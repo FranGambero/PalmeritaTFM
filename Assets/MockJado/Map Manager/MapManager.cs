@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ElJardin
 {
-    public class MapManager : MonoBehaviour
+    public class MapManager : Singleton<MapManager>
     {
         #region Variables
 
@@ -63,8 +63,14 @@ namespace ElJardin
                 {
                     mapMatrix[i,j] = Instantiate(nodePrefab, new Vector3(j,0,i)*tileOffset, Quaternion.Euler(-90,0,0), this.transform);
                     mapMatrix[i, j].GetComponent<Node>().ChangeNodeType(NodeType.Ground, groundMat);
+                    mapMatrix[i, j].GetComponent<Node>().SetPosition(new Vector2(i,j));
                 }
             }
+        }
+
+        public Node GetNode(int row, int column)
+        {
+            return mapMatrix[row, column].GetComponent<Node>();
         }
 
         #endregion

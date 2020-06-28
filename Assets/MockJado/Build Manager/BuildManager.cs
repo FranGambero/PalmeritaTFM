@@ -2,17 +2,108 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildManager : MonoBehaviour
+namespace ElJardin
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BuildManager : Singleton<BuildManager>
     {
-        
-    }
+        #region Variables
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [Header("Materials")]
+        public Material waterMat;
+        //public Material waterMatStr8, waterMatCurve, waterMatFork, waterMatCross, waterMatEnd;
+
+        public Material grooveMat;
+        //public Material grooveMatStr8, grooveMatCurve, grooveMatFork, grooveMatCross, grooveMatEnd;
+
+        [Header("Test Cards")]
+        public int amount;
+        public DirectionType direction;
+
+        private List<Node> nodesToBuild;
+
+        #endregion
+
+        #region Build
+
+        public void BuildGroove(Node node)
+        {
+            if(node.IsGround())
+                node.ChangeNodeType(NodeType.Water, waterMat);
+        }
+
+        private void CreateChangeList(int row, int column)
+        {
+            if(row >=0 && row < MapManager.Instance.rows && column >=0 && column < MapManager.Instance.columns)
+            {
+                Node auxNode = MapManager.Instance.GetNode(row,column);
+
+                if (auxNode.IsGround())
+                {
+                    //MapManager.Instance.GetNode(row, column).ChangeNodeType(NodeType.Water, waterMat);
+                    nodesToBuild.Add(auxNode);
+                }
+            }
+        }
+
+        private bool IsChangeValid()
+        {
+            return (nodesToBuild.Count == amount) ? true : false;
+        }
+
+        private void ChangeNodesInList()
+        {
+            foreach( Node node in nodesToBuild){
+                node.ChangeNodeType(NodeType.Water, waterMat);
+            }
+        }
+
+        public void BuildByCard(Node node)
+        {
+            nodesToBuild = new List<Node>();
+
+            Vector2 position = node.GetPosition();
+
+            switch (direction)
+            {
+                case DirectionType.North:
+                    for (int i = (int)position.x; i < (int)position.x + amount; i++)
+                    {
+                        //MapManager.Instance.GetNode(i, (int)position.y).ChangeNodeType(NodeType.Water, waterMat);
+                        CreateChangeList(i, (int)position.y);
+                        if (IsChangeValid())
+                            ChangeNodesInList();
+                    }
+                        break;
+                case DirectionType.South:
+                    for (int i = (int)position.x; i > (int)position.x - amount; i--)
+                    {
+                        CreateChangeList(i, (int)position.y);
+                        if (IsChangeValid())
+                            ChangeNodesInList();
+                    }
+                    break;
+                case DirectionType.East:
+                    for (int j = (int)position.y; j < (int)position.y + amount; j++)
+                    {
+                        CreateChangeList((int)position.x, j);
+                        if (IsChangeValid())
+                            ChangeNodesInList();
+                    }
+                    break;
+                case DirectionType.West:
+                    for (int j = (int)position.y; j > (int)position.y - amount; j--)
+                    {
+                        CreateChangeList((int)position.x, j);
+                        if (IsChangeValid())
+                            ChangeNodesInList();
+                    }
+                    break;
+                default:
+
+                    break;
+            }
+        }
+
+        #endregion
     }
 }
