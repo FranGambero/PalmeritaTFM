@@ -50,14 +50,15 @@ namespace ElJardin
             return (nodesToBuild.Count == amount) ? true : false;
         }
 
-        private void ChangeNodesInList()
+        public void ChangeNodesInList()
         {
-            foreach( Node node in nodesToBuild){
-                node.ChangeNodeType(NodeType.Water, waterMat);
-            }
+            if (IsChangeValid())
+                foreach( Node node in nodesToBuild){
+                    node.ChangeNodeType(NodeType.Water, waterMat);
+                }
         }
 
-        public void BuildByCard(Node node)
+        public void GetSurroundingsByCard(Node node)
         {
             nodesToBuild = new List<Node>();
 
@@ -70,37 +71,53 @@ namespace ElJardin
                     {
                         //MapManager.Instance.GetNode(i, (int)position.y).ChangeNodeType(NodeType.Water, waterMat);
                         CreateChangeList(i, (int)position.y);
-                        if (IsChangeValid())
-                            ChangeNodesInList();
+                        //ChangeNodesInList();
                     }
                         break;
                 case DirectionType.South:
                     for (int i = (int)position.x; i > (int)position.x - amount; i--)
                     {
                         CreateChangeList(i, (int)position.y);
-                        if (IsChangeValid())
-                            ChangeNodesInList();
+                        //ChangeNodesInList();
                     }
                     break;
                 case DirectionType.East:
                     for (int j = (int)position.y; j < (int)position.y + amount; j++)
                     {
                         CreateChangeList((int)position.x, j);
-                        if (IsChangeValid())
-                            ChangeNodesInList();
+                        //ChangeNodesInList();
                     }
                     break;
                 case DirectionType.West:
                     for (int j = (int)position.y; j > (int)position.y - amount; j--)
                     {
                         CreateChangeList((int)position.x, j);
-                        if (IsChangeValid())
-                            ChangeNodesInList();
+                        //ChangeNodesInList();
                     }
                     break;
                 default:
 
                     break;
+            }
+        }
+
+        #endregion
+
+        #region Hover
+
+        public void HoverNodesInList()
+        {
+            foreach(Node node in nodesToBuild)
+            {
+                node.HoverOn();
+            }
+        }
+
+        public void UnHoverNodesInList()
+        {
+            foreach (Node node in nodesToBuild)
+            {
+                node.HoverOff();
             }
         }
 

@@ -63,16 +63,28 @@ namespace ElJardin
 
         #region Hover
 
-        private void OnMouseEnter()
+        public void HoverOn()
         {
+            baseColor = _mr.material.color;
             _mr.material.color = hoverColor;
             hovering = true;
         }
 
-        private void OnMouseExit()
+        public void HoverOff()
         {
             _mr.material.color = baseColor;
             hovering = false;
+        }
+
+        private void OnMouseEnter()
+        {
+            BuildManager.Instance.GetSurroundingsByCard(this);
+            BuildManager.Instance.HoverNodesInList();
+        }
+
+        private void OnMouseExit()
+        {
+            BuildManager.Instance.UnHoverNodesInList();
         }
 
         #endregion
@@ -87,7 +99,7 @@ namespace ElJardin
             if (hovering)
             {
                 //BuildManager.Instance.BuildGroove(this);
-                BuildManager.Instance.BuildByCard(this);
+                BuildManager.Instance.ChangeNodesInList();
             }
         }
 
