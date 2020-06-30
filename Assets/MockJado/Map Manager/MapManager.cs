@@ -41,6 +41,8 @@ namespace ElJardin
         public Vector2 playerStartPos;
 
         private GameObject[,] mapMatrix;
+        private Node startingNode;
+        private Node endingNode;
         #endregion
 
         private void Awake()
@@ -61,10 +63,26 @@ namespace ElJardin
             {
                 for(int j = 0; j < columns; j++)
                 {
-                    mapMatrix[i,j] = Instantiate(nodePrefab, new Vector3(j,0,i)*tileOffset, Quaternion.Euler(-90,0,0), this.transform);
+                    mapMatrix[i,j] = Instantiate(nodePrefab, new Vector3(j,0,i)*tileOffset, Quaternion.identity, this.transform);
                     mapMatrix[i, j].GetComponent<Node>().ChangeNodeType(NodeType.Ground, groundMat);
                     mapMatrix[i, j].GetComponent<Node>().SetPosition(new Vector2(i,j));
+                    mapMatrix[i, j].gameObject.name = "Node"+i+"_"+j;
                 }
+            }
+            CreateStartEndPoints();
+        }
+
+        private void CreateStartEndPoints()
+        {
+            // Start point
+            if(riverStartPos != riverEndPos)
+            {
+                mapMatrix[(int)riverStartPos.x, (int)riverStartPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Water, BuildManager.Instance.pond_m);
+                mapMatrix[(int)riverEndPos.x, (int)riverEndPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
+            }
+            else
+            {
+                Debug.LogError("Start and end positions cant be the same");
             }
         }
 

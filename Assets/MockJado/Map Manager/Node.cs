@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,13 +16,18 @@ namespace ElJardin
         [Header("Position")]
         public int row, column;
 
+        //[HideInInspector]
+        public List<Node> neighbors;
+
         private Material currentMaterial;
         private NodeType nodeType;
 
         private MeshRenderer _mr;
+        private MeshFilter _mf;
         private Color baseColor;
 
         private bool hovering;
+
 
         #endregion
 
@@ -29,7 +35,8 @@ namespace ElJardin
         {
             nodeType = NodeType.Undefined;
 
-            _mr = GetComponent<MeshRenderer>();
+            _mr = GetComponentInChildren<MeshRenderer>();
+            _mf = GetComponentInChildren<MeshFilter>();
 
             hovering = false;
 
@@ -40,6 +47,13 @@ namespace ElJardin
         {
             nodeType = newType;
             _mr.material = newMaterial;
+        }
+
+        public void ChangeNodeType(NodeType newType, Mesh newMesh)
+        {
+            nodeType = newType;
+            _mf.mesh = newMesh;
+            CalculateNeighbors();
         }
 
         #region Setters
@@ -57,6 +71,16 @@ namespace ElJardin
         public Vector2 GetPosition()
         {
             return new Vector2(row, column);
+        }
+
+        public NodeType GetNodeType()
+        {
+            return nodeType;
+        }
+
+        public Mesh GetMesh()
+        {
+            return _mf.mesh;
         }
 
         #endregion
@@ -80,6 +104,7 @@ namespace ElJardin
         {
             BuildManager.Instance.GetSurroundingsByCard(this);
             BuildManager.Instance.HoverNodesInList();
+            //BuildManager.Instance.CalculateMeshToBuild(this);
         }
 
         private void OnMouseExit()
@@ -110,6 +135,36 @@ namespace ElJardin
         public bool IsGround()
         {
             return nodeType == NodeType.Ground ? true : false;
+        }
+
+        public void CalculateNeighbors()
+        {
+            this.neighbors = new List<Node>();
+
+            List<Vector2> positionList = new List<Vector2>();
+            List<Node> neighbors = new List<Node>();
+            //Sacamos lista de posibles vecinos en cruz (i+1,j // i-1,j // i,j+1 // i,j-1)
+
+            positionList.Add(new Vector2(row + 1, column));
+            positionList.Add(new Vector2(row - 1, column));
+            positionList.Add(new Vector2(row, column + 1));
+            positionList.Add(new Vector2(row, column - 1));
+
+
+            //Comprobamos que los vecinos sean validos
+            foreach (Vector2 pos in positionList)
+            {
+                if (BuildManager.Instance.CheckValidNode((int)pos.x, (int)pos.y))
+                {
+                    neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    this.neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    foreach (Node neighbor in neighbors)
+                    {
+                        if(!neighbor.neighbors.Contains(this))
+                            neighbor.neighbors.Add(this);
+                    }
+                }
+            }
         }
 
         #endregion
