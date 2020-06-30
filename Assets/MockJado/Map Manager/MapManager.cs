@@ -43,11 +43,15 @@ namespace ElJardin
         private GameObject[,] mapMatrix;
         private Node startingNode;
         private Node endingNode;
+
+        private bool levelEnded;
+        private List<Node> winCheckedNodes;
         #endregion
 
         private void Awake()
         {
             mapMatrix = new GameObject[rows,columns];
+            levelEnded = false;
         }
 
         private void Start()
@@ -78,7 +82,9 @@ namespace ElJardin
             if(riverStartPos != riverEndPos)
             {
                 mapMatrix[(int)riverStartPos.x, (int)riverStartPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Water, BuildManager.Instance.pond_m);
+                startingNode = mapMatrix[(int)riverStartPos.x, (int)riverStartPos.y].GetComponent<Node>();
                 mapMatrix[(int)riverEndPos.x, (int)riverEndPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
+                endingNode = mapMatrix[(int)riverEndPos.x, (int)riverEndPos.y].GetComponent<Node>();
             }
             else
             {
@@ -90,6 +96,40 @@ namespace ElJardin
         {
             return mapMatrix[row, column].GetComponent<Node>();
         }
+
+        #region Victory
+        private void CheckWin(Node node)
+        {
+            winCheckedNodes.Add(node);
+            Debug.Log("Node: "+node.name+" // Ending node: "+endingNode.name);
+            if(node == endingNode)
+            {
+                levelEnded = true;
+            }
+            else
+            {
+                if (node.neighbors.Count > 0)
+                {
+                    foreach(Node neighbor in node.neighbors)
+                    {
+                        if(!winCheckedNodes.Contains(neighbor))
+                            CheckWin(neighbor);
+                    }
+                }
+            }
+        }
+
+        public void CheckFullRiver()
+        {
+            winCheckedNodes = new List<Node>();
+            CheckWin(startingNode);
+            if (levelEnded)
+            {
+                Debug.Log("LVL COMPLETADO HIJO DE PUTA");
+            }
+        }
+
+        #endregion
 
         #endregion
 
