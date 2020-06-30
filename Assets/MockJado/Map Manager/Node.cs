@@ -64,6 +64,11 @@ namespace ElJardin
             column = (int)pos.y;
         }
 
+        public void SetColor(Color cl)
+        {
+            _mr.material.color = cl;
+        }
+
         #endregion
 
         #region Getters

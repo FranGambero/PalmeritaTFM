@@ -84,8 +84,10 @@ namespace ElJardin
             {
                 mapMatrix[(int)riverStartPos.x, (int)riverStartPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Water, BuildManager.Instance.pond_m);
                 startingNode = mapMatrix[(int)riverStartPos.x, (int)riverStartPos.y].GetComponent<Node>();
+                startingNode.SetColor(Color.blue);
                 mapMatrix[(int)riverEndPos.x, (int)riverEndPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
                 endingNode = mapMatrix[(int)riverEndPos.x, (int)riverEndPos.y].GetComponent<Node>();
+                endingNode.SetColor(Color.red);
             }
             else
             {
