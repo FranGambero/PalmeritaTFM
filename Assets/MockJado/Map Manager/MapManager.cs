@@ -8,6 +8,7 @@ namespace ElJardin
     {
         #region Variables
 
+        public GameObject victoryCanvas;
         /**
          * 
          */
@@ -125,6 +126,7 @@ namespace ElJardin
             CheckWin(startingNode);
             if (levelEnded)
             {
+                victoryCanvas.SetActive(true);
                 Debug.Log("LVL COMPLETADO HIJO DE PUTA");
             }
         }
