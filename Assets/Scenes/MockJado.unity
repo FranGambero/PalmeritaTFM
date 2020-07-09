@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1c452a20ae1a448b72af2c9d8e5d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterMat: {fileID: 2100000, guid: acb223a08bc971547b13de5361f4376c, type: 2}
+  waterMat: {fileID: 2100000, guid: 6d072d4434ce6024cb2c0607ea4d2887, type: 2}
   grooveMat: {fileID: 2100000, guid: a84d8c4329e0f21479bdc1fd2584161a, type: 2}
   canal_m: {fileID: -3172128858085774672, guid: 6862566bfeb13434cb32799f2e9751dc,
     type: 3}
@@ -1216,11 +1216,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryCanvas: {fileID: 947286819}
   confety: {fileID: 54189472}
-  rows: 10
-  columns: 10
+  rows: 15
+  columns: 15
   tileOffset: 1.5
-  groundMat: {fileID: 2100000, guid: cda3d080bf1bff94d989c4667d4e0289, type: 2}
-  waterMat: {fileID: 2100000, guid: acb223a08bc971547b13de5361f4376c, type: 2}
+  groundMat: {fileID: 2100000, guid: e2bfa47644be6504d8afbb145e15bc9c, type: 2}
+  waterMat: {fileID: 2100000, guid: 6d072d4434ce6024cb2c0607ea4d2887, type: 2}
   grooveMat: {fileID: 2100000, guid: a84d8c4329e0f21479bdc1fd2584161a, type: 2}
   nodePrefab: {fileID: 7819085289489393484, guid: 299fd3d914e9098439703f0426dc069c,
     type: 3}
