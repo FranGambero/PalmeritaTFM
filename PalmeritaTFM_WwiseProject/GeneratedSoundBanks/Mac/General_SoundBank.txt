@@ -1,0 +1,4 @@
+Event	ID	Name			Wwise Object Path	Notes
+	523675535	Amb_Viento			\Default Work Unit\Ambientes\Amb_Viento	
+	3299029048	Amb_Tono			\Default Work Unit\Ambientes\Amb_Tono	
+
