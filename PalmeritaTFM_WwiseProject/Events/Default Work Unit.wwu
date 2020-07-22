@@ -5,7 +5,17 @@
 			<ChildrenList>
 				<Folder Name="Ambientes" ID="{0CFDF471-BAA8-4F65-BD72-6880BA870CAE}" ShortID="303249527">
 					<ChildrenList>
-						<Event Name="Amb_Tono" ID="{012AD3C9-FCA8-4F50-A8A8-CAE89DBB1509}"/>
+						<Event Name="Amb_Tono" ID="{012AD3C9-FCA8-4F50-A8A8-CAE89DBB1509}">
+							<ChildrenList>
+								<Action Name="" ID="{C4E4F8C6-C1D7-4E84-AB6C-9CB77803DAE0}" ShortID="101174880">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Base_Loop" ID="{38C05550-C5A9-4BA6-A430-15901649E28D}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Amb_Viento" ID="{32A973B7-BCCB-4BEE-AE7D-874B90244A06}"/>
 					</ChildrenList>
 				</Folder>

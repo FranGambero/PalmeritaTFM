@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="General_SoundBank" ID="{C48BB0D3-AF2B-42AE-8883-210D31E969EC}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Amb_Tono" ID="{012AD3C9-FCA8-4F50-A8A8-CAE89DBB1509}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ambientes" ID="{0CFDF471-BAA8-4F65-BD72-6880BA870CAE}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

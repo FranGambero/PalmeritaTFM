@@ -2,3 +2,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	523675535	Amb_Viento			\Default Work Unit\Ambientes\Amb_Viento	
 	3299029048	Amb_Tono			\Default Work Unit\Ambientes\Amb_Tono	
 
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	283048770	Jardin_Amb_SFX_44_16_Capa_6	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_6		4586308
+	308316035	Jardin_Amb_SFX_44_16_Capa_5	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_5		4570136
+	382406686	Jardin_Amb_SFX_44_16_Capa_1	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_1		4199312
+	384476250	Jardin_Amb_SFX_44_16_Capa_4	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_4		9306576
+	395860979	Jardin_Amb_SFX_44_16_Capa_3	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_3		6855160
+	1053431661	Jardin_Amb_SFX_44_16_Capa_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_2		4570668
+

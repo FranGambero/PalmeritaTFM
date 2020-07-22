@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>C:\Users\eduar\Documents\PalmeritaTFM\PalmeritaTFM_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\eduar\Documents\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\eduar\Documents\PalmeritaTFM\PalmeritaTFM_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\eduar\Documents\PalmeritaTFM\PalmeritaTFM_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,7 +21,34 @@
 			<ShortName>General_SoundBank</ShortName>
 			<Path>General_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3299029048" Name="Amb_Tono" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Tono" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3299029048" Name="Amb_Tono" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Tono" DurationType="OneShot" DurationMin="23.802042" DurationMax="48.471001">
+					<IncludedMemoryFiles>
+						<File Id="283048770" Language="SFX">
+							<ShortName>Jardin_Amb_SFX_44_16_Capa_6.wav</ShortName>
+							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_6_10C4C929.wem</Path>
+						</File>
+						<File Id="308316035" Language="SFX">
+							<ShortName>Jardin_Amb_SFX_44_16_Capa_5.wav</ShortName>
+							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_5_10C4C929.wem</Path>
+						</File>
+						<File Id="382406686" Language="SFX">
+							<ShortName>Jardin_Amb_SFX_44_16_Capa_1.wav</ShortName>
+							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_1_10C4C929.wem</Path>
+						</File>
+						<File Id="384476250" Language="SFX">
+							<ShortName>Jardin_Amb_SFX_44_16_Capa_4.wav</ShortName>
+							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_4_10C4C929.wem</Path>
+						</File>
+						<File Id="395860979" Language="SFX">
+							<ShortName>Jardin_Amb_SFX_44_16_Capa_3.wav</ShortName>
+							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_3_10C4C929.wem</Path>
+						</File>
+						<File Id="1053431661" Language="SFX">
+							<ShortName>Jardin_Amb_SFX_44_16_Capa_2.wav</ShortName>
+							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="523675535" Name="Amb_Viento" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Viento" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>

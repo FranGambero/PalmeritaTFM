@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c001807ab021ea459d16f25ac52c85d5
     GuidInternal: 
-    m_lastTime: -8586068112063921708
+    m_lastTime: -8586061785253144326
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8586068112066642449
+    m_lastTime: -8586061785253514451
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586068094522894774
+    m_lastTime: -8586061771815269626
     List:
     - name: General_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586068094523046658
+    m_lastTime: -8586061771815519632
     List:
     - name: Amb_Tono
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -70,8 +70,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambientes\Amb_Tono
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 48471000
+      minDuration: 23802042
     - name: Amb_Viento
       guid: b773a932cbbcee4bae7d874b90244a06
       id: 523675535
@@ -103,31 +103,33 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8586068112064912000
+    m_lastTime: -8586061785253814538
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: f0f0adf59de36e448e0b24f6c1daf7d1
     GuidInternal: 
-    m_lastTime: -8586068112066802482
+    m_lastTime: -8586061785253214385
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: be45168c1167574995b8d19afab72716
     GuidInternal: 
-    m_lastTime: -8586068112066491089
+    m_lastTime: -8586061785253194368
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 96a89cc124a0d94aa6cd088c0f287252
     GuidInternal: 
-    m_lastTime: -8586068112064591917
+    m_lastTime: -8586061785253174356
     List: []
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
-  - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/Events
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
