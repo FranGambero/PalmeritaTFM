@@ -23,6 +23,18 @@
 			<IncludedEvents>
 				<Event Id="430716873" Name="Amb_Base_In" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_In" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="13095816" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_14.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_14_10C4C929.wem</Path>
+						</File>
+						<File Id="22370529" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_21.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_21_10C4C929.wem</Path>
+						</File>
+						<File Id="44805806" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_15.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_15_10C4C929.wem</Path>
+						</File>
 						<File Id="79782297" Language="SFX">
 							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_4.wav</ShortName>
 							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_4_10C4C929.wem</Path>
@@ -35,13 +47,33 @@
 							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_9.wav</ShortName>
 							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_9_10C4C929.wem</Path>
 						</File>
+						<File Id="225958763" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_24.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_24_10C4C929.wem</Path>
+						</File>
+						<File Id="280401281" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_17.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_17_10C4C929.wem</Path>
+						</File>
 						<File Id="283048770" Language="SFX">
 							<ShortName>Jardin_Amb_SFX_44_16_Capa_6.wav</ShortName>
 							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_6_10C4C929.wem</Path>
 						</File>
+						<File Id="292172757" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_25.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_25_10C4C929.wem</Path>
+						</File>
 						<File Id="308316035" Language="SFX">
 							<ShortName>Jardin_Amb_SFX_44_16_Capa_5.wav</ShortName>
 							<Path>SFX\Jardin_Amb_SFX_44_16_Capa_5_10C4C929.wem</Path>
+						</File>
+						<File Id="346821230" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_22.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_22_10C4C929.wem</Path>
+						</File>
+						<File Id="370734203" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_16.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_16_10C4C929.wem</Path>
 						</File>
 						<File Id="382406686" Language="SFX">
 							<ShortName>Jardin_Amb_SFX_44_16_Capa_1.wav</ShortName>
@@ -67,6 +99,14 @@
 							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_5.wav</ShortName>
 							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_5_10C4C929.wem</Path>
 						</File>
+						<File Id="576119278" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_19.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_19_10C4C929.wem</Path>
+						</File>
+						<File Id="592338051" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_23.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_23_10C4C929.wem</Path>
+						</File>
 						<File Id="650557739" Language="SFX">
 							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_8.wav</ShortName>
 							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_8_10C4C929.wem</Path>
@@ -74,6 +114,18 @@
 						<File Id="666322497" Language="SFX">
 							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_12.wav</ShortName>
 							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_12_10C4C929.wem</Path>
+						</File>
+						<File Id="678048449" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_18.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_18_10C4C929.wem</Path>
+						</File>
+						<File Id="796333084" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_26.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_26_10C4C929.wem</Path>
+						</File>
+						<File Id="831636672" Language="SFX">
+							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_20.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_20_10C4C929.wem</Path>
 						</File>
 						<File Id="882408490" Language="SFX">
 							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_11.wav</ShortName>

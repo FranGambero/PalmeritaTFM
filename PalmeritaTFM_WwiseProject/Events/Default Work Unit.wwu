@@ -25,7 +25,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Amb_Birds_Shoot" ID="{9B8EFDB0-EEAF-445B-90B7-4176B566EAFF}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+											<ObjectRef Name="General_Shoots" ID="{702878F9-69A7-4679-B205-30AD2788F12E}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -54,7 +54,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Amb_Birds_Shoot" ID="{9B8EFDB0-EEAF-445B-90B7-4176B566EAFF}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+											<ObjectRef Name="General_Shoots" ID="{702878F9-69A7-4679-B205-30AD2788F12E}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
