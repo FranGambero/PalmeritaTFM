@@ -2,11 +2,32 @@ Event	ID	Name			Wwise Object Path	Notes
 	430716873	Amb_Base_In			\Default Work Unit\Ambientes\Amb_Base_In	
 	941055080	Amb_Base_Out			\Default Work Unit\Ambientes\Amb_Base_Out	
 
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	10286612	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Silence_01\Wwise Silence	
+	59906668	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Silence_02\Wwise Silence	
+	366061150	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Silence_05\Wwise Silence	
+	419594037	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Silence_04\Wwise Silence	
+	882939177	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Silence_03\Wwise Silence	
+	956667473	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Silence_1\Wwise Silence	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	79782297	Jardin_Amb_Birds_Shoot_SFX_44_16_4	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_4		1137204
+	162647633	Jardin_Amb_Birds_Shoot_SFX_44_16_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_2		2274376
+	203035603	Jardin_Amb_Birds_Shoot_SFX_44_16_9	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_9		2624212
 	283048770	Jardin_Amb_SFX_44_16_Capa_6	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_6		4586308
 	308316035	Jardin_Amb_SFX_44_16_Capa_5	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_5		4570136
 	382406686	Jardin_Amb_SFX_44_16_Capa_1	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_1		4199312
 	384476250	Jardin_Amb_SFX_44_16_Capa_4	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_4		9306576
 	395860979	Jardin_Amb_SFX_44_16_Capa_3	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_3		6855160
+	430259742	Jardin_Amb_Birds_Shoot_SFX_44_16_10	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_10		874800
+	450425698	Jardin_Amb_Birds_Shoot_SFX_44_16_7	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_7		2361756
+	478879843	Jardin_Amb_Birds_Shoot_SFX_44_16_5	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_5		1662092
+	650557739	Jardin_Amb_Birds_Shoot_SFX_44_16_8	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_8		4023884
+	666322497	Jardin_Amb_Birds_Shoot_SFX_44_16_12	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_12		2099408
+	882408490	Jardin_Amb_Birds_Shoot_SFX_44_16_11	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_11		2624392
+	941197341	Jardin_Amb_Birds_Shoot_SFX_44_16_1	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_1		1749560
+	948688988	Jardin_Amb_Birds_Shoot_SFX_44_16_3	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_3		2012048
+	1002465659	Jardin_Amb_Birds_Shoot_SFX_44_16_6	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_6		1749652
+	1014974714	Jardin_Amb_Birds_Shoot_SFX_44_16_13	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Birds_Shoot\Jardin_Amb_Birds_Shoot_SFX_44_16_13		3149104
 	1053431661	Jardin_Amb_SFX_44_16_Capa_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_2		4570668
 

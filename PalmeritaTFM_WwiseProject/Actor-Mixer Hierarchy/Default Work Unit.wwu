@@ -177,6 +177,482 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Amb_Birds_Shoot" ID="{9B8EFDB0-EEAF-445B-90B7-4176B566EAFF}" ShortID="1051015118">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_1" ID="{A305201A-2C2C-4704-9975-AB80E0D2FAEA}" ShortID="416416529">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_1" ID="{1880AD75-078E-4C7B-B58F-C19A5EA97A67}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="941197341"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_1" ID="{1880AD75-078E-4C7B-B58F-C19A5EA97A67}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_2" ID="{17717FB7-9413-492E-987C-466C05648C17}" ShortID="92682223">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_2" ID="{07036018-31A5-4CA4-B12A-B1F70FA82C57}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="162647633"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_2" ID="{07036018-31A5-4CA4-B12A-B1F70FA82C57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_3" ID="{C7AD4975-B077-45EE-ACA3-3CDFEAE231F9}" ShortID="843402363">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_3" ID="{F469AC5C-03EF-4F00-A223-4FC869E70575}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="948688988"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_3" ID="{F469AC5C-03EF-4F00-A223-4FC869E70575}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_4" ID="{24F3C720-EA5A-433F-98D2-1AA333366FA5}" ShortID="649738259">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_4" ID="{9A318389-FD8A-42A4-9C33-640BFC86C078}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="79782297"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_4" ID="{9A318389-FD8A-42A4-9C33-640BFC86C078}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_5" ID="{8CAE9D82-FDC0-4FA3-9942-CA72B4AD1AB4}" ShortID="390866660">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_5" ID="{EC0C1E26-D208-4F2C-969B-F3A9C188944C}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="478879843"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_5" ID="{EC0C1E26-D208-4F2C-969B-F3A9C188944C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_6" ID="{B1D62454-AE72-40E1-892C-AD8DCD93E342}" ShortID="360842222">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_6" ID="{CACA9039-CC66-4FBC-A0E8-51B1B8B9D330}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1002465659"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_6" ID="{CACA9039-CC66-4FBC-A0E8-51B1B8B9D330}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_7" ID="{00B41326-9940-46A5-9219-5E8F8BF98647}" ShortID="385207959">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_7" ID="{AD773323-C81D-4268-83C8-C4DBD74DE719}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="450425698"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_7" ID="{AD773323-C81D-4268-83C8-C4DBD74DE719}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_8" ID="{31E72D20-E52B-46A4-B022-8884D9AC60BD}" ShortID="643304615">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_8" ID="{0F813074-C75C-44F7-B2FD-F987D071A034}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="650557739"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_8" ID="{0F813074-C75C-44F7-B2FD-F987D071A034}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_9" ID="{66006744-A93B-4104-9E57-42E344D31865}" ShortID="135317648">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_9" ID="{B639008F-9064-4508-B950-31CFE4DE6E2C}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_9.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="203035603"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_9" ID="{B639008F-9064-4508-B950-31CFE4DE6E2C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_10" ID="{D59EE6B4-6E9F-4233-92B9-E3B6AC60C620}" ShortID="852105065">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_10" ID="{29371D2C-AAF5-4D18-9116-03147CA089B3}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="430259742"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_10" ID="{29371D2C-AAF5-4D18-9116-03147CA089B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_11" ID="{53A6525A-B60C-4C49-B5E4-8208801BE234}" ShortID="813515446">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_11" ID="{0CBAA498-66F1-4E8A-80F2-E4C8A461794D}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="882408490"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_11" ID="{0CBAA498-66F1-4E8A-80F2-E4C8A461794D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_12" ID="{70C93A6F-EE17-4969-B8F3-6BB4113CAFCF}" ShortID="576698626">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_12" ID="{87512A15-82EA-42D9-90ED-85E8B313DB8A}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="666322497"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_12" ID="{87512A15-82EA-42D9-90ED-85E8B313DB8A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_13" ID="{56174243-7D45-4624-A136-9BE3D8C4F4C2}" ShortID="806420020">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_13" ID="{7085325F-B60F-425E-9081-A8919D616BDA}">
+											<Language>SFX</Language>
+											<AudioFile>Jardin_Amb_Birds_Shoot_SFX_44_16_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1014974714"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Jardin_Amb_Birds_Shoot_SFX_44_16_13" ID="{7085325F-B60F-425E-9081-A8919D616BDA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence_1" ID="{EE9BDE3B-A9FB-4F05-9FD1-B9D1CC65D094}" ShortID="804347970">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{DCA32DE0-788D-44D0-A892-748B24F5C004}" ShortID="956667473" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="3"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{DCA32DE0-788D-44D0-A892-748B24F5C004}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence_01" ID="{C8389EB7-9C29-4BBA-8B63-AF4F372E08AB}" ShortID="111258865">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{DB721233-3828-4D88-B23D-6CCD483DEEF2}" ShortID="10286612" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="3"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{DB721233-3828-4D88-B23D-6CCD483DEEF2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence_02" ID="{C530C0A5-7E7D-41E7-AC08-E5EA85A73E59}" ShortID="377766907">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{DA843E16-F915-4BB6-B23E-06BD56A5EB03}" ShortID="59906668" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="3"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{DA843E16-F915-4BB6-B23E-06BD56A5EB03}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence_03" ID="{5722837F-7968-4BAF-957B-C7F2354157B4}" ShortID="210976338">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{5FAA1820-2E83-4FA5-841B-DAF47B5D8C16}" ShortID="882939177" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="3"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{5FAA1820-2E83-4FA5-841B-DAF47B5D8C16}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence_04" ID="{D9BF5C2E-4D0D-4715-B835-BA65EC865EE6}" ShortID="501204191">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{D585F6EF-6096-4FBB-B7A9-E4634DBEF211}" ShortID="419594037" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="3"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{D585F6EF-6096-4FBB-B7A9-E4634DBEF211}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence_05" ID="{8700BA38-F84B-42ED-8FC8-95ADAF984537}" ShortID="402957828">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{797C00B8-B112-4372-A514-2788CB43626E}" ShortID="366061150" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="3"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{797C00B8-B112-4372-A514-2788CB43626E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

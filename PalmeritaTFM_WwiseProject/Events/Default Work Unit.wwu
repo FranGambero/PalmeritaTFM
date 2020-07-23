@@ -18,6 +18,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{19DAAA52-A32B-409C-BE49-975EB6AB3654}" ShortID="799998643">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Birds_Shoot" ID="{9B8EFDB0-EEAF-445B-90B7-4176B566EAFF}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Amb_Base_Out" ID="{43433771-3EBF-4566-8033-5A72D762C774}">
@@ -32,6 +43,18 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Amb_Base_Loop" ID="{38C05550-C5A9-4BA6-A430-15901649E28D}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CED4FDD7-FD22-4F41-8345-0F03123AB9E6}" ShortID="794239834">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Birds_Shoot" ID="{9B8EFDB0-EEAF-445B-90B7-4176B566EAFF}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
