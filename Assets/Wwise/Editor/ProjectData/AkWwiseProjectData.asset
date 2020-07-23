@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586061771815269626
+    m_lastTime: -8586061229040263237
     List:
     - name: General_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -56,33 +56,33 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586061771815519632
+    m_lastTime: -8586061227297101036
     List:
-    - name: Amb_Tono
+    - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
-      id: 3299029048
+      id: 430716873
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Ambientes
         ObjectType: 4
-      - ElementName: Amb_Tono
+      - ElementName: Amb_Base_In
         ObjectType: 3
-      Path: Default Work Unit\Ambientes\Amb_Tono
+      Path: Default Work Unit\Ambientes\Amb_Base_In
       maxAttenuation: 0
-      maxDuration: 48471000
-      minDuration: 23802042
-    - name: Amb_Viento
-      guid: b773a932cbbcee4bae7d874b90244a06
-      id: 523675535
+      maxDuration: -1
+      minDuration: -1
+    - name: Amb_Base_Out
+      guid: 71374343bf3e664580335a72d762c774
+      id: 941055080
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Ambientes
         ObjectType: 4
-      - ElementName: Amb_Viento
+      - ElementName: Amb_Base_Out
         ObjectType: 3
-      Path: Default Work Unit\Ambientes\Amb_Viento
+      Path: Default Work Unit\Ambientes\Amb_Base_Out
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -130,6 +130,5 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

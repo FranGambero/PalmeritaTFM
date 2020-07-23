@@ -21,7 +21,7 @@
 			<ShortName>General_SoundBank</ShortName>
 			<Path>General_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3299029048" Name="Amb_Tono" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Tono" DurationType="OneShot" DurationMin="23.802042" DurationMax="48.471001">
+				<Event Id="430716873" Name="Amb_Base_In" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_In" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="283048770" Language="SFX">
 							<ShortName>Jardin_Amb_SFX_44_16_Capa_6.wav</ShortName>
@@ -49,7 +49,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="523675535" Name="Amb_Viento" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Viento" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>

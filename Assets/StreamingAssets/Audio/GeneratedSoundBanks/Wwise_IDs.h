@@ -13,8 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID AMB_TONO = 3299029048U;
-        static const AkUniqueID AMB_VIENTO = 523675535U;
+        static const AkUniqueID AMB_BASE_IN = 430716873U;
+        static const AkUniqueID AMB_BASE_OUT = 941055080U;
     } // namespace EVENTS
 
     namespace BANKS

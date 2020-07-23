@@ -6,6 +6,13 @@
 				<Folder Name="Ambientes" ID="{963FDFA8-4AA4-44D7-9C6C-9D90545EA251}" ShortID="630035428">
 					<ChildrenList>
 						<RandomSequenceContainer Name="Amb_Base_Loop" ID="{38C05550-C5A9-4BA6-A430-15901649E28D}" ShortID="824925235">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -60,6 +67,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_3" ID="{2CE27013-4990-4537-9965-B56D29FEA8BA}" ShortID="1064916853">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -82,6 +96,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_4" ID="{2AA0F0F1-003E-4F8E-82A3-5C7A97638624}" ShortID="1038504771">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -126,6 +147,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_6" ID="{8CC85744-A3B6-43C8-B0F2-9A8C497EB33D}" ShortID="704810352">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>

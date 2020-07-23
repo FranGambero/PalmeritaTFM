@@ -1,6 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
-	523675535	Amb_Viento			\Default Work Unit\Ambientes\Amb_Viento	
-	3299029048	Amb_Tono			\Default Work Unit\Ambientes\Amb_Tono	
+	430716873	Amb_Base_In			\Default Work Unit\Ambientes\Amb_Base_In	
+	941055080	Amb_Base_Out			\Default Work Unit\Ambientes\Amb_Base_Out	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	283048770	Jardin_Amb_SFX_44_16_Capa_6	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_SFX_44_16_Capa_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_6		4586308
