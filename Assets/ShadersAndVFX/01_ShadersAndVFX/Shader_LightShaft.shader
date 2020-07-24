@@ -2,7 +2,8 @@
 {
     Properties
     {
-		[HDR] _Color("Base Color", Color) = (1,1,1,1)
+		[HDR] 
+	_Color("Base Color", Color) = (1,1,1,1)
 
 		[Header(Spec Layer 1)]
 		_Specs1("Specs", 2D) = "white" {}
