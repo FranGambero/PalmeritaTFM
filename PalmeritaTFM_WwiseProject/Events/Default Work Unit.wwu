@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Ambientes" ID="{0CFDF471-BAA8-4F65-BD72-6880BA870CAE}" ShortID="303249527">
+					<ChildrenList>
+						<Event Name="Amb_Base_In" ID="{012AD3C9-FCA8-4F50-A8A8-CAE89DBB1509}">
+							<ChildrenList>
+								<Action Name="" ID="{C4E4F8C6-C1D7-4E84-AB6C-9CB77803DAE0}" ShortID="101174880">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Base_Loop" ID="{38C05550-C5A9-4BA6-A430-15901649E28D}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{19DAAA52-A32B-409C-BE49-975EB6AB3654}" ShortID="799998643">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="General_Shoots" ID="{702878F9-69A7-4679-B205-30AD2788F12E}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Amb_Base_Out" ID="{43433771-3EBF-4566-8033-5A72D762C774}">
+							<ChildrenList>
+								<Action Name="" ID="{7C616DB9-FC3C-4F00-884C-6810D917CFAD}" ShortID="544374641">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Base_Loop" ID="{38C05550-C5A9-4BA6-A430-15901649E28D}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CED4FDD7-FD22-4F41-8345-0F03123AB9E6}" ShortID="794239834">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="General_Shoots" ID="{702878F9-69A7-4679-B205-30AD2788F12E}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
