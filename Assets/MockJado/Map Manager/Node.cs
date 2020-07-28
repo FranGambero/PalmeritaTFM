@@ -131,6 +131,7 @@ namespace ElJardin
                 //BuildManager.Instance.BuildGroove(this);
                 BuildManager.Instance.ChangeNodesInList();
                 MapManager.Instance.CheckFullRiver();
+
             }
         }
 

@@ -27,6 +27,9 @@ namespace ElJardin
         public int amount;
         public DirectionType direction;
 
+        [Header("Characters")]
+        public CharacterController characterController;
+
         private List<Node> nodesToBuild;
 
         #endregion
@@ -280,6 +283,12 @@ namespace ElJardin
                     node.ChangeNodeType(NodeType.Water, canal_m);
                 }
                 */
+
+                // Vamos a llamar al movimiento del personaje con el nodo una vez validado
+                Debug.Log("Me llaman con lista " + nodesToBuild);
+                characterController.MoveToPosition(nodesToBuild[0]);
+
+
                 //Correct mesh
                 foreach(Node node in nodesToBuild)
                 {
@@ -287,6 +296,7 @@ namespace ElJardin
                     UpdateNeighbors(node);
                     RotateMesh(node);
                 }
+
             }
         }
 
