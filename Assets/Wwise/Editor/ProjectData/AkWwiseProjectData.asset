@@ -84,8 +84,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambientes\Amb_Base_Out
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Ambientes
       guid: 71f4fd0ca8ba654fbd726880ba870cae
       id: 1014953671
