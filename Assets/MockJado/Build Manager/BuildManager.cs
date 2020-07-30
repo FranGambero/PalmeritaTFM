@@ -286,7 +286,7 @@ namespace ElJardin
 
                 // Vamos a llamar al movimiento del personaje con el nodo una vez validado
                 Debug.Log("Me llaman con lista " + nodesToBuild);
-                characterController.MoveToPosition(nodesToBuild[0]);
+                characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
 
 
                 //Correct mesh
