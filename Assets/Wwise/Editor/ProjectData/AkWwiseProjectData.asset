@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d593da33270da4882c84ffc3b8c977, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: c001807ab021ea459d16f25ac52c85d5
+    GuidInternal: 
+    m_lastTime: -8586061782632199627
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 119e4a91d4c8c241a4f679e82e1cc781
+    GuidInternal: 
+    m_lastTime: -8586061782632299322
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 3391a3b1c5ab3c47b92915f0b3a0273e
+    GuidInternal: 
+    m_lastTime: -8586057426763100471
+    List:
+    - name: General_SoundBank
+      guid: d3b08bc42bafae428883210d31e969ec
+      id: 3657742645
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: General_SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\General_SoundBank
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 0e03ab045547294f9c12522a79eb1cad
+    GuidInternal: 
+    m_lastTime: -8586057426796863396
+    List:
+    - name: Amb_Base_In
+      guid: c9d32a01a8fc504fa8a8cae89dbb1509
+      id: 430716873
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambientes
+        ObjectType: 4
+      - ElementName: Amb_Base_In
+        ObjectType: 3
+      Path: Default Work Unit\Ambientes\Amb_Base_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Amb_Base_Out
+      guid: 71374343bf3e664580335a72d762c774
+      id: 941055080
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambientes
+        ObjectType: 4
+      - ElementName: Amb_Base_Out
+        ObjectType: 3
+      Path: Default Work Unit\Ambientes\Amb_Base_Out
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Ambientes
+      guid: 71f4fd0ca8ba654fbd726880ba870cae
+      id: 1014953671
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambientes
+        ObjectType: 4
+      Path: Default Work Unit\Ambientes
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: d7cd8876a6318e419b499e967b49208c
+    GuidInternal: 
+    m_lastTime: -8586061782632389104
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: f0f0adf59de36e448e0b24f6c1daf7d1
+    GuidInternal: 
+    m_lastTime: -8586061782632209594
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: be45168c1167574995b8d19afab72716
+    GuidInternal: 
+    m_lastTime: -8586061782632209594
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 96a89cc124a0d94aa6cd088c0f287252
+    GuidInternal: 
+    m_lastTime: -8586061782632199627
+    List: []
+  ExpandedItems:
+  - /PalmeritaTFM_WwiseProject
+  - /PalmeritaTFM_WwiseProject/Events
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
