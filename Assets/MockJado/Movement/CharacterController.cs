@@ -13,6 +13,8 @@ namespace ElJardin {
         public ParticleSystem constructionPS;
         public ParticleSystem walkingPS;
 
+        public AvoidObstacles mySteering;
+
         private void Awake() {
             myRb = GetComponent<Rigidbody>();
             currentVelocity = normalVelocity = 6f;
@@ -48,7 +50,9 @@ namespace ElJardin {
                 listPos.Add(lastPos);
             }
 
-            StartCoroutine(ReachPosition());
+            mySteering.assignObjective(destNode.transform);
+
+            //StartCoroutine(ReachPosition());
         }
 
         private IEnumerator ReachPosition() {
