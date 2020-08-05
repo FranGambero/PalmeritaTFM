@@ -29,14 +29,19 @@ public class AvoidObstacles : SteeringBehaviour {
             hasObjective = false;
         }
 
+        if(Vector3.Distance(transform.position, targetT.position) < stopDistance) {
+            quita();
+        }
+
         if (targetT != null) {
 
-            _targetDir = targetT.position - transform.position; // Vector dirección al objetivo
+            _targetDir = new Vector3(targetT.position.x, transform.position.y, targetT.position.z) - transform.position; // Vector dirección al objetivo
             if (_obstacleDetected) // Si hay obstáculo
-                _avoidDir = transform.position - _obstacleCollider.transform.position; // Vector dirección de evasión
+                _avoidDir = transform.position - new Vector3(_obstacleCollider.transform.position.x, transform.position.y, _obstacleCollider.transform.position.z); // Vector dirección de evasión
 
             base.Update(); // Llamada al Update del padre
         }
+
     }
 
     public void assignObjective(Transform destiny) {
