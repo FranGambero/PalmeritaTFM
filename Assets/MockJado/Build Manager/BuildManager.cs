@@ -30,7 +30,7 @@ namespace ElJardin
         [Header("Characters")]
         public CharacterController characterController;
 
-        private List<Node> nodesToBuild;
+        private List<Node> nodesToBuild, savedNodes;
 
         #endregion
 
@@ -287,16 +287,26 @@ namespace ElJardin
                 // Vamos a llamar al movimiento del personaje con el nodo una vez validado
                 Debug.Log("Me llaman con lista " + nodesToBuild);
                 characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
+                savedNodes = nodesToBuild;
 
 
-                //Correct mesh
-                foreach(Node node in nodesToBuild)
-                {
-                    node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                    UpdateNeighbors(node);
-                    RotateMesh(node);
-                }
+                ////Correct mesh
+                //foreach(Node node in nodesToBuild)
+                //{
+                //    node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
+                //    UpdateNeighbors(node);
+                //    RotateMesh(node);
+                //}
 
+            }
+        }
+
+        public void construyeCasillas() {
+            //Correct mesh
+            foreach (Node node in savedNodes) {
+                node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
+                UpdateNeighbors(node);
+                RotateMesh(node);
             }
         }
 

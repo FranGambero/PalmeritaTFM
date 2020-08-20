@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 namespace ElJardin {
-    public class CharacterController : MonoBehaviour {
+    public class CharacterController : Singleton<CharacterController> {
         private Rigidbody myRb;
         private Vector3 firstPos, lastPos;
         public List<Vector3> listPos = new List<Vector3>();
@@ -14,6 +15,8 @@ namespace ElJardin {
         public ParticleSystem walkingPS;
 
         public AvoidObstacles mySteering;
+
+        public Sequence jumpSeq;
 
         private void Awake() {
             myRb = GetComponent<Rigidbody>();
@@ -37,6 +40,7 @@ namespace ElJardin {
 
         public void stopWalkingPS() {
             walkingPS.Stop();
+            BuildManager.Instance.construyeCasillas();
         }
 
         public void MoveToPosition(Node destNode, Node lastNode) {
@@ -50,8 +54,13 @@ namespace ElJardin {
                 listPos.Add(lastPos);
             }
 
+            transform.LookAt(destNode.transform);
+
             mySteering.assignObjective(destNode.transform);
 
+            //
+            startWalkingPS();
+            //
             //StartCoroutine(ReachPosition());
         }
 
@@ -80,6 +89,14 @@ namespace ElJardin {
             stopWalkingPS();
 
 
+        }
+
+        public Sequence jumpSequence() {
+            Sequence jumpSeq = DOTween.Sequence();
+
+            //jumpSeq.Append(transform.DOJump(new Vector3(transform.position.x, )));
+
+            return jumpSeq;
         }
     }
 }
