@@ -40,7 +40,7 @@ namespace ElJardin {
 
         public void stopWalkingPS() {
             walkingPS.Stop();
-            BuildManager.Instance.construyeCasillas();
+            BuildManager.Instance.buildCells();
         }
 
         public void MoveToPosition(Node destNode, Node lastNode) {

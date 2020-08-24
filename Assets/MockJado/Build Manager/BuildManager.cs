@@ -269,6 +269,11 @@ namespace ElJardin
             }
         }
 
+        public void changeBuildValues(int newAmount, DirectionType newDirType) {
+            amount = newAmount;
+            direction = newDirType;
+        }
+
         private bool IsChangeValid()
         {
             return (nodesToBuild.Count == amount) ? true : false;
@@ -301,7 +306,7 @@ namespace ElJardin
             }
         }
 
-        public void construyeCasillas() {
+        public void buildCells() {
             //Correct mesh
             foreach (Node node in savedNodes) {
                 node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
