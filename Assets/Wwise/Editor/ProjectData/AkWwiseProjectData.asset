@@ -40,23 +40,23 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586057426763100471
+    m_lastTime: -8586031593075107485
     List:
-    - name: General_SoundBank
+    - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
-      id: 3657742645
+      id: 4063213932
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: General_SoundBank
+      - ElementName: Ingame_SoundBank
         ObjectType: 7
-      Path: Default Work Unit\General_SoundBank
+      Path: Default Work Unit\Ingame_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586057426796863396
+    m_lastTime: -8586031593075598923
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -98,6 +98,80 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Hormiga
+      guid: 0bd0805230ab43499342437a62886457
+      id: 2509213026
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      Path: Default Work Unit\perosnajes\Hormiga
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hormiga_Crep_In
+      guid: 1a172b0d967b294795b4dba796f8c8db
+      id: 1873637369
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Crep_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In
+      maxAttenuation: 0
+      maxDuration: 12893356
+      minDuration: 12893356
+    - name: Hormiga_Crep_Out
+      guid: 153402345f6195479a34bfff5f12cb72
+      id: 2885749304
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Crep_Out
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Hormiga_Steps_In
+      guid: 4d0cc55da989b44e82e65d82579c087d
+      id: 60258080
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Steps_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In
+      maxAttenuation: 0
+      maxDuration: 129532
+      minDuration: 10265
+    - name: perosnajes
+      guid: f89693393a12b4419ccf274effb40232
+      id: 2562612159
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      Path: Default Work Unit\perosnajes
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -128,8 +202,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
-  - /PalmeritaTFM_WwiseProject/Events
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

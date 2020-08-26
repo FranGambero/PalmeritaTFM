@@ -15,12 +15,15 @@ namespace AK
     {
         static const AkUniqueID AMB_BASE_IN = 430716873U;
         static const AkUniqueID AMB_BASE_OUT = 941055080U;
+        static const AkUniqueID HORMIGA_CREP_IN = 1873637369U;
+        static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;
+        static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
     } // namespace EVENTS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID GENERAL_SOUNDBANK = 3657742645U;
+        static const AkUniqueID INGAME_SOUNDBANK = 4063213932U;
     } // namespace BANKS
 
     namespace BUSSES
