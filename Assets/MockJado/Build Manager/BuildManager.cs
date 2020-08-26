@@ -27,7 +27,10 @@ namespace ElJardin
         public int amount;
         public DirectionType direction;
 
-        private List<Node> nodesToBuild;
+        [Header("Characters")]
+        public CharacterController characterController;
+
+        private List<Node> nodesToBuild, savedNodes;
 
         #endregion
 
@@ -266,6 +269,11 @@ namespace ElJardin
             }
         }
 
+        public void changeBuildValues(int newAmount, DirectionType newDirType) {
+            amount = newAmount;
+            direction = newDirType;
+        }
+
         private bool IsChangeValid()
         {
             return (nodesToBuild.Count == amount) ? true : false;
@@ -280,13 +288,30 @@ namespace ElJardin
                     node.ChangeNodeType(NodeType.Water, canal_m);
                 }
                 */
-                //Correct mesh
-                foreach(Node node in nodesToBuild)
-                {
-                    node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                    UpdateNeighbors(node);
-                    RotateMesh(node);
-                }
+
+                // Vamos a llamar al movimiento del personaje con el nodo una vez validado
+                Debug.Log("Me llaman con lista " + nodesToBuild);
+                characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
+                savedNodes = nodesToBuild;
+
+
+                ////Correct mesh
+                //foreach(Node node in nodesToBuild)
+                //{
+                //    node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
+                //    UpdateNeighbors(node);
+                //    RotateMesh(node);
+                //}
+
+            }
+        }
+
+        public void buildCells() {
+            //Correct mesh
+            foreach (Node node in savedNodes) {
+                node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
+                UpdateNeighbors(node);
+                RotateMesh(node);
             }
         }
 

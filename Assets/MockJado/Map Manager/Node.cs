@@ -121,17 +121,18 @@ namespace ElJardin
 
         #region Builder
 
-        private void OnMouseDown()
+        private void OnMouseUp()
         {
+            Debug.LogError("Me han llamao");
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
 
-            if (hovering)
-            {
-                //BuildManager.Instance.BuildGroove(this);
-                BuildManager.Instance.ChangeNodesInList();
-                MapManager.Instance.CheckFullRiver();
-            }
+            //if (hovering)
+            //{
+            //    //BuildManager.Instance.BuildGroove(this);
+            //    BuildManager.Instance.ChangeNodesInList();
+            //    MapManager.Instance.CheckFullRiver();
+            //}
         }
 
         #endregion
