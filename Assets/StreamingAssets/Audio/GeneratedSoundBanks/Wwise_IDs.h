@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID AMB_BASE_OUT = 941055080U;
         static const AkUniqueID HORMIGA_CREP_IN = 1873637369U;
         static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;
+        static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
     } // namespace EVENTS
 

@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Ingame_SoundBank" ID="{C48BB0D3-AF2B-42AE-8883-210D31E969EC}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Hormiga_Salto_In" ID="{9B87469B-575E-436C-A48D-38E5FFB33865}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_Base_Out" ID="{43433771-3EBF-4566-8033-5A72D762C774}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Crep_In" ID="{0D2B171A-7B96-4729-95B4-DBA796F8C8DB}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Crep_Out" ID="{34023415-615F-4795-9A34-BFFF5F12CB72}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>

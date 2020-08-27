@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586031593075107485
+    m_lastTime: -8586030765060608316
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586031593075598923
+    m_lastTime: -8586030765060428256
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -144,6 +144,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Hormiga_Salto_In
+      guid: 9b46879b5e576c43a48d38e5ffb33865
+      id: 2360392006
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Salto_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In
+      maxAttenuation: 0
+      maxDuration: 2188843
+      minDuration: 2188843
     - name: Hormiga_Steps_In
       guid: 4d0cc55da989b44e82e65d82579c087d
       id: 60258080
@@ -202,5 +218,6 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
+  - /PalmeritaTFM_WwiseProject/Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
