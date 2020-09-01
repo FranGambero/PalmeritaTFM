@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c001807ab021ea459d16f25ac52c85d5
     GuidInternal: 
-    m_lastTime: -8586061782632199627
+    m_lastTime: -8586056591463567210
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8586061782632299322
+    m_lastTime: -8586056591473309324
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586031593075107485
+    m_lastTime: -8586031468840643009
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586031593075598923
+    m_lastTime: -8586031468858064538
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -84,8 +84,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambientes\Amb_Base_Out
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Ambientes
       guid: 71f4fd0ca8ba654fbd726880ba870cae
       id: 1014953671
@@ -126,8 +126,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In
       maxAttenuation: 0
-      maxDuration: 12893356
-      minDuration: 12893356
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Crep_Out
       guid: 153402345f6195479a34bfff5f12cb72
       id: 2885749304
@@ -142,8 +142,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Steps_In
       guid: 4d0cc55da989b44e82e65d82579c087d
       id: 60258080
@@ -158,8 +158,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In
       maxAttenuation: 0
-      maxDuration: 129532
-      minDuration: 10265
+      maxDuration: -1
+      minDuration: -1
     - name: perosnajes
       guid: f89693393a12b4419ccf274effb40232
       id: 2562612159
@@ -177,30 +177,39 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8586061782632389104
+    m_lastTime: -8586056591490183776
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: f0f0adf59de36e448e0b24f6c1daf7d1
     GuidInternal: 
-    m_lastTime: -8586061782632209594
+    m_lastTime: -8586056591463587155
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: be45168c1167574995b8d19afab72716
     GuidInternal: 
-    m_lastTime: -8586061782632209594
+    m_lastTime: -8586056591463577182
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 96a89cc124a0d94aa6cd088c0f287252
     GuidInternal: 
-    m_lastTime: -8586061782632199627
+    m_lastTime: -8586056591463577182
     List: []
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
+  - /PalmeritaTFM_WwiseProject/Auxiliary Busses
+  - /PalmeritaTFM_WwiseProject/Auxiliary Busses/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes/Hormiga
+  - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
