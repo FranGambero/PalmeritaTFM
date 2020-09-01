@@ -4,6 +4,9 @@ ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
+      74: 1827226128182048838
+    second: WalkAnim (1)
+  - first:
       74: 7007069243673831616
     second: WalkAnim
   - first:
@@ -48,7 +51,7 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: WalkAnim
-      takeName: WalkAnim
+      takeName: Take 001
       internalID: 0
       firstFrame: 0
       lastFrame: 50
@@ -58,7 +61,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -77,7 +80,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpAnim
-      takeName: WalkAnim
+      takeName: Take 001
       internalID: 0
       firstFrame: 51
       lastFrame: 100
@@ -109,14 +112,14 @@ ModelImporter:
       takeName: Take 001
       internalID: 0
       firstFrame: 101
-      lastFrame: 151
+      lastFrame: 184
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -128,7 +131,49 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.18217823
+        functionName: Touch
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.23762372
+        functionName: Touch
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.33465344
+        functionName: Touch
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.43564358
+        functionName: Touch
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5089109
+        functionName: Touch
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7425743
+        functionName: SuperTouch
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -137,15 +182,15 @@ ModelImporter:
       name: BongoIdle
       takeName: Take 001
       internalID: 0
-      firstFrame: 152
-      lastFrame: 202
+      firstFrame: 184
+      lastFrame: 234
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -166,8 +211,8 @@ ModelImporter:
       name: BackAnim
       takeName: Take 001
       internalID: 0
-      firstFrame: 203
-      lastFrame: 242
+      firstFrame: 234
+      lastFrame: 272
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -203,7 +248,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    fileIdsGeneration: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -250,7 +295,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
