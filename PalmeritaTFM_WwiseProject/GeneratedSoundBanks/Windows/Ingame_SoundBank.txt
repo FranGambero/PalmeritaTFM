@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	430716873	Amb_Base_In			\Default Work Unit\Ambientes\Amb_Base_In	
 	941055080	Amb_Base_Out			\Default Work Unit\Ambientes\Amb_Base_Out	
 	1873637369	Hormiga_Crep_In			\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In	
+	2360392006	Hormiga_Salto_In			\Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In	
 	2885749304	Hormiga_Crep_Out			\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
@@ -50,6 +51,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	308316035	Jardin_Amb_SFX_44_16_Capa_5	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Jardin_Amb_SFX_44_16_Capa_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\Amb_Base_Loop\Jardin_Amb_SFX_44_16_Capa_5		4570136
 	310507928	Hormiga_Steps_L_SFX_Start_1	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Steps_L_SFX_Start_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_1		22012
 	315022579	Hormiga_Steps_R_SFX_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Steps_R_SFX_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_R_SFX_Start		1412
+	315805695	Hormiga_Salto_SFX_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Salto_SFX_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_Salto\Hormiga_Salto_SFX_Start		386304
 	346821230	Jardin_Amb_Birds_Shoot_SFX_44_16_22	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_22_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Jardin_Amb_Birds_Shoot_SFX_44_16_22		1575200
 	347756161	Hormiga_Steps_R_SFX_Start_5	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Steps_R_SFX_Start_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_R_SFX_Start_5		1126
 	354100747	Hormiga_Steps_R_SFX_Start_7	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Steps_R_SFX_Start_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_R_SFX_Start_7		1626
