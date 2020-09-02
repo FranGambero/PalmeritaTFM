@@ -119,6 +119,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Hormiga_Ataque_In" ID="{FFC50977-BFE9-43DE-837A-9DEA73F23E04}">
+									<ChildrenList>
+										<Action Name="" ID="{4975BE59-5D02-44AD-900A-033421EC15C2}" ShortID="874020227">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hormiga_Ataque" ID="{0F72B632-A24B-4A54-9A52-0FFEB74A4CD2}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

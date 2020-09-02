@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586030765060428256
+    m_lastTime: -8586025738713387545
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -84,8 +84,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambientes\Amb_Base_Out
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Ambientes
       guid: 71f4fd0ca8ba654fbd726880ba870cae
       id: 1014953671
@@ -112,6 +112,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Hormiga_Ataque_In
+      guid: 7709c5ffe9bfde43837a9dea73f23e04
+      id: 1694954324
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Ataque_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Crep_In
       guid: 1a172b0d967b294795b4dba796f8c8db
       id: 1873637369
@@ -126,8 +142,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In
       maxAttenuation: 0
-      maxDuration: 12893356
-      minDuration: 12893356
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Crep_Out
       guid: 153402345f6195479a34bfff5f12cb72
       id: 2885749304
@@ -142,8 +158,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Salto_In
       guid: 9b46879b5e576c43a48d38e5ffb33865
       id: 2360392006
@@ -158,8 +174,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In
       maxAttenuation: 0
-      maxDuration: 2188843
-      minDuration: 2188843
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Steps_In
       guid: 4d0cc55da989b44e82e65d82579c087d
       id: 60258080
@@ -174,8 +190,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In
       maxAttenuation: 0
-      maxDuration: 129532
-      minDuration: 10265
+      maxDuration: -1
+      minDuration: -1
     - name: perosnajes
       guid: f89693393a12b4419ccf274effb40232
       id: 2562612159
@@ -219,5 +235,7 @@ MonoBehaviour:
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
