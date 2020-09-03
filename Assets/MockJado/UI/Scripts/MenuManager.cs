@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
     public GameObject titleMenu, startMenu;
@@ -8,6 +9,10 @@ public class MenuManager : MonoBehaviour {
     private void Awake() {
         titleMenu.SetActive(true);
         startMenu.SetActive(false);
+    }
+
+    public void goToGame() {
+        SceneManager.LoadScene(1);
     }
 
     private void Update() {
