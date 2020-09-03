@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586031468858064538
+    m_lastTime: -8586025738713387545
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -112,6 +112,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Hormiga_Ataque_In
+      guid: 7709c5ffe9bfde43837a9dea73f23e04
+      id: 1694954324
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Ataque_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Crep_In
       guid: 1a172b0d967b294795b4dba796f8c8db
       id: 1873637369
@@ -141,6 +157,22 @@ MonoBehaviour:
       - ElementName: Hormiga_Crep_Out
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hormiga_Salto_In
+      guid: 9b46879b5e576c43a48d38e5ffb33865
+      id: 2360392006
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Salto_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -206,10 +238,6 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/Auxiliary Busses/Default Work Unit
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes/Hormiga
-  - /PalmeritaTFM_WwiseProject/SoundBanks
-  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

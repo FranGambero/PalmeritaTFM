@@ -154,6 +154,26 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1694954324" Name="Hormiga_Ataque_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In" DurationType="OneShot" DurationMin="4.883265" DurationMax="4.883265">
+					<IncludedMemoryFiles>
+						<File Id="371519463" Language="SFX">
+							<ShortName>Hormiga_Bongo_SFX_Start_4.wav</ShortName>
+							<Path>SFX\Hormiga_Bongo_SFX_Start_4_10C4C929.wem</Path>
+						</File>
+						<File Id="401232362" Language="SFX">
+							<ShortName>Hormiga_Bongo_SFX_Start_2.wav</ShortName>
+							<Path>SFX\Hormiga_Bongo_SFX_Start_2_10C4C929.wem</Path>
+						</File>
+						<File Id="498911896" Language="SFX">
+							<ShortName>Hormiga_Bongo_SFX_Start_1.wav</ShortName>
+							<Path>SFX\Hormiga_Bongo_SFX_Start_1_10C4C929.wem</Path>
+						</File>
+						<File Id="734971858" Language="SFX">
+							<ShortName>Hormiga_Bongo_SFX_Start_3.wav</ShortName>
+							<Path>SFX\Hormiga_Bongo_SFX_Start_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1873637369" Name="Hormiga_Crep_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In" DurationType="OneShot" DurationMin="12.893356" DurationMax="12.893356">
 					<IncludedMemoryFiles>
 						<File Id="445216661" Language="SFX">
