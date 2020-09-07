@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
-    private Vector3 ogV;
+    public Vector3 ogV;
     public LayerMask layerMask;
     public GameObject cartLinked;
     private Card cardData;
@@ -14,6 +14,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         ogV = transform.position;
         cardData = cartLinked.transform.GetChild(0).GetComponent<Card>();
     }
+
     public void OnDrag(PointerEventData eventData) {
         transform.position = Input.mousePosition;
         BuildManager.Instance.changeBuildValues(
