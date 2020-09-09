@@ -3,16 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
-public class MenuButton : Button
-{
+[RequireComponent(typeof(EventTrigger))]
+public class MenuButton : MonoBehaviour {
     public Image indicatorImg;
-    public override void OnSelect(BaseEventData eventData) {
-        base.OnSelect(eventData);
+    public float cacafuti;
+    public string playAnimation;
+    public System.Action OnClickEvent;
+    bool clicked=false;
+
+    public void OnSelect(BaseEventData eventData) {
         indicatorImg.enabled = true;
     }
-    public override void OnDeselect(BaseEventData eventData) {
-        base.OnDeselect(eventData);
+    public void OnDeselect(BaseEventData eventData) {
         indicatorImg.enabled = false;
+    }
+
+    public void OnClick(BaseEventData eventData) {
+        if (!clicked) {
+            clicked = true;
+        indicatorImg.GetComponent<Animator>().Play(playAnimation);
+        StartCoroutine(PlayEvent());
+        }
+    }
+    IEnumerator PlayEvent() {
+        Debug.Log(indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForFixedUpdate();
+
+        float time = indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
+        Debug.Log(indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(time);
+        OnClickEvent?.Invoke();
+        clicked = false;
     }
 }
