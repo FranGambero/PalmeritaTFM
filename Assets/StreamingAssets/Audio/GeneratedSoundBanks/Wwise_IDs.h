@@ -20,12 +20,15 @@ namespace AK
         static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;
         static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
+        static const AkUniqueID UI_CURSOR_IN = 3671726430U;
+        static const AkUniqueID UI_SELECT_IN = 3930592856U;
     } // namespace EVENTS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID INGAME_SOUNDBANK = 4063213932U;
+        static const AkUniqueID UI_SOUNDBANK = 2454045173U;
     } // namespace BANKS
 
     namespace BUSSES

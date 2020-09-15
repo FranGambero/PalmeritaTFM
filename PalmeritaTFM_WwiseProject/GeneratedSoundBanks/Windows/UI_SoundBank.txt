@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3671726430	UI_Cursor_In			\Default Work Unit\UI\UI_Cursor_In	
+	3930592856	UI_Select_In			\Default Work Unit\UI\UI_Select_In	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	130561974	El_Jardin_UI_Cursor_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Cursor_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Cursor\El_Jardin_UI_Cursor_Start		134992
+	649737484	El_Jardin_UI_Select_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Select_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Select\El_Jardin_UI_Select_Start		240688
+

@@ -16,6 +16,29 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
+		<SoundBank Id="2454045173" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\UI_SoundBank</ObjectPath>
+			<ShortName>UI_SoundBank</ShortName>
+			<Path>UI_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3671726430" Name="UI_Cursor_In" ObjectPath="\Events\Default Work Unit\UI\UI_Cursor_In" DurationType="OneShot" DurationMin="0.764444" DurationMax="0.764444">
+					<IncludedMemoryFiles>
+						<File Id="130561974" Language="SFX">
+							<ShortName>El_Jardin_UI_Cursor_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_Cursor_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3930592856" Name="UI_Select_In" ObjectPath="\Events\Default Work Unit\UI\UI_Select_In" DurationType="OneShot" DurationMin="1.363628" DurationMax="1.363628">
+					<IncludedMemoryFiles>
+						<File Id="649737484" Language="SFX">
+							<ShortName>El_Jardin_UI_Select_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_Select_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
 		<SoundBank Id="4063213932" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ingame_SoundBank</ObjectPath>
 			<ShortName>Ingame_SoundBank</ShortName>

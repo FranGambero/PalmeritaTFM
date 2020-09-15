@@ -134,6 +134,32 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI" ID="{CE8AA016-8D66-40B6-A5CA-1F0567BCD62E}" ShortID="194048897">
+					<ChildrenList>
+						<Event Name="UI_Cursor_In" ID="{DF4B09AF-621B-46BC-A7D0-D959C2CF97AE}">
+							<ChildrenList>
+								<Action Name="" ID="{531DE9CF-9E6A-4509-B634-DCFC03213A61}" ShortID="893128212">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Cursor" ID="{E4A8A55C-7A00-424D-A41A-B691DF028CD5}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Select_In" ID="{FFBFAF0D-DD0A-4D79-8D54-B24A5E20266B}">
+							<ChildrenList>
+								<Action Name="" ID="{5215934F-9967-44E1-BE55-C265078488FC}" ShortID="238796867">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Select" ID="{E4EFB3B3-209D-4F01-8DB6-99B4630519F9}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

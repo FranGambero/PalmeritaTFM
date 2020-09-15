@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586031468840643009
+    m_lastTime: -8586014269951217694
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -51,12 +51,21 @@ MonoBehaviour:
       - ElementName: Ingame_SoundBank
         ObjectType: 7
       Path: Default Work Unit\Ingame_SoundBank
+    - name: UI_SoundBank
+      guid: ab09ae9ebca33947a935488977f5960f
+      id: 2454045173
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI_SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\UI_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586025738713387545
+    m_lastTime: -8586014269951407746
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -204,6 +213,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: UI
+      guid: 16a08ace668db640a5ca1f0567bcd62e
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      Path: Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Cursor_In
+      guid: af094bdf1b62bc46a7d0d959c2cf97ae
+      id: 3671726430
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Cursor_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Cursor_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Select_In
+      guid: 0dafbfff0add794d8d54b24a5e20266b
+      id: 3930592856
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Select_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Select_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -234,10 +283,9 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
-  - /PalmeritaTFM_WwiseProject/Auxiliary Busses
-  - /PalmeritaTFM_WwiseProject/Auxiliary Busses/Default Work Unit
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes
+  - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
