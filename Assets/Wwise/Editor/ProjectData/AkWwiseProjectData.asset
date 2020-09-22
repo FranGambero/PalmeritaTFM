@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c001807ab021ea459d16f25ac52c85d5
     GuidInternal: 
-    m_lastTime: -8586061782632199627
+    m_lastTime: -8586056591463567210
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8586061782632299322
+    m_lastTime: -8586056591473309324
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,23 +40,32 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586057426763100471
+    m_lastTime: -8586014269951217694
     List:
-    - name: General_SoundBank
+    - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
-      id: 3657742645
+      id: 4063213932
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: General_SoundBank
+      - ElementName: Ingame_SoundBank
         ObjectType: 7
-      Path: Default Work Unit\General_SoundBank
+      Path: Default Work Unit\Ingame_SoundBank
+    - name: UI_SoundBank
+      guid: ab09ae9ebca33947a935488977f5960f
+      id: 2454045173
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI_SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\UI_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586057426796863396
+    m_lastTime: -8586014269951407746
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -84,8 +93,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambientes\Amb_Base_Out
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Ambientes
       guid: 71f4fd0ca8ba654fbd726880ba870cae
       id: 1014953671
@@ -98,38 +107,185 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Hormiga
+      guid: 0bd0805230ab43499342437a62886457
+      id: 2509213026
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      Path: Default Work Unit\perosnajes\Hormiga
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hormiga_Ataque_In
+      guid: 7709c5ffe9bfde43837a9dea73f23e04
+      id: 1694954324
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Ataque_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hormiga_Crep_In
+      guid: 1a172b0d967b294795b4dba796f8c8db
+      id: 1873637369
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Crep_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hormiga_Crep_Out
+      guid: 153402345f6195479a34bfff5f12cb72
+      id: 2885749304
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Crep_Out
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hormiga_Salto_In
+      guid: 9b46879b5e576c43a48d38e5ffb33865
+      id: 2360392006
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Salto_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hormiga_Steps_In
+      guid: 4d0cc55da989b44e82e65d82579c087d
+      id: 60258080
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      - ElementName: Hormiga
+        ObjectType: 4
+      - ElementName: Hormiga_Steps_In
+        ObjectType: 3
+      Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: perosnajes
+      guid: f89693393a12b4419ccf274effb40232
+      id: 2562612159
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: perosnajes
+        ObjectType: 4
+      Path: Default Work Unit\perosnajes
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI
+      guid: 16a08ace668db640a5ca1f0567bcd62e
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      Path: Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Cursor_In
+      guid: af094bdf1b62bc46a7d0d959c2cf97ae
+      id: 3671726430
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Cursor_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Cursor_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Select_In
+      guid: 0dafbfff0add794d8d54b24a5e20266b
+      id: 3930592856
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Select_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Select_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8586061782632389104
+    m_lastTime: -8586056591490183776
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: f0f0adf59de36e448e0b24f6c1daf7d1
     GuidInternal: 
-    m_lastTime: -8586061782632209594
+    m_lastTime: -8586056591463587155
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: be45168c1167574995b8d19afab72716
     GuidInternal: 
-    m_lastTime: -8586061782632209594
+    m_lastTime: -8586056591463577182
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 96a89cc124a0d94aa6cd088c0f287252
     GuidInternal: 
-    m_lastTime: -8586061782632199627
+    m_lastTime: -8586056591463577182
     List: []
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
+  - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

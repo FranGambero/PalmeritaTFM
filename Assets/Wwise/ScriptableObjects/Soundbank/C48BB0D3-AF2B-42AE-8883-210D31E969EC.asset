@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd7fc85f949b2d47a68dcdcebbadebd, type: 3}
   m_Name: C48BB0D3-AF2B-42AE-8883-210D31E969EC
   m_EditorClassIdentifier: 
-  objectName: General_SoundBank
-  id: 3657742645
+  objectName: Ingame_SoundBank
+  id: 4063213932
   guid: C48BB0D3-AF2B-42AE-8883-210D31E969EC

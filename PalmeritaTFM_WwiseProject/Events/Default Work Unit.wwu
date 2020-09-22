@@ -62,6 +62,104 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="perosnajes" ID="{399396F8-123A-41B4-9CCF-274EFFB40232}" ShortID="601825588">
+					<ChildrenList>
+						<Folder Name="Hormiga" ID="{5280D00B-AB30-4943-9342-437A62886457}" ShortID="687945225">
+							<ChildrenList>
+								<Event Name="Hormiga_Steps_In" ID="{5DC50C4D-89A9-4EB4-82E6-5D82579C087D}">
+									<ChildrenList>
+										<Action Name="" ID="{1A8EF75F-7B7E-4CFE-B8B1-06EB349A437A}" ShortID="396510100">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hormiga_steps" ID="{8524F3CD-C649-4C33-AE15-07E578C8FFEA}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Hormiga_Crep_In" ID="{0D2B171A-7B96-4729-95B4-DBA796F8C8DB}">
+									<ChildrenList>
+										<Action Name="" ID="{3739BF1D-4E4F-41DE-979C-5BAFBBFA03DD}" ShortID="375870759">
+											<PropertyList>
+												<Property Name="FadeInCurve" Type="int16" Value="5"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hormiga_Crep_Loop" ID="{FBC60E2A-9A12-480D-9574-22949777C24F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Hormiga_Crep_Out" ID="{34023415-615F-4795-9A34-BFFF5F12CB72}">
+									<ChildrenList>
+										<Action Name="" ID="{81A6DFF4-FFF5-43C4-B8A6-2425D3E1F8C9}" ShortID="514413961">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hormiga_Crep_Loop" ID="{FBC60E2A-9A12-480D-9574-22949777C24F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Hormiga_Salto_In" ID="{9B87469B-575E-436C-A48D-38E5FFB33865}">
+									<ChildrenList>
+										<Action Name="" ID="{E2D71334-6C86-4801-AB91-086B2F6BFB4E}" ShortID="95654350">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hormiga_Salto" ID="{6691F68C-B3C4-494D-B479-E384AF137652}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Hormiga_Ataque_In" ID="{FFC50977-BFE9-43DE-837A-9DEA73F23E04}">
+									<ChildrenList>
+										<Action Name="" ID="{4975BE59-5D02-44AD-900A-033421EC15C2}" ShortID="874020227">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hormiga_Ataque" ID="{0F72B632-A24B-4A54-9A52-0FFEB74A4CD2}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{CE8AA016-8D66-40B6-A5CA-1F0567BCD62E}" ShortID="194048897">
+					<ChildrenList>
+						<Event Name="UI_Cursor_In" ID="{DF4B09AF-621B-46BC-A7D0-D959C2CF97AE}">
+							<ChildrenList>
+								<Action Name="" ID="{531DE9CF-9E6A-4509-B634-DCFC03213A61}" ShortID="893128212">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Cursor" ID="{E4A8A55C-7A00-424D-A41A-B691DF028CD5}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Select_In" ID="{FFBFAF0D-DD0A-4D79-8D54-B24A5E20266B}">
+							<ChildrenList>
+								<Action Name="" ID="{5215934F-9967-44E1-BE55-C265078488FC}" ShortID="238796867">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Select" ID="{E4EFB3B3-209D-4F01-8DB6-99B4630519F9}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
