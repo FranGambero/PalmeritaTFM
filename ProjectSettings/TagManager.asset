@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: MenuEffects1
+    uniqueID: 3527302673
+    locked: 0

@@ -23,7 +23,7 @@ namespace ElJardin
          * 
          */
         [Header("Tile Materials")]
-        public Material groundMat;
+        public Material groundMat, groundMat2;
 
         public Material waterMat;
         //public Material waterMatStr8, waterMatCurve, waterMatFork, waterMatCross, waterMatEnd;
@@ -70,7 +70,7 @@ namespace ElJardin
                 for(int j = 0; j < columns; j++)
                 {
                     mapMatrix[i,j] = Instantiate(nodePrefab, new Vector3(j,0,i)*tileOffset, Quaternion.identity, this.transform);
-                    mapMatrix[i, j].GetComponent<Node>().ChangeNodeType(NodeType.Ground, groundMat);
+                    mapMatrix[i, j].GetComponent<Node>().ChangeNodeType(NodeType.Ground, ((i + j%2)%2 == 0)?  groundMat : groundMat2);
                     mapMatrix[i, j].GetComponent<Node>().SetPosition(new Vector2(i,j));
                     mapMatrix[i, j].gameObject.name = "Node"+i+"_"+j;
                 }
