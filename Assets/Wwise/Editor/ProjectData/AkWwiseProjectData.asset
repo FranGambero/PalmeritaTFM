@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586014269951217694
+    m_lastTime: -8586008368716105033
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -65,7 +65,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586014269951407746
+    m_lastTime: -8586008368745652370
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -285,6 +285,8 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes/Hormiga
   - /PalmeritaTFM_WwiseProject/SoundBanks
   - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1

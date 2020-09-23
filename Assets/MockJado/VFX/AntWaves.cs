@@ -60,4 +60,12 @@ public class AntWaves : MonoBehaviour {
             yield return new WaitForSeconds(delay);
         }
     }
+
+    public void OnStartPlayingBongo() {
+        AkSoundEngine.PostEvent("Hormiga_Ataque_In", gameObject);
+    }
+
+    public void OnJump() {
+        AkSoundEngine.PostEvent("Hormiga_Salto_In", gameObject);
+    }
 }

@@ -16,6 +16,7 @@ public class Bongormiga : MonoBehaviour, ITurn {
         if (turnIndex == currentIndex) {
             Debug.Log("TOCO EL COSO");
             myAnimator.Play("PlayBongo0");
+            //AkSoundEngine.PostEvent("Hormiga_Ataque_In", gameObject);
             Invoke(nameof(onTurnFinished), 3f);
         }
     }
