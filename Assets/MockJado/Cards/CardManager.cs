@@ -12,6 +12,8 @@ public class CardManager : MonoBehaviour {
     public List<GameObject> cardList;
     public List<Transform> cardPosList;
 
+    //BORRAR T'O
+
     private void Awake() {
         cardList = new List<GameObject>();
     }
