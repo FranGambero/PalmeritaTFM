@@ -16,12 +16,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     }
 
     public void OnDrag(PointerEventData eventData) {
-        transform.position = Input.mousePosition;
-        BuildManager.Instance.changeBuildValues(
-            cardData.amount, cardData.direction);
-        //BuildManager.Instance.changeBuildValues(
-        //    cartLinked.transform.GetChild(0).GetComponent<Card>().amount,
-        //    cartLinked.transform.GetChild(0).GetComponent<Card>().direction);
+        if (GameManager.Instance.myCharacterController.turnIndex == Semaphore.Instance.currentTurn) {
+            transform.position = Input.mousePosition;
+            BuildManager.Instance.changeBuildValues(
+                cardData.amount, cardData.direction);
+        }
     }
     public void OnEndDrag(PointerEventData eventData) {
         transform.position = ogV;

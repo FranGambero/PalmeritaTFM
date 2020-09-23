@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Runtime.Remoting.Messaging;
 
 namespace ElJardin {
-    public class CharacterController : Singleton<CharacterController> {
+    public class CharacterController : Singleton<CharacterController>, ITurn {
         private Rigidbody myRb;
         private Vector3 firstPos, lastPos;
         public List<Vector3> listPos = new List<Vector3>();
@@ -17,6 +18,10 @@ namespace ElJardin {
         public AvoidObstacles mySteering;
 
         public Sequence jumpSeq;
+
+        public int myTurnIndex;
+        public int turnIndex { get => myTurnIndex; set => myTurnIndex = value; }
+        public bool isMyTurn { get { return turnIndex == Semaphore.Instance.currentTurn; } }
 
         private void Awake() {
             myRb = GetComponent<Rigidbody>();
@@ -41,27 +46,27 @@ namespace ElJardin {
         public void stopWalkingPS() {
             walkingPS.Stop();
             BuildManager.Instance.buildCells();
+            onTurnFinished();
         }
 
         public void MoveToPosition(Node destNode, Node lastNode) {
-            listPos.Clear();
+            if (isMyTurn) {
+                listPos.Clear();
 
-            firstPos = new Vector3(destNode.transform.position.x, transform.position.y, destNode.transform.position.z);
-            listPos.Add(firstPos);
+                firstPos = new Vector3(destNode.transform.position.x, transform.position.y, destNode.transform.position.z);
+                listPos.Add(firstPos);
 
-            if (lastNode != destNode) {
-                lastPos = new Vector3(lastNode.transform.position.x, transform.position.y, lastNode.transform.position.z);
-                listPos.Add(lastPos);
+                if (lastNode != destNode) {
+                    lastPos = new Vector3(lastNode.transform.position.x, transform.position.y, lastNode.transform.position.z);
+                    listPos.Add(lastPos);
+                }
+
+                transform.LookAt(destNode.transform);
+
+                mySteering.assignObjective(destNode.transform);
+
+                startWalkingPS();
             }
-
-            transform.LookAt(destNode.transform);
-
-            mySteering.assignObjective(destNode.transform);
-
-            //
-            startWalkingPS();
-            //
-            //StartCoroutine(ReachPosition());
         }
 
         private IEnumerator ReachPosition() {
@@ -97,6 +102,14 @@ namespace ElJardin {
             //jumpSeq.Append(transform.DOJump(new Vector3(transform.position.x, )));
 
             return jumpSeq;
+        }
+
+        public void onTurnStart(int currentIndex) {
+                  // TBD
+        }
+
+        public void onTurnFinished() {
+            Semaphore.Instance.onTurnEnd(turnIndex);
         }
     }
 }
