@@ -24,6 +24,10 @@ public class Semaphore : Singleton<Semaphore> {
 
     private void Start() {
         // Se cambiará por otra función que inicie el nivel
+        if (turnBasedElementList.Count > 0)
+            currentTurn = turnBasedElementList[0].turnIndex;
+        else
+            Debug.LogError("NO TIENES NÁ EN LA LISTA");
         onTurnStart?.Invoke(currentTurn);
     }
 
