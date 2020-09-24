@@ -31,7 +31,7 @@ public class MenuButton : MonoBehaviour {
 
         float time = indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
         Debug.Log(indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time-0.2f);
         OnClickEvent?.Invoke();
         clicked = false;
     }
