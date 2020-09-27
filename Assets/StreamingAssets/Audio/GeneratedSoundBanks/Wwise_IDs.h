@@ -21,7 +21,10 @@ namespace AK
         static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
+        static const AkUniqueID UI_SELECT_2_IN = 2493148897U;
         static const AkUniqueID UI_SELECT_IN = 3930592856U;
+        static const AkUniqueID UI_VOL_DOWN_IN = 2053540170U;
+        static const AkUniqueID UI_VOL_UP_IN = 1436640151U;
     } // namespace EVENTS
 
     namespace BANKS
