@@ -7,12 +7,13 @@ using UnityEngine.EventSystems;
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public Vector3 ogV;
     public LayerMask layerMask;
-    public GameObject cartLinked;
+    //public GameObject cartLinked;
     private Card cardData;
 
     private void Start() {
         ogV = transform.position;
-        cardData = cartLinked.transform.GetChild(0).GetComponent<Card>();
+        //cardData = cartLinked.transform.GetChild(0).GetComponent<Card>();
+        cardData = GetComponent<Card>();
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -34,9 +35,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     }
 
     private void callData() {
-        if (cartLinked) {
-            Debug.LogWarning("TIENES AHI " + cartLinked.transform.GetChild(0).GetComponent<Card>().amount);
-        }
+        //if (cartLinked) {
+        //    Debug.LogWarning("TIENES AHI " + cartLinked.transform.GetChild(0).GetComponent<Card>().amount);
+        //}
     }
 
 }

@@ -1,25 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ElJardin {
-    public class Card : Singleton<Card> {
+    public class Card : MonoBehaviour {
         public int amount;
         public DirectionType direction;
+        public TextMeshProUGUI amountText;
 
-        public void generateCard() {
-            // Ahora mismo los datos son randoms, esto se cambiará a datos fijos de la baraja y el set se guardará en un orden concreto
-            // Podemos usar JSON o XML para guardarlas y leerlas facilmente?
-            // Se cambiará a PickCard
-            amount = Random.Range(1, 6);
-            direction = getNewDirection();
+        private void Start() {
+            loadCardData();
         }
 
-        public void pickCard() {
-            // To Be Done
+        private void loadCardData() {
+            amountText.text = amount.ToString();
         }
 
-        public DirectionType getNewDirection() {
+        private DirectionType getNewDirection() {
             int numResult = Random.Range(0, 4);
             DirectionType newDirection;
 
