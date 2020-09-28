@@ -28,6 +28,22 @@ namespace AK
         static const AkUniqueID UI_VOL_UP_IN = 1436640151U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace GENERAL_MUSIC
+        {
+            static const AkUniqueID GROUP = 1620872583U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MUSICA_INGAME = 109925333U;
+                static const AkUniqueID MUSICA_INICIO = 1563092195U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GENERAL_MUSIC
+
+    } // namespace STATES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID VOL_MUSICA = 3361044397U;

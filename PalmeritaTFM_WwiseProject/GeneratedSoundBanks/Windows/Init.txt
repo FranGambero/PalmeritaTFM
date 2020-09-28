@@ -1,3 +1,15 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1620872583	General_Music			\Default Work Unit\General_Music	
+
+State	ID	Name	State Group			Notes
+	109925333	Musica_Ingame	General_Music			
+	748895195	None	General_Music			
+	1563092195	Musica_Inicio	General_Music			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3273357900	Vol_SFX			\Default Work Unit\Vol_SFX	
+	3361044397	Vol_Musica			\Default Work Unit\Vol_Musica	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
 	1054075596	Musica_Bus			\Default Work Unit\Master Audio Bus\Musica_Bus	

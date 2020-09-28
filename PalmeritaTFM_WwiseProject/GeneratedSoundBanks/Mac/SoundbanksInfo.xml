@@ -15,6 +15,10 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="3273357900" Name="Vol_SFX" ObjectPath="\Game Parameters\Default Work Unit\Vol_SFX"/>
+				<GameParameter Id="3361044397" Name="Vol_Musica" ObjectPath="\Game Parameters\Default Work Unit\Vol_Musica"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="2454045173" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\UI_SoundBank</ObjectPath>
