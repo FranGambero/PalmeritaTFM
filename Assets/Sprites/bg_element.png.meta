@@ -32,6 +32,24 @@ TextureImporter:
   - first:
       213: 1558516342841549525
     second: bg_element_3
+  - first:
+      213: -180807130482745595
+    second: bg_element_6
+  - first:
+      213: -3479022564109696594
+    second: bg_element_7
+  - first:
+      213: -3828303624572245751
+    second: bg_element_4
+  - first:
+      213: 3148504058042323449
+    second: bg_element_5
+  - first:
+      213: -6058164614310447258
+    second: bg_element_6
+  - first:
+      213: 148933761906957575
+    second: bg_element_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -144,10 +162,10 @@ TextureImporter:
       name: bg_element_0
       rect:
         serializedVersion: 2
-        x: 154
-        y: 493
-        width: 743
-        height: 587
+        x: 64
+        y: 395
+        width: 832
+        height: 685
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +183,10 @@ TextureImporter:
       name: bg_element_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 37
-        width: 311
-        height: 350
+        x: 22
+        y: 13
+        width: 339
+        height: 374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,9 +204,9 @@ TextureImporter:
       name: bg_element_2
       rect:
         serializedVersion: 2
-        x: 583
+        x: 582
         y: 0
-        width: 426
+        width: 449
         height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d603b5a17567c20800000000000000
-      internalID: 3203843955631353168
+      spriteID: 3ca108178948a56d0800000000000000
+      internalID: -3000940411414897981
       vertices: []
       indices: 
       edges: []
@@ -207,10 +225,10 @@ TextureImporter:
       name: bg_element_3
       rect:
         serializedVersion: 2
-        x: 1004
-        y: 172
-        width: 7
-        height: 22
+        x: 1297
+        y: 187
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,8 +236,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd9ce7d9fa729ef50800000000000000
-      internalID: 6911098738391828957
+      spriteID: 5d226bf3b56f0a510800000000000000
+      internalID: 1558516342841549525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_element_4
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 35
+        width: 403
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909e70df2222fdac0800000000000000
+      internalID: -3828303624572245751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_element_5
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 182
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f11d7162cbb1bb20800000000000000
+      internalID: 3148504058042323449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_element_6
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 169
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6673f2d71631deba0800000000000000
+      internalID: -6058164614310447258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_element_7
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 158
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70dd685a77e111200800000000000000
+      internalID: 148933761906957575
       vertices: []
       indices: 
       edges: []
