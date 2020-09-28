@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8586056591473309324
+    m_lastTime: -8586003399481925379
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -35,12 +35,34 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Musica_Bus
+      guid: 07848105b273024d8587a7bbe0d1c64a
+      id: 1054075596
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Musica_Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Musica_Bus
+    - name: SFX_Bus
+      guid: 2de1691cef86fd469bc203eca30cefaa
+      id: 213475909
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: SFX_Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\SFX_Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586003942137658506
+    m_lastTime: -8586003399482175449
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -65,7 +87,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586003942137848575
+    m_lastTime: -8586003399481355236
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -93,8 +115,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambientes\Amb_Base_Out
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Ambientes
       guid: 71f4fd0ca8ba654fbd726880ba870cae
       id: 1014953671
@@ -135,8 +157,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4458707
+      minDuration: 4458707
     - name: Hormiga_Crep_In
       guid: 1a172b0d967b294795b4dba796f8c8db
       id: 1873637369
@@ -151,8 +173,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 12893356
+      minDuration: 12893356
     - name: Hormiga_Crep_Out
       guid: 153402345f6195479a34bfff5f12cb72
       id: 2885749304
@@ -167,8 +189,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Hormiga_Salto_In
       guid: 9b46879b5e576c43a48d38e5ffb33865
       id: 2360392006
@@ -183,8 +205,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2188843
+      minDuration: 2188843
     - name: Hormiga_Steps_In
       guid: 4d0cc55da989b44e82e65d82579c087d
       id: 60258080
@@ -199,8 +221,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 129532
+      minDuration: 10265
     - name: perosnajes
       guid: f89693393a12b4419ccf274effb40232
       id: 2562612159
@@ -225,6 +247,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: UI_Back_In
+      guid: f7a89fb8ad1db64590c13b82408d54a6
+      id: 349057203
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Back_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Back_In
+      maxAttenuation: 0
+      maxDuration: 874467
+      minDuration: 874467
     - name: UI_Cursor_In
       guid: af094bdf1b62bc46a7d0d959c2cf97ae
       id: 3671726430
@@ -237,8 +273,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Cursor_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 764444
+      minDuration: 764444
     - name: UI_Select_2_In
       guid: 4ed8d488a1f00846b2aebd4640fb29c7
       id: 2493148897
@@ -251,8 +287,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Select_2_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 799569
+      minDuration: 799569
     - name: UI_Select_In
       guid: 0dafbfff0add794d8d54b24a5e20266b
       id: 3930592856
@@ -265,8 +301,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Select_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1363628
+      minDuration: 1363628
     - name: UI_Vol_Down_In
       guid: 7ed6b7b733a255449714bcd25eb911cc
       id: 2053540170
@@ -279,8 +315,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Vol_Down_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 351247
+      minDuration: 351247
     - name: UI_Vol_Up_In
       guid: 36382b77edfeba44a3faf966b03f4690
       id: 1436640151
@@ -293,15 +329,33 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Vol_Up_In
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 351247
+      minDuration: 351247
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8586056591490183776
-    List: []
+    m_lastTime: -8586003399482385544
+    List:
+    - name: Vol_Musica
+      guid: a32eaa7062895a4cadff213bafe91747
+      id: 3361044397
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Vol_Musica
+        ObjectType: 13
+      Path: Default Work Unit\Vol_Musica
+    - name: Vol_SFX
+      guid: 2f32287257f4d04c89fab61d9cb74fe3
+      id: 3273357900
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Vol_SFX
+        ObjectType: 13
+      Path: Default Work Unit\Vol_SFX
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -326,8 +380,5 @@ MonoBehaviour:
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/SoundBanks
-  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
