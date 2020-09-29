@@ -8,25 +8,28 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public Vector3 ogV;
     public LayerMask layerMask;
     //public GameObject cartLinked;
-    private Card cardData;
+    private CardData cardData;
 
     private void Start() {
         ogV = transform.position;
         //cardData = cartLinked.transform.GetChild(0).GetComponent<Card>();
-        cardData = GetComponent<Card>();
+        cardData = GetComponent<Card>().cardData;
     }
 
     public void OnDrag(PointerEventData eventData) {
-        if (GameManager.Instance.myCharacterController.turnIndex == Semaphore.Instance.currentTurn) {
+        //if (GameManager.Instance.myCharacterController.turnIndex == Semaphore.Instance.currentTurn) {
+        if (GameManager.Instance.myCharacterController.isMyTurn) {
             transform.position = Input.mousePosition;
             BuildManager.Instance.changeBuildValues(
                 cardData.amount, cardData.direction);
         }
     }
     public void OnEndDrag(PointerEventData eventData) {
-        transform.position = ogV;
-        buildNewChannel();
-        callData();
+        if (GameManager.Instance.myCharacterController.isMyTurn) {
+            transform.position = ogV;
+            buildNewChannel();
+            hideCard();
+        }
     }
 
     private void buildNewChannel() {
@@ -34,10 +37,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         MapManager.Instance.CheckFullRiver();
     }
 
-    private void callData() {
-        //if (cartLinked) {
-        //    Debug.LogWarning("TIENES AHI " + cartLinked.transform.GetChild(0).GetComponent<Card>().amount);
-        //}
+    private void hideCard() {
+        Debug.Log("IO ERA: " + GetComponent<Card>().transformIndex);
+        CardManager.Instance.moveCards(GetComponent<Card>().transformIndex);
+        gameObject.SetActive(false);
     }
 
 }

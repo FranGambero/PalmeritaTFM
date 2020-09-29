@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 4312102823346743419}
   - component: {fileID: 4312102823346743417}
   - component: {fileID: 824035396}
+  - component: {fileID: 3447245990632058019}
   m_Layer: 5
   m_Name: ConstructionCard
   m_TagString: Untagged
@@ -340,9 +341,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13b2d7b74c50434cade0c87589b41e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 1
-  direction: 1
+  cardData:
+    amount: 0
+    direction: 0
   amountText: {fileID: 1318785629}
+  transformIndex: 0
+  usedCard: 0
+--- !u!95 &3447245990632058019
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312102823346743413}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b120973d3892a224693494ac4d7c67fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5936700214287124387
 GameObject:
   m_ObjectHideFlags: 0
