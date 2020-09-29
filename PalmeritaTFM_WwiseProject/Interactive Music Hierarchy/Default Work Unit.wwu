@@ -1,6 +1,524 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" SchemaVersion="97">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{E545DACF-DDD9-4608-AB93-EFA6AA943816}" ShortID="409956497">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="116307.68707483"/>
+						<Property Name="Tempo" Type="Real64" Value="130"/>
+						<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{3A135637-1D07-4B3A-A3ED-89DFEC6E8BDF}" ShortID="528448291">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{263D42FD-FC89-4BFD-BB5E-58698721A085}">
+									<Language>SFX</Language>
+									<AudioFile>El_Jardin_Musica_Ingame_44_16_Layer_2_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="554799606"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9C9CAFEC-83F5-4700-8160-3FFA3E1AD3DC}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{C9317DD4-2599-42C9-B5B8-0DB4A8B6716D}">
+									<ClipList>
+										<MusicClip Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{BD06D96F-C2D7-4060-A7DF-E4114FB30DF3}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="116307.68707483"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{263D42FD-FC89-4BFD-BB5E-58698721A085}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{D353E480-D61C-407F-801A-A76243F0A0FF}"/>
+						<MusicCue Name="Exit Cue" ID="{AA8F15C2-BCBF-4D4B-8064-4ACE1ED320B5}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="116307.68707483"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSwitchContainer Name="Music" ID="{4EE57AF4-31B9-404F-ABA8-7902D865B256}" ShortID="265239767">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Musica_Ingame" ID="{F8E0533D-C71A-405D-8AEF-A445CF59107A}" ShortID="134681890">
+							<PropertyList>
+								<Property Name="Tempo" Type="Real64" Value="130"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="El_Jardin_Musica_Ingame_44_16_Layer_1_Loop" ID="{8C0D29A2-8E72-4E05-BB9D-812830AB969C}" ShortID="840995939">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="116307.68707483"/>
+										<Property Name="Tempo" Type="Real64" Value="130"/>
+										<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_1_Loop" ID="{02A8EDB1-59CB-4334-BC32-428D05208A7F}" ShortID="673570057">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="El_Jardin_Musica_Ingame_44_16_Layer_1_Loop" ID="{BBC6A171-9B96-4197-B621-C66939ED1FAC}">
+													<Language>SFX</Language>
+													<AudioFile>El_Jardin_Musica_Ingame_44_16_Layer_1_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="811940940"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{29BA42C4-2B23-4523-9265-60F636463681}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{307AC0D7-51B7-4B72-8FAC-3E5138C552BE}">
+													<ClipList>
+														<MusicClip Name="El_Jardin_Musica_Ingame_44_16_Layer_1_Loop" ID="{9B28070C-F011-4476-A124-0EC47D68DCD3}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="116307.68707483"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="El_Jardin_Musica_Ingame_44_16_Layer_1_Loop" ID="{BBC6A171-9B96-4197-B621-C66939ED1FAC}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{858BEC8E-FCF5-4486-A434-F703E0EC44BC}"/>
+										<MusicCue Name="Exit Cue" ID="{3D080A22-C7B3-4799-8C72-4022CED1064E}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="116307.68707483"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{D1D3E559-47CB-473C-BE4A-32D6A1571DB5}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{BF46B18E-CB0B-4A5F-B713-C089370AD066}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{8407805D-DC3E-47F0-8214-631C18FA1949}" ShortID="332536248">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{584DF871-35CF-4691-8891-DA91160CBC7F}" ShortID="1021933004">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="El_Jardin_Musica_Ingame_44_16_Layer_1_Loop" ID="{8C0D29A2-8E72-4E05-BB9D-812830AB969C}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" ShortID="308687411">
+							<PropertyList>
+								<Property Name="Tempo" Type="Real64" Value="148"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{6FD24E00-C354-469B-81AC-781119944979}" ShortID="83780514">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="38918.9115646259"/>
+										<Property Name="Tempo" Type="Real64" Value="148"/>
+										<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{D12EFDC9-9719-47C3-94EE-CD1B01F9904F}" ShortID="220211912">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{AE033256-D4B3-4B07-9BF9-E3220080BBF7}">
+													<Language>SFX</Language>
+													<AudioFile>El_Jardin_Musica_Inicio_Intro_44_16_Start.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="218172167"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{2BEB40DD-BE4E-4E28-87D6-BADDFECF7EF6}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{69B79735-FF01-4665-B6EC-6842A7C40EB1}">
+													<ClipList>
+														<MusicClip Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{C7A872AE-D38F-4F51-AB1D-1ED2F4BF5CD4}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="38918.9115646259"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{AE033256-D4B3-4B07-9BF9-E3220080BBF7}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{D6C81D31-5B80-4980-8809-85A53065B69E}"/>
+										<MusicCue Name="Exit Cue" ID="{147AD6CC-1E3D-4500-8AA5-3124BE51DE79}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="38918.9115646259"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{16D89C07-9869-4208-9667-815620370F80}" ShortID="812765406">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="131351.337868481"/>
+										<Property Name="Tempo" Type="Real64" Value="148"/>
+										<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{898FF793-1E5E-4A72-A07B-DA7D3C16C388}" ShortID="979474458">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{B1DBBEA3-A510-4452-93A5-3B64BBAA4BE2}">
+													<Language>SFX</Language>
+													<AudioFile>El_Jardin_Musica_Inicio_44_16_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="119660723"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{51AAFE7B-8101-4147-AE5C-11142E044F93}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{A48D6586-4D7B-435E-B7C9-A696F4610B09}">
+													<ClipList>
+														<MusicClip Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{D43FD685-1232-45C7-A45F-7CBD95808B73}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="131351.337868481"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{B1DBBEA3-A510-4452-93A5-3B64BBAA4BE2}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{F41FB1A9-A69C-4FB7-9EE5-910F184BB6E9}"/>
+										<MusicCue Name="Exit Cue" ID="{9A2ADC9A-81A8-4C38-844B-3952C3AEF4F0}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="131351.337868481"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{BED36ED7-02EF-45BF-955C-C09BAEAEE9AE}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{3B11E8F5-0C21-47C9-893C-706F466DA895}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{BDC07CEF-D879-4BAC-B8BD-C78A85127FD0}" ShortID="64216727">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{026BA0A0-6710-4D81-AFEE-0CBA8D11EA55}" ShortID="297418160">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{6FD24E00-C354-469B-81AC-781119944979}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{4EA25B6C-CC34-4864-B9C1-2D2D16958DFD}" ShortID="806094643">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{16D89C07-9869-4208-9667-815620370F80}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{F5C5DD80-285C-4568-8AD4-A43A59D3F686}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{9C1E0FA5-4B5D-4864-A0A9-B850956F0F34}">
+									<PropertyList>
+										<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableTransitionFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+									</PropertyList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{5E80A8BF-AD63-4D60-ACFB-E985265E9991}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="5"/>
+													<Property Name="FadeTime" Type="Real64" Value="6.2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{322E8A17-32F4-45BD-B87C-391602605459}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="-1.3"/>
+													<Property Name="FadeTime" Type="Real64" Value="2.9"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+										<TransitionFadeIn>
+											<MusicFade Name="Transition Fade-in" ID="{FF9AF9AF-B40C-44A8-88A7-000ECF0226FA}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="-1.3"/>
+													<Property Name="FadeTime" Type="Real64" Value="3.1"/>
+												</PropertyList>
+											</MusicFade>
+										</TransitionFadeIn>
+										<TransitionFadeOut>
+											<MusicFade Name="Transition Fade-out" ID="{0C267595-2FAD-4FE0-BCA7-D0BA913F371D}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="1.6"/>
+													<Property Name="FadeTime" Type="Real64" Value="4.1"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</TransitionFadeOut>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{A76A415A-63DB-45E4-9806-81C480247150}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Musica_Ingame" ID="{F8E0533D-C71A-405D-8AEF-A445CF59107A}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{81C212C4-423D-4879-AE00-D99688B992B7}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="1.9"/>
+													<Property Name="FadeTime" Type="Real64" Value="3.7"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{F55915A2-4153-4EF4-BD2A-D1582C45AFEE}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="-1.9"/>
+													<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{D9EC422E-0B01-4667-A0C9-D0A7E02A7F1B}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Musica_Ingame" ID="{F8E0533D-C71A-405D-8AEF-A445CF59107A}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{5B309B82-3174-4F90-9879-0F32F0988E9C}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="4.7"/>
+													<Property Name="FadeTime" Type="Real64" Value="5.8"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+									</TransitionInfo>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ArgumentList>
+						<ArgumentRef Name="General_Music" ID="{53E3A4CF-7263-466D-A4FC-2B99FC0DF2D9}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Musica_Ingame" ID="{8C10EA33-8856-4B71-B94E-1CD6A8CC0DD2}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Musica_Ingame" ID="{F8E0533D-C71A-405D-8AEF-A445CF59107A}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Musica_Inicio" ID="{43A4F975-E858-4CE1-AC44-14F2ACFF8513}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

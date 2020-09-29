@@ -191,6 +191,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="UI_Back_In" ID="{B89FA8F7-1DAD-45B6-90C1-3B82408D54A6}">
+							<ChildrenList>
+								<Action Name="" ID="{976B0D7E-864E-42A9-A825-93602FF42B5F}" ShortID="777753899">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Back" ID="{76DE2665-7EE1-4DC7-94B6-CA235682F7A3}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
