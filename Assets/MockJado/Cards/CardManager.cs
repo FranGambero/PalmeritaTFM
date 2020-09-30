@@ -35,12 +35,14 @@ namespace ElJardin {
 
         private void firstDrawCard() {
             int index = 0;
-            while (index < maxHand - 1) {
+            while (index < maxHand ) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);
                 handList[index].cardData = cardQueue.Dequeue();
                 handList[index].loadCardData();
+                moveCardToDeck(handList[index]);
+
                 handList[index].changeCardTransform(index);
                 index++;
             }
@@ -60,7 +62,8 @@ namespace ElJardin {
         }
 
         public void drawNextCard() {
-            if (cardQueue.Count > 0) {
+            bool canDraw = handList.FindAll(c => c.gameObject.activeSelf).Count < maxHand;
+            if (cardQueue.Count > 0 && canDraw) {
                 int lastHandIndex = maxHand - 1;
                 Card tmpCard = handList.Find(c => !c.gameObject.activeSelf);
 
@@ -71,11 +74,17 @@ namespace ElJardin {
 
                 tmpCard.cardData = cardQueue.Dequeue();
                 tmpCard.loadCardData();
-                tmpCard.changeCardTransform(lastHandIndex);
+                moveCardToDeck(tmpCard);
                 tmpCard.gameObject.SetActive(true);
+                tmpCard.changeCardTransform(lastHandIndex, false);
 
                 refreshLabels();
             }
+        }
+
+        private void moveCardToDeck(Card cardToMove) {
+            cardToMove.transform.position = indicatorCardImage.transform.position;
+
         }
 
         private void refreshLabels() {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace ElJardin {
     public class Card : MonoBehaviour {
@@ -21,12 +22,20 @@ namespace ElJardin {
 
         public void loadCardData() {
             amountText.text = cardData.amount.ToString();
+
         }
 
-        public void changeCardTransform(int newIndex) {
+        public void changeCardTransform(int newIndex, bool wait = true) {
             transformIndex = newIndex;
-            this.transform.position = CardManager.Instance.transformList[transformIndex].position;
+            float waitTime = wait ? transformIndex * .5f : 0f;
+            Invoke(nameof(jump), waitTime);
+
             transform.SetParent(CardManager.Instance.transformList[transformIndex]);
+        }
+
+        private void jump() {
+            transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, .5f);
+
         }
 
         private DirectionType getNewDirection() {

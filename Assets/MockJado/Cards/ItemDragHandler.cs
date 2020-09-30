@@ -24,8 +24,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public void OnEndDrag(PointerEventData eventData) {
         if (GameManager.Instance.myCharacterController.isMyTurn) {
             transform.position = originalPosition;
-            buildNewChannel();
             hideCard();
+            buildNewChannel();
         }
     }
 
