@@ -5,19 +5,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
-    public Vector3 ogV;
+    public Vector3 originalPosition;
     public LayerMask layerMask;
-    //public GameObject cartLinked;
     private CardData cardData;
 
     private void Start() {
-        ogV = transform.position;
-        //cardData = cartLinked.transform.GetChild(0).GetComponent<Card>();
+        originalPosition = transform.position;
         cardData = GetComponent<Card>().cardData;
     }
 
     public void OnDrag(PointerEventData eventData) {
-        //if (GameManager.Instance.myCharacterController.turnIndex == Semaphore.Instance.currentTurn) {
         if (GameManager.Instance.myCharacterController.isMyTurn) {
             transform.position = Input.mousePosition;
             BuildManager.Instance.changeBuildValues(
@@ -26,9 +23,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     }
     public void OnEndDrag(PointerEventData eventData) {
         if (GameManager.Instance.myCharacterController.isMyTurn) {
-            transform.position = ogV;
-            buildNewChannel();
+            transform.position = originalPosition;
             hideCard();
+            buildNewChannel();
         }
     }
 
@@ -38,7 +35,6 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     }
 
     private void hideCard() {
-        Debug.Log("IO ERA: " + GetComponent<Card>().transformIndex);
         CardManager.Instance.moveCards(GetComponent<Card>().transformIndex);
         gameObject.SetActive(false);
     }
