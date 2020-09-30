@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 2d2f9492ba77f1f4ea9839b71fafadec
   - enabled: 1
+    path: Assets/Scenes/LoadScene.unity
+    guid: 867e19216b5224f409a325b4dd1a1bfe
+  - enabled: 1
     path: Assets/Scenes/AudioTestScene.unity
     guid: 745e45db80992f04eb00256af40f903e
   m_configObjects: {}

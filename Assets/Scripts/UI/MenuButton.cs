@@ -9,7 +9,8 @@ public class MenuButton : MonoBehaviour {
     public float cacafuti;
     public string playAnimation;
     public System.Action OnClickEvent;
-    bool clicked=false;
+    public System.Action OnPreAnimationEvent;
+    bool clicked = false;
 
     public void OnSelect(BaseEventData eventData) {
         indicatorImg.enabled = true;
@@ -21,8 +22,9 @@ public class MenuButton : MonoBehaviour {
     public void OnClick(BaseEventData eventData) {
         if (!clicked) {
             clicked = true;
-        indicatorImg.GetComponent<Animator>().Play(playAnimation);
-        StartCoroutine(PlayEvent());
+            OnPreAnimationEvent?.Invoke();
+            indicatorImg.GetComponent<Animator>().Play(playAnimation);
+            StartCoroutine(PlayEvent());
         }
     }
     IEnumerator PlayEvent() {
@@ -31,7 +33,7 @@ public class MenuButton : MonoBehaviour {
 
         float time = indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
         Debug.Log(indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-        yield return new WaitForSeconds(time-0.2f);
+        yield return new WaitForSeconds(time - 0.2f);
         OnClickEvent?.Invoke();
         clicked = false;
     }
