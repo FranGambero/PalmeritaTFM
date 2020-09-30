@@ -6,14 +6,19 @@ public class TillingMovement : MonoBehaviour {
     public Material material;
     public float scroll_speed = 0.1f;
     float movement;
-    Vector2 offset;
+    public Vector2 offset;
+    Vector2 offsetMov;
     private void Start() {
+        if (!material)
+            material = GetComponent<Renderer>().material;
         movement = scroll_speed * Time.deltaTime;
-        Vector2 offset = new Vector2(movement, 0);
+        offsetMov *= movement;
+
     }
     private void Update() {
         movement = scroll_speed * Time.deltaTime;
-        offset.x += movement;
-        material.SetTextureOffset("_MainTex", offset);
+        offsetMov += offset * movement;
+
+        material.SetTextureOffset("_MainTex", offsetMov);
     }
 }

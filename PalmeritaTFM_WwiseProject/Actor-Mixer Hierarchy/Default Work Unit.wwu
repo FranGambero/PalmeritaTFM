@@ -12,13 +12,18 @@
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -188,7 +193,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1483,7 +1488,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+											<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2133,7 +2138,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+											<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2185,6 +2190,17 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Hormiga_Salto" ID="{6691F68C-B3C4-494D-B479-E384AF137652}" ShortID="257279204">
 									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-5</Value>
@@ -2196,7 +2212,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+											<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2237,7 +2253,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+											<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2343,7 +2359,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2377,7 +2393,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2401,6 +2417,149 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="El_Jardin_UI_Select_Start" ID="{34CCB22E-9F0E-48D3-AA79-BEE07FAF1B32}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="UI_Select_2" ID="{285FF6E3-4A2C-47D0-8682-A2CDA400FC26}" ShortID="17960757">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_UI_Select_2_Start" ID="{4A98B7F4-CD3A-4995-B7CC-6952C862931D}" ShortID="584239737">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_UI_Select_2_Start" ID="{98CE7FCC-382C-42DF-8F06-D835A485D1A2}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_UI_Select_2_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="312227647"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_UI_Select_2_Start" ID="{98CE7FCC-382C-42DF-8F06-D835A485D1A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="UI_Vol_Up" ID="{91B8339D-8B9C-431E-9114-E15B33987622}" ShortID="1047252811">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_UI_Volumen_Up_Start" ID="{48049F62-F724-4BC0-AE7C-C2F2CAB19ABC}" ShortID="686409853">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_UI_Volumen_Up_Start" ID="{3B049BAA-65DA-4C69-BE70-53E0361A0A58}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_UI_Volumen_Up_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="846422562"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_UI_Volumen_Up_Start" ID="{3B049BAA-65DA-4C69-BE70-53E0361A0A58}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="UI_Vol_Down" ID="{30B84D43-E3D9-472A-B918-9A35CAB2465E}" ShortID="638065982">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_UI_Volumen_Down_Start" ID="{C958F0D1-38BD-4C23-9A48-DCB0AA48B859}" ShortID="174013692">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_UI_Volumen_Down_Start" ID="{AFB220DD-AEBE-41EE-AA04-D186081C3C41}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_UI_Volumen_Down_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1011145882"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_UI_Volumen_Down_Start" ID="{AFB220DD-AEBE-41EE-AA04-D186081C3C41}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="UI_Back" ID="{76DE2665-7EE1-4DC7-94B6-CA235682F7A3}" ShortID="846135490">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_UI_Back_Start" ID="{E2A59E39-977A-4424-B7A4-C6AD94CBC6EB}" ShortID="888811807">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_UI_Back_Start" ID="{932079D4-996D-4D53-A806-07C6E824AF64}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_UI_Back_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="548071252"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_UI_Back_Start" ID="{932079D4-996D-4D53-A806-07C6E824AF64}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

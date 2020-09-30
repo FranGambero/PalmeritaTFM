@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
-    public GameObject titleMenu, startMenu, configMenu;
-    public MenuButton btnPlay;
-    public MenuButton btnConfig;
-    public MenuButton btnCredits;
+    public GameObject titleMenu, startMenu, configMenu, FadeOutPanel;
+    public MenuButton btnPlay, btnConfig, btnCredits;
 
     private void Awake() {
         titleMenu.SetActive(true);
@@ -27,7 +25,7 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void goToGame() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("LoadScene");
     }
 
     public void changeToStartMenu() {
@@ -37,6 +35,7 @@ public class MenuManager : MonoBehaviour {
     public void InitButtons() {
         btnPlay.OnClickEvent = null;
         btnPlay.OnClickEvent = StartGame;
+        btnPlay.OnPreAnimationEvent = FadeOut;
         btnConfig.OnClickEvent = null;
         btnConfig.OnClickEvent = toggleConfig;
         btnCredits.OnClickEvent = null;
@@ -44,7 +43,10 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void StartGame() {
-        FindObjectOfType<MenuManager>().goToGame();
+        goToGame();
+    }    
+    public void FadeOut() {
+        FadeOutPanel.GetComponent<Animator>().Play("FadeOut");
     }
 
     public void toggleConfig() {

@@ -1,8 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
+	349057203	UI_Back_In			\Default Work Unit\UI\UI_Back_In	
+	1436640151	UI_Vol_Up_In			\Default Work Unit\UI\UI_Vol_Up_In	
+	2053540170	UI_Vol_Down_In			\Default Work Unit\UI\UI_Vol_Down_In	
+	2493148897	UI_Select_2_In			\Default Work Unit\UI\UI_Select_2_In	
 	3671726430	UI_Cursor_In			\Default Work Unit\UI\UI_Cursor_In	
 	3930592856	UI_Select_In			\Default Work Unit\UI\UI_Select_In	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	130561974	El_Jardin_UI_Cursor_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Cursor_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Cursor\El_Jardin_UI_Cursor_Start		134992
+	312227647	El_Jardin_UI_Select_2_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Select_2_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Select_2\El_Jardin_UI_Select_2_Start		141188
+	548071252	El_Jardin_UI_Back_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Back_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Back\El_Jardin_UI_Back_Start		154400
 	649737484	El_Jardin_UI_Select_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Select_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Select\El_Jardin_UI_Select_Start		240688
+	846422562	El_Jardin_UI_Volumen_Up_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Volumen_Up_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Vol_Up\El_Jardin_UI_Volumen_Up_Start		62104
+	1011145882	El_Jardin_UI_Volumen_Down_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_UI_Volumen_Down_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Vol_Down\El_Jardin_UI_Volumen_Down_Start		62104
 

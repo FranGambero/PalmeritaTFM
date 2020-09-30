@@ -15,12 +15,24 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="3273357900" Name="Vol_SFX" ObjectPath="\Game Parameters\Default Work Unit\Vol_SFX"/>
+				<GameParameter Id="3361044397" Name="Vol_Musica" ObjectPath="\Game Parameters\Default Work Unit\Vol_Musica"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="2454045173" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\UI_SoundBank</ObjectPath>
 			<ShortName>UI_SoundBank</ShortName>
 			<Path>UI_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="349057203" Name="UI_Back_In" ObjectPath="\Events\Default Work Unit\UI\UI_Back_In" DurationType="OneShot" DurationMin="0.874467" DurationMax="0.874467">
+					<IncludedMemoryFiles>
+						<File Id="548071252" Language="SFX">
+							<ShortName>El_Jardin_UI_Back_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_Back_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3671726430" Name="UI_Cursor_In" ObjectPath="\Events\Default Work Unit\UI\UI_Cursor_In" DurationType="OneShot" DurationMin="0.764444" DurationMax="0.764444">
 					<IncludedMemoryFiles>
 						<File Id="130561974" Language="SFX">
@@ -29,11 +41,35 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2493148897" Name="UI_Select_2_In" ObjectPath="\Events\Default Work Unit\UI\UI_Select_2_In" DurationType="OneShot" DurationMin="0.799569" DurationMax="0.799569">
+					<IncludedMemoryFiles>
+						<File Id="312227647" Language="SFX">
+							<ShortName>El_Jardin_UI_Select_2_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_Select_2_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3930592856" Name="UI_Select_In" ObjectPath="\Events\Default Work Unit\UI\UI_Select_In" DurationType="OneShot" DurationMin="1.363628" DurationMax="1.363628">
 					<IncludedMemoryFiles>
 						<File Id="649737484" Language="SFX">
 							<ShortName>El_Jardin_UI_Select_Start.wav</ShortName>
 							<Path>SFX\El_Jardin_UI_Select_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2053540170" Name="UI_Vol_Down_In" ObjectPath="\Events\Default Work Unit\UI\UI_Vol_Down_In" DurationType="OneShot" DurationMin="0.351247" DurationMax="0.351247">
+					<IncludedMemoryFiles>
+						<File Id="1011145882" Language="SFX">
+							<ShortName>El_Jardin_UI_Volumen_Down_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_Volumen_Down_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1436640151" Name="UI_Vol_Up_In" ObjectPath="\Events\Default Work Unit\UI\UI_Vol_Up_In" DurationType="OneShot" DurationMin="0.351247" DurationMax="0.351247">
+					<IncludedMemoryFiles>
+						<File Id="846422562" Language="SFX">
+							<ShortName>El_Jardin_UI_Volumen_Up_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_Volumen_Up_Start_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -20,9 +20,35 @@ namespace AK
         static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;
         static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
+        static const AkUniqueID UI_BACK_IN = 349057203U;
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
+        static const AkUniqueID UI_SELECT_2_IN = 2493148897U;
         static const AkUniqueID UI_SELECT_IN = 3930592856U;
+        static const AkUniqueID UI_VOL_DOWN_IN = 2053540170U;
+        static const AkUniqueID UI_VOL_UP_IN = 1436640151U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GENERAL_MUSIC
+        {
+            static const AkUniqueID GROUP = 1620872583U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MUSICA_INGAME = 109925333U;
+                static const AkUniqueID MUSICA_INICIO = 1563092195U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GENERAL_MUSIC
+
+    } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID VOL_MUSICA = 3361044397U;
+        static const AkUniqueID VOL_SFX = 3273357900U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
@@ -34,6 +60,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSICA_BUS = 1054075596U;
+        static const AkUniqueID SFX_BUS = 213475909U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES
