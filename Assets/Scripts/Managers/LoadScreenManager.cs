@@ -35,13 +35,9 @@ public class LoadScreenManager : MonoBehaviour {
         
 
         while (!async.isDone && !minTimeElapsed) {
-            Debug.LogError("CARGANDO " + async.progress);
             loadedImg.fillAmount = async.progress / 0.9f; // Trabajamos en 0 -> 0.9 porque 'progress' llega como máximo a 0.9f
             loadedText.text = $"{(int)(loadedImg.fillAmount * 100f)}%";
-            Debug.LogError("CARGANDO 2" + (async.progress >= 0.9f && minTimeElapsed));
-
             if (async.progress >= 0.9f || minTimeElapsed) {
-                Debug.LogError("CARGANDO 3" + async.progress);
                 loadedImg.fillAmount = 1f;
                 loadedText.text = "100%";
                async.allowSceneActivation = true;
