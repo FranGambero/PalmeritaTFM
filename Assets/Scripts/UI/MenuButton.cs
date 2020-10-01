@@ -30,11 +30,9 @@ public class MenuButton : MonoBehaviour {
     }
 
     IEnumerator PlayEvent() {
-        Debug.Log(indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         yield return new WaitForFixedUpdate();
 
         float time = indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
-        Debug.Log(indicatorImg.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         yield return new WaitForSeconds(time - 0.2f);
         OnClickEvent?.Invoke();
         clicked = false;

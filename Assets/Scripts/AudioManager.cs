@@ -8,7 +8,7 @@ namespace ElJardin {
         private float musicValue, sfxValue;
 
         private void Awake() {
-            
+
         }
 
         private void Start() {
@@ -20,11 +20,9 @@ namespace ElJardin {
 
         private void Update() {
             if (Input.GetKeyDown(KeyCode.O)) {
-                Debug.LogWarning("musoca ingame");
 
                 AkSoundEngine.SetState("General_Music", "Musica_Ingame");
             } else if (Input.GetKeyDown(KeyCode.L)) {
-                Debug.LogWarning("MUSIC INICIOP");
 
                 AkSoundEngine.SetState("General_Music", "Musica_Inicio");
                 //AkSoundEngine.PostEvent("UI_Select_In", gameObject);

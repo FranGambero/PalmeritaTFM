@@ -35,7 +35,6 @@ public class ConfigMenuManager : MonoBehaviour {
     public void changeSoundSliderValue(Slider targetMusicSlider, string stringParam) {
         float newVolValue = targetMusicSlider.value * 100;
         if (stringParam == "Vol_SFX") {
-            Debug.LogWarning(newVolValue + " skdjksjd " + volSFXValue);
             if (newVolValue > volSFXValue) {
                 AkSoundEngine.PostEvent("UI_Vol_Up_In", gameObject);
 
@@ -46,7 +45,6 @@ public class ConfigMenuManager : MonoBehaviour {
         } else {
             // Estamos cambiando el bus de Musica
         }
-        Debug.LogWarning("Changing " + targetMusicSlider + " with " + stringParam + " for " + newVolValue);
         AkSoundEngine.SetRTPCValue(stringParam, newVolValue);
     }
 }
