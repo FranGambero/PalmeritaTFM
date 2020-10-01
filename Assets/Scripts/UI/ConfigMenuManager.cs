@@ -7,23 +7,24 @@ using UnityEngine.UI;
 public class ConfigMenuManager : MonoBehaviour {
     public MenuButton backBtn;
     public Slider musicSlider, sfxSlider;
+    private float volMusicValue, volSFXValue;
 
     private void Awake() {
-        musicSlider.value = .5f;
-        sfxSlider.value = .6f;
+        //To be changed when we have both buses working, currently only SFX does -------------------
+        musicSlider.value = 1f;
+        sfxSlider.value = 1f;
+        volMusicValue = volSFXValue = 100;
+        // --------------------
 
         musicSlider.onValueChanged.AddListener(delegate {
-            changeSoundSliderValue(musicSlider, "Musica_Bus");
-            });
+            changeSoundSliderValue(musicSlider, "Vol_Musica");
+        });
 
         sfxSlider.onValueChanged.AddListener(delegate {
-            changeSoundSliderValue(sfxSlider, "SFX_Bus");
+            changeSoundSliderValue(sfxSlider, "Vol_SFX");
         });
 
         backBtn.OnClickEvent += CloseCongifMenu;
-    }
-
-    private void OnDisable() {
     }
 
     public void CloseCongifMenu() {
@@ -32,20 +33,20 @@ public class ConfigMenuManager : MonoBehaviour {
     }
 
     public void changeSoundSliderValue(Slider targetMusicSlider, string stringParam) {
-        Debug.LogWarning("IUSDFYUSYFUDYF " + targetMusicSlider + " con " + targetMusicSlider.value);
+        float newVolValue = targetMusicSlider.value * 100;
+        if (stringParam == "Vol_SFX") {
+            Debug.LogWarning(newVolValue + " skdjksjd " + volSFXValue);
+            if (newVolValue > volSFXValue) {
+                AkSoundEngine.PostEvent("UI_Vol_Up_In", gameObject);
 
-        AkSoundEngine.SetRTPCValue(stringParam, targetMusicSlider.value);
-
-
-
-        //if (isMusicSlider) {
-        //    musicSlider.value;
-        //    Debug.LogWarning("MUSIC VALUE: " + musicValue);
-        //    //AkSoundEngine.SetRTPCValue("NOMBRE", musicValue);
-        //} else {
-        //    sfxValue = sfxSlider.value;
-        //    Debug.LogWarning("SFX VALUE: " + sfxValue);
-        //    //AkSoundEngine.SetRTPCValue("NOMBRE2", sfxValue);
-        //}
+            } else {
+                AkSoundEngine.PostEvent("UI_Vol_Down_In", gameObject);
+            }
+            volSFXValue = newVolValue;
+        } else {
+            // Estamos cambiando el bus de Musica
+        }
+        Debug.LogWarning("Changing " + targetMusicSlider + " with " + stringParam + " for " + newVolValue);
+        AkSoundEngine.SetRTPCValue(stringParam, newVolValue);
     }
 }

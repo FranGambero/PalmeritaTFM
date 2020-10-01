@@ -11,7 +11,6 @@ public class MenuManager : MonoBehaviour {
     private void Awake() {
         titleMenu.SetActive(true);
         startMenu.SetActive(false);
-        //configMenuManager = FindObjectOfType<ConfigMenuManager>();
         configMenuManager.gameObject.SetActive(false);
 
         InitButtons();
@@ -57,7 +56,6 @@ public class MenuManager : MonoBehaviour {
     public void toggleConfig() {
         if (configMenuManager.gameObject.activeSelf) {
             configMenuManager.CloseCongifMenu();
-            //configMenuManager.gameObject.SetActive(false);
         } else {
             configMenuManager.gameObject.SetActive(true);
         }

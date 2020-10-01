@@ -12,10 +12,9 @@ namespace ElJardin {
         }
 
         private void Start() {
-            AkSoundEngine.SetState("General_Music", "Musica_Inicio");
+            //AkSoundEngine.SetState("General_Music", "Musica_Inicio");
             // Si va en el Awake peta, esta linea irá en la clase que inicie bien el juego
             AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
-            //AkSoundEngine.PostEvent("UI_Select_In", gameObject);
 
         }
 
@@ -30,18 +29,6 @@ namespace ElJardin {
                 AkSoundEngine.SetState("General_Music", "Musica_Inicio");
                 //AkSoundEngine.PostEvent("UI_Select_In", gameObject);
             }
-        }
-
-        public void assignValue(bool isMusicSlider, float newValue) {
-            //if (isMusicSlider) {
-            //    musicValue = musicSlider.value;
-            //    Debug.LogWarning("MUSIC VALUE: " + musicValue);
-            //    //AkSoundEngine.SetRTPCValue("NOMBRE", musicValue);
-            //} else {
-            //    sfxValue = sfxSlider.value;
-            //    Debug.LogWarning("SFX VALUE: " + sfxValue);
-            //    //AkSoundEngine.SetRTPCValue("NOMBRE2", sfxValue);
-            //}
         }
     }
 }
