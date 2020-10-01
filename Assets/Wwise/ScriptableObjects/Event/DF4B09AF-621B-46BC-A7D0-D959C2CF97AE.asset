@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5532c7ee8592a76458a2d417db6ab205, type: 3}
+  m_Name: DF4B09AF-621B-46BC-A7D0-D959C2CF97AE
+  m_EditorClassIdentifier: 
+  objectName: UI_Cursor_In
+  id: 3671726430
+  guid: DF4B09AF-621B-46BC-A7D0-D959C2CF97AE

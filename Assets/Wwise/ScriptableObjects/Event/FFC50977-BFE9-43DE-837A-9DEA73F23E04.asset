@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5532c7ee8592a76458a2d417db6ab205, type: 3}
+  m_Name: FFC50977-BFE9-43DE-837A-9DEA73F23E04
+  m_EditorClassIdentifier: 
+  objectName: Hormiga_Ataque_In
+  id: 1694954324
+  guid: FFC50977-BFE9-43DE-837A-9DEA73F23E04
