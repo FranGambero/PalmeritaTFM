@@ -1,14 +1,15 @@
 ﻿using ElJardin;
 using System.Collections;
 using System.Collections.Generic;
+using ElJardin.Characters;
 using UnityEngine;
 
 namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
-        public CharacterController myCharacterController;
+        public SepaloController Sepalo;
 
         private void Awake() {
-            myCharacterController = FindObjectOfType<CharacterController>();
+            Sepalo = FindObjectOfType<SepaloController>();
         }
 
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43934983, g: 0.48766983, b: 0.567911, a: 1}
+  m_IndirectSpecularColor: {r: 0.43934965, g: 0.48766875, b: 0.5679102, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   start_m: {fileID: 3112977340068577888, guid: f2685abeb33751c4e8b2db5ff0400314, type: 3}
   amount: 1
   direction: 1
-  characterController: {fileID: 1039270559}
+  Sepalo: {fileID: 0}
 --- !u!1 &839690034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,18 +1457,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1033454924}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1039270559 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8964213101944951266, guid: f65c7e93b712bcf49a6c4f6d52a02f14,
-    type: 3}
-  m_PrefabInstance: {fileID: 1265140556}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3063910fc0c2ce34295c78db746c97da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1081216973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,8 +1858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb80dce4e5d0334fb70fa0fc30bff60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
 --- !u!1 &1425112327
 GameObject:
   m_ObjectHideFlags: 0

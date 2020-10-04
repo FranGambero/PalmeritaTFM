@@ -15,14 +15,14 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     }
 
     public void OnDrag(PointerEventData eventData) {
-        if (GameManager.Instance.myCharacterController.isMyTurn) {
+        if (GameManager.Instance.Sepalo.IsMyTurn) {
             transform.position = Input.mousePosition;
             BuildManager.Instance.changeBuildValues(
                 cardData.amount, cardData.direction);
         }
     }
     public void OnEndDrag(PointerEventData eventData) {
-        if (GameManager.Instance.myCharacterController.isMyTurn) {
+        if (GameManager.Instance.Sepalo.IsMyTurn) {
             transform.position = originalPosition;
             hideCard();
             buildNewChannel();

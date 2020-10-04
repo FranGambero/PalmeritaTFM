@@ -23,6 +23,7 @@ namespace ElJardin {
         public Gradient gradient;
 
         private void Awake() {
+            Debug.Log("Awake CardManager");
             maxHand = 5;
             handList = new List<Card>();
             cardQueue = new Queue<CardData>(cardList);

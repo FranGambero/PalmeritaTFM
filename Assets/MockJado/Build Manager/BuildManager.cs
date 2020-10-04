@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ElJardin.Characters;
 using UnityEngine;
 
 namespace ElJardin
@@ -28,7 +29,7 @@ namespace ElJardin
         public DirectionType direction;
 
         [Header("Characters")]
-        public CharacterController characterController;
+        public SepaloController Sepalo;
 
         private List<Node> nodesToBuild, savedNodes;
 
@@ -283,26 +284,11 @@ namespace ElJardin
         {
             if (IsChangeValid())
             {
-                /*
-                foreach( Node node in nodesToBuild){
-                    node.ChangeNodeType(NodeType.Water, canal_m);
-                }
-                */
-
+                savedNodes = nodesToBuild;
                 // Vamos a llamar al movimiento del personaje con el nodo una vez validado
                 Debug.Log("Me llaman con lista " + nodesToBuild);
-                characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
-                savedNodes = nodesToBuild;
-
-
-                ////Correct mesh
-                //foreach(Node node in nodesToBuild)
-                //{
-                //    node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                //    UpdateNeighbors(node);
-                //    RotateMesh(node);
-                //}
-
+                StartCoroutine(Sepalo.Move(nodesToBuild[0]));
+                //characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
             }
         }
 
