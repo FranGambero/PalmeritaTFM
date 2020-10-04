@@ -62,7 +62,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8586001429234822283
+    m_lastTime: -8585997774206889076
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -87,7 +87,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8586001429259338005
+    m_lastTime: -8585997774696558614
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -129,6 +129,34 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Carta_Select_In
+      guid: 7319dc09a3eec442a897591ef38d4420
+      id: 236399107
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Carta_Select_In
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Carta_Select_In
+      maxAttenuation: 0
+      maxDuration: 733492
+      minDuration: 733492
+    - name: Carta_Slide_In
+      guid: 85ed6b3e00b92548ae76ed36e29dfa20
+      id: 2760388952
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Carta_Slide_In
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Carta_Slide_In
+      maxAttenuation: 0
+      maxDuration: 537188
+      minDuration: 459320
     - name: Hormiga
       guid: 0bd0805230ab43499342437a62886457
       id: 2509213026
@@ -232,6 +260,18 @@ MonoBehaviour:
       - ElementName: perosnajes
         ObjectType: 4
       Path: Default Work Unit\perosnajes
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: cce1d28cb63263458723a14139eabdd1
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      Path: Default Work Unit\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -415,7 +455,6 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/Auxiliary Busses/Default Work Unit/Master Audio Bus
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
   - /PalmeritaTFM_WwiseProject/States
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit/General_Music

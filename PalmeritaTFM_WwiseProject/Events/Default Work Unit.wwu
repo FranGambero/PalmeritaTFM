@@ -204,6 +204,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="SFX" ID="{8CD2E1CC-32B6-4563-8723-A14139EABDD1}" ShortID="50463570">
+					<ChildrenList>
+						<Event Name="Carta_Slide_In" ID="{3E6BED85-B900-4825-AE76-ED36E29DFA20}">
+							<ChildrenList>
+								<Action Name="" ID="{8F0EDE33-8539-4C96-928F-999623DB5C07}" ShortID="670808931">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Carta_Slide" ID="{178A959B-A08E-4778-9643-1AECB2BEFFAF}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Carta_Select_In" ID="{09DC1973-EEA3-42C4-A897-591EF38D4420}">
+							<ChildrenList>
+								<Action Name="" ID="{E621F197-57D4-483E-9ED3-1F89CB96921C}" ShortID="341432372">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Carta_Select" ID="{CBFA11C1-0206-40C3-9ABD-A87DD7F31230}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

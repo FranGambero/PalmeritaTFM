@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID AMB_BASE_IN = 430716873U;
         static const AkUniqueID AMB_BASE_OUT = 941055080U;
+        static const AkUniqueID CARTA_SELECT_IN = 236399107U;
+        static const AkUniqueID CARTA_SLIDE_IN = 2760388952U;
         static const AkUniqueID HORMIGA_ATAQUE_IN = 1694954324U;
         static const AkUniqueID HORMIGA_CREP_IN = 1873637369U;
         static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;

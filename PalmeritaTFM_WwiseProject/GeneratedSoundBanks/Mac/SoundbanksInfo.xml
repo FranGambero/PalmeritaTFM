@@ -213,6 +213,38 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="236399107" Name="Carta_Select_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Select_In" DurationType="OneShot" DurationMin="0.733492" DurationMax="0.733492">
+					<IncludedMemoryFiles>
+						<File Id="734722749" Language="SFX">
+							<ShortName>El_Jardin_Select_Cartas_SFX_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_Select_Cartas_SFX_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2760388952" Name="Carta_Slide_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Slide_In" DurationType="OneShot" DurationMin="0.459320" DurationMax="0.537188">
+					<IncludedMemoryFiles>
+						<File Id="90619311" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_2.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_2_10C4C929.wem</Path>
+						</File>
+						<File Id="260027919" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_1.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_1_10C4C929.wem</Path>
+						</File>
+						<File Id="610056849" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_5.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_5_10C4C929.wem</Path>
+						</File>
+						<File Id="721585249" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_4.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_4_10C4C929.wem</Path>
+						</File>
+						<File Id="961432926" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_3.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1694954324" Name="Hormiga_Ataque_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In" DurationType="OneShot" DurationMin="4.458707" DurationMax="4.458707">
 					<IncludedMemoryFiles>
 						<File Id="371519463" Language="SFX">
