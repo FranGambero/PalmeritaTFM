@@ -15,11 +15,14 @@ namespace AK
     {
         static const AkUniqueID AMB_BASE_IN = 430716873U;
         static const AkUniqueID AMB_BASE_OUT = 941055080U;
+        static const AkUniqueID CARTA_SELECT_IN = 236399107U;
+        static const AkUniqueID CARTA_SLIDE_IN = 2760388952U;
         static const AkUniqueID HORMIGA_ATAQUE_IN = 1694954324U;
         static const AkUniqueID HORMIGA_CREP_IN = 1873637369U;
         static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;
         static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
+        static const AkUniqueID MUSICA_SWITCH_IN = 2706007436U;
         static const AkUniqueID UI_BACK_IN = 349057203U;
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
         static const AkUniqueID UI_SELECT_2_IN = 2493148897U;
@@ -54,6 +57,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID INGAME_SOUNDBANK = 4063213932U;
+        static const AkUniqueID MUSICA_SOUNDBANK = 806408097U;
         static const AkUniqueID UI_SOUNDBANK = 2454045173U;
     } // namespace BANKS
 

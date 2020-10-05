@@ -1,19 +1,23 @@
-﻿using System;
+﻿using ElJardin;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ConfigMenuManager : MonoBehaviour {
     public MenuButton backBtn;
     public Slider musicSlider, sfxSlider;
+    public TextMeshProUGUI volMusicTextValue, volSFXTextValue;
     private float volMusicValue, volSFXValue;
 
     private void Awake() {
         //To be changed when we have both buses working, currently only SFX does -------------------
-        musicSlider.value = 1f;
-        sfxSlider.value = 1f;
+        musicSlider.value = 5f;
+        sfxSlider.value = 5f;
         volMusicValue = volSFXValue = 100;
+        refreshTextValues();
         // --------------------
 
         musicSlider.onValueChanged.AddListener(delegate {
@@ -25,15 +29,21 @@ public class ConfigMenuManager : MonoBehaviour {
         });
 
         backBtn.OnClickEvent += CloseCongifMenu;
+
+    }
+
+    private void OnEnable() {
+        AudioManager.Instance.toggleMusicIngameState(false);
     }
 
     public void CloseCongifMenu() {
+        AudioManager.Instance.toggleMusicIngameState(true);
         AkSoundEngine.PostEvent("UI_Back_In", gameObject);
         gameObject.SetActive(false);
     }
 
     public void changeSoundSliderValue(Slider targetMusicSlider, string stringParam) {
-        float newVolValue = targetMusicSlider.value * 100;
+        float newVolValue = targetMusicSlider.value * 20;
         if (stringParam == "Vol_SFX") {
             if (newVolValue > volSFXValue) {
                 AkSoundEngine.PostEvent("UI_Vol_Up_In", gameObject);
@@ -44,7 +54,20 @@ public class ConfigMenuManager : MonoBehaviour {
             volSFXValue = newVolValue;
         } else {
             // Estamos cambiando el bus de Musica
+            if (newVolValue > volMusicValue) {
+                AkSoundEngine.PostEvent("UI_Vol_Up_In", gameObject);
+
+            } else {
+                AkSoundEngine.PostEvent("UI_Vol_Down_In", gameObject);
+            }
+            volMusicValue = newVolValue;
         }
+        refreshTextValues();
         AkSoundEngine.SetRTPCValue(stringParam, newVolValue);
+    }
+
+    private void refreshTextValues() {
+        volMusicTextValue.text = volMusicValue.ToString();
+        volSFXTextValue.text = volSFXValue.ToString();
     }
 }
