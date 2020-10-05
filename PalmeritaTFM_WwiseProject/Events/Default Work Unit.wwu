@@ -230,6 +230,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Musica" ID="{ED5AD844-ADE3-4379-95C5-89018A6993DE}" ShortID="194525612">
+					<ChildrenList>
+						<Event Name="Musica_Switch_In" ID="{887B9841-2688-456B-B68C-950634A2E73B}">
+							<ChildrenList>
+								<Action Name="" ID="{ACBC73A1-CB5F-434C-834B-A92A51B153B7}" ShortID="656460913">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{4EE57AF4-31B9-404F-ABA8-7902D865B256}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

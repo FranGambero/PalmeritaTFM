@@ -62,7 +62,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585997774206889076
+    m_lastTime: -8585997326893883033
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -73,6 +73,15 @@ MonoBehaviour:
       - ElementName: Ingame_SoundBank
         ObjectType: 7
       Path: Default Work Unit\Ingame_SoundBank
+    - name: Musica_SoundBank
+      guid: 48fc94f3b36bdf4a918921408420818d
+      id: 806408097
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musica_SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\Musica_SoundBank
     - name: UI_SoundBank
       guid: ab09ae9ebca33947a935488977f5960f
       id: 2454045173
@@ -87,7 +96,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585997774696558614
+    m_lastTime: -8585997326893703011
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -251,6 +260,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 129532
       minDuration: 10265
+    - name: Musica
+      guid: 44d85aede3ad794395c589018a6993de
+      id: 1730564739
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musica
+        ObjectType: 4
+      Path: Default Work Unit\Musica
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musica_Switch_In
+      guid: 41987b8888266b45b68c950634a2e73b
+      id: 2706007436
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musica
+        ObjectType: 4
+      - ElementName: Musica_Switch_In
+        ObjectType: 3
+      Path: Default Work Unit\Musica\Musica_Switch_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: perosnajes
       guid: f89693393a12b4419ccf274effb40232
       id: 2562612159
@@ -455,6 +490,8 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/Auxiliary Busses/Default Work Unit/Master Audio Bus
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   - /PalmeritaTFM_WwiseProject/States
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit/General_Music
