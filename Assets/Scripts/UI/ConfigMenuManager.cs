@@ -47,6 +47,13 @@ public class ConfigMenuManager : MonoBehaviour {
             volSFXValue = newVolValue;
         } else {
             // Estamos cambiando el bus de Musica
+            if (newVolValue > volMusicValue) {
+                AkSoundEngine.PostEvent("UI_Vol_Up_In", gameObject);
+
+            } else {
+                AkSoundEngine.PostEvent("UI_Vol_Down_In", gameObject);
+            }
+            volMusicValue = newVolValue;
         }
         refreshTextValues();
         AkSoundEngine.SetRTPCValue(stringParam, newVolValue);
