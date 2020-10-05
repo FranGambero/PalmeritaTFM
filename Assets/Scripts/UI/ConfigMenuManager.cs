@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElJardin;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -28,9 +29,15 @@ public class ConfigMenuManager : MonoBehaviour {
         });
 
         backBtn.OnClickEvent += CloseCongifMenu;
+
+    }
+
+    private void OnEnable() {
+        AudioManager.Instance.toggleMusicIngameState(false);
     }
 
     public void CloseCongifMenu() {
+        AudioManager.Instance.toggleMusicIngameState(true);
         AkSoundEngine.PostEvent("UI_Back_In", gameObject);
         gameObject.SetActive(false);
     }
