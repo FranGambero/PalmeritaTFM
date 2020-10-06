@@ -7,6 +7,7 @@ namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public CharacterController myCharacterController;
         public ConfigMenuManager mycoso;
+        public GameObject instructMenu;
 
         private void Awake() {
             myCharacterController = FindObjectOfType<CharacterController>();
@@ -22,5 +23,12 @@ namespace ElJardin {
             }
         }
 
+        public void showInstructions(bool showInstruc) {
+            if (showInstruc) {
+                instructMenu.SetActive(true);
+            } else {
+                instructMenu.SetActive(false);
+            }
+        }
     }
 }

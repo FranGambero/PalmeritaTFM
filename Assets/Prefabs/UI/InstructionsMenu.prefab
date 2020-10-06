@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 2192137891710311492}
   - component: {fileID: 2192137891710311493}
   m_Layer: 5
-  m_Name: ConfigTitle
+  m_Name: InstTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 2192137892103089770}
   - component: {fileID: 2192137892103089771}
   m_Layer: 5
-  m_Name: InnerConfigPanel
+  m_Name: InneInstructPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

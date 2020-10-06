@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8585996449212439968
+    m_lastTime: -8585995979560991587
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -73,7 +73,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585996978079640893
+    m_lastTime: -8585995979548606781
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585996978111242078
+    m_lastTime: -8585995979595604359
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -422,7 +422,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8585997895120806626
+    m_lastTime: -8585995979595594378
     List:
     - name: Vol_Musica
       guid: a32eaa7062895a4cadff213bafe91747
@@ -447,7 +447,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0f0adf59de36e448e0b24f6c1daf7d1
     GuidInternal: 
-    m_lastTime: -8585997812146397480
+    m_lastTime: -8585995979548586816
     List:
     - name: General_Music
       guid: cfa4e35363726d46a4fc2b99fc0df2d9
@@ -497,6 +497,9 @@ MonoBehaviour:
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
