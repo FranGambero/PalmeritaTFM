@@ -15,7 +15,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Musica_Ingame" ID="{8C10EA33-8856-4B71-B94E-1CD6A8CC0DD2}"/>
+						<CurrentStateRef Name="None" ID="{7B65DC3C-242E-4E6C-96FF-623EA9D29310}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
