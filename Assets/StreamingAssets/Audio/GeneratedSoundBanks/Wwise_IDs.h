@@ -68,6 +68,11 @@ namespace AK
         static const AkUniqueID SFX_BUS = 213475909U;
     } // namespace BUSSES
 
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID PC = 1635194334U;
+    } // namespace AUX_BUSSES
+
     namespace AUDIO_DEVICES
     {
         static const AkUniqueID NO_OUTPUT = 2317455096U;

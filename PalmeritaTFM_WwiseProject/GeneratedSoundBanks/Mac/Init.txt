@@ -15,6 +15,12 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1054075596	Musica_Bus			\Default Work Unit\Master Audio Bus\Musica_Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1635194334	PC			\Default Work Unit\Master Audio Bus\PC	
+
+Effect plug-ins	ID	Name	Type				Notes
+	403038448	Wwise_Compressor_(Custom)	Wwise Compressor			
+
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
 	3859886410	System	System			
