@@ -32,6 +32,7 @@ namespace ElJardin {
         }
 
         public void changeToStartMenu() {
+            triggerButtonSound();
             titleMenu.SetActive(false);
             startMenu.SetActive(true);
         }

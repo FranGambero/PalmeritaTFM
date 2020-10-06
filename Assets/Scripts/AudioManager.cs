@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace ElJardin {
@@ -20,9 +21,12 @@ namespace ElJardin {
         public void toggleMusicIngameState(bool inGame = true) {
             levelInGame = inGame;
             if (levelInGame) {
+                Debug.Log("Pongo estado Musica_Ingame");
                 AkSoundEngine.SetState("General_Music", "Musica_Ingame");
             } else {
-                AkSoundEngine.SetState("General_Music", "Musica_Inicio");
+                Debug.Log("Pongo estado NONE");
+
+                AkSoundEngine.SetState("General_Music", "None");
             }
         }
     }
