@@ -384,6 +384,18 @@
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicSegment Name="Pausa" ID="{1F6C7636-FD3A-4CAF-BF00-7716AAD93ECC}" ShortID="725745014">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="130678.538250388"/>
+								<Property Name="GridFrequencyPreset" Type="int16" Value="51"/>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="130"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-96</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -393,14 +405,26 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Pausa" ID="{6747F1B3-8F5D-4F85-9B8F-3243457D1A9A}" ShortID="223579680">
+								<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{0212862E-DCB9-4CC8-BA4D-912CA946973F}" ShortID="847002806">
 									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{A3714E6B-DEC3-49E9-BE42-21BBF5218492}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Musica_Ingame_44_16_Layer_2_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="554799606"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{7B2E9DF3-A178-4BCB-8F60-FFC00EE7FCED}">
+										<MusicTransition Name="Root" ID="{C3CA729B-D6AC-4264-A15C-BBDD6BCD2BB8}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -408,7 +432,18 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{F581EF59-7A55-4D04-BA15-1925DAEE4A15}"/>
+										<MusicTrackSequence Name="" ID="{F0DFF4B3-E43D-4108-B098-207E75AB4A4E}">
+											<ClipList>
+												<MusicClip Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{54C7DE6A-F969-462F-8CB9-91268990C4B2}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="116307.68707483"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{A3714E6B-DEC3-49E9-BE42-21BBF5218492}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
 									</SequenceList>
 								</MusicTrack>
 							</ChildrenList>
@@ -417,7 +452,7 @@
 								<MusicCue Name="Exit Cue" ID="{235A80FC-50D0-4BAC-B394-3F2646F373BE}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="1000"/>
+										<Property Name="TimeMs" Type="Real64" Value="116307.692307692"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
@@ -495,8 +530,8 @@
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{81C212C4-423D-4879-AE00-D99688B992B7}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="1.9"/>
-													<Property Name="FadeTime" Type="Real64" Value="3.7"/>
+													<Property Name="FadeOffset" Type="Real64" Value="4.7"/>
+													<Property Name="FadeTime" Type="Real64" Value="5.8"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
@@ -562,8 +597,8 @@
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{3C525F03-A5CB-4A45-B89E-1CC1D765F18B}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="1.9"/>
-													<Property Name="FadeTime" Type="Real64" Value="3.7"/>
+													<Property Name="FadeOffset" Type="Real64" Value="4.7"/>
+													<Property Name="FadeTime" Type="Real64" Value="5.8"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
@@ -600,8 +635,8 @@
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{C5401068-0A5C-44F3-AE8B-E65F3C823783}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="1.9"/>
-													<Property Name="FadeTime" Type="Real64" Value="3.7"/>
+													<Property Name="FadeOffset" Type="Real64" Value="4.7"/>
+													<Property Name="FadeTime" Type="Real64" Value="5.8"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
@@ -609,7 +644,6 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{C1E7DADF-D411-4A44-9E4B-2EABC1D75967}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="-1.9"/>
 													<Property Name="FadeTime" Type="Real64" Value="4.5"/>
 												</PropertyList>
 											</MusicFade>
@@ -621,9 +655,12 @@
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+										<Property Name="PlayTransitionPostExit" Type="bool" Value="False"/>
+										<Property Name="PlayTransitionPreEntry" Type="bool" Value="False"/>
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
@@ -635,11 +672,12 @@
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
+										<TransitionObjectRef Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{E545DACF-DDD9-4608-AB93-EFA6AA943816}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{9EBB4CAE-8367-400B-8567-357763D95885}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="1.9"/>
-													<Property Name="FadeTime" Type="Real64" Value="3.7"/>
+													<Property Name="FadeOffset" Type="Real64" Value="4.7"/>
+													<Property Name="FadeTime" Type="Real64" Value="5.8"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
@@ -647,11 +685,17 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{B32F564A-4890-4375-8372-9474A10AE617}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="-1.9"/>
-													<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="5.2"/>
 												</PropertyList>
 											</MusicFade>
 										</DestinationFadeIn>
+										<TransitionFadeIn>
+											<MusicFade Name="Transition Fade-in" ID="{4E6A6EF3-4689-4CA5-AE1B-A799A3C6E9AD}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="4.6"/>
+												</PropertyList>
+											</MusicFade>
+										</TransitionFadeIn>
 									</TransitionInfo>
 								</MusicTransition>
 							</ChildrenList>

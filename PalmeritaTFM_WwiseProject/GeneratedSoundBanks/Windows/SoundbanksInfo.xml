@@ -26,6 +26,10 @@
 							<ShortName>El_Jardin_Musica_Inicio_Intro_44_16_Start.wav</ShortName>
 							<Path>SFX\El_Jardin_Musica_Inicio_Intro_44_16_Start_D79FB2B7.wem</Path>
 						</File>
+						<File Id="554799606" Language="SFX">
+							<ShortName>El_Jardin_Musica_Ingame_44_16_Layer_2_Loop.wav</ShortName>
+							<Path>SFX\El_Jardin_Musica_Ingame_44_16_Layer_2_Loop_D79FB2B7.wem</Path>
+						</File>
 						<File Id="811940940" Language="SFX">
 							<ShortName>El_Jardin_Musica_Ingame_44_16_Layer_1_Loop.wav</ShortName>
 							<Path>SFX\El_Jardin_Musica_Ingame_44_16_Layer_1_Loop_D79FB2B7.wem</Path>
@@ -41,6 +45,11 @@
 							<Media>
 								<File Id="218172167"/>
 								<File Id="119660723"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7B65DC3C-242E-4E6C-96FF-623EA9D29310}">
+							<Media>
+								<File Id="554799606"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
