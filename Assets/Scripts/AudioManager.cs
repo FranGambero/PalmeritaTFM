@@ -21,13 +21,22 @@ namespace ElJardin {
         public void toggleMusicIngameState(bool inGame = true) {
             levelInGame = inGame;
             if (levelInGame) {
-                Debug.Log("Pongo estado Musica_Ingame");
-                AkSoundEngine.SetState("General_Music", "Musica_Ingame");
+                if (SceneManager.GetActiveScene().buildIndex == 0) {
+                    Debug.Log("Pongo estado Musica_Ingame");
+                    AkSoundEngine.SetState("General_Music", "Musica_Inicio");
+                } else {
+                    setIngameMusic();
+                }
             } else {
                 Debug.Log("Pongo estado NONE");
 
                 AkSoundEngine.SetState("General_Music", "None");
             }
+        }
+
+        public void setIngameMusic() {
+            AkSoundEngine.SetState("General_Music", "Musica_Ingame");
+
         }
     }
 }
