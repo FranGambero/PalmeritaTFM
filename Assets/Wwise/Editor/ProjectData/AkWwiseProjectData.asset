@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8585997895100861320
+    m_lastTime: -8585996449212439968
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -46,6 +46,17 @@ MonoBehaviour:
       - ElementName: Musica_Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus\Musica_Bus
+    - name: PC
+      guid: 3a3670cb1ac6e54e8ed674ae093cd00b
+      id: 1635194334
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: PC
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\PC
     - name: SFX_Bus
       guid: 2de1691cef86fd469bc203eca30cefaa
       id: 213475909
@@ -486,12 +497,6 @@ MonoBehaviour:
   ExpandedItems:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Musica
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
-  - /PalmeritaTFM_WwiseProject/States
-  - /PalmeritaTFM_WwiseProject/States/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/States/Default Work Unit/General_Music
+  - /PalmeritaTFM_WwiseProject/SoundBanks
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
