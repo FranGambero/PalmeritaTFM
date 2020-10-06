@@ -11,6 +11,51 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="806408097" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Musica_SoundBank</ObjectPath>
+			<ShortName>Musica_SoundBank</ShortName>
+			<Path>Musica_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2706007436" Name="Musica_Switch_In" ObjectPath="\Events\Default Work Unit\Musica\Musica_Switch_In" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="119660723" Language="SFX">
+							<ShortName>El_Jardin_Musica_Inicio_44_16_Loop.wav</ShortName>
+							<Path>SFX\El_Jardin_Musica_Inicio_44_16_Loop_D79FB2B7.wem</Path>
+						</File>
+						<File Id="218172167" Language="SFX">
+							<ShortName>El_Jardin_Musica_Inicio_Intro_44_16_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_Musica_Inicio_Intro_44_16_Start_D79FB2B7.wem</Path>
+						</File>
+						<File Id="811940940" Language="SFX">
+							<ShortName>El_Jardin_Musica_Ingame_44_16_Layer_1_Loop.wav</ShortName>
+							<Path>SFX\El_Jardin_Musica_Ingame_44_16_Layer_1_Loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{8C10EA33-8856-4B71-B94E-1CD6A8CC0DD2}">
+							<Media>
+								<File Id="811940940"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{43A4F975-E858-4CE1-AC44-14F2ACFF8513}">
+							<Media>
+								<File Id="218172167"/>
+								<File Id="119660723"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="1620872583" Name="General_Music" ObjectPath="\States\Default Work Unit\General_Music">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\General_Music\None"/>
+						<State Id="1563092195" Name="Musica_Inicio" ObjectPath="\States\Default Work Unit\General_Music\Musica_Inicio"/>
+						<State Id="109925333" Name="Musica_Ingame" ObjectPath="\States\Default Work Unit\General_Music\Musica_Ingame"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -213,6 +258,38 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="236399107" Name="Carta_Select_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Select_In" DurationType="OneShot" DurationMin="0.733492" DurationMax="0.733492">
+					<IncludedMemoryFiles>
+						<File Id="734722749" Language="SFX">
+							<ShortName>El_Jardin_Select_Cartas_SFX_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_Select_Cartas_SFX_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2760388952" Name="Carta_Slide_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Slide_In" DurationType="OneShot" DurationMin="0.459320" DurationMax="0.537188">
+					<IncludedMemoryFiles>
+						<File Id="90619311" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_2.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_2_10C4C929.wem</Path>
+						</File>
+						<File Id="260027919" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_1.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_1_10C4C929.wem</Path>
+						</File>
+						<File Id="610056849" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_5.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_5_10C4C929.wem</Path>
+						</File>
+						<File Id="721585249" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_4.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_4_10C4C929.wem</Path>
+						</File>
+						<File Id="961432926" Language="SFX">
+							<ShortName>El_Jardin_Slide_Cartas_SFX_Start_3.wav</ShortName>
+							<Path>SFX\El_Jardin_Slide_Cartas_SFX_Start_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1694954324" Name="Hormiga_Ataque_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In" DurationType="OneShot" DurationMin="4.458707" DurationMax="4.458707">
 					<IncludedMemoryFiles>
 						<File Id="371519463" Language="SFX">
