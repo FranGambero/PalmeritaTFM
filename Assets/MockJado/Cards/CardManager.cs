@@ -43,7 +43,6 @@ namespace ElJardin {
                 handList[index].cardData = cardQueue.Dequeue();
                 handList[index].loadCardData();
                 moveCardToDeck(handList[index]);
-
                 handList[index].changeCardTransform(index);
                 index++;
             }

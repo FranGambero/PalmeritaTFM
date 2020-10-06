@@ -34,9 +34,9 @@ namespace ElJardin {
         }
 
         private void jumpCard() {
-            //if (transformIndex != CardManager.Instance.maxHand - 1) {
+            if (gameObject.activeSelf) {
                 AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
-            //}
+            }
             transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, .5f);
         }
     }
