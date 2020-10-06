@@ -76,6 +76,8 @@ namespace ElJardin {
                 tmpCard.cardData = cardQueue.Dequeue();
                 tmpCard.loadCardData();
                 moveCardToDeck(tmpCard);
+                //AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
+
                 tmpCard.gameObject.SetActive(true);
                 tmpCard.changeCardTransform(lastHandIndex, false);
 

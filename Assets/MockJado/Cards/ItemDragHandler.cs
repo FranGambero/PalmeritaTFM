@@ -24,6 +24,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public void OnEndDrag(PointerEventData eventData) {
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             transform.position = originalPosition;
+            AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
             hideCard();
             buildNewChannel();
         }

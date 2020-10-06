@@ -7,7 +7,7 @@ using UnityEngine;
 namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public SepaloController Sepalo;
-        public ConfigMenuManager mycoso;
+        public ConfigMenuManager configMenu;
 
 
         private void Awake()
@@ -17,10 +17,10 @@ namespace ElJardin {
 
         private void Update() {
             if (Input.GetKeyDown(KeyCode.Escape)) {
-                if (mycoso.gameObject.activeSelf)
-                    mycoso.CloseCongifMenu();
+                if (configMenu.gameObject.activeSelf)
+                    configMenu.CloseCongifMenu();
                 else
-                    mycoso.gameObject.SetActive(true);
+                    configMenu.gameObject.SetActive(true);
             }
         }
 

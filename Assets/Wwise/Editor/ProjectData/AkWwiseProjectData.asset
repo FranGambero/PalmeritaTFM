@@ -62,7 +62,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585996978079640893
+    m_lastTime: -8585996657013302170
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -96,7 +96,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585996978111242078
+    m_lastTime: -8585996657047686799
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -436,7 +436,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0f0adf59de36e448e0b24f6c1daf7d1
     GuidInternal: 
-    m_lastTime: -8585997812146397480
+    m_lastTime: -8585996657013261991
     List:
     - name: General_Music
       guid: cfa4e35363726d46a4fc2b99fc0df2d9
@@ -489,7 +489,10 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Musica
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/SFX
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
+  - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
   - /PalmeritaTFM_WwiseProject/States
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit/General_Music
