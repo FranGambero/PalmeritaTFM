@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using System.Runtime.Remoting.Messaging;
 
 namespace ElJardin {
     public class CharacterController : Singleton<CharacterController>, ITurn {
