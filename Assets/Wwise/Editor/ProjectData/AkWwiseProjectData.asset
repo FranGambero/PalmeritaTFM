@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8585997895100861320
+    m_lastTime: -8585995979560991587
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -46,6 +46,17 @@ MonoBehaviour:
       - ElementName: Musica_Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus\Musica_Bus
+    - name: PC
+      guid: 3a3670cb1ac6e54e8ed674ae093cd00b
+      id: 1635194334
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: PC
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\PC
     - name: SFX_Bus
       guid: 2de1691cef86fd469bc203eca30cefaa
       id: 213475909
@@ -62,7 +73,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8585996657013302170
+=======
+    m_lastTime: -8585995979548606781
+>>>>>>> d18c6be2c4f8999fd7ab089ff58e30916428257d
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -96,7 +111,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8585996657047686799
+=======
+    m_lastTime: -8585995979595604359
+>>>>>>> d18c6be2c4f8999fd7ab089ff58e30916428257d
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -411,7 +430,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8585997895120806626
+    m_lastTime: -8585995979595594378
     List:
     - name: Vol_Musica
       guid: a32eaa7062895a4cadff213bafe91747
@@ -436,7 +455,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0f0adf59de36e448e0b24f6c1daf7d1
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8585996657013261991
+=======
+    m_lastTime: -8585995979548586816
+>>>>>>> d18c6be2c4f8999fd7ab089ff58e30916428257d
     List:
     - name: General_Music
       guid: cfa4e35363726d46a4fc2b99fc0df2d9
@@ -488,6 +511,7 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
+<<<<<<< HEAD
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Musica
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/SFX
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
@@ -496,5 +520,9 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/States
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit/General_Music
+=======
+  - /PalmeritaTFM_WwiseProject/SoundBanks
+  - /PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit
+>>>>>>> d18c6be2c4f8999fd7ab089ff58e30916428257d
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -8,6 +8,8 @@ namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public SepaloController Sepalo;
         public ConfigMenuManager configMenu;
+        public GameObject instructMenu;
+
 
 
         private void Awake()
@@ -24,5 +26,12 @@ namespace ElJardin {
             }
         }
 
+        public void showInstructions(bool showInstruc) {
+            if (showInstruc) {
+                instructMenu.SetActive(true);
+            } else {
+                instructMenu.SetActive(false);
+            }
+        }
     }
 }

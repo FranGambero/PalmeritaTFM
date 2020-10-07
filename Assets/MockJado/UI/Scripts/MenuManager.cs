@@ -27,11 +27,12 @@ namespace ElJardin {
         }
 
         public void goToGame() {
-            AudioManager.Instance.toggleMusicIngameState(true);
+            AudioManager.Instance.setIngameMusic();
             SceneManager.LoadScene("LoadScene");
         }
 
         public void changeToStartMenu() {
+            triggerButtonSound();
             titleMenu.SetActive(false);
             startMenu.SetActive(true);
         }

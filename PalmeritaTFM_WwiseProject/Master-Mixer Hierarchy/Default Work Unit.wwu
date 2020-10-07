@@ -41,6 +41,11 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="PC" ID="{CB70363A-C61A-4EE5-8ED6-74AE093CD00B}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
 						</Bus>
 						<Bus Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}">
 							<PropertyList>
@@ -73,7 +78,43 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}"/>
+									<DuckingParam>
+										<Volume>-3</Volume>
+										<FadeInTime>0.300000011920929</FadeInTime>
+										<FadeOutTime>0.300000011920929</FadeOutTime>
+										<FadeCurve>FadeLog1</FadeCurve>
+										<TargetProp>BusVolume</TargetProp>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
 						</Bus>
+						<AuxBus Name="PC" ID="{CB70363A-C61A-4EE5-8ED6-74AE093CD00B}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-24</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise_Compressor_(Custom)" ID="{6BC366D6-1446-43AC-8400-BEDE67E81ABA}" ShortID="403038448" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+											<PropertyList>
+												<Property Name="AttackTime" Type="Real32" Value="0"/>
+												<Property Name="OutputGain" Type="Real32" Value="10.2"/>
+												<Property Name="Ratio" Type="Real32" Value="6.9"/>
+												<Property Name="ReleaseTime" Type="Real32" Value="1.4"/>
+												<Property Name="Threshold" Type="Real32" Value="-42.1"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
