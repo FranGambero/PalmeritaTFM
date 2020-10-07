@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47116edcfbe8d754bb64869d7b14ea4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ogV: {x: 0, y: 0, z: 0}
+  originalPosition: {x: 0, y: 0, z: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7415955986125602904, guid: 1a9bb3c15350c094080ed964f7e63745,
+  m_Sprite: {fileID: 8963368785945452489, guid: 1a9bb3c15350c094080ed964f7e63745,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8963368785945452489, guid: 1a9bb3c15350c094080ed964f7e63745,
+  m_Sprite: {fileID: -7415955986125602904, guid: 1a9bb3c15350c094080ed964f7e63745,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
