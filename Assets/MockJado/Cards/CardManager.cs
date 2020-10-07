@@ -23,6 +23,7 @@ namespace ElJardin {
         public Gradient gradient;
 
         private void Awake() {
+            Debug.Log("Awake CardManager");
             maxHand = 5;
             handList = new List<Card>();
             cardQueue = new Queue<CardData>(cardList);
@@ -42,7 +43,6 @@ namespace ElJardin {
                 handList[index].cardData = cardQueue.Dequeue();
                 handList[index].loadCardData();
                 moveCardToDeck(handList[index]);
-
                 handList[index].changeCardTransform(index);
                 index++;
             }
@@ -75,6 +75,8 @@ namespace ElJardin {
                 tmpCard.cardData = cardQueue.Dequeue();
                 tmpCard.loadCardData();
                 moveCardToDeck(tmpCard);
+                //AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
+
                 tmpCard.gameObject.SetActive(true);
                 tmpCard.changeCardTransform(lastHandIndex, false);
 

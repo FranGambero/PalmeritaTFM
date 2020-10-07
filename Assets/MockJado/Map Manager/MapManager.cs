@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ElJardin.Util;
 using UnityEngine;
 
 namespace ElJardin
@@ -48,6 +49,11 @@ namespace ElJardin
 
         private bool levelEnded;
         private List<Node> winCheckedNodes;
+        
+        
+        [Header("Injection")]
+        [HideInInspector]
+        public Pathfinding Pathfinding;
         #endregion
 
         private void Awake()
@@ -59,6 +65,7 @@ namespace ElJardin
         private void Start()
         {
             InitializeMap();
+            Pathfinding = new Pathfinding(this);
         }
 
         #region Matrix

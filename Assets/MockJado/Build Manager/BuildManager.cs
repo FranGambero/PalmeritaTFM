@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ElJardin.Characters;
 using UnityEngine;
 
 namespace ElJardin
@@ -16,6 +17,7 @@ namespace ElJardin
         //public Material grooveMatStr8, grooveMatCurve, grooveMatFork, grooveMatCross, grooveMatEnd;
 
         [Header("Meshs")]
+        public Mesh ground_m;
         public Mesh canal_m;
         public Mesh elbow_m;
         public Mesh intersection3_m;
@@ -28,7 +30,7 @@ namespace ElJardin
         public DirectionType direction;
 
         [Header("Characters")]
-        public CharacterController characterController;
+        public SepaloController Sepalo;
 
         private List<Node> nodesToBuild, savedNodes;
 
@@ -40,6 +42,14 @@ namespace ElJardin
         {
             if(node.IsGround())
                 node.ChangeNodeType(NodeType.Water, waterMat);
+        }
+
+        public void BuildGround(Node node)
+        {
+            //Cambio nodo a tierra
+            node.ChangeNodeType(NodeType.Ground,ground_m);
+            //Correccion de vecinos
+            UpdateNeighbors(node);
         }
 
         public void UpdateNeighbors(Node node)
@@ -279,31 +289,17 @@ namespace ElJardin
             return (nodesToBuild.Count == amount) ? true : false;
         }
 
-        public void ChangeNodesInList()
+        public bool ChangeNodesInList()
         {
             if (IsChangeValid())
             {
-                /*
-                foreach( Node node in nodesToBuild){
-                    node.ChangeNodeType(NodeType.Water, canal_m);
-                }
-                */
-
+                savedNodes = new List<Node>(nodesToBuild);
                 // Vamos a llamar al movimiento del personaje con el nodo una vez validado
                 Debug.Log("Me llaman con lista " + nodesToBuild);
-                characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
-                savedNodes = nodesToBuild;
-
-
-                ////Correct mesh
-                //foreach(Node node in nodesToBuild)
-                //{
-                //    node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                //    UpdateNeighbors(node);
-                //    RotateMesh(node);
-                //}
-
+                StartCoroutine(Sepalo.Move(nodesToBuild[0]));
+                //characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
             }
+            return IsChangeValid();
         }
 
         public void buildCells() {
@@ -376,6 +372,7 @@ namespace ElJardin
             {
                 node.HoverOff();
             }
+            nodesToBuild.Clear();
         }
 
         #endregion
