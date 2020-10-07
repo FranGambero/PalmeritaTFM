@@ -22,7 +22,6 @@ namespace ElJardin {
 
         public void loadCardData() {
             amountText.text = cardData.amount.ToString();
-
         }
 
         public void changeCardTransform(int newIndex, bool wait = true) {
