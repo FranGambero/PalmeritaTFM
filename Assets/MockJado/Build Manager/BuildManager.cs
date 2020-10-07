@@ -17,6 +17,7 @@ namespace ElJardin
         //public Material grooveMatStr8, grooveMatCurve, grooveMatFork, grooveMatCross, grooveMatEnd;
 
         [Header("Meshs")]
+        public Mesh ground_m;
         public Mesh canal_m;
         public Mesh elbow_m;
         public Mesh intersection3_m;
@@ -41,6 +42,14 @@ namespace ElJardin
         {
             if(node.IsGround())
                 node.ChangeNodeType(NodeType.Water, waterMat);
+        }
+
+        public void BuildGround(Node node)
+        {
+            //Cambio nodo a tierra
+            node.ChangeNodeType(NodeType.Ground,ground_m);
+            //Correccion de vecinos
+            UpdateNeighbors(node);
         }
 
         public void UpdateNeighbors(Node node)

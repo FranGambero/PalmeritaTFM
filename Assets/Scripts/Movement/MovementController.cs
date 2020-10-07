@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using ElJardin;
 using UnityEngine;
 
@@ -39,10 +40,26 @@ namespace ElJardin.Movement
             }
         }
 
+        IEnumerator MovePartialPath(IEnumerable<Node> path, int times, System.Action<Node> callback)
+        {
+            var pathList = path.ToList();
+            for(var i = 0; i < times && i<pathList.Count; i++)
+            {
+                yield return StartCoroutine(MoveToNode(pathList[i]));
+                callback(pathList[i]);
+            }
+        }
+
         public IEnumerator Move(Node startingNode, Node targetNode)
         {
             var path = CalculatePath(startingNode, targetNode);
             yield return StartCoroutine(MoveFullPath(path));
+        }
+
+        public IEnumerator MovePartial(Node startingNode, Node targetNode, int timesToMove, System.Action<Node> callback)
+        {
+            var path = CalculatePath(startingNode, targetNode);
+            yield return StartCoroutine(MovePartialPath(path, timesToMove, callback));
         }
     }
 }

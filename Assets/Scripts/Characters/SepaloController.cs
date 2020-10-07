@@ -13,7 +13,7 @@ namespace ElJardin.Characters
         [Header("Turn")] [SerializeField] int myTurnIndex;
         #endregion
 
-        Node currentNode;
+        public Node CurrentNode { get; private set; }
 
         #region Accessors
         public int turnIndex
@@ -28,14 +28,14 @@ namespace ElJardin.Characters
 
         void Start()
         {
-            currentNode = MapManager.Instance?.GetNode((int)StartingNode.x, (int)StartingNode.y);
+            CurrentNode = MapManager.Instance?.GetNode((int)StartingNode.x, (int)StartingNode.y);
         }
 
         #region Actions
         public IEnumerator Move(Node targetNode)
         {
-            yield return StartCoroutine(Movement.Move(currentNode, targetNode));
-            currentNode = targetNode;
+            yield return StartCoroutine(Movement.Move(CurrentNode, targetNode));
+            CurrentNode = targetNode;
             //TODO: abstraer comportamiento
             BuildManager.Instance.buildCells();
             onTurnFinished();

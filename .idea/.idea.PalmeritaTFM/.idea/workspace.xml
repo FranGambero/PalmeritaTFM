@@ -2,71 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="061300e8-9aed-4815-8dd3-e716a8eb15e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Soundbank/F394FC48-6BB3-4ADF-9189-21408420818D.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Soundbank/F394FC48-6BB3-4ADF-9189-21408420818D.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Musica_Ingame_44_16_Layer_1_Loop_D79FB2B7.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Musica_Inicio_44_16_Loop_D79FB2B7.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Musica_Inicio_Intro_44_16_Start_D79FB2B7.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Select_Cartas_SFX_Start_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Slide_Cartas_SFX_Start_1_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Slide_Cartas_SFX_Start_2_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Slide_Cartas_SFX_Start_3_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Slide_Cartas_SFX_Start_4_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Slide_Cartas_SFX_Start_5_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Musica_Ingame_44_16_Layer_1_Loop_D79FB2B7.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Musica_Inicio_44_16_Loop_D79FB2B7.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Musica_Inicio_Intro_44_16_Start_D79FB2B7.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Select_Cartas_SFX_Start_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Slide_Cartas_SFX_Start_1_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Slide_Cartas_SFX_Start_2_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Slide_Cartas_SFX_Start_3_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Slide_Cartas_SFX_Start_4_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Slide_Cartas_SFX_Start_5_10C4C929.wem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Musica_SoundBank.bnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Musica_SoundBank.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Musica_SoundBank.bnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Musica_SoundBank.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Select_Cartas_SFX_Start.akd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Select_Cartas_SFX_Start.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_1.akd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_2.akd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_3.akd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_3.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_4.akd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_4.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_5.akd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Slide_Cartas_SFX_Start_5.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Menu/MenuBG.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Menu/MenuBG.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/UI/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/UI/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AudioTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AudioTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LoadScreenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LoadScreenManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ConfigMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConfigMenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/Wwise.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/Wwise.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/SoundBankInfoCache.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/SoundBankInfoCache.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/Wwise.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/Wwise.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Events/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Events/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.bnk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.bnk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Init.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Init.bnk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Interactive Music Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Interactive Music Hierarchy/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.validationcache" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.validationcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.wsettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/States/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/States/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Bongormiga.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Bongormiga.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +25,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/MovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Bongormiga.cs" />
       </list>
     </option>
   </component>
@@ -106,7 +51,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601940142937</updated>
-      <workItem from="1601940168784" duration="287000" />
+      <workItem from="1601940168784" duration="888000" />
+      <workItem from="1602004947572" duration="6628000" />
     </task>
     <servers />
   </component>
@@ -115,5 +61,11 @@
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602035801778">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602035801778" />
   </component>
 </project>
