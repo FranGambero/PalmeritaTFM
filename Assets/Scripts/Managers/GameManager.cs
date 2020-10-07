@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ElJardin.Characters;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
@@ -32,6 +33,10 @@ namespace ElJardin {
             } else {
                 instructMenu.SetActive(false);
             }
+        }
+
+        public void goToStartMenu() {
+            SceneManager.LoadScene(0);
         }
     }
 }
