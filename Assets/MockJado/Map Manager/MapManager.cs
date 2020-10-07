@@ -137,7 +137,7 @@ namespace ElJardin
             if (levelEnded)
             {
                 victoryCanvas.SetActive(true);
-                confety.SetActive(true);
+                //confety.SetActive(true);
                 Debug.Log("LVL COMPLETADO HIJO DE PUTA");
             }
         }

@@ -70,7 +70,6 @@ namespace ElJardin {
         }
 
         public void StartCredits() {
-            Debug.Log("Bon voyage");
             Application.Quit();
         }
     }
