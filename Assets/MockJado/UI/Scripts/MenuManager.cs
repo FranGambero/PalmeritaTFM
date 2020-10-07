@@ -50,6 +50,7 @@ namespace ElJardin {
         }
 
         public void StartGame() {
+            PlayerPrefs.SetInt("NextLevel",2);
             goToGame();
         }
         public void FadeOut() {
