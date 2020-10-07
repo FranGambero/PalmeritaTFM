@@ -9,6 +9,7 @@ using UnityEngine;
 public class Bongormiga : MonoBehaviour, ITurn {
     public int myTurnIndex;
     public Vector2 startingNode;
+    public GameObject StunObj;
     
     public Node CurrentNode { get; private set; }
 
@@ -55,8 +56,10 @@ public class Bongormiga : MonoBehaviour, ITurn {
 
     IEnumerator Stun()
     {
+        StunObj.SetActive(true);
         //TODO: lo que sea que haga el stun, animaciones, sonido...
         yield return null;
+
     }
 
     void DestroySurroundingGround(Node node)
@@ -123,6 +126,7 @@ public class Bongormiga : MonoBehaviour, ITurn {
     }
 
     public void onTurnFinished() {
+        StunObj.SetActive(false);
         Semaphore.Instance.onTurnEnd(turnIndex);
     }
 

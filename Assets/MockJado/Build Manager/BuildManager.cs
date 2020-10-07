@@ -293,7 +293,7 @@ namespace ElJardin
         {
             if (IsChangeValid())
             {
-                savedNodes = nodesToBuild;
+                savedNodes = new List<Node>(nodesToBuild);
                 // Vamos a llamar al movimiento del personaje con el nodo una vez validado
                 Debug.Log("Me llaman con lista " + nodesToBuild);
                 StartCoroutine(Sepalo.Move(nodesToBuild[0]));
