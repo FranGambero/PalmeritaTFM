@@ -46,8 +46,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
 
     private bool buildNewChannel() {
         bool hasBuild = BuildManager.Instance.ChangeNodesInList();
-        if (hasBuild)
-            MapManager.Instance.CheckFullRiver();
+      //  if (hasBuild)
+            //MapManager.Instance.CheckFullRiver();
         return hasBuild;
     }
 
