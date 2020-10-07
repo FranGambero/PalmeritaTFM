@@ -25,6 +25,10 @@ namespace ElJardin {
                 else
                     configMenu.gameObject.SetActive(true);
             }
+
+            if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {
+                                        
+            }
         }
 
         public void showInstructions(bool showInstruc) {
