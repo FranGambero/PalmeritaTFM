@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3742622092763242773}
   - component: {fileID: 1105701644}
+  - component: {fileID: 1218795929}
   m_Layer: 0
   m_Name: Bongormiga
   m_TagString: Untagged
@@ -108,8 +109,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87f55c59ea3a5a4ea793dbf84b73df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myTurnIndex: 1
+  startingNode: {x: 3, y: 1}
+  Movement: {fileID: 1218795929}
   myAnimator: {fileID: 0}
-  myTurnIndex: 2
+--- !u!114 &1218795929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3742622092763242779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b6b1ccaf5e3864696dce917a090607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  YOffset: 0.7
 --- !u!1 &3742622093228143770
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,24 +206,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5746123914904925256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4553454952551180440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1905ef3a011520f488384311aafa9921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tEast: {fileID: 3742622093278995831}
-  tWest: {fileID: 3742622091520153710}
-  tSouth: {fileID: 3742622093228143765}
-  tNorth: {fileID: 3742622092713900940}
-  anim: {fileID: 0}
-  delay: 0
 --- !u!114 &426855537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +228,24 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &5746123914904925256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553454952551180440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1905ef3a011520f488384311aafa9921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tEast: {fileID: 3742622093278995831}
+  tWest: {fileID: 3742622091520153710}
+  tSouth: {fileID: 3742622093228143765}
+  tNorth: {fileID: 3742622092713900940}
+  anim: {fileID: 0}
+  delay: 0
 --- !u!1001 &3742622091820881353
 PrefabInstance:
   m_ObjectHideFlags: 0

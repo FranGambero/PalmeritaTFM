@@ -18,27 +18,18 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     }
 
     public void OnDrag(PointerEventData eventData) {
-        if (GameManager.Instance.myCharacterController.isMyTurn) {
-            if (!starting) {
-                starting = true;
-                originalHandPosition = transform.position;
-            }
+        if (GameManager.Instance.Sepalo.IsMyTurn) {
             transform.position = Input.mousePosition;
             BuildManager.Instance.changeBuildValues(
                 cardData.amount, cardData.direction);
         }
     }
     public void OnEndDrag(PointerEventData eventData) {
-        if (GameManager.Instance.myCharacterController.isMyTurn) {
-            starting = false;
-
-            if (buildNewChannel()) {
-                transform.position = originalPosition;
-                hideCard();
-            } else {
-                transform.position = originalHandPosition;
-
-            }
+        if (GameManager.Instance.Sepalo.IsMyTurn) {
+            transform.position = originalPosition;
+            AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
+            hideCard();
+            buildNewChannel();
         }
     }
 

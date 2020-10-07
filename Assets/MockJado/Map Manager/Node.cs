@@ -1,34 +1,33 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ElJardin.Movement;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace ElJardin
 {
-    public class Node : MonoBehaviour
+    public class Node : MonoBehaviour, IPathable
     {
         #region Variables
+        [Header("Hover")] public Color hoverColor;
 
-        [Header("Hover")]
-        public Color hoverColor;
-
-        [Header("Position")]
-        public int row, column;
+        [Header("Position")] public int row, column;
 
         //[HideInInspector]
         public List<Node> neighbors;
 
-        private Material currentMaterial;
-        private NodeType nodeType;
+        Material currentMaterial;
+        NodeType nodeType;
 
-        private MeshRenderer _mr;
-        private MeshFilter _mf;
-        private Color baseColor;
+        MeshRenderer _mr;
+        MeshFilter _mf;
+        Color baseColor;
 
-        private bool hovering;
+        bool hovering;
 
-
+        public int GCost { get; set; }
+        public int HCost { get; set; }
+        public int FCost { get; set; }
+        public Node CameFromNode { get; set; }
         #endregion
 
         private void Awake()
@@ -57,22 +56,19 @@ namespace ElJardin
         }
 
         #region Setters
-
         public void SetPosition(Vector2 pos)
         {
-            row = (int)pos.x;
-            column = (int)pos.y;
+            row = (int) pos.x;
+            column = (int) pos.y;
         }
 
         public void SetColor(Color cl)
         {
             _mr.material.color = cl;
         }
-
         #endregion
 
         #region Getters
-
         public Vector2 GetPosition()
         {
             return new Vector2(row, column);
@@ -87,11 +83,9 @@ namespace ElJardin
         {
             return _mf.mesh;
         }
-
         #endregion
 
         #region Hover
-
         public void HoverOn()
         {
             baseColor = _mr.material.color;
@@ -116,15 +110,13 @@ namespace ElJardin
         {
             BuildManager.Instance.UnHoverNodesInList();
         }
-
         #endregion
 
         #region Builder
-
         private void OnMouseUp()
         {
             Debug.LogError("Me han llamao");
-            if (EventSystem.current.IsPointerOverGameObject())
+            if(EventSystem.current.IsPointerOverGameObject())
                 return;
 
             //if (hovering)
@@ -134,11 +126,9 @@ namespace ElJardin
             //    MapManager.Instance.CheckFullRiver();
             //}
         }
-
         #endregion
 
-        #region 
-
+        #region
         public bool IsGround()
         {
             return nodeType == NodeType.Ground ? true : false;
@@ -159,19 +149,27 @@ namespace ElJardin
 
 
             //Comprobamos que los vecinos sean validos
-            foreach (Vector2 pos in positionList)
+            foreach(Vector2 pos in positionList)
             {
-                if (BuildManager.Instance.CheckValidNode((int)pos.x, (int)pos.y))
+                if(BuildManager.Instance.CheckValidNode((int) pos.x, (int) pos.y))
                 {
-                    neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
-                    this.neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
-                    foreach (Node neighbor in neighbors)
+                    neighbors.Add(MapManager.Instance.GetNode((int) pos.x, (int) pos.y));
+                    this.neighbors.Add(MapManager.Instance.GetNode((int) pos.x, (int) pos.y));
+                    foreach(Node neighbor in neighbors)
                     {
                         if(!neighbor.neighbors.Contains(this))
                             neighbor.neighbors.Add(this);
                     }
                 }
             }
+        }
+        #endregion
+        
+        #region Pathfinding
+
+        public void CalculateFCost()
+        {
+            FCost = GCost + HCost;
         }
 
         #endregion

@@ -27,39 +27,16 @@ namespace ElJardin {
         public void changeCardTransform(int newIndex, bool wait = true) {
             transformIndex = newIndex;
             float waitTime = wait ? transformIndex * .5f : 0f;
-            Invoke(nameof(jump), waitTime);
+            Invoke(nameof(jumpCard), waitTime);
 
             transform.SetParent(CardManager.Instance.transformList[transformIndex]);
         }
 
-        private void jump() {
-            transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, .5f);
-
-        }
-
-        private DirectionType getNewDirection() {
-            int numResult = Random.Range(0, 4);
-            DirectionType newDirection;
-
-            switch (numResult) {
-                case 0:
-                    newDirection = DirectionType.North;
-                    break;
-                case 1:
-                    newDirection = DirectionType.East;
-                    break;
-                case 2:
-                    newDirection = DirectionType.South;
-                    break;
-                case 3:
-                    newDirection = DirectionType.West;
-                    break;
-                default:
-                    newDirection = DirectionType.North;
-                    break;
+        private void jumpCard() {
+            if (gameObject.activeSelf) {
+                AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
             }
-            return newDirection;
+            transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, .5f);
         }
-
     }
 }
