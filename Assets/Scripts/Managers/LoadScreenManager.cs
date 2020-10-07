@@ -37,7 +37,7 @@ namespace ElJardin
         private IEnumerator LoadScreenCoroutine()
         {
             loadingScreenPanel.SetActive(true);
-            async = SceneManager.LoadSceneAsync(2);
+            async = SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("NextLevel"));
             async.allowSceneActivation = false;
 
 
