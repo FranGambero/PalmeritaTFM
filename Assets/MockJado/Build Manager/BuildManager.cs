@@ -309,6 +309,8 @@ namespace ElJardin
                 UpdateNeighbors(node);
                 RotateMesh(node);
             }
+            MapManager.Instance.CheckFullRiver();
+
         }
 
         public void GetSurroundingsByCard(Node node)

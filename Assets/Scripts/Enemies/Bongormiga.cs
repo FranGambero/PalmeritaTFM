@@ -37,11 +37,15 @@ public class Bongormiga : MonoBehaviour, ITurn {
     #region Actions
     IEnumerator Move(Node target)
     {
+        myAnimator.SetFloat("Speed", 5);
+        yield return new WaitForSeconds(1.25f);
         //TODO: se debería asignar un nodo, no ir directo a por sépalo
         target = GameManager.Instance.Sepalo.CurrentNode;
         Node lastNodeWalked = target;
         yield return StartCoroutine(Movement.MovePartial(CurrentNode, target, 2, value => lastNodeWalked = value));
         CurrentNode = lastNodeWalked;
+        myAnimator.SetFloat("Speed", 0);
+
     }
 
     IEnumerator PlayBongos()
