@@ -18,6 +18,10 @@ namespace ElJardin {
             Sepalo = FindObjectOfType<SepaloController>();
         }
 
+        private void Start() {
+            AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
+        }
+
         private void Update() {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 if (configMenu.gameObject.activeSelf)

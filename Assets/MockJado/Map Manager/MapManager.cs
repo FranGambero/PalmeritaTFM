@@ -136,6 +136,7 @@ namespace ElJardin
             CheckWin(startingNode);
             if (levelEnded)
             {
+                AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
                 victoryCanvas.SetActive(true);
                 //confety.SetActive(true);
                 Debug.Log("LVL COMPLETADO HIJO DE PUTA");
