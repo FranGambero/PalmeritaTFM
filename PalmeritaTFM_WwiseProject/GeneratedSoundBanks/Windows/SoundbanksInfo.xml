@@ -302,7 +302,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1694954324" Name="Hormiga_Ataque_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In" DurationType="OneShot" DurationMin="4.458707" DurationMax="4.458707">
+				<Event Id="1694954324" Name="Hormiga_Ataque_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In" DurationType="OneShot" DurationMin="4.121995" DurationMax="4.127982">
 					<IncludedMemoryFiles>
 						<File Id="371519463" Language="SFX">
 							<ShortName>Hormiga_Bongo_SFX_Start_4.wav</ShortName>

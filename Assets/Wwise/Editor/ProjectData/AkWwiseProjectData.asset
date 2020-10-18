@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585996657047686799
+    m_lastTime: -8585986071943047543
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -205,8 +205,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In
       maxAttenuation: 0
-      maxDuration: 4458707
-      minDuration: 4458707
+      maxDuration: 4127982
+      minDuration: 4121995
     - name: Hormiga_Crep_In
       guid: 1a172b0d967b294795b4dba796f8c8db
       id: 1873637369
