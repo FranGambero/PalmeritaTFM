@@ -2,6 +2,8 @@
 {
     Properties
     {
+        _Color ("Color", Color) = (1,1,1,1)
+
         _MainTex ("Texture", 2D) = "white" {}
         _Amplitud("Amplitud", float)=1
         _Speed("Speed", float)=1
@@ -48,6 +50,7 @@
             float _Amplitud;
             float _Speed;
             float _Seno;
+        fixed4 _Color;
 
             fixed4 frag (v2f i) : SV_Target
             {
@@ -55,7 +58,7 @@
               i.uv.y += sin(_Time.y*_Speed)*_Amplitud;
               _Seno = sin(_Time.y);
             //  i.uv.y += _Speed;
-                fixed4 col = tex2D(_MainTex, i.uv);
+                fixed4 col = tex2D(_MainTex, i.uv)* _Color;
                 return col;
             }
             ENDCG

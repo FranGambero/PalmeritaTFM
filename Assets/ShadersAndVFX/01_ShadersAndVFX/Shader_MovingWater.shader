@@ -6,7 +6,7 @@
 		_CellColor("Cell Color", Color) = (0,0,0,1)
 
 		_Amplitude("Wave Size", Range(0,1)) = 0.4
-		_Frequency("Wave Freqency", Range(1, 8)) = 2
+		_Frequency("Wave Freqency", Range(0, 8)) = 2
 		_AnimationSpeed("Animation Speed", Range(0,5)) = 1
 	}
 		SubShader{
