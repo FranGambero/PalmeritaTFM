@@ -73,6 +73,7 @@
 				<AuxBus Id="1635194334" Name="PC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PC"/>
 			</IncludedAuxBusses>
 			<GameParameters>
+				<GameParameter Id="2712164154" Name="Ducking" ObjectPath="\Game Parameters\Default Work Unit\Ducking"/>
 				<GameParameter Id="3273357900" Name="Vol_SFX" ObjectPath="\Game Parameters\Default Work Unit\Vol_SFX"/>
 				<GameParameter Id="3361044397" Name="Vol_Musica" ObjectPath="\Game Parameters\Default Work Unit\Vol_Musica"/>
 			</GameParameters>

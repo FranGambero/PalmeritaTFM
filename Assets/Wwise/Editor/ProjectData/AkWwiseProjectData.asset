@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8585984364138292139
+    m_lastTime: -8585984315863496732
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -422,8 +422,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8585995979595594378
+    m_lastTime: -8585984315862816549
     List:
+    - name: Ducking
+      guid: 68031a4791c8d748ac560680a6d382f1
+      id: 2712164154
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ducking
+        ObjectType: 13
+      Path: Default Work Unit\Ducking
     - name: Vol_Musica
       guid: a32eaa7062895a4cadff213bafe91747
       id: 3361044397
