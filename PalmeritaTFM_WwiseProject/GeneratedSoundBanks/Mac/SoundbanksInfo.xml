@@ -335,7 +335,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2885749304" Name="Hormiga_Crep_Out" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2360392006" Name="Hormiga_Salto_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In" DurationType="OneShot" DurationMin="2.188843" DurationMax="2.188843">
+				<Event Id="2360392006" Name="Hormiga_Salto_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In" DurationType="OneShot" DurationMin="1.983469" DurationMax="1.983469">
 					<IncludedMemoryFiles>
 						<File Id="315805695" Language="SFX">
 							<ShortName>Hormiga_Salto_SFX_Start.wav</ShortName>

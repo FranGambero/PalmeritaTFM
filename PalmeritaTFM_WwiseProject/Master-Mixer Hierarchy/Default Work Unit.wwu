@@ -29,6 +29,7 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -66,6 +67,7 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -78,18 +80,6 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}"/>
-									<DuckingParam>
-										<Volume>-3</Volume>
-										<FadeInTime>0.300000011920929</FadeInTime>
-										<FadeOutTime>0.300000011920929</FadeOutTime>
-										<FadeCurve>FadeLog1</FadeCurve>
-										<TargetProp>BusVolume</TargetProp>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
 						</Bus>
 						<AuxBus Name="PC" ID="{CB70363A-C61A-4EE5-8ED6-74AE093CD00B}">
 							<PropertyList>

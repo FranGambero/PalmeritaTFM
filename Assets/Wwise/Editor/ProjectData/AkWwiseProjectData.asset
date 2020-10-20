@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8585995979560991587
+    m_lastTime: -8585984364138292139
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -253,8 +253,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In
       maxAttenuation: 0
-      maxDuration: 2188843
-      minDuration: 2188843
+      maxDuration: 1983469
+      minDuration: 1983469
     - name: Hormiga_Steps_In
       guid: 4d0cc55da989b44e82e65d82579c087d
       id: 60258080

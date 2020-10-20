@@ -6,15 +6,15 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{3FF2A5AE-104E-45F3-ABC7-9FEE0D94CD26}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Amb_Base_Loop" ID="{38C05550-C5A9-4BA6-A430-15901649E28D}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+							<ObjectRef Name="UI_Back" ID="{76DE2665-7EE1-4DC7-94B6-CA235682F7A3}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="General_Shoots" ID="{702878F9-69A7-4679-B205-30AD2788F12E}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+							<ObjectRef Name="UI_Cursor" ID="{E4A8A55C-7A00-424D-A41A-B691DF028CD5}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Musica_Ingame" ID="{F8E0533D-C71A-405D-8AEF-A445CF59107A}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+							<ObjectRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
