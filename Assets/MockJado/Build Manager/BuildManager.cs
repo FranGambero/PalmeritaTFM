@@ -271,7 +271,7 @@ namespace ElJardin
             {
                 Node auxNode = MapManager.Instance.GetNode(row,column);
 
-                if (auxNode.IsGround())
+                if (auxNode.IsGround() && auxNode.CanBuild)
                 {
                     //MapManager.Instance.GetNode(row, column).ChangeNodeType(NodeType.Water, waterMat);
                     nodesToBuild.Add(auxNode);

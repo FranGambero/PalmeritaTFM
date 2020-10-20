@@ -37,7 +37,7 @@ namespace ElJardin.Characters
             yield return StartCoroutine(Movement.Move(CurrentNode, targetNode));
             CurrentNode = targetNode;
             //TODO: abstraer comportamiento
-            BuildManager.Instance.buildCells();
+           // BuildManager.Instance.buildCells();
             onTurnFinished();
         }
         #endregion

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 using ElJardin.Movement;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -22,12 +24,19 @@ namespace ElJardin
         MeshFilter _mf;
         Color baseColor;
 
-        bool hovering;
+        bool hovering, canBuild;
 
         public int GCost { get; set; }
         public int HCost { get; set; }
         public int FCost { get; set; }
         public Node CameFromNode { get; set; }
+
+        public bool CanBuild {
+            get
+            {
+                return canBuild;
+            }
+        }
         #endregion
 
         private void Awake()
@@ -40,6 +49,10 @@ namespace ElJardin
             hovering = false;
 
             baseColor = _mr.material.color;
+
+            // uwu
+            canBuild = true;
+            // end of UWU
         }
 
         public void ChangeNodeType(NodeType newType, Material newMaterial)
@@ -115,7 +128,9 @@ namespace ElJardin
         #region Builder
         private void OnMouseUp()
         {
-            Debug.LogError("Me han llamao");
+            GameManager.Instance.Sepalo.StopAllCoroutines();
+            Debug.LogError("Me han llamao");    
+           StartCoroutine( GameManager.Instance.Sepalo.Move(this)); 
             if(EventSystem.current.IsPointerOverGameObject())
                 return;
 

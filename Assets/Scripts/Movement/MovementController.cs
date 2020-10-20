@@ -34,6 +34,7 @@ namespace ElJardin.Movement
 
         IEnumerator MoveFullPath(IEnumerable<Node> path)
         {
+            Debug.Log(path.Count());
             foreach(var node in path)
             {
                 yield return StartCoroutine(MoveToNode(node));

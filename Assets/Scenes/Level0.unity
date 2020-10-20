@@ -1377,7 +1377,7 @@ PrefabInstance:
     - target: {fileID: 2192137890672951379, guid: 797d16d1c8237694b8f27c8fed18e9fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2192137891710311493, guid: 797d16d1c8237694b8f27c8fed18e9fa,
         type: 3}
@@ -1402,7 +1402,7 @@ PrefabInstance:
     - target: {fileID: 2192137891815723702, guid: 797d16d1c8237694b8f27c8fed18e9fa,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2192137892103089773, guid: 797d16d1c8237694b8f27c8fed18e9fa,
         type: 3}
@@ -4642,6 +4642,11 @@ PrefabInstance:
       propertyPath: riverEndPos.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1522253018068072351, guid: 80062185d6d1d9047856f888d9a54398,
+        type: 3}
+      propertyPath: groundMatOscurecio
+      value: 
+      objectReference: {fileID: 2100000, guid: cda3d080bf1bff94d989c4667d4e0289, type: 2}
     - target: {fileID: 1522253018248357548, guid: 80062185d6d1d9047856f888d9a54398,
         type: 3}
       propertyPath: configMenu
