@@ -252,21 +252,38 @@ namespace ElJardin {
             direction = newDirType;
         }
 
-        private bool IsChangeValid() {
-            //return (nodesToBuild.Count == amount) ? true : false;
-            return false;
+        private bool IsChangeValid(List<Node> nodesToBuild) {
+            return (nodesToBuild != null && nodesToBuild.Count == amount) ? true : false;
         }
 
         public bool ChangeNodesInList() {
-            if (IsChangeValid()) {
-                savedNodes = new List<Node>(nodesToBuild);
-                // Vamos a llamar al movimiento del personaje con el nodo una vez validado
-                Debug.Log("Me llaman con lista " + nodesToBuild);
-                StartCoroutine(Sepalo.Move(nodesToBuild[0]));
-                //characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
+            bool isValid = false;
+            if (GameManager.Instance.SelectedNode != null) {
+                List<Node> nodesToBuild = GetNodeListByDirection(GameManager.Instance.SelectedNode.directionInHover);
+                isValid = IsChangeValid(nodesToBuild);
+                if (isValid) {
+                    savedNodes = new List<Node>(nodesToBuild);
+                    // Vamos a llamar al movimiento del personaje con el nodo una vez validado
+                    Debug.Log("Me llaman con lista " + nodesToBuild);
+                    buildCells();
+                    //StartCoroutine(Sepalo.Move(nodesToBuild[0]));
+                    //characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
+                }
             }
-            return IsChangeValid();
+            return isValid;
         }
+
+        //Justo en caso
+        //public bool ChangeNodesInList(Node startingNode) {
+        //    if (IsChangeValid()) {
+        //        savedNodes = new List<Node>(nodesToBuild);
+        //        // Vamos a llamar al movimiento del personaje con el nodo una vez validado
+        //        Debug.Log("Me llaman con lista " + nodesToBuild);
+        //        StartCoroutine(Sepalo.Move(nodesToBuild[0]));
+        //        //characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
+        //    }
+        //    return IsChangeValid();
+        //}
 
         public void buildCells() {
             //Correct mesh
@@ -399,6 +416,15 @@ namespace ElJardin {
             }
 
             return nodesToBuilAround;
+        }
+
+        private List<Node> GetNodeListByDirection(DirectionType direction) {
+            List<Node> nodeList = null;
+            if (dictionaryNodesAround != null) {
+                nodeList = dictionaryNodesAround[direction];
+            }
+
+            return nodeList;
         }
 
         #endregion

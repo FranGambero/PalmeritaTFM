@@ -21,6 +21,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             if (!starting) {
                 starting = true;
+                GameManager.Instance.draggingCard = true;
                 BuildManager.Instance.HoverAroundNode(GameManager.Instance.Sepalo.CurrentNode, cardData.amount);
                 originalHandPosition = transform.position;
             }
@@ -30,6 +31,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         }
     }
     public void OnEndDrag(PointerEventData eventData) {
+        starting = false;
+        GameManager.Instance.draggingCard = false;
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             if (buildNewChannel()) {
                 transform.position = originalPosition;

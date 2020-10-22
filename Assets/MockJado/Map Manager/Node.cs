@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using ElJardin.Movement;
 using Unity.Collections.LowLevel.Unsafe;
@@ -117,16 +118,26 @@ namespace ElJardin {
 
         private void OnMouseEnter() {
             if (hovering) {
+                GameManager.Instance.SelectedNode = this;
                 BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
+            } else if(!GameManager.Instance.draggingCard && this.CanBuild){
+                PositionMoveHover();
             }
             //BuildManager.Instance.GetSurroundingsByCard(this);
             //BuildManager.Instance.HoverNodesInList();
             //BuildManager.Instance.CalculateMeshToBuild(this);
         }
 
+        private void PositionMoveHover() {
+            _mr.material.color = Color.blue;
+        }
+
         private void OnMouseExit() {
             if (hovering) {
+                GameManager.Instance.SelectedNode = null;
                 BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
+            } else {
+                ShowPreview(false);
             }
             //BuildManager.Instance.UnHoverNodesInList();
         }
