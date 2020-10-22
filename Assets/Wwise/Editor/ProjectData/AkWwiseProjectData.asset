@@ -161,8 +161,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Carta_Select_In
       maxAttenuation: 0
-      maxDuration: 733492
-      minDuration: 733492
+      maxDuration: 231632
+      minDuration: 180793
     - name: Carta_Slide_In
       guid: 85ed6b3e00b92548ae76ed36e29dfa20
       id: 2760388952

@@ -113,35 +113,6 @@
 												</PointList>
 											</Curve>
 										</RTPC>
-										<RTPC Name="" ID="{7B81A9B7-D5EE-4524-B86B-62F0E917BBC1}" ShortID="483521556">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Ducking" ID="{471A0368-C891-48D7-AC56-0680A6D382F1}" WorkUnitID="{7688CDD7-31A6-418E-9B49-9E967B49208C}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{360E38B3-767C-43D2-8581-45D0DFB01B91}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>-48</XPos>
-														<YPos>-8</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>-9.48837</XPos>
-														<YPos>-8</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
 									</RTPCList>
 								</Property>
 							</PropertyList>
