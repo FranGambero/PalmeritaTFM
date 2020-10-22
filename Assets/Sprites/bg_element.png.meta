@@ -80,6 +80,12 @@ TextureImporter:
   - first:
       213: 411535812139160067
     second: bg_element_12
+  - first:
+      213: -5804021184318183117
+    second: bg_element_13
+  - first:
+      213: -6132734308239269921
+    second: bg_element_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -192,10 +198,10 @@ TextureImporter:
       name: bg_element_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 395
-        width: 832
-        height: 685
+        x: 154
+        y: 493
+        width: 750
+        height: 587
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,7 +219,7 @@ TextureImporter:
       name: bg_element_1
       rect:
         serializedVersion: 2
-        x: 1048
+        x: 1049
         y: 944
         width: 81
         height: 104
@@ -234,10 +240,10 @@ TextureImporter:
       name: bg_element_2
       rect:
         serializedVersion: 2
-        x: 1147
+        x: 1148
         y: 951
         width: 29
-        height: 45
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +261,7 @@ TextureImporter:
       name: bg_element_3
       rect:
         serializedVersion: 2
-        x: 1194
+        x: 1195
         y: 918
         width: 51
         height: 95
@@ -276,7 +282,7 @@ TextureImporter:
       name: bg_element_4
       rect:
         serializedVersion: 2
-        x: 1143
+        x: 1144
         y: 551
         width: 252
         height: 184
@@ -297,9 +303,9 @@ TextureImporter:
       name: bg_element_5
       rect:
         serializedVersion: 2
-        x: 1464
+        x: 1465
         y: 552
-        width: 274
+        width: 273
         height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -318,10 +324,10 @@ TextureImporter:
       name: bg_element_6
       rect:
         serializedVersion: 2
-        x: 22
-        y: 13
-        width: 339
-        height: 374
+        x: 46
+        y: 50
+        width: 195
+        height: 405
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +345,10 @@ TextureImporter:
       name: bg_element_7
       rect:
         serializedVersion: 2
-        x: 582
-        y: 0
-        width: 449
-        height: 306
+        x: 262
+        y: 55
+        width: 197
+        height: 438
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,10 +366,10 @@ TextureImporter:
       name: bg_element_8
       rect:
         serializedVersion: 2
-        x: 1297
-        y: 187
-        width: 5
-        height: 5
+        x: 587
+        y: 27
+        width: 443
+        height: 294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +387,10 @@ TextureImporter:
       name: bg_element_9
       rect:
         serializedVersion: 2
-        x: 1300
-        y: 35
-        width: 403
-        height: 317
+        x: 1347
+        y: 78
+        width: 350
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,69 +400,6 @@ TextureImporter:
       bones: []
       spriteID: 5b2427052e65d9490800000000000000
       internalID: -7737933054740381003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bg_element_10
-      rect:
-        serializedVersion: 2
-        x: 1298
-        y: 182
-        width: 16
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 029406b9314686a30800000000000000
-      internalID: 4208723887151663392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bg_element_11
-      rect:
-        serializedVersion: 2
-        x: 1287
-        y: 169
-        width: 23
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 917c6bff7429b3e30800000000000000
-      internalID: 4484338691907962649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bg_element_12
-      rect:
-        serializedVersion: 2
-        x: 1287
-        y: 158
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30218e604a116b500800000000000000
-      internalID: 411535812139160067
       vertices: []
       indices: 
       edges: []
