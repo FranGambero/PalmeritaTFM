@@ -21,6 +21,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             if (!starting) {
                 starting = true;
+                BuildManager.Instance.HoverAroundNode(GameManager.Instance.Sepalo.CurrentNode, cardData.amount);
                 originalHandPosition = transform.position;
             }
             transform.position = Input.mousePosition;
@@ -37,6 +38,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             } else {
                 transform.position = originalHandPosition;
             }
+            BuildManager.Instance.UnHoverNodesInList();
         }
     }
 
@@ -46,8 +48,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
 
     private bool buildNewChannel() {
         bool hasBuild = BuildManager.Instance.ChangeNodesInList();
-      //  if (hasBuild)
-            //MapManager.Instance.CheckFullRiver();
+        //  if (hasBuild)
+        //MapManager.Instance.CheckFullRiver();
         return hasBuild;
     }
 
