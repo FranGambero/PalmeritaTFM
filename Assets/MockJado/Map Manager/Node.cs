@@ -129,7 +129,13 @@ namespace ElJardin {
         }
 
         private void PositionMoveHover() {
-            _mr.material.color = Color.blue;
+            GameManager.Instance.positionHover.SetActive(true);
+            GameManager.Instance.positionHover.transform.position = new Vector3(
+                this.transform.position.x, 
+                GameManager.Instance.positionHover.transform.position.y, 
+                this.transform.position.z
+                );
+            //_mr.material.color = Color.blue;   //La casillita asú
         }
 
         private void OnMouseExit() {
@@ -138,6 +144,7 @@ namespace ElJardin {
                 BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
             } else {
                 ShowPreview(false);
+                GameManager.Instance.positionHover.SetActive(false);
             }
             //BuildManager.Instance.UnHoverNodesInList();
         }
