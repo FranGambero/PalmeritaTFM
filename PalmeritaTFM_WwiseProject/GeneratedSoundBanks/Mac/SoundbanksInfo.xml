@@ -271,7 +271,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="236399107" Name="Carta_Select_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Select_In" DurationType="OneShot" DurationMin="0.180793" DurationMax="0.231632">
+				<Event Id="236399107" Name="Carta_Select_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Select_In" DurationType="OneShot" DurationMin="0.330091" DurationMax="0.330091">
 					<IncludedMemoryFiles>
 						<File Id="734722749" Language="SFX">
 							<ShortName>El_Jardin_Select_Cartas_SFX_Start.wav</ShortName>
