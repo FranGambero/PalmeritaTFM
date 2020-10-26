@@ -120,19 +120,16 @@ namespace ElJardin {
             if (hovering) {
                 GameManager.Instance.SelectedNode = this;
                 BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
-            } else if(!GameManager.Instance.draggingCard && this.CanBuild){
+            } else if (!GameManager.Instance.draggingCard && this.CanBuild) {
                 PositionMoveHover();
             }
-            //BuildManager.Instance.GetSurroundingsByCard(this);
-            //BuildManager.Instance.HoverNodesInList();
-            //BuildManager.Instance.CalculateMeshToBuild(this);
         }
 
         private void PositionMoveHover() {
             GameManager.Instance.positionHover.SetActive(true);
             GameManager.Instance.positionHover.transform.position = new Vector3(
-                this.transform.position.x, 
-                GameManager.Instance.positionHover.transform.position.y, 
+                this.transform.position.x,
+                GameManager.Instance.positionHover.transform.position.y,
                 this.transform.position.z
                 );
             //_mr.material.color = Color.blue;   //La casillita asú
@@ -152,18 +149,11 @@ namespace ElJardin {
 
         #region Builder
         private void OnMouseUp() {
-            GameManager.Instance.Sepalo.StopAllCoroutines();
+            //GameManager.Instance.Sepalo.StopAllCoroutines();
             Debug.LogError("Me han llamao");
-            StartCoroutine(GameManager.Instance.Sepalo.Move(this));
+            GameManager.Instance.Sepalo.DoTheMove(this);
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
-
-            //if (hovering)
-            //{
-            //    //BuildManager.Instance.BuildGroove(this);
-            //    BuildManager.Instance.ChangeNodesInList();
-            //    MapManager.Instance.CheckFullRiver();
-            //}
         }
         #endregion
 

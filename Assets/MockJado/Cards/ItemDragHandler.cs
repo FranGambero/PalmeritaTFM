@@ -15,6 +15,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         starting = false;
         originalPosition = transform.position;
         cardData = GetComponent<Card>().cardData;
+
+        GameManager.Instance.Sepalo.OnEndWalk.AddListener(DoTheAction);
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -33,16 +35,23 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public void OnEndDrag(PointerEventData eventData) {
         starting = false;
         GameManager.Instance.draggingCard = false;
-        if (GameManager.Instance.Sepalo.IsMyTurn) {
+        DoTheAction();
+    }
+
+    private void DoTheAction() {
+        if (GameManager.Instance.Sepalo.IsMyTurn && starting && !GameManager.Instance.Sepalo.isMoving) {
             if (buildNewChannel()) {
                 transform.position = originalPosition;
                 AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
+                GameManager.Instance.Sepalo.onTurnFinished();
                 hideCard();
             } else {
+                BuildManager.Instance.StopHoverCoroutine();
                 transform.position = originalHandPosition;
             }
             BuildManager.Instance.UnHoverNodesInList();
         }
+
     }
 
     private IEnumerator Wait() {

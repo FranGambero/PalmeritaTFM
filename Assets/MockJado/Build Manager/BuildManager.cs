@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using ElJardin.Characters;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ElJardin {
     public class BuildManager : Singleton<BuildManager> {
@@ -32,6 +34,7 @@ namespace ElJardin {
 
         private List<Node> nodesToBuild, savedNodes;
         public Dictionary<DirectionType, List<Node>> dictionaryNodesAround;
+        private Coroutine hoverCoroutine;
 
         #endregion
 
@@ -337,21 +340,12 @@ namespace ElJardin {
 
         #region Hover
 
-        //public void HoverNodesInList() {
-        //    foreach (Node node in nodesToBuild) {
-        //        node.HoverOn();
-        //    }
-        //}
-
         public void UnHoverNodesInList() {
-            UnHoverNodesInList(dictionaryNodesAround[DirectionType.North]);
-            UnHoverNodesInList(dictionaryNodesAround[DirectionType.East]);
-            UnHoverNodesInList(dictionaryNodesAround[DirectionType.West]);
-            UnHoverNodesInList(dictionaryNodesAround[DirectionType.South]);
-            //foreach (Node node in nodesToBuild) {
-            //    node.HoverOff();
-            //}                  uwu
-            //nodesToBuild.Clear();
+            if (dictionaryNodesAround != null) {
+                foreach (DirectionType dir in dictionaryNodesAround.Keys) {
+                    UnHoverNodesInList(dictionaryNodesAround[dir]);
+                }
+            }
         }
 
         public void HoverNodesInList(List<Node> nodesAroundList, DirectionType newDirection) {
@@ -368,15 +362,33 @@ namespace ElJardin {
         }
 
         public void HoverAroundNode(Node startingNode, int numNodes) {
+            StopHoverCoroutine();
+            if(hoverCoroutine == null)
+                Debug.LogError("EU EU EU");
+            hoverCoroutine = StartCoroutine(HoverAroundNodeCoroutine(startingNode, numNodes));
+        }
+
+        public void StopHoverCoroutine() {
+            if(hoverCoroutine != null)
+                StopCoroutine(hoverCoroutine);
+            hoverCoroutine = null;
+        }
+
+        private IEnumerator HoverAroundNodeCoroutine(Node startingNode, int numNodes) {
+            SepaloController sepalo = GameManager.Instance.Sepalo;
             this.dictionaryNodesAround = new Dictionary<DirectionType, List<Node>>();
+            yield return sepalo.movementCoroutine;
 
             DirectionType[] directions = new DirectionType[] { DirectionType.North, DirectionType.East, DirectionType.South, DirectionType.West };
             foreach (DirectionType directionToFill in directions) {
 
-                dictionaryNodesAround[directionToFill] = GetSurroundingsByNode(startingNode, directionToFill, numNodes);
+                dictionaryNodesAround[directionToFill] = GetSurroundingsByNode(
+                    sepalo.CurrentNode,
+                    directionToFill,
+                    numNodes);
                 HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
-            }
 
+            }
         }
 
         public List<Node> GetSurroundingsByNode(Node node, DirectionType direction, int amount) {
@@ -395,19 +407,16 @@ namespace ElJardin {
                 case DirectionType.South:
                     for (int i = (int)position.x - 1; i >= (int)position.x - amount; i--) {
                         CreateChangeList(i, (int)position.y, nodesToBuilAround);
-                        //ChangeNodesInList();
                     }
                     break;
                 case DirectionType.East:
                     for (int j = (int)position.y + 1; j <= (int)position.y + amount; j++) {
                         CreateChangeList((int)position.x, j, nodesToBuilAround);
-                        //ChangeNodesInList();
                     }
                     break;
                 case DirectionType.West:
                     for (int j = (int)position.y - 1; j >= (int)position.y - amount; j--) {
                         CreateChangeList((int)position.x, j, nodesToBuilAround);
-                        //ChangeNodesInList();
                     }
                     break;
                 default:
