@@ -1,4 +1,5 @@
-﻿using ElJardin;
+﻿using DG.Tweening;
+using ElJardin;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -84,4 +85,15 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         gameObject.SetActive(false);
     }
 
+    public void OnMouseHoverEnter() {
+        if (GameManager.Instance.Sepalo.IsMyTurn && !starting) {
+            transform.DOMove(originalHandPosition + Vector3.up * 7f, .2f).SetEase(Ease.Linear);
+        }
+    }
+
+    public void OnMouseHoverExit() {
+        if (GameManager.Instance.Sepalo.IsMyTurn && !starting) {
+            transform.DOMove(originalHandPosition, .5f);
+        }
+    }
 }

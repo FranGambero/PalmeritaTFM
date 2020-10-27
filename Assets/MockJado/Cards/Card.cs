@@ -37,6 +37,8 @@ namespace ElJardin {
                 AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
             }
             transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, .5f);
+
+            GetComponent<ItemDragHandler>().originalHandPosition = CardManager.Instance.transformList[transformIndex].position;
         }
     }
 }
