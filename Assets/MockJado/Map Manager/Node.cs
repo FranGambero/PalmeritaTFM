@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using DG.Tweening;
 using ElJardin.Movement;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace ElJardin
-{
-    public class Node : MonoBehaviour, IPathable
-    {
+namespace ElJardin {
+    public class Node : MonoBehaviour, IPathable {
         #region Variables
         [Header("Hover")] public Color hoverColor;
 
@@ -22,120 +23,150 @@ namespace ElJardin
         MeshFilter _mf;
         Color baseColor;
 
-        bool hovering;
+        bool hovering, canBuild;
+         Water water;
 
         public int GCost { get; set; }
         public int HCost { get; set; }
         public int FCost { get; set; }
         public Node CameFromNode { get; set; }
+
+        public bool CanBuild {
+            get
+            {
+                return canBuild;
+            }
+        }
+
+        public DirectionType directionInHover;
         #endregion
 
-        private void Awake()
-        {
+        private void Awake() {
             nodeType = NodeType.Undefined;
+            directionInHover = DirectionType.Undefined;
 
             _mr = GetComponentInChildren<MeshRenderer>();
             _mf = GetComponentInChildren<MeshFilter>();
 
             hovering = false;
 
-            baseColor = _mr.material.color;
-        }
 
-        public void ChangeNodeType(NodeType newType, Material newMaterial)
-        {
+            // uwu
+            canBuild = true;
+            // end of UWU
+        }
+        private void Start() {
+            water = GetComponentInChildren<Water>();
+            baseColor = _mr.material.color;
+
+        }
+        public void ChangeNodeType(NodeType newType, Material newMaterial) {
             nodeType = newType;
             _mr.material = newMaterial;
         }
 
-        public void ChangeNodeType(NodeType newType, Mesh newMesh)
-        {
+        public void ChangeNodeType(NodeType newType, Mesh newMesh) {
             nodeType = newType;
             _mf.mesh = newMesh;
             CalculateNeighbors();
         }
 
         #region Setters
-        public void SetPosition(Vector2 pos)
-        {
-            row = (int) pos.x;
-            column = (int) pos.y;
+        public void SetPosition(Vector2 pos) {
+            row = (int)pos.x;
+            column = (int)pos.y;
         }
 
-        public void SetColor(Color cl)
-        {
+        public void SetColor(Color cl) {
             _mr.material.color = cl;
         }
         #endregion
 
         #region Getters
-        public Vector2 GetPosition()
-        {
+        public Vector2 GetPosition() {
             return new Vector2(row, column);
         }
 
-        public NodeType GetNodeType()
-        {
+        public NodeType GetNodeType() {
             return nodeType;
         }
 
-        public Mesh GetMesh()
-        {
+        public Mesh GetMesh() {
             return _mf.mesh;
         }
         #endregion
 
         #region Hover
-        public void HoverOn()
-        {
-            baseColor = _mr.material.color;
+        public void HoverOn(DirectionType direction) {
+            //baseColor = _mr.material.color;
             _mr.material.color = hoverColor;
             hovering = true;
+            directionInHover = direction;
         }
 
-        public void HoverOff()
-        {
+        public void HoverOff() {
             _mr.material.color = baseColor;
             hovering = false;
+            directionInHover = DirectionType.Undefined;
         }
 
-        private void OnMouseEnter()
-        {
-            BuildManager.Instance.GetSurroundingsByCard(this);
-            BuildManager.Instance.HoverNodesInList();
-            //BuildManager.Instance.CalculateMeshToBuild(this);
+        public void ShowPreview(bool show) {
+            if (show) {
+                _mr.material.color = Color.black;
+            } else if (hovering) {
+                HoverOn(directionInHover);
+            } else {
+                HoverOff();
+            }
         }
 
-        private void OnMouseExit()
-        {
-            BuildManager.Instance.UnHoverNodesInList();
+        private void OnMouseEnter() {
+            if (hovering) {
+                GameManager.Instance.SelectedNode = this;
+                BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
+            } else if (!GameManager.Instance.draggingCard && this.CanBuild) {
+                PositionMoveHover();
+            }
+        }
+
+        private void PositionMoveHover() {
+            GameManager.Instance.positionHover.SetActive(true);
+            GameManager.Instance.positionHover.transform.position = new Vector3(
+                this.transform.position.x,
+                GameManager.Instance.positionHover.transform.position.y,
+                this.transform.position.z
+                );
+            //_mr.material.color = Color.blue;   //La casillita asú
+        }
+
+        private void OnMouseExit() {
+            if (hovering) {
+                GameManager.Instance.SelectedNode = null;
+                BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
+            } else {
+                ShowPreview(false);
+                GameManager.Instance.positionHover.SetActive(false);
+            }
+            //BuildManager.Instance.UnHoverNodesInList();
         }
         #endregion
 
         #region Builder
-        private void OnMouseUp()
-        {
+        private void OnMouseUp() {
+            //GameManager.Instance.Sepalo.StopAllCoroutines();
             Debug.LogError("Me han llamao");
-            if(EventSystem.current.IsPointerOverGameObject())
+            GameManager.Instance.Sepalo.DoTheMove(this);
+            if (EventSystem.current.IsPointerOverGameObject())
                 return;
-
-            //if (hovering)
-            //{
-            //    //BuildManager.Instance.BuildGroove(this);
-            //    BuildManager.Instance.ChangeNodesInList();
-            //    MapManager.Instance.CheckFullRiver();
-            //}
         }
         #endregion
 
         #region
-        public bool IsGround()
-        {
+        public bool IsGround() {
             return nodeType == NodeType.Ground ? true : false;
         }
 
-        public void CalculateNeighbors()
-        {
+        public void CalculateNeighbors() {
             this.neighbors = new List<Node>();
 
             List<Vector2> positionList = new List<Vector2>();
@@ -149,29 +180,36 @@ namespace ElJardin
 
 
             //Comprobamos que los vecinos sean validos
-            foreach(Vector2 pos in positionList)
-            {
-                if(BuildManager.Instance.CheckValidNode((int) pos.x, (int) pos.y))
-                {
-                    neighbors.Add(MapManager.Instance.GetNode((int) pos.x, (int) pos.y));
-                    this.neighbors.Add(MapManager.Instance.GetNode((int) pos.x, (int) pos.y));
-                    foreach(Node neighbor in neighbors)
-                    {
-                        if(!neighbor.neighbors.Contains(this))
+            foreach (Vector2 pos in positionList) {
+                if (BuildManager.Instance.CheckValidNode((int)pos.x, (int)pos.y)) {
+                    neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    this.neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    foreach (Node neighbor in neighbors) {
+                        if (!neighbor.neighbors.Contains(this))
                             neighbor.neighbors.Add(this);
                     }
                 }
             }
         }
         #endregion
-        
+
         #region Pathfinding
 
-        public void CalculateFCost()
-        {
+        public void CalculateFCost() {
             FCost = GCost + HCost;
         }
 
+        #endregion
+
+        #region Water
+        [ContextMenu("Water")]
+        public void Water() {
+            water.Grow(true, () => neighbors.ForEach(n => n.Water()));
+        }
+        [ContextMenu("Dry")]
+        public void Dry() {
+            water.Grow(false, () => neighbors.ForEach(n => n.Dry()));
+        }
         #endregion
     }
 }
