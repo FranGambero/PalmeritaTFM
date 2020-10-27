@@ -73,7 +73,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585996657013302170
+    m_lastTime: -8585995290154359845
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -456,7 +456,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0f0adf59de36e448e0b24f6c1daf7d1
     GuidInternal: 
-    m_lastTime: -8585996657013261991
+    m_lastTime: -8585995290154319854
     List:
     - name: General_Music
       guid: cfa4e35363726d46a4fc2b99fc0df2d9
@@ -509,6 +509,8 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Musica
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes/Hormiga
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/SFX
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
   - /PalmeritaTFM_WwiseProject/SoundBanks

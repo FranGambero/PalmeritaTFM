@@ -10,11 +10,17 @@ namespace ElJardin {
         public SepaloController Sepalo;
         public ConfigMenuManager configMenu;
         public GameObject instructMenu;
+        public GameObject positionHover;
 
+        private Node selectedNode;
+        public bool draggingCard;
 
+        public Node SelectedNode { get => selectedNode; set => selectedNode = value; }
 
         private void Awake()
         {
+            positionHover.SetActive(false);
+            draggingCard = false;
             Sepalo = FindObjectOfType<SepaloController>();
         }
 

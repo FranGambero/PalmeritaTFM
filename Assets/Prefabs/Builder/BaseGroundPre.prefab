@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7608305966207004105}
   - component: {fileID: 7117516987411040307}
   - component: {fileID: 4445199011437283369}
+  - component: {fileID: 1277770368571136094}
   m_Layer: 0
   m_Name: BaseWater
   m_TagString: Untagged
@@ -59,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 6880531976611370200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.322, z: 0}
-  m_LocalScale: {x: 1.49, y: 0.38230255, z: 1.49}
+  m_LocalScale: {x: 1.5, y: 0.38230255, z: 1.5}
   m_Children: []
   m_Father: {fileID: 4250817273789922796}
   m_RootOrder: 2
@@ -124,6 +125,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1277770368571136094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880531976611370200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be7fa4e72f2f194bb3e49a8a1082ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valuey: 0.4
+  valuex: 1.5
+  maxValue: 1.5
+  minValue: 0
+  growing: 0
 --- !u!1 &7244367991962702457
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,10 +220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edff2f87e8b3e542915eec9bc8a9246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.13803846, g: 0.8464394, b: 0.8867924, a: 0}
+  hoverColor: {r: 0.07315983, g: 0.6037736, b: 0.07119971, a: 1}
   row: 0
   column: 0
   neighbors: []
+  directionInHover: 0
 --- !u!65 &2233214265423123325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354,7 +373,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 71a40a4a0e31b07448b576f62bc98a28, type: 2}
+      objectReference: {fileID: 2100000, guid: e2bfa47644be6504d8afbb145e15bc9c, type: 2}
+    - target: {fileID: -1504981713932161579, guid: efe2b40611aa5f1478f6e7808b426ff5,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: efe2b40611aa5f1478f6e7808b426ff5,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: efe2b40611aa5f1478f6e7808b426ff5,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: efe2b40611aa5f1478f6e7808b426ff5,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: efe2b40611aa5f1478f6e7808b426ff5,
+        type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: efe2b40611aa5f1478f6e7808b426ff5,
         type: 3}
       propertyPath: m_Name
