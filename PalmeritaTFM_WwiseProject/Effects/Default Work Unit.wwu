@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CC6D4C3D-B214-4672-AF29-CB77A2F2704A}" SchemaVersion="97">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{CC6D4C3D-B214-4672-AF29-CB77A2F2704A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CC6D4C3D-B214-4672-AF29-CB77A2F2704A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Ducking_Meter" ID="{0059CC87-89C2-4C33-88C9-922AC485C194}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">					<PluginData>
+	<GameParameter Name="Ducking" ID="{471A0368-C891-48D7-AC56-0680A6D382F1}"/>
+</PluginData>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

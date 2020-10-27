@@ -4,7 +4,25 @@
 		<WorkUnit Name="Default Work Unit" ID="{0579BD64-9453-47DC-9D37-8C21C7321512}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{3FF2A5AE-104E-45F3-ABC7-9FEE0D94CD26}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="UI_Back" ID="{76DE2665-7EE1-4DC7-94B6-CA235682F7A3}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Cursor" ID="{E4A8A55C-7A00-424D-A41A-B691DF028CD5}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Ducking" ID="{471A0368-C891-48D7-AC56-0680A6D382F1}"/>
+							<Value>-9.2093023255814</Value>
+						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Vol_Musica" ID="{70AA2EA3-8962-4C5A-ADFF-213BAFE91747}"/>
 							<Value>100</Value>

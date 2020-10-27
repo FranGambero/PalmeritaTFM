@@ -49,6 +49,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID DUCKING = 2712164154U;
         static const AkUniqueID VOL_MUSICA = 3361044397U;
         static const AkUniqueID VOL_SFX = 3273357900U;
     } // namespace GAME_PARAMETERS

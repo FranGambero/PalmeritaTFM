@@ -29,10 +29,47 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
 														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{929AFCF3-28C4-4BDF-B2C5-990F731FD6AE}" ShortID="950314145">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Ducking" ID="{471A0368-C891-48D7-AC56-0680A6D382F1}" WorkUnitID="{7688CDD7-31A6-418E-9B49-9E967B49208C}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{5920DEE7-B1BB-4009-883D-76F5CFB70F24}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-25</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-10</XPos>
+														<YPos>-5</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-5</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -66,6 +103,7 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -78,18 +116,11 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}"/>
-									<DuckingParam>
-										<Volume>-3</Volume>
-										<FadeInTime>0.300000011920929</FadeInTime>
-										<FadeOutTime>0.300000011920929</FadeOutTime>
-										<FadeCurve>FadeLog1</FadeCurve>
-										<TargetProp>BusVolume</TargetProp>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="Ducking_Meter" ID="{0059CC87-89C2-4C33-88C9-922AC485C194}" WorkUnitID="{CC6D4C3D-B214-4672-AF29-CB77A2F2704A}"/>
+								</Reference>
+							</ReferenceList>
 						</Bus>
 						<AuxBus Name="PC" ID="{CB70363A-C61A-4EE5-8ED6-74AE093CD00B}">
 							<PropertyList>

@@ -7,6 +7,7 @@ State	ID	Name	State Group			Notes
 	1563092195	Musica_Inicio	General_Music			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	2712164154	Ducking			\Default Work Unit\Ducking	
 	3273357900	Vol_SFX			\Default Work Unit\Vol_SFX	
 	3361044397	Vol_Musica			\Default Work Unit\Vol_Musica	
 
@@ -20,6 +21,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	403038448	Wwise_Compressor_(Custom)	Wwise Compressor			
+	493155608	Ducking_Meter	Wwise Meter			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

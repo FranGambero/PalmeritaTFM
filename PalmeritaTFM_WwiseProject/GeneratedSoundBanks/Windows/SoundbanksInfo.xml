@@ -73,6 +73,7 @@
 				<AuxBus Id="1635194334" Name="PC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PC"/>
 			</IncludedAuxBusses>
 			<GameParameters>
+				<GameParameter Id="2712164154" Name="Ducking" ObjectPath="\Game Parameters\Default Work Unit\Ducking"/>
 				<GameParameter Id="3273357900" Name="Vol_SFX" ObjectPath="\Game Parameters\Default Work Unit\Vol_SFX"/>
 				<GameParameter Id="3361044397" Name="Vol_Musica" ObjectPath="\Game Parameters\Default Work Unit\Vol_Musica"/>
 			</GameParameters>
@@ -270,7 +271,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="236399107" Name="Carta_Select_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Select_In" DurationType="OneShot" DurationMin="0.733492" DurationMax="0.733492">
+				<Event Id="236399107" Name="Carta_Select_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Select_In" DurationType="OneShot" DurationMin="0.330091" DurationMax="0.330091">
 					<IncludedMemoryFiles>
 						<File Id="734722749" Language="SFX">
 							<ShortName>El_Jardin_Select_Cartas_SFX_Start.wav</ShortName>
@@ -302,7 +303,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1694954324" Name="Hormiga_Ataque_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In" DurationType="OneShot" DurationMin="4.458707" DurationMax="4.458707">
+				<Event Id="1694954324" Name="Hormiga_Ataque_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In" DurationType="OneShot" DurationMin="4.121995" DurationMax="4.127982">
 					<IncludedMemoryFiles>
 						<File Id="371519463" Language="SFX">
 							<ShortName>Hormiga_Bongo_SFX_Start_4.wav</ShortName>
@@ -335,7 +336,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2885749304" Name="Hormiga_Crep_Out" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2360392006" Name="Hormiga_Salto_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In" DurationType="OneShot" DurationMin="2.188843" DurationMax="2.188843">
+				<Event Id="2360392006" Name="Hormiga_Salto_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In" DurationType="OneShot" DurationMin="1.983469" DurationMax="1.983469">
 					<IncludedMemoryFiles>
 						<File Id="315805695" Language="SFX">
 							<ShortName>Hormiga_Salto_SFX_Start.wav</ShortName>
