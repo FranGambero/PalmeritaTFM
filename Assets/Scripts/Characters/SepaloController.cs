@@ -43,6 +43,7 @@ namespace ElJardin.Characters {
                     StopCoroutine(movementCoroutine);
                     movementCoroutine = null;
                 }
+                Debug.Log("Haz movimiento");
                 movementCoroutine = StartCoroutine(Move(targetNode));
             }
         }

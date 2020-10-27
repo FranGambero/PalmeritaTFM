@@ -24,6 +24,7 @@ namespace ElJardin {
         Color baseColor;
 
         bool hovering, canBuild;
+         Water water;
 
         public int GCost { get; set; }
         public int HCost { get; set; }
@@ -49,13 +50,16 @@ namespace ElJardin {
 
             hovering = false;
 
-            baseColor = _mr.material.color;
 
             // uwu
             canBuild = true;
             // end of UWU
         }
+        private void Start() {
+            water = GetComponentInChildren<Water>();
+            baseColor = _mr.material.color;
 
+        }
         public void ChangeNodeType(NodeType newType, Material newMaterial) {
             nodeType = newType;
             _mr.material = newMaterial;
@@ -195,6 +199,17 @@ namespace ElJardin {
             FCost = GCost + HCost;
         }
 
+        #endregion
+
+        #region Water
+        [ContextMenu("Water")]
+        public void Water() {
+            water.Grow(true, () => neighbors.ForEach(n => n.Water()));
+        }
+        [ContextMenu("Dry")]
+        public void Dry() {
+            water.Grow(false, () => neighbors.ForEach(n => n.Dry()));
+        }
         #endregion
     }
 }

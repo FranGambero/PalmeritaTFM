@@ -262,6 +262,8 @@ namespace ElJardin {
         public bool ChangeNodesInList() {
             bool isValid = false;
             if (GameManager.Instance.SelectedNode != null) {
+                if (!dictionaryNodesAround.ContainsKey(direction))
+                    HoverAroundNode( amount);
                 List<Node> nodesToBuild = GetNodeListByDirection(GameManager.Instance.SelectedNode.directionInHover);
                 isValid = IsChangeValid(nodesToBuild);
                 if (isValid) {
@@ -361,24 +363,23 @@ namespace ElJardin {
             nodesAroundList.Clear();
         }
 
-        public void HoverAroundNode(Node startingNode, int numNodes) {
+        public void HoverAroundNode( int numNodes) {
             StopHoverCoroutine();
-            if(hoverCoroutine == null)
-                Debug.LogError("EU EU EU");
-            hoverCoroutine = StartCoroutine(HoverAroundNodeCoroutine(startingNode, numNodes));
+
+            hoverCoroutine = StartCoroutine(HoverAroundNodeCoroutine( numNodes));
         }
 
         public void StopHoverCoroutine() {
-            if(hoverCoroutine != null)
+            if (hoverCoroutine != null)
                 StopCoroutine(hoverCoroutine);
             hoverCoroutine = null;
         }
 
-        private IEnumerator HoverAroundNodeCoroutine(Node startingNode, int numNodes) {
+        private IEnumerator HoverAroundNodeCoroutine( int numNodes) {
             SepaloController sepalo = GameManager.Instance.Sepalo;
             this.dictionaryNodesAround = new Dictionary<DirectionType, List<Node>>();
             yield return sepalo.movementCoroutine;
-
+            Debug.Log("Cacafuti");
             DirectionType[] directions = new DirectionType[] { DirectionType.North, DirectionType.East, DirectionType.South, DirectionType.West };
             foreach (DirectionType directionToFill in directions) {
 
@@ -393,7 +394,7 @@ namespace ElJardin {
 
         public List<Node> GetSurroundingsByNode(Node node, DirectionType direction, int amount) {
             List<Node> nodesToBuilAround = new List<Node>();
-
+            Debug.Log("Puto");
             Vector2 position = node.GetPosition();
 
             switch (direction) {
@@ -430,6 +431,7 @@ namespace ElJardin {
         private List<Node> GetNodeListByDirection(DirectionType direction) {
             List<Node> nodeList = null;
             if (dictionaryNodesAround != null) {
+                Debug.Log("N Keys: " + dictionaryNodesAround.Keys);
                 nodeList = dictionaryNodesAround[direction];
             }
 

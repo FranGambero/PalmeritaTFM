@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public Vector3 originalPosition;
     public Vector3 originalHandPosition;
-    public bool starting;
+    public bool starting, hoving;
     public LayerMask layerMask;
     private CardData cardData;
 
@@ -15,8 +15,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         starting = false;
         originalPosition = transform.position;
         cardData = GetComponent<Card>().cardData;
+        hoving = false;
 
-        GameManager.Instance.Sepalo.OnEndWalk.AddListener(DoTheAction);
+        GameManager.Instance.Sepalo.OnEndWalk.AddListener(HoverAround);
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -24,7 +25,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             if (!starting) {
                 starting = true;
                 GameManager.Instance.draggingCard = true;
-                BuildManager.Instance.HoverAroundNode(GameManager.Instance.Sepalo.CurrentNode, cardData.amount);
+                HoverAround();
                 originalHandPosition = transform.position;
             }
             transform.position = Input.mousePosition;
@@ -33,19 +34,32 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         }
     }
     public void OnEndDrag(PointerEventData eventData) {
-        starting = false;
         GameManager.Instance.draggingCard = false;
         DoTheAction();
-    }
+        starting = false;
+        hoving = false;
 
+    }
+    public void HoverAround() {
+        if (!GameManager.Instance.Sepalo.isMoving && !hoving && starting) {
+            hoving = true;
+            Debug.Log("QUIEEETO");
+            BuildManager.Instance.HoverAroundNode(cardData.amount);
+        }
+
+    }
     private void DoTheAction() {
-        if (GameManager.Instance.Sepalo.IsMyTurn && starting && !GameManager.Instance.Sepalo.isMoving) {
-            if (buildNewChannel()) {
+        Debug.Log(1 + "- Turno: " + GameManager.Instance.Sepalo.IsMyTurn + ", Starting: " + starting + ", IsMoving: " + GameManager.Instance.Sepalo.isMoving);
+        if (GameManager.Instance.Sepalo.IsMyTurn && starting) {
+            Debug.Log(2);
+            if (buildNewChannel() && !GameManager.Instance.Sepalo.isMoving) {
+                Debug.Log(3);
                 transform.position = originalPosition;
                 AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 GameManager.Instance.Sepalo.onTurnFinished();
                 hideCard();
             } else {
+                Debug.Log(4);
                 BuildManager.Instance.StopHoverCoroutine();
                 transform.position = originalHandPosition;
             }
