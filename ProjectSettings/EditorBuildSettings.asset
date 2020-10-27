@@ -16,8 +16,8 @@ EditorBuildSettings:
     guid: b3bd3c72a98e2d7418522325410f595b
   - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: a7d52af594a477f439738080258f3872
+    guid: 95a2d8b5510cbe84481f0dfecb146aa8
   - enabled: 1
-    path: Assets/Scenes/AudioTestScene.unity
-    guid: 745e45db80992f04eb00256af40f903e
+    path: Assets/Scenes/Level2.unity
+    guid: 9f0ae79679514b14a9362ca6cb47c85c
   m_configObjects: {}
