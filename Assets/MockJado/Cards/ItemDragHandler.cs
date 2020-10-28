@@ -26,6 +26,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             if (!starting) {
                 starting = true;
                 GameManager.Instance.draggingCard = true;
+                AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 HoverAround();
                 originalHandPosition = transform.position;
             }
@@ -56,7 +57,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             if (buildNewChannel() && !GameManager.Instance.Sepalo.isMoving) {
                 Debug.Log(3);
                 transform.position = originalPosition;
-                AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
+                //AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 GameManager.Instance.Sepalo.onTurnFinished();
                 hideCard();
             } else {
