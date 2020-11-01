@@ -276,6 +276,22 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2289756239" Name="Carta_Posicion_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Posicion_In" DurationType="OneShot" DurationMin="1.554150" DurationMax="1.615624">
+					<IncludedMemoryFiles>
+						<File Id="71906175" Language="SFX">
+							<ShortName>El_Jardin_Posicion_Cartas_SFX_Start_3.wav</ShortName>
+							<Path>SFX\El_Jardin_Posicion_Cartas_SFX_Start_3_10C4C929.wem</Path>
+						</File>
+						<File Id="125858152" Language="SFX">
+							<ShortName>El_Jardin_Posicion_Cartas_SFX_Start_2.wav</ShortName>
+							<Path>SFX\El_Jardin_Posicion_Cartas_SFX_Start_2_10C4C929.wem</Path>
+						</File>
+						<File Id="1021382917" Language="SFX">
+							<ShortName>El_Jardin_Posicion_Cartas_SFX_Start_1.wav</ShortName>
+							<Path>SFX\El_Jardin_Posicion_Cartas_SFX_Start_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="236399107" Name="Carta_Select_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Select_In" DurationType="OneShot" DurationMin="0.330091" DurationMax="0.330091">
 					<IncludedMemoryFiles>
 						<File Id="734722749" Language="SFX">

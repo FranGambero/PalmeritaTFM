@@ -3131,6 +3131,97 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Carta_Posicion" ID="{6996E7EE-8C8F-444E-B34A-017EF390ABB5}" ShortID="793783854">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{08F0C2C5-D0AA-4FBF-94D0-C1E57C4D2CE9}" ShortID="894702377">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{86FB6111-233B-4651-BA48-C2D743C31E90}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Posicion_Cartas_SFX_Start_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1021382917"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{86FB6111-233B-4651-BA48-C2D743C31E90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{112FC22C-13C0-400F-901F-515C07A17A22}" ShortID="132367125">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{2B4C6573-DE86-47CF-8797-20C2D4CCB67E}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Posicion_Cartas_SFX_Start_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="125858152"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{2B4C6573-DE86-47CF-8797-20C2D4CCB67E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{7EA7CB29-34CC-4457-8696-6270FBBA9535}" ShortID="461790121">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{D7990E1E-1F57-4216-A16A-F03975D17485}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Posicion_Cartas_SFX_Start_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71906175"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{D7990E1E-1F57-4216-A16A-F03975D17485}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{08F0C2C5-D0AA-4FBF-94D0-C1E57C4D2CE9}"/>
+								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{112FC22C-13C0-400F-901F-515C07A17A22}"/>
+								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{7EA7CB29-34CC-4457-8696-6270FBBA9535}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
