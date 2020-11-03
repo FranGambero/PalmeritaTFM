@@ -14,6 +14,12 @@ namespace ElJardin {
 
         private void Start() {
             AkSoundEngine.PostEvent("Musica_Switch_In", gameObject);
+            if (PlayerPrefs.HasKey(Keys.Volume.PREF_VOL_SFX)) {
+                AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_SFX, PlayerPrefs.GetInt(Keys.Volume.PREF_VOL_SFX));
+            }
+            if (PlayerPrefs.HasKey(Keys.Volume.PREF_VOL_MUSIC)) {
+                AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_Music, PlayerPrefs.GetInt(Keys.Volume.PREF_VOL_MUSIC));
+            }
         }
 
         public void toggleMusicIngameState(bool inGame = true) {

@@ -49,7 +49,6 @@ public class Bongormiga : MonoBehaviour, ITurn {
 
     IEnumerator PlayBongos()
     {
-        Debug.Log("TOCO EL COSO");
         myAnimator.Play("PlayBongo0");
         //AkSoundEngine.PostEvent("Hormiga_Ataque_In", gameObject);
 
