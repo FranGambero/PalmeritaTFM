@@ -133,6 +133,21 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Sepalo" ID="{8ED5D0C2-42EE-4264-9634-7A07D12E7AB0}" ShortID="651267284">
+							<ChildrenList>
+								<Event Name="Sepalo_Steps_In" ID="{616AED51-B29D-4EE4-9A14-89BDB3611A37}">
+									<ChildrenList>
+										<Action Name="" ID="{E95123D2-53AF-4893-87A7-CC54C64577B1}" ShortID="231528691">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Sepalo_Steps" ID="{32C492BF-6E13-45B4-B454-84B53E6CE75F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{CE8AA016-8D66-40B6-A5CA-1F0567BCD62E}" ShortID="194048897">

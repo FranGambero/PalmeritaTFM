@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
         static const AkUniqueID MUSICA_SWITCH_IN = 2706007436U;
+        static const AkUniqueID SEPALO_STEPS_IN = 847036623U;
         static const AkUniqueID UI_BACK_IN = 349057203U;
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
         static const AkUniqueID UI_SELECT_2_IN = 2493148897U;

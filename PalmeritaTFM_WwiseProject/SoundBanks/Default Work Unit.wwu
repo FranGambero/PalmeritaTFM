@@ -15,6 +15,7 @@
 						<ObjectRef Name="Carta_Slide_In" ID="{3E6BED85-B900-4825-AE76-ED36E29DFA20}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga" ID="{5280D00B-AB30-4943-9342-437A62886457}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Steps_In" ID="{5DC50C4D-89A9-4EB4-82E6-5D82579C087D}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Sepalo_Steps_In" ID="{616AED51-B29D-4EE4-9A14-89BDB3611A37}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_Base_In" ID="{012AD3C9-FCA8-4F50-A8A8-CAE89DBB1509}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ambientes" ID="{0CFDF471-BAA8-4F65-BD72-6880BA870CAE}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
