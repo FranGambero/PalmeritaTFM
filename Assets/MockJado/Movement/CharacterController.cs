@@ -106,7 +106,7 @@ namespace ElJardin {
         public void onTurnStart(int currentIndex) {
             if (isMyTurn) {
             Debug.LogWarning("EMPIEZA MI VIDA" + isMyTurn);
-                CardManager.Instance.drawNextCard();
+                CardManager.Instance.DrawNextCard();
             }
         }
 
