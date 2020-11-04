@@ -7,10 +7,12 @@ using DG.Tweening;
 
 namespace ElJardin {
     public class Card : MonoBehaviour {
-        public CardData cardData;
+        private CardData cardData;
         public TextMeshProUGUI amountText;
         public int transformIndex;
         public bool usedCard;
+
+        public CardData CardData { get => cardData; set => cardData = value; }
 
         private void Awake() {
             usedCard = false;
@@ -21,22 +23,26 @@ namespace ElJardin {
         }
 
         public void loadCardData() {
-            amountText.text = cardData.amount.ToString();
+            amountText.text = CardData.amount.ToString();
+            GetComponent<ItemDragHandler>().LoadCardData(CardData);
         }
-
-        public void changeCardTransform(int newIndex, bool wait = true) {
+        
+        public IEnumerator changeCardTransform(int newIndex, bool wait = true) {
+            float animTime=.5f;
             transformIndex = newIndex;
             float waitTime = wait ? transformIndex * .5f : 0f;
-            Invoke(nameof(jumpCard), waitTime);
+            yield return new WaitForSeconds(waitTime);
+            jumpCard(animTime);
+            yield return new WaitForSeconds(animTime);
 
             transform.SetParent(CardManager.Instance.transformList[transformIndex]);
         }
 
-        private void jumpCard() {
+        private void jumpCard(float animTime) {
             if (gameObject.activeSelf) {
                 AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
             }
-            transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, .5f);
+            transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, animTime);
 
             GetComponent<ItemDragHandler>().originalHandPosition = CardManager.Instance.transformList[transformIndex].position;
         }

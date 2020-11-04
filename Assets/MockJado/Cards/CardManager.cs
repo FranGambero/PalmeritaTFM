@@ -22,8 +22,11 @@ namespace ElJardin {
         public Image indicatorCardImage;
         public Gradient gradient;
 
+        private int lastIndexUsed;
+
+        public int LastIndexUsed { get => lastIndexUsed; set => lastIndexUsed = value; }
+
         private void Awake() {
-            Debug.Log("Awake CardManager");
             maxHand = 5;
             handList = new List<Card>();
             cardQueue = new Queue<CardData>(cardList);
@@ -36,14 +39,14 @@ namespace ElJardin {
 
         private void firstDrawCard() {
             int index = 0;
-            while (index < maxHand ) {
+            while (index < maxHand) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);
-                handList[index].cardData = cardQueue.Dequeue();
+                handList[index].CardData = cardQueue.Dequeue();
                 handList[index].loadCardData();
                 moveCardToDeck(handList[index]);
-                handList[index].changeCardTransform(index);
+                StartCoroutine(handList[index].changeCardTransform(index));
                 index++;
             }
 
@@ -54,34 +57,41 @@ namespace ElJardin {
             Card tmpCard = handList.Find(c => c.transformIndex == currentIndex);
             handList.ForEach(c => {
                 if (c.transformIndex > currentIndex) {
-                    c.changeCardTransform(c.transformIndex - 1);
+                    StartCoroutine(c.changeCardTransform(c.transformIndex - 1));
                 }
             });
-
-            tmpCard.changeCardTransform(maxHand - 1);
+            //Lo movemos a ultima posicion
+            StartCoroutine(tmpCard.changeCardTransform(maxHand - 1));
         }
 
-        public void drawNextCard() {
+        public void DrawNextCard() {
+            StartCoroutine(DrawNextCardCoroutine());
+        }
+        private IEnumerator DrawNextCardCoroutine() {
+            yield return new WaitForSeconds(.1f);
             bool canDraw = handList.FindAll(c => c.gameObject.activeSelf).Count < maxHand;
+            Debug.Log("Cartas posibles: " + canDraw);
             if (cardQueue.Count > 0 && canDraw) {
                 int lastHandIndex = maxHand - 1;
                 Card tmpCard = handList.Find(c => !c.gameObject.activeSelf);
-
-                if(tmpCard == null) {
+                if (tmpCard == null) {
                     tmpCard = Instantiate(cardPrefab, transformList[lastHandIndex]);
                     handList.Add(tmpCard);
                 }
+                tmpCard.StopAllCoroutines();
 
-                tmpCard.cardData = cardQueue.Dequeue();
+                tmpCard.CardData = cardQueue.Dequeue();
                 tmpCard.loadCardData();
                 moveCardToDeck(tmpCard);
                 //AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
 
                 tmpCard.gameObject.SetActive(true);
-                tmpCard.changeCardTransform(lastHandIndex, false);
+                // tmpCard.changeCardTransform(lastHandIndex, true);
 
                 refreshLabels();
             }
+                moveCards(LastIndexUsed);
+
         }
 
         private void moveCardToDeck(Card cardToMove) {
