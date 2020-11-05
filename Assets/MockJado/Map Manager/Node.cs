@@ -154,7 +154,6 @@ namespace ElJardin {
         #region Builder
         private void OnMouseUp() {
             //GameManager.Instance.Sepalo.StopAllCoroutines();
-            Debug.LogError("Me han llamao");
             GameManager.Instance.Sepalo.DoTheMove(this);
             if (EventSystem.current.IsPointerOverGameObject())
                 return;

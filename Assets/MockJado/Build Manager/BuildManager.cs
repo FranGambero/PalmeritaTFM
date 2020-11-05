@@ -263,7 +263,7 @@ namespace ElJardin {
             bool isValid = false;
             if (GameManager.Instance.SelectedNode != null) {
                 if (!dictionaryNodesAround.ContainsKey(direction))
-                    HoverAroundNode( amount);
+                    HoverAroundNode(amount);
                 List<Node> nodesToBuild = GetNodeListByDirection(GameManager.Instance.SelectedNode.directionInHover);
                 isValid = IsChangeValid(nodesToBuild);
                 if (isValid) {
@@ -363,10 +363,10 @@ namespace ElJardin {
             nodesAroundList.Clear();
         }
 
-        public void HoverAroundNode( int numNodes) {
+        public void HoverAroundNode(int numNodes) {
             StopHoverCoroutine();
 
-            hoverCoroutine = StartCoroutine(HoverAroundNodeCoroutine( numNodes));
+            hoverCoroutine = StartCoroutine(HoverAroundNodeCoroutine(numNodes));
         }
 
         public void StopHoverCoroutine() {
@@ -375,11 +375,10 @@ namespace ElJardin {
             hoverCoroutine = null;
         }
 
-        private IEnumerator HoverAroundNodeCoroutine( int numNodes) {
+        private IEnumerator HoverAroundNodeCoroutine(int numNodes) {
             SepaloController sepalo = GameManager.Instance.Sepalo;
             this.dictionaryNodesAround = new Dictionary<DirectionType, List<Node>>();
             yield return sepalo.movementCoroutine;
-            Debug.Log("Cacafuti");
             DirectionType[] directions = new DirectionType[] { DirectionType.North, DirectionType.East, DirectionType.South, DirectionType.West };
             foreach (DirectionType directionToFill in directions) {
 
@@ -394,7 +393,6 @@ namespace ElJardin {
 
         public List<Node> GetSurroundingsByNode(Node node, DirectionType direction, int amount) {
             List<Node> nodesToBuilAround = new List<Node>();
-            Debug.Log("Puto");
             Vector2 position = node.GetPosition();
 
             switch (direction) {
@@ -432,7 +430,8 @@ namespace ElJardin {
             List<Node> nodeList = null;
             if (dictionaryNodesAround != null) {
                 Debug.Log("N Keys: " + dictionaryNodesAround.Keys);
-                nodeList = dictionaryNodesAround[direction];
+                if (dictionaryNodesAround.ContainsKey(direction))
+                    nodeList = dictionaryNodesAround[direction];
             }
 
             return nodeList;

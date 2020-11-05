@@ -43,7 +43,6 @@ namespace ElJardin.Characters {
                     StopCoroutine(movementCoroutine);
                     movementCoroutine = null;
                 }
-                Debug.Log("Haz movimiento");
                 movementCoroutine = StartCoroutine(Move(targetNode));
             }
         }
@@ -60,8 +59,10 @@ namespace ElJardin.Characters {
 
         #region Turn
         public void onTurnStart(int currentIndex) {
-            if (IsMyTurn)
-                CardManager.Instance.drawNextCard();
+            if (IsMyTurn) {
+                Debug.Log("Turno sepalo");
+                CardManager.Instance.DrawNextCard();
+            }
         }
 
         public void onTurnFinished() {
