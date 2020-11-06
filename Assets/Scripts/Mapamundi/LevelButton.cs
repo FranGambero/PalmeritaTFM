@@ -7,10 +7,14 @@ using UnityEngine.UI;
 public class LevelButton : MonoBehaviour
 {
     public Sprite[] petals;
+    public Sprite lockedSprite;
+
     public TextMeshProUGUI levelText;
     public int level;
     public int numPetals = 0;
     public ConfirmPanel confirmPanel;
+
+    public bool isActive;
 
     private void Awake() {
         if(confirmPanel == null) {
