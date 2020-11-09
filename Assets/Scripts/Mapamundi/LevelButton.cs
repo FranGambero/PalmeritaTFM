@@ -13,10 +13,12 @@ public class LevelButton : MonoBehaviour
     public int level;
     public int numPetals = 0;
     public ConfirmPanel confirmPanel;
+    private MapMove mapMoveController;
 
     public bool isActive;
 
     private void Awake() {
+        mapMoveController = FindObjectOfType<MapMove>();
         if(confirmPanel == null) {
             //No va :(((
             confirmPanel = FindObjectOfType<ConfirmPanel>();
@@ -28,9 +30,14 @@ public class LevelButton : MonoBehaviour
     }
 
     public void ShowConfirmPanel() {
+        mapMoveController.focusMove(this.transform, level);
+        StartCoroutine(nameof(MoveCoroutine));
+    }
+
+    public IEnumerator MoveCoroutine() {
+        yield return new WaitUntil(() => mapMoveController.moveFinished == true);
         confirmPanel.gameObject.SetActive(true);
-        // No va :(
-        confirmPanel.levelName.text = levelText.text;
+        confirmPanel.levelName.text = levelText.text;   
     }
 
     public void ChangeSprite() {
