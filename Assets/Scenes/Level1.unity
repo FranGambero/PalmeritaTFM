@@ -604,7 +604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &120002043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8336,7 +8336,7 @@ PrefabInstance:
     - target: {fileID: 1776236745566181779, guid: ae469d2226e7b6f42bc9c78323f79e75,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0006713867
+      value: 0.00061035156
       objectReference: {fileID: 0}
     - target: {fileID: 1776236745566181779, guid: ae469d2226e7b6f42bc9c78323f79e75,
         type: 3}

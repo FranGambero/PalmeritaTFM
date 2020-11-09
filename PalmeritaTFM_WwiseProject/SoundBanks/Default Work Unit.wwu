@@ -8,12 +8,14 @@
 						<ObjectRef Name="Carta_Select_In" ID="{09DC1973-EEA3-42C4-A897-591EF38D4420}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Salto_In" ID="{9B87469B-575E-436C-A48D-38E5FFB33865}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Ataque_In" ID="{FFC50977-BFE9-43DE-837A-9DEA73F23E04}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Carta_Posicion_In" ID="{188F6BD4-1C3D-442F-8F04-50853C6736A5}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_Base_Out" ID="{43433771-3EBF-4566-8033-5A72D762C774}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Crep_In" ID="{0D2B171A-7B96-4729-95B4-DBA796F8C8DB}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Crep_Out" ID="{34023415-615F-4795-9A34-BFFF5F12CB72}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Carta_Slide_In" ID="{3E6BED85-B900-4825-AE76-ED36E29DFA20}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga" ID="{5280D00B-AB30-4943-9342-437A62886457}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Steps_In" ID="{5DC50C4D-89A9-4EB4-82E6-5D82579C087D}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Sepalo_Steps_In" ID="{616AED51-B29D-4EE4-9A14-89BDB3611A37}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_Base_In" ID="{012AD3C9-FCA8-4F50-A8A8-CAE89DBB1509}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ambientes" ID="{0CFDF471-BAA8-4F65-BD72-6880BA870CAE}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
