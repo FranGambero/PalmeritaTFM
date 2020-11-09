@@ -4754,6 +4754,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2554598980396421682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695921815374953097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af205097c190fe4f8a7663c11e1c3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5614350270788547084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,7 +4796,7 @@ Transform:
   m_LocalPosition: {x: 1, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 617161501869534402}
+  - {fileID: 5359447032838627379}
   - {fileID: 5988949350905273107}
   - {fileID: 4107896864056481535}
   - {fileID: 5614350269897423265}
@@ -4820,6 +4832,7 @@ MonoBehaviour:
   StartingNode: {x: 1, y: 1}
   Movement: {fileID: 3570621685683779729}
   myTurnIndex: 0
+  isMoving: 0
 --- !u!114 &3570621685683779729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5203,9 +5216,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 59f5020b4ee32144d8db0b119c29fa90, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34293364b3e8505479f260c6fa8e6354, type: 3}
---- !u!4 &617161501869534402 stripped
+--- !u!1 &4695921815374953097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 34293364b3e8505479f260c6fa8e6354,
+    type: 3}
+  m_PrefabInstance: {fileID: 5614350270644570072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5359447032838627379 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 34293364b3e8505479f260c6fa8e6354,
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34293364b3e8505479f260c6fa8e6354,
     type: 3}
   m_PrefabInstance: {fileID: 5614350270644570072}
   m_PrefabAsset: {fileID: 0}

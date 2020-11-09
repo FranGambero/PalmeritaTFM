@@ -24,7 +24,7 @@ namespace ElJardin {
         Color baseColor;
 
         bool hovering, canBuild;
-         Water water;
+        Water water;
 
         public int GCost { get; set; }
         public int HCost { get; set; }
@@ -32,8 +32,7 @@ namespace ElJardin {
         public Node CameFromNode { get; set; }
 
         public bool CanBuild {
-            get
-            {
+            get {
                 return canBuild;
             }
         }
@@ -125,17 +124,18 @@ namespace ElJardin {
                 GameManager.Instance.SelectedNode = this;
                 BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
             } else if (!GameManager.Instance.draggingCard && this.CanBuild) {
-                PositionMoveHover();
+                if (GameManager.Instance.Sepalo.CurrentNode != this)
+                    PositionMoveHover();
             }
         }
 
         private void PositionMoveHover() {
-            GameManager.Instance.positionHover.SetActive(true);
-            GameManager.Instance.positionHover.transform.position = new Vector3(
+            GameManager.Instance.PositionHover.SetActive(true);
+            GameManager.Instance.PosPositionHover(new Vector3(
                 this.transform.position.x,
-                GameManager.Instance.positionHover.transform.position.y,
+                GameManager.Instance.PositionHover.transform.position.y,
                 this.transform.position.z
-                );
+                ));
             //_mr.material.color = Color.blue;   //La casillita asú
         }
 
@@ -145,7 +145,7 @@ namespace ElJardin {
                 BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
             } else {
                 ShowPreview(false);
-                GameManager.Instance.positionHover.SetActive(false);
+                GameManager.Instance.PositionHover.SetActive(false);
             }
             //BuildManager.Instance.UnHoverNodesInList();
         }
@@ -203,11 +203,14 @@ namespace ElJardin {
         #region Water
         [ContextMenu("Water")]
         public void Water() {
-            water.Grow(true, () => neighbors.ForEach(n => n.Water()));
+            water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), null);
+        }
+        public void Water(Node last) {
+            water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), last);
         }
         [ContextMenu("Dry")]
         public void Dry() {
-            water.Grow(false, () => neighbors.ForEach(n => n.Dry()));
+            water.Grow(false, () => neighbors.ForEach(n => n.Dry()), null);
         }
         #endregion
     }
