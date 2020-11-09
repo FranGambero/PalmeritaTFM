@@ -22,7 +22,7 @@ namespace ElJardin {
         public Image indicatorCardImage;
         public Gradient gradient;
 
-        private int lastIndexUsed;
+        private int lastIndexUsed = -1;
 
         public int LastIndexUsed { get => lastIndexUsed; set => lastIndexUsed = value; }
 
@@ -90,6 +90,7 @@ namespace ElJardin {
 
                 refreshLabels();
             }
+            if (LastIndexUsed >= 0)
                 moveCards(LastIndexUsed);
 
         }
