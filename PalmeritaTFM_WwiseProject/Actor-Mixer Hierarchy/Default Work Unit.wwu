@@ -2685,6 +2685,391 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Sepalo" ID="{EB343673-9E1D-4C20-8341-7E0BBE62663F}" ShortID="890848249">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Sepalo_Steps" ID="{32C492BF-6E13-45B4-B454-84B53E6CE75F}" ShortID="737799226">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B026B529-92CB-42BB-AA34-0BC6145344BF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="41"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{69ED1FEF-E097-4FF1-88CB-AC516A019E15}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="202"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F269BA2E-B37C-45A4-B05C-7BC09BED93F5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-4"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_01" ID="{2E55CB24-DD99-4AF8-ABD3-127BE74818CA}" ShortID="1042638640">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_01" ID="{7C99CA62-CE7A-4140-A19E-7050788D1F80}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="418905517"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_01" ID="{7C99CA62-CE7A-4140-A19E-7050788D1F80}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_02" ID="{CE97FCCA-1124-4EEE-94F6-FBD936ACA666}" ShortID="506808918">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_02" ID="{3149A669-5805-495F-A968-B349C34E7220}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="376104432"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_02" ID="{3149A669-5805-495F-A968-B349C34E7220}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_03" ID="{3F721F79-A3CB-45D7-BED7-326F43CD7494}" ShortID="918703607">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_03" ID="{89107F31-2A16-4B7A-976E-4B565F7BE40F}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="390693949"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_03" ID="{89107F31-2A16-4B7A-976E-4B565F7BE40F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_04" ID="{DEF6325A-FC3B-4432-905B-A489149D07DB}" ShortID="671172330">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_04" ID="{4ED7739F-C213-4B99-B314-22E0EFD3F531}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="512440749"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_04" ID="{4ED7739F-C213-4B99-B314-22E0EFD3F531}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_05" ID="{1143C462-0F45-4A0A-B527-086913C27984}" ShortID="1020811426">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_05" ID="{91C8756B-A9DC-4959-A65C-AC90C9F6DBB5}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="374366418"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_05" ID="{91C8756B-A9DC-4959-A65C-AC90C9F6DBB5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_06" ID="{E418AB0B-C67A-4383-BA33-9F60844E7977}" ShortID="51534595">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_06" ID="{69E149AA-F880-4D5F-96AF-735D9699C880}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="230775093"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_06" ID="{69E149AA-F880-4D5F-96AF-735D9699C880}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_07" ID="{17966955-CAEA-40F6-9F6B-60E5FADE0982}" ShortID="54136511">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_07" ID="{E6716A95-65BB-4F06-92A2-E35E1E3FB81C}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="757205018"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_07" ID="{E6716A95-65BB-4F06-92A2-E35E1E3FB81C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_08" ID="{7FBB9F3C-3448-4144-8270-0317A1BA4C04}" ShortID="706685312">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_08" ID="{B206907E-4A95-48B4-A826-986AD3FC0363}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="175036366"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_08" ID="{B206907E-4A95-48B4-A826-986AD3FC0363}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_09" ID="{669D2972-7E80-4BC3-8DEE-7747CAED8276}" ShortID="908611333">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_09" ID="{8B1A0494-FD3F-40AF-985F-C7C6C33F11DD}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_09.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="732199025"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_09" ID="{8B1A0494-FD3F-40AF-985F-C7C6C33F11DD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_10" ID="{8F335E0B-1A6E-4354-B785-4D2538FD28D9}" ShortID="464515292">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_10" ID="{EBD14046-ABF4-4142-972E-523A37BFAC35}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_10.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1005884361"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_10" ID="{EBD14046-ABF4-4142-972E-523A37BFAC35}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_11" ID="{F5CD5704-4563-4197-A718-E66F65902D16}" ShortID="356289369">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_11" ID="{178EBFBD-A0B7-41ED-8B24-E8F98D96BC7A}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_11.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="410818859"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_11" ID="{178EBFBD-A0B7-41ED-8B24-E8F98D96BC7A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_12" ID="{6C4C5361-B319-4D5A-A7D1-E42C2983A912}" ShortID="872845811">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_12" ID="{D5A50B0D-4560-4AAF-AB8E-08FC0F08C581}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_12.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="602205659"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_12" ID="{D5A50B0D-4560-4AAF-AB8E-08FC0F08C581}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_13" ID="{DEF30C12-A283-4C6A-ADCC-34F6BA064B70}" ShortID="981410258">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_13" ID="{A905102C-AEB8-4BD2-AA0B-5B3FB1650DB1}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_13.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="824916201"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_13" ID="{A905102C-AEB8-4BD2-AA0B-5B3FB1650DB1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_14" ID="{7B905F18-291A-4537-85D8-20C0DC8BE667}" ShortID="349022340">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_14" ID="{0CA8846C-D17E-446B-A71A-BD27DC78B431}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_14.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="187478389"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_14" ID="{0CA8846C-D17E-446B-A71A-BD27DC78B431}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Sepalo_Steps_SFX_Start_15" ID="{E786F7A4-0652-484C-8D9B-CD5BBE2F59D1}" ShortID="513266812">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Sepalo_Steps_SFX_Start_15" ID="{DFE12D92-7E37-46DA-B0E3-8F5FF7C09AC4}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Sepalo_Steps_SFX_Start_15.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="714277669"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Sepalo_Steps_SFX_Start_15" ID="{DFE12D92-7E37-46DA-B0E3-8F5FF7C09AC4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{251A66EE-15DF-4825-AFB0-27CDC0662D5E}" ShortID="998399970">
@@ -3097,11 +3482,6 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-5</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3135,6 +3515,97 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Carta_Posicion" ID="{6996E7EE-8C8F-444E-B34A-017EF390ABB5}" ShortID="793783854">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{08F0C2C5-D0AA-4FBF-94D0-C1E57C4D2CE9}" ShortID="894702377">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{86FB6111-233B-4651-BA48-C2D743C31E90}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Posicion_Cartas_SFX_Start_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1021382917"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{86FB6111-233B-4651-BA48-C2D743C31E90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{112FC22C-13C0-400F-901F-515C07A17A22}" ShortID="132367125">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{2B4C6573-DE86-47CF-8797-20C2D4CCB67E}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Posicion_Cartas_SFX_Start_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="125858152"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{2B4C6573-DE86-47CF-8797-20C2D4CCB67E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{7EA7CB29-34CC-4457-8696-6270FBBA9535}" ShortID="461790121">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{D7990E1E-1F57-4216-A16A-F03975D17485}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Posicion_Cartas_SFX_Start_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71906175"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{D7990E1E-1F57-4216-A16A-F03975D17485}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_1" ID="{08F0C2C5-D0AA-4FBF-94D0-C1E57C4D2CE9}"/>
+								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{112FC22C-13C0-400F-901F-515C07A17A22}"/>
+								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{7EA7CB29-34CC-4457-8696-6270FBBA9535}"/>
+							</Playlist>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>

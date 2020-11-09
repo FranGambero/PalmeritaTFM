@@ -6,12 +6,6 @@ using UnityEngine.UI;
 
 namespace ElJardin {
     public class AudioManager : Singleton<AudioManager> {
-        /*
-         *    Empieza con Switch_In y al empezar partida lo quitamos con Amb_Out
-         *    
-         *             EL AMB_BASE_IN SUENA AL EMPEZAR PARTIDA  y OUT AL TERMINARLA
-         * 
-         * */
         private bool levelInGame;
 
         private void Awake() {
@@ -19,9 +13,13 @@ namespace ElJardin {
         }
 
         private void Start() {
-            // Si va en el Awake peta, esta linea irá en la clase que inicie bien el juego
-            //AkSoundEngine.PostEvent("Amb_Base_In", gameObject);   ESTO SUENA AL EMPEZAR LA PARTIDAAAAAA
             AkSoundEngine.PostEvent("Musica_Switch_In", gameObject);
+            if (PlayerPrefs.HasKey(Keys.Volume.PREF_VOL_SFX)) {
+                AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_SFX, PlayerPrefs.GetInt(Keys.Volume.PREF_VOL_SFX));
+            }
+            if (PlayerPrefs.HasKey(Keys.Volume.PREF_VOL_MUSIC)) {
+                AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_Music, PlayerPrefs.GetInt(Keys.Volume.PREF_VOL_MUSIC));
+            }
         }
 
         public void toggleMusicIngameState(bool inGame = true) {
@@ -33,7 +31,7 @@ namespace ElJardin {
                     setIngameMusic();
                 }
             } else {
-                AkSoundEngine.SetState("General_Music", "None");
+                //AkSoundEngine.SetState("General_Music", "None");
             }
         }
 

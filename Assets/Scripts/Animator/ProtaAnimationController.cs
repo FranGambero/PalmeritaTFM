@@ -10,28 +10,9 @@ public class ProtaAnimationController : MonoBehaviour
         Idle,Walk,Run
     }
     State state;
-    void Start()
-    {
-        state = State.Idle;
-        rigidbody = transform.parent.GetComponent<Rigidbody>();
+  
+    public void OnStep() {
+        AkSoundEngine.PostEvent("Sepalo_Steps_In", gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("Speeed "+rigidbody.velocity);
-        switch (state) {
-            case State.Idle:
-                if (rigidbody.velocity.magnitude > 0) {
-
-                }
-                break;
-            case State.Walk:
-                break;
-            case State.Run:
-                break;
-            default:
-                break;
-        }
-    }
 }

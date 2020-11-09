@@ -10,16 +10,24 @@ namespace ElJardin {
         public SepaloController Sepalo;
         public ConfigMenuManager configMenu;
         public GameObject instructMenu;
-        public GameObject positionHover;
-
+        public GameObject _positionHover;
+        public Vector3 tmpRot;
         private Node selectedNode;
         public bool draggingCard;
 
         public Node SelectedNode { get => selectedNode; set => selectedNode = value; }
-
-        private void Awake()
-        {
-            positionHover.SetActive(false);
+        public GameObject PositionHover {
+            get {
+                return _positionHover;
+            }
+            set => _positionHover = value;
+        }
+        public void PosPositionHover(Vector3 newPosition) {
+            _positionHover.transform.position = newPosition;
+            _positionHover.transform.LookAt(new Vector3(Sepalo.transform.position.x, _positionHover.transform.position.y, Sepalo.transform.position.z));
+        }
+        private void Awake() {
+            _positionHover.SetActive(false);
             draggingCard = false;
             Sepalo = FindObjectOfType<SepaloController>();
         }

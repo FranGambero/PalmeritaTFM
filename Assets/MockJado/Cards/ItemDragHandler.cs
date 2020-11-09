@@ -30,6 +30,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             if (!starting) {
                 starting = true;
                 GameManager.Instance.draggingCard = true;
+                AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 HoverAround();
             }
             transform.position = Input.mousePosition;
@@ -55,8 +56,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         if (GameManager.Instance.Sepalo.IsMyTurn && starting) {
             if (buildNewChannel() && !GameManager.Instance.Sepalo.isMoving) {
                 transform.position = originalPosition;
-                AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
-                HideCard();
+                //AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 GameManager.Instance.Sepalo.onTurnFinished();
             } else {
                 BuildManager.Instance.StopHoverCoroutine();

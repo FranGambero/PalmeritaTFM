@@ -174,6 +174,54 @@
 												</MusicTrackSequence>
 											</SequenceList>
 										</MusicTrack>
+										<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{0212862E-DCB9-4CC8-BA4D-912CA946973F}" ShortID="847002806">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-96</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{A3714E6B-DEC3-49E9-BE42-21BBF5218492}">
+													<Language>SFX</Language>
+													<AudioFile>El_Jardin_Musica_Ingame_44_16_Layer_2_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="554799606"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{C3CA729B-D6AC-4264-A15C-BBDD6BCD2BB8}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{F0DFF4B3-E43D-4108-B098-207E75AB4A4E}">
+													<ClipList>
+														<MusicClip Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{54C7DE6A-F969-462F-8CB9-91268990C4B2}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="116307.68707483"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{A3714E6B-DEC3-49E9-BE42-21BBF5218492}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
 									</ChildrenList>
 									<CueList>
 										<MusicCue Name="Entry Cue" ID="{858BEC8E-FCF5-4486-A434-F703E0EC44BC}"/>
@@ -407,11 +455,6 @@
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="130"/>
 								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-96</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -422,26 +465,30 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{0212862E-DCB9-4CC8-BA4D-912CA946973F}" ShortID="847002806">
+								<MusicTrack Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{48D10D6F-4200-422B-A90F-2410FA8B1FD2}" ShortID="649246184">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{A3714E6B-DEC3-49E9-BE42-21BBF5218492}">
+										<AudioFileSource Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{B66B922F-DE09-4B82-AD86-D9AECC0BF2DE}">
 											<Language>SFX</Language>
-											<AudioFile>El_Jardin_Musica_Ingame_44_16_Layer_2_Loop.wav</AudioFile>
+											<AudioFile>El_Jardin_Musica_Pausa_44_16_Loop.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="554799606"/>
+												<MediaID ID="914630107"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{C3CA729B-D6AC-4264-A15C-BBDD6BCD2BB8}">
+										<MusicTransition Name="Root" ID="{B1255EF5-CC9C-43BD-BC28-8BDB8472EA49}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -449,15 +496,15 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{F0DFF4B3-E43D-4108-B098-207E75AB4A4E}">
+										<MusicTrackSequence Name="" ID="{23EA56D0-7093-4FD8-967F-84C697DBECD4}">
 											<ClipList>
-												<MusicClip Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{54C7DE6A-F969-462F-8CB9-91268990C4B2}">
+												<MusicClip Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{4585609E-ED67-49FC-9FB3-FEDFE8137EF9}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="116307.68707483"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="116254.013605442"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{A3714E6B-DEC3-49E9-BE42-21BBF5218492}"/>
+													<AudioSourceRef Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{B66B922F-DE09-4B82-AD86-D9AECC0BF2DE}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -566,6 +613,7 @@
 								<MusicTransition Name="Transition" ID="{D9EC422E-0B01-4667-A0C9-D0A7E02A7F1B}">
 									<PropertyList>
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
@@ -590,6 +638,14 @@
 												</PropertyList>
 											</MusicFade>
 										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{EEC2F1B4-A256-455F-BEB9-6CDDDF708DB0}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="-1.9"/>
+													<Property Name="FadeTime" Type="Real64" Value="4.7"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
 									</TransitionInfo>
 								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{DFDA69B3-F99D-4401-9D2E-3AC4D6103A4B}">
@@ -623,7 +679,6 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{EDC05B23-F63C-4A9A-8F04-84860F4DD6B1}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="-1.9"/>
 													<Property Name="FadeTime" Type="Real64" Value="4.5"/>
 												</PropertyList>
 											</MusicFade>
@@ -661,6 +716,7 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{C1E7DADF-D411-4A44-9E4B-2EABC1D75967}">
 												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="-1.9"/>
 													<Property Name="FadeTime" Type="Real64" Value="4.5"/>
 												</PropertyList>
 											</MusicFade>
