@@ -12,7 +12,7 @@ public class ProtaAnimationController : MonoBehaviour
     State state;
   
     public void OnStep() {
-        Debug.Log("pasito");
+        AkSoundEngine.PostEvent("Sepalo_Steps_In", gameObject);
     }
-   
+
 }
