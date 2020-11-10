@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelButton : MonoBehaviour
-{
+public class LevelButton : MonoBehaviour {
     public Sprite[] petals;
     public Sprite lockedSprite;
 
@@ -19,7 +19,7 @@ public class LevelButton : MonoBehaviour
 
     private void Awake() {
         mapMoveController = FindObjectOfType<MapMove>();
-        if(confirmPanel == null) {
+        if (confirmPanel == null) {
             //No va :(((
             confirmPanel = FindObjectOfType<ConfirmPanel>();
         }
@@ -37,10 +37,16 @@ public class LevelButton : MonoBehaviour
     public IEnumerator MoveCoroutine() {
         yield return new WaitUntil(() => mapMoveController.moveFinished == true);
         confirmPanel.gameObject.SetActive(true);
-        confirmPanel.levelName.text = levelText.text;   
+        AssignDataToPanel();
+    }
+
+    private void AssignDataToPanel() {
+        confirmPanel.levelName.text = levelText.text;
+        confirmPanel.levelToLoad = "Level" + level;
     }
 
     public void ChangeSprite() {
         this.gameObject.GetComponent<Image>().sprite = petals[numPetals];
     }
+
 }

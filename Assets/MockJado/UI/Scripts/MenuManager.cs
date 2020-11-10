@@ -27,7 +27,7 @@ namespace ElJardin {
         }
 
         public void goToGame() {
-            AudioManager.Instance.setIngameMusic();
+            //AudioManager.Instance.setIngameMusic();
             SceneManager.LoadScene("LoadScene");
         }
 
@@ -50,7 +50,7 @@ namespace ElJardin {
         }
 
         public void StartGame() {
-            PlayerPrefs.SetInt("NextLevel",2);
+            PlayerPrefs.SetInt("NextLevel", 2);
             goToGame();
         }
         public void FadeOut() {

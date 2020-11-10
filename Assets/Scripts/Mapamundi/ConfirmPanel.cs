@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ElJardin;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -27,6 +28,8 @@ public class ConfirmPanel : MonoBehaviour
     }
 
     public void PlayLevel() {
+        Debug.LogWarning("Voy a " + levelToLoad);
+        AudioManager.Instance.setIngameMusic();
         SceneManager.LoadScene(levelToLoad);
     }
 }
