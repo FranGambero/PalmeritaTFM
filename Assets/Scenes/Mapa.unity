@@ -696,7 +696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &233964632
 Transform:
   m_ObjectHideFlags: 0
@@ -718,12 +718,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233964631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9cfcd816a2c440498ac96b2b0c0adcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   zoneDataArray: []
+  currentZone: 0
+  currentLevel: 0
 --- !u!1 &327158419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,6 +1839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096008517}
   - component: {fileID: 1096008518}
+  - component: {fileID: 1096008519}
   m_Layer: 0
   m_Name: SerializableManager
   m_TagString: Untagged
@@ -1878,6 +1881,21 @@ MonoBehaviour:
   - /Zone3
   postBuildPath: PalmeritaTFM_Data/Resources
   format: .json
+--- !u!114 &1096008519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096008516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9cfcd816a2c440498ac96b2b0c0adcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoneDataArray: []
+  currentZone: 0
+  currentLevel: 0
 --- !u!1 &1101458763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,7 +4009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a4c32df659b924490c9e8c46ba0667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Level1
+  levelIdToLoad: 0
+  levelStringToLoad: 
   levelName: {fileID: 1411910408}
 --- !u!1 &1769931841
 GameObject:

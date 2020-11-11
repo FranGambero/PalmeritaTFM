@@ -8,7 +8,8 @@ using UnityEngine.UI;
 
 public class ConfirmPanel : MonoBehaviour
 {
-    public string levelToLoad;
+    public int levelIdToLoad;
+    public string levelStringToLoad;
     public TextMeshProUGUI levelName;
 
     private void Start() {
@@ -28,8 +29,10 @@ public class ConfirmPanel : MonoBehaviour
     }
 
     public void PlayLevel() {
-        Debug.LogWarning("Voy a " + levelToLoad);
+        levelStringToLoad = "Level" + levelIdToLoad;
+        Debug.LogWarning("Voy a " + levelStringToLoad);
+        PlayerPrefs.SetInt("CurrentLevel", levelIdToLoad);
         AudioManager.Instance.setIngameMusic();
-        SceneManager.LoadScene(levelToLoad);
+        SceneManager.LoadScene(levelStringToLoad);
     }
 }

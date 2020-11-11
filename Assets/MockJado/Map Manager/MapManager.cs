@@ -119,9 +119,40 @@ namespace ElJardin {
             if (levelEnded)
             {
                 AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
+                CheckLogros();
                 victoryCanvas.SetActive(true);
                 //confety.SetActive(true);
             }
+        }
+
+        [ContextMenu("FUERZA LOGROS CARLA")]
+        private void CheckLogros() {
+            //El logro de victoria lo seteamos a true si o si al ganar
+            int currentZone = MapamundiManager.Instance.currentZone;
+            int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+            LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(currentZone, currentLevel);
+
+            Debug.LogError("Los datos del nivel: " + currentZone + " - " + currentLevel + ". Con ID: " + levelData.levelName);
+
+            // Logritos
+            levelData.logros[0].done = true;
+            levelData.logros[1].done = CheckLogroPetalos();
+            levelData.logros[2].done = CheckLogroMovimientos();
+
+            //MapamundiManager.Instance.SaveZoneData();
+            MapamundiManager.Instance.SaveLevel(levelData);
+
+            Debug.LogError("Los datos del nivel tras actualizar: " + levelData.logros);
+        }
+
+        private bool CheckLogroPetalos() {
+            // Comprobamos que todas las flores de ese nivel están siendo regafas
+            return false;
+        }
+
+        private bool CheckLogroMovimientos() {
+            // Comprobamos que se ha completado en menos de X movimientos
+            return true;
         }
 
         #endregion

@@ -42,7 +42,7 @@ public class LevelButton : MonoBehaviour {
 
     private void AssignDataToPanel() {
         confirmPanel.levelName.text = levelText.text;
-        confirmPanel.levelToLoad = "Level" + level;
+        confirmPanel.levelIdToLoad = level;
     }
 
     public void ChangeSprite() {
