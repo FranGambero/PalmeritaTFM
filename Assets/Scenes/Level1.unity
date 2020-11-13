@@ -5215,6 +5215,11 @@ PrefabInstance:
       propertyPath: groundMatOscurecio
       value: 
       objectReference: {fileID: 2100000, guid: 282b80c511ed78044940e6964336e9c4, type: 2}
+    - target: {fileID: 1522253018068072351, guid: 80062185d6d1d9047856f888d9a54398,
+        type: 3}
+      propertyPath: cardCanvas
+      value: 
+      objectReference: {fileID: 1876104921}
     - target: {fileID: 1522253018248357548, guid: 80062185d6d1d9047856f888d9a54398,
         type: 3}
       propertyPath: configMenu

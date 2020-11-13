@@ -59,7 +59,12 @@ namespace ElJardin {
         }
 
         public void goToStartMenu() {
+            PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(0);
+        }
+
+        public void goToMapamundi() {
+            SceneManager.LoadScene(2);
         }
 
         public void goNextLevel(int nextLevelIndex) {
