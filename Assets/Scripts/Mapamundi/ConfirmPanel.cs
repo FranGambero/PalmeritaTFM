@@ -11,6 +11,11 @@ public class ConfirmPanel : MonoBehaviour
     public int levelIdToLoad;
     public string levelStringToLoad;
     public TextMeshProUGUI levelName;
+    public LogrosPanel logrosPanel;
+
+    private void Awake() {
+        logrosPanel = GetComponentInChildren<LogrosPanel>();
+    }
 
     private void Start() {
         if (this.gameObject.activeSelf) {
@@ -26,6 +31,10 @@ public class ConfirmPanel : MonoBehaviour
 
     void Cancel() {
         this.gameObject.SetActive(false);
+    }
+
+    public void recargaLogros() {
+        logrosPanel.GetLogritos(levelIdToLoad);
     }
 
     public void PlayLevel() {

@@ -10,7 +10,7 @@ public class LevelButton : MonoBehaviour {
     public Sprite lockedSprite;
 
     public TextMeshProUGUI levelText;
-    public int level;
+    public int levelId;
     public int numPetals = 0;
     public ConfirmPanel confirmPanel;
     private MapMove mapMoveController;
@@ -30,7 +30,7 @@ public class LevelButton : MonoBehaviour {
     }
 
     public void ShowConfirmPanel() {
-        mapMoveController.focusMove(this.transform, level);
+        mapMoveController.focusMove(this.transform, levelId);
         StartCoroutine(nameof(MoveCoroutine));
     }
 
@@ -42,7 +42,8 @@ public class LevelButton : MonoBehaviour {
 
     private void AssignDataToPanel() {
         confirmPanel.levelName.text = levelText.text;
-        confirmPanel.levelIdToLoad = level;
+        confirmPanel.levelIdToLoad = levelId;
+        confirmPanel.logrosPanel.GetLogritos(levelId);
     }
 
     public void ChangeSprite() {

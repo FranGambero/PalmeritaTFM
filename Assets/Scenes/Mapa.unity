@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 50669247}
   - component: {fileID: 50669249}
   - component: {fileID: 50669248}
+  - component: {fileID: 50669250}
   m_Layer: 5
   m_Name: LogrosPanel
   m_TagString: Untagged
@@ -354,6 +355,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50669246}
   m_CullTransparentMesh: 0
+--- !u!114 &50669250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50669246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811c92303e1cb9340b3e6972a8ae2540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logroTicks:
+  - {fileID: 664931951}
+  - {fileID: 217726675}
+  - {fileID: 2009670913}
 --- !u!1 &87954072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,7 +2217,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 38825b0fa56fffd47982a5f99c977f97, type: 3}
   lockedSprite: {fileID: 0}
   levelText: {fileID: 1021668198}
-  level: 0
+  levelId: 0
   numPetals: 0
   confirmPanel: {fileID: 1703306941}
   isActive: 0
@@ -2419,7 +2436,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 38825b0fa56fffd47982a5f99c977f97, type: 3}
   lockedSprite: {fileID: 0}
   levelText: {fileID: 32577333}
-  level: 3
+  levelId: 3
   numPetals: 3
   confirmPanel: {fileID: 0}
   isActive: 0
@@ -2968,7 +2985,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 38825b0fa56fffd47982a5f99c977f97, type: 3}
   lockedSprite: {fileID: 0}
   levelText: {fileID: 1929115646}
-  level: 2
+  levelId: 2
   numPetals: 2
   confirmPanel: {fileID: 0}
   isActive: 0
@@ -3640,7 +3657,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 38825b0fa56fffd47982a5f99c977f97, type: 3}
   lockedSprite: {fileID: 0}
   levelText: {fileID: 1861163136}
-  level: 1
+  levelId: 1
   numPetals: 1
   confirmPanel: {fileID: 0}
   isActive: 0
@@ -4012,6 +4029,7 @@ MonoBehaviour:
   levelIdToLoad: 0
   levelStringToLoad: 
   levelName: {fileID: 1411910408}
+  logrosPanel: {fileID: 0}
 --- !u!1 &1769931841
 GameObject:
   m_ObjectHideFlags: 0

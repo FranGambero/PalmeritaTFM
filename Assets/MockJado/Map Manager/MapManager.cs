@@ -8,6 +8,7 @@ namespace ElJardin {
         #region Variables
 
         public GameObject victoryCanvas;
+        public GameObject cardCanvas;
         public GameObject confety;
         /**
          * 
@@ -120,7 +121,8 @@ namespace ElJardin {
             {
                 AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
                 CheckLogros();
-                victoryCanvas.SetActive(true);
+                // Quizá hay que desactivar antes los otros canvas (cartas y mazo)???
+                //victoryCanvas.SetActive(true);
                 //confety.SetActive(true);
             }
         }
@@ -132,17 +134,16 @@ namespace ElJardin {
             int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
             LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(currentZone, currentLevel);
 
-            Debug.LogError("Los datos del nivel: " + currentZone + " - " + currentLevel + ". Con ID: " + levelData.levelName);
-
             // Logritos
-            levelData.logros[0].done = true;
+            levelData.logros[0].done = true;   // El logro completado basico siempre se cumple por terminar el nivel
             levelData.logros[1].done = CheckLogroPetalos();
             levelData.logros[2].done = CheckLogroMovimientos();
 
-            //MapamundiManager.Instance.SaveZoneData();
             MapamundiManager.Instance.SaveLevel(levelData);
+            cardCanvas.SetActive(false);
+            victoryCanvas.SetActive(true);
+            ActivateLogrosPanel(currentLevel);
 
-            Debug.LogError("Los datos del nivel tras actualizar: " + levelData.logros);
         }
 
         private bool CheckLogroPetalos() {
@@ -152,7 +153,13 @@ namespace ElJardin {
 
         private bool CheckLogroMovimientos() {
             // Comprobamos que se ha completado en menos de X movimientos
-            return true;
+            return false;
+        }
+
+        private void ActivateLogrosPanel(int currentLevel) {
+            LogrosPanel logrosPanel = FindObjectOfType<LogrosPanel>();
+            // Quiza puede ser directamente el activar los ticks pasando el leveldata
+            logrosPanel.GetLogritos(currentLevel);
         }
 
         #endregion

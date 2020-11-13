@@ -63,6 +63,10 @@ namespace ElJardin {
             SceneManager.LoadScene(0);
         }
 
+        public void goToMapamundi() {
+            SceneManager.LoadScene(2);
+        }
+
         public void goNextLevel(int nextLevelIndex) {
             PlayerPrefs.SetInt("NextLevel", nextLevelIndex);
             SceneManager.LoadScene("LoadScene");
