@@ -27,6 +27,7 @@ public class LevelButton : MonoBehaviour {
 
     private void Start() {
         ChangeSprite();
+        CheckAvailableLevel();
     }
 
     public void ShowConfirmPanel() {
@@ -50,4 +51,16 @@ public class LevelButton : MonoBehaviour {
         this.gameObject.GetComponent<Image>().sprite = petals[numPetals];
     }
 
+    private void CheckAvailableLevel() {
+        // Para poder empezar en el 1º nivel empezamos a checkear a partir del 2º
+        if (levelId > 0) {
+            LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
+            isActive = levelData.isCompleted;
+
+            if (!isActive) {
+                GetComponent<Button>().interactable = false;
+            }
+        }
+
+    }
 }
