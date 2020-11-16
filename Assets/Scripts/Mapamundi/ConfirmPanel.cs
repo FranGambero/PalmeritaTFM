@@ -44,4 +44,8 @@ public class ConfirmPanel : MonoBehaviour
         AudioManager.Instance.setIngameMusic();
         SceneManager.LoadScene(levelStringToLoad);
     }
+    public int GetLevelBuildId() {
+        levelStringToLoad = "Level" + levelIdToLoad;
+        return SceneManager.GetSceneByName(levelStringToLoad).buildIndex;
+    }
 }

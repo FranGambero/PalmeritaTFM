@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour {
-    public Sprite[] petals;
+    public GameObject[] petals;
+    public List<DoGrow> elementsToAppears;
     public Sprite lockedSprite;
 
     public TextMeshProUGUI levelText;
@@ -46,9 +47,23 @@ public class LevelButton : MonoBehaviour {
         confirmPanel.levelIdToLoad = levelId;
         confirmPanel.logrosPanel.GetLogritos(levelId);
     }
-
+    [ContextMenu("ChangeSprite")]
     public void ChangeSprite() {
-        this.gameObject.GetComponent<Image>().sprite = petals[numPetals];
+        new List<GameObject>(petals).ForEach(p => p.SetActive(false));
+        if (numPetals > 0) {
+
+            for (int i = 0; i < numPetals; i++) {
+                petals[i].SetActive(true);
+            }
+            if (elementsToAppears.Count > 0) {
+                if (SessionVariables.Instance.sceneData.lastScene != confirmPanel.GetLevelBuildId()) {
+                    elementsToAppears.ForEach(e => e.QuickGrow());
+                } else {
+                    elementsToAppears[0].Grow();
+                    elementsToAppears.ForEach(e => e.RandomGrow());
+                }
+            }
+        }
     }
 
     private void CheckAvailableLevel() {
