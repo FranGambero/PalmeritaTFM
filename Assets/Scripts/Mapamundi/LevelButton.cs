@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour {
@@ -10,7 +10,9 @@ public class LevelButton : MonoBehaviour {
     public List<DoGrow> elementsToAppears;
     public Sprite lockedSprite;
 
+    public LevelData levelData;
     public TextMeshProUGUI levelText;
+    public int zoneId;
     public int levelId;
     public int numPetals = 0;
     public ConfirmPanel confirmPanel;
@@ -27,8 +29,17 @@ public class LevelButton : MonoBehaviour {
     }
 
     private void Start() {
+        GetLevelData();
         ChangeSprite();
         CheckAvailableLevel();
+    }
+
+    private void GetLevelData() {
+        int currentZone = PlayerPrefs.GetInt("CurrentZone");
+        this.levelData = MapamundiManager.Instance.GetCurrentLevel(zoneId, levelId);
+
+        numPetals = Array.FindAll(levelData.logros, l => l.done).Length;
+        levelText.text = levelData.levelName;
     }
 
     public void ShowConfirmPanel() {
