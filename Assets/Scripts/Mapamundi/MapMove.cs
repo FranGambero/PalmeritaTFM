@@ -30,9 +30,9 @@ public class MapMove : MonoBehaviour {
                     moveEase = Ease.InOutQuint;
                     moveTime = 1.1f;
                 } else if (i == 0) {
-                    moveEase = Ease.InQuint;
+                    moveEase = Ease.InSine;
                 } else if (i == listaPosiciones.Count - 1) {
-                    moveEase = Ease.OutCirc;
+                    moveEase = Ease.OutSine;
                     moveTime = .9f;
                 } else {
                     moveTime = 1f;

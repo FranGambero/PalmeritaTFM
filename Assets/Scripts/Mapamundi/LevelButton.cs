@@ -79,14 +79,14 @@ public class LevelButton : MonoBehaviour {
 
     private void CheckAvailableLevel() {
         // Para poder empezar en el 1º nivel empezamos a checkear a partir del 2º
-        if (levelId > 0) {
-            LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
-            isActive = levelData.isCompleted;
+        //if (levelId > 0) {
+        //    LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
+        //    isActive = levelData.isCompleted;
 
-            if (!isActive) {
-                GetComponent<Button>().interactable = false;
-            }
-        }
+        //    if (!isActive) {
+        //        GetComponent<Button>().interactable = false;
+        //    }
+        //}
 
     }
 }
