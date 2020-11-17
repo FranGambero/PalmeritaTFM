@@ -7,5 +7,6 @@ using UnityEngine;
 public class ZoneData
 {
     public int zoneId;
+    public string zoneName;
     public LevelData[] levels;
 }
