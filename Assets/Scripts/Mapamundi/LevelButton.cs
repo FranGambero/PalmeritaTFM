@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour {
     public GameObject[] petals;
-    public List<DoGrow> elementsToAppears;
+    public Transform parentElementsToAppears;
+    private List<DoGrow> elementsToAppears;
     public Sprite lockedSprite;
 
     public LevelData levelData;
@@ -26,6 +27,7 @@ public class LevelButton : MonoBehaviour {
             //No va :(((
             confirmPanel = FindObjectOfType<ConfirmPanel>();
         }
+        elementsToAppears = new List<DoGrow>(parentElementsToAppears.GetComponentsInChildren<DoGrow>());
     }
 
     private void Start() {
