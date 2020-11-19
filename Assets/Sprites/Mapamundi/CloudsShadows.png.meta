@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: 6cb1c8c9793e5fa4288e59946a5afc54
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1876421765446557653
+    second: CloudsShadows_0
+  - first:
+      213: 7951882376572941195
+    second: CloudsShadows_1
+  - first:
+      213: -3282247950693727437
+    second: CloudsShadows_2
+  - first:
+      213: -6740414096537048661
+    second: CloudsShadows_3
+  - first:
+      213: -492509827231417680
+    second: CloudsShadows_4
+  - first:
+      213: -805954090063578449
+    second: CloudsShadows_5
+  - first:
+      213: -2412368025022664465
+    second: CloudsShadows_6
+  - first:
+      213: -3753229634567316125
+    second: CloudsShadows_7
+  - first:
+      213: 3441162563660284583
+    second: CloudsShadows_8
+  - first:
+      213: 8587611512548593344
+    second: CloudsShadows_9
+  - first:
+      213: -8267865064308879003
+    second: CloudsShadows_10
+  - first:
+      213: 6158794821545132770
+    second: CloudsShadows_0
+  - first:
+      213: 1683400557769654403
+    second: CloudsShadows_1
+  - first:
+      213: -5280367010594324801
+    second: CloudsShadows_2
+  - first:
+      213: 1830997525082467661
+    second: CloudsShadows_3
+  - first:
+      213: -3139817564090571905
+    second: CloudsShadows_4
+  - first:
+      213: -984293785307516692
+    second: CloudsShadows_5
+  - first:
+      213: 3868141096927010128
+    second: CloudsShadows_6
+  - first:
+      213: -1000116806062408239
+    second: CloudsShadows_7
+  - first:
+      213: -1961164089561600717
+    second: CloudsShadows_8
+  - first:
+      213: -7607274026244534437
+    second: CloudsShadows_9
+  - first:
+      213: -6551227259229078027
+    second: CloudsShadows_10
+  - first:
+      213: 8611975165228482447
+    second: CloudsShadows_11
+  - first:
+      213: -5915609431768576532
+    second: CloudsShadows_12
+  - first:
+      213: 567883922921038649
+    second: CloudsShadows_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CloudsShadows_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1053
+        width: 378
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e286be624f687550800000000000000
+      internalID: 6158794821545132770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1018
+        width: 488
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3800e8463e3ac5710800000000000000
+      internalID: 1683400557769654403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1026
+        width: 137
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe75d13e2e58b6b0800000000000000
+      internalID: -5280367010594324801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_3
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1059
+        width: 252
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4de82b4c82096910800000000000000
+      internalID: 1830997525082467661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 634
+        width: 319
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7369d89f802d64d0800000000000000
+      internalID: -3139817564090571905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_5
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 643
+        width: 404
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0fe1c64061752f0800000000000000
+      internalID: -984293785307516692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_6
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 676
+        width: 282
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d9c6755d56ea530800000000000000
+      internalID: 3868141096927010128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_7
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 330
+        width: 400
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd70c0501fde12f0800000000000000
+      internalID: -1000116806062408239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_8
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 355
+        width: 148
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dad67b6ab88c4e0800000000000000
+      internalID: -1961164089561600717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_9
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 350
+        width: 326
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f83a404988d6690800000000000000
+      internalID: -7607274026244534437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudsShadows_10
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 362
+        width: 137
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd7bc2848d5515a0800000000000000
+      internalID: -6551227259229078027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fc43ba01ef6b3064facdff5ef282eb4f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -190,7 +190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -109.608}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: -38}
+  m_AnchoredPosition: {x: 51.6, y: -33.9}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6239894029449488905
@@ -265,7 +265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 71.069}
+  m_AnchoredPosition: {x: -4.3, y: 55.05}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6239894029600121940
@@ -531,13 +531,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petals:
-  - {fileID: 21300000, guid: b80904a3cd0f2ea4a97c982aecb106da, type: 3}
-  - {fileID: 21300000, guid: 8ed76afcecae68349a7e374c3f5b3245, type: 3}
-  - {fileID: 21300000, guid: f7f2f1a3c3f98094897393edff5d4ebc, type: 3}
-  - {fileID: 21300000, guid: 38825b0fa56fffd47982a5f99c977f97, type: 3}
-  elementsToAppears: []
+  - {fileID: 6239894029600121937}
+  - {fileID: 6239894030687827742}
+  - {fileID: 6239894029449488906}
+  parentElementsToAppears: {fileID: 4314610461374518995}
   lockedSprite: {fileID: 0}
+  levelData:
+    levelName: 
+    id: 0
+    zone: 0
+    isCompleted: 0
+    logros: []
   levelText: {fileID: 6239894029234600780}
+  zoneId: 0
   levelId: 0
   numPetals: 0
   confirmPanel: {fileID: 0}
@@ -651,7 +657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 111.518005}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -74, y: -41}
+  m_AnchoredPosition: {x: -50.6, y: -37.5}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6239894030687827741

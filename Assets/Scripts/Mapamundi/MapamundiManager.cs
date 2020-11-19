@@ -23,7 +23,8 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         /////
         currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
 
-        levelZonePanels[currentZone].SetActive(true);
+        if (levelZonePanels.Length > 0)
+            levelZonePanels[currentZone].SetActive(true);
 
         //DontDestroyOnLoad(this.gameObject);
     }
@@ -89,10 +90,11 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         string petalsText = currentPetals + " / " + totalPetals;
         //string zoneText = "Zona " + currentZone;
         string zoneText = GetCurrentZone(currentZone).zoneName;
-
-        petalsTextTag.text = petalsText;
-        zoneTextTag.text = zoneText;
-        Debug.LogWarning("Vas a meter la zonita  text : " + currentZone + " === " + zoneTextTag.text);
+        if (petalsTextTag) {
+            petalsTextTag.text = petalsText;
+            zoneTextTag.text = zoneText;
+            Debug.LogWarning("Vas a meter la zonita  text : " + currentZone + " === " + zoneTextTag.text);
+        }
     }
 
     public void ChangeZone(bool greater) {

@@ -165,10 +165,10 @@ TextureImporter:
       name: MapStaticElements1_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 1096
+        x: 32
+        y: 1102
         width: 157
-        height: 168
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,27 +178,6 @@ TextureImporter:
       bones: []
       spriteID: 3bc657f23990490d0800000000000000
       internalID: -3417095689506296653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapStaticElements1_1
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 14
-        width: 329
-        height: 209
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7c4dacbc2ee0b2d0800000000000000
-      internalID: -3264847853932163970
       vertices: []
       indices: 
       edges: []

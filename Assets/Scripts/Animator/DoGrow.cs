@@ -19,7 +19,7 @@ public class DoGrow : MonoBehaviour {
     [ContextMenu("Grow")]
     public void Grow() {
         if (!growed) {
-            transform.DOScale(size, time).SetEase(Ease.OutElastic);
+            transform.DOScale(size, time).SetEase(Ease.OutBack);
             growed = true;
         }
     }
@@ -30,7 +30,7 @@ public class DoGrow : MonoBehaviour {
         time = tmpTime;
     }
     public void RandomGrow() {
-        Invoke(nameof(Grow), Random.Range(0, 3f));
+        Invoke(nameof(Grow), Random.Range(1, 3f));
     }
 
     [ContextMenu("Encoje")]
