@@ -65,7 +65,8 @@ namespace ElJardin {
         }
 
         public void DrawNextCard() {
-            StartCoroutine(DrawNextCardCoroutine());
+            if(this.gameObject.activeInHierarchy)
+                StartCoroutine(DrawNextCardCoroutine());
         }
         private IEnumerator DrawNextCardCoroutine() {
             yield return new WaitForSeconds(.1f);
