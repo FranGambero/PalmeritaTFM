@@ -50,10 +50,6 @@
 							<Media>
 								<File Id="218172167"/>
 								<File Id="119660723"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{7B65DC3C-242E-4E6C-96FF-623EA9D29310}">
-							<Media>
 								<File Id="914630107"/>
 							</Media>
 						</SwitchContainer>
@@ -104,6 +100,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="326370846" Name="UI_LPF_In" ObjectPath="\Events\Default Work Unit\UI\UI_LPF_In" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2830404289" Name="UI_LPF_Out" ObjectPath="\Events\Default Work Unit\UI\UI_LPF_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2493148897" Name="UI_Select_2_In" ObjectPath="\Events\Default Work Unit\UI\UI_Select_2_In" DurationType="OneShot" DurationMin="0.799569" DurationMax="0.799569">
 					<IncludedMemoryFiles>
 						<File Id="312227647" Language="SFX">

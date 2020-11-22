@@ -414,6 +414,79 @@
 										</MusicCue>
 									</CueList>
 								</MusicSegment>
+								<MusicSegment Name="Pausa" ID="{1F6C7636-FD3A-4CAF-BF00-7716AAD93ECC}" ShortID="725745014">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="130678.538250388"/>
+										<Property Name="GridFrequencyPreset" Type="int16" Value="51"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="130"/>
+										<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{48D10D6F-4200-422B-A90F-2410FA8B1FD2}" ShortID="649246184">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{B66B922F-DE09-4B82-AD86-D9AECC0BF2DE}">
+													<Language>SFX</Language>
+													<AudioFile>El_Jardin_Musica_Pausa_44_16_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="914630107"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{B1255EF5-CC9C-43BD-BC28-8BDB8472EA49}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{23EA56D0-7093-4FD8-967F-84C697DBECD4}">
+													<ClipList>
+														<MusicClip Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{4585609E-ED67-49FC-9FB3-FEDFE8137EF9}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="116254.013605442"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{B66B922F-DE09-4B82-AD86-D9AECC0BF2DE}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{1130E8DD-F2FA-4845-9EB7-B6418B86A686}"/>
+										<MusicCue Name="Exit Cue" ID="{235A80FC-50D0-4BAC-B394-3F2646F373BE}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="116307.692307692"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
 							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{BED36ED7-02EF-45BF-955C-C09BAEAEE9AE}">
@@ -448,79 +521,6 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
-						<MusicSegment Name="Pausa" ID="{1F6C7636-FD3A-4CAF-BF00-7716AAD93ECC}" ShortID="725745014">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="130678.538250388"/>
-								<Property Name="GridFrequencyPreset" Type="int16" Value="51"/>
-								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
-								<Property Name="Tempo" Type="Real64" Value="130"/>
-								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{48D10D6F-4200-422B-A90F-2410FA8B1FD2}" ShortID="649246184">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{B66B922F-DE09-4B82-AD86-D9AECC0BF2DE}">
-											<Language>SFX</Language>
-											<AudioFile>El_Jardin_Musica_Pausa_44_16_Loop.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="914630107"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{B1255EF5-CC9C-43BD-BC28-8BDB8472EA49}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{23EA56D0-7093-4FD8-967F-84C697DBECD4}">
-											<ClipList>
-												<MusicClip Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{4585609E-ED67-49FC-9FB3-FEDFE8137EF9}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="116254.013605442"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{B66B922F-DE09-4B82-AD86-D9AECC0BF2DE}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{1130E8DD-F2FA-4845-9EB7-B6418B86A686}"/>
-								<MusicCue Name="Exit Cue" ID="{235A80FC-50D0-4BAC-B394-3F2646F373BE}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="116307.692307692"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{F5C5DD80-285C-4568-8AD4-A43A59D3F686}">
@@ -800,7 +800,7 @@
 								<PathElementRef Name="None" ID="{7B65DC3C-242E-4E6C-96FF-623EA9D29310}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="Pausa" ID="{1F6C7636-FD3A-4CAF-BF00-7716AAD93ECC}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" Platform="Linked"/>
+								<NoObject Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

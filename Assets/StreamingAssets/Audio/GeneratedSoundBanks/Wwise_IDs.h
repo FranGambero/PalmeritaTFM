@@ -27,6 +27,8 @@ namespace AK
         static const AkUniqueID SEPALO_STEPS_IN = 847036623U;
         static const AkUniqueID UI_BACK_IN = 349057203U;
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
+        static const AkUniqueID UI_LPF_IN = 326370846U;
+        static const AkUniqueID UI_LPF_OUT = 2830404289U;
         static const AkUniqueID UI_SELECT_2_IN = 2493148897U;
         static const AkUniqueID UI_SELECT_IN = 3930592856U;
         static const AkUniqueID UI_VOL_DOWN_IN = 2053540170U;
