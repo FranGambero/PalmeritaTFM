@@ -1878,6 +1878,40 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Amb_Fly_Shoots" ID="{336839D7-4928-4E54-A1B1-2AF6D0A43C4E}" ShortID="566218652">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldListenerOrientation" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{772A9017-9E43-4B94-B506-019594D2054D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="505"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6F8CC73F-C159-4225-8757-476A102D0DF7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="2"/>
+															<Property Name="Min" Type="Real64" Value="-4"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
 												<Value>68</Value>
@@ -1893,7 +1927,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_1" ID="{4BBE6E4E-9C0B-4CAF-B812-13E110D6EED5}" ShortID="138520329">
+										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_1" ID="{F17791BB-2C9D-49A3-AA33-69D54F2D30E5}" ShortID="696222847">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -1903,7 +1937,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_1" ID="{7E2ADE21-4460-4F54-BEE0-58DCD5156504}">
+												<AudioFileSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_1" ID="{CD7D0C5B-1AA5-45B3-815C-46EB54157BC6}">
 													<Language>SFX</Language>
 													<AudioFile>Jardin_Amb_Fly_Shoot_SFX_44_16_1.wav</AudioFile>
 													<MediaIDList>
@@ -1912,10 +1946,10 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_1" ID="{7E2ADE21-4460-4F54-BEE0-58DCD5156504}" Platform="Linked"/>
+												<ActiveSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_1" ID="{CD7D0C5B-1AA5-45B3-815C-46EB54157BC6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_2" ID="{F14D57E2-E5CD-452A-8C33-9065B1E68FB9}" ShortID="397231692">
+										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_2" ID="{93142459-7957-48B8-986B-4AC920D52B3D}" ShortID="391705249">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -1925,7 +1959,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_2" ID="{47BD1645-D983-4355-A3C2-811BB8A97E8C}">
+												<AudioFileSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_2" ID="{49F56153-0D95-4CB3-A843-25D228E48BDE}">
 													<Language>SFX</Language>
 													<AudioFile>Jardin_Amb_Fly_Shoot_SFX_44_16_2.wav</AudioFile>
 													<MediaIDList>
@@ -1934,10 +1968,10 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_2" ID="{47BD1645-D983-4355-A3C2-811BB8A97E8C}" Platform="Linked"/>
+												<ActiveSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_2" ID="{49F56153-0D95-4CB3-A843-25D228E48BDE}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_3" ID="{72A23CF2-C8BC-4BAA-889D-DF7666F1C742}" ShortID="403436261">
+										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_3" ID="{58D6B20A-C2F9-4ECA-8A96-61551274A0BC}" ShortID="889754813">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -1947,7 +1981,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_3" ID="{6EB77D8E-E898-4938-BA96-12CC74CE06C7}">
+												<AudioFileSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_3" ID="{7B234F96-372D-44A4-B090-30F29E7560BA}">
 													<Language>SFX</Language>
 													<AudioFile>Jardin_Amb_Fly_Shoot_SFX_44_16_3.wav</AudioFile>
 													<MediaIDList>
@@ -1956,10 +1990,127 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_3" ID="{6EB77D8E-E898-4938-BA96-12CC74CE06C7}" Platform="Linked"/>
+												<ActiveSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_3" ID="{7B234F96-372D-44A4-B090-30F29E7560BA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_4" ID="{CB090864-EA86-4BA5-A767-131593F00FD9}" ShortID="366479335">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_4" ID="{EDA8A38F-09B6-47B4-9793-6425F1E63FD4}">
+													<Language>SFX</Language>
+													<AudioFile>Jardin_Amb_Fly_Shoot_SFX_44_16_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="549590014"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jardin_Amb_Fly_Shoot_SFX_44_16_4" ID="{EDA8A38F-09B6-47B4-9793-6425F1E63FD4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{E3BD703B-0588-4714-B22A-F98EF51DCA42}"/>
+										<Position Name="" ID="{E50F4BA8-197B-490D-8A60-3A673E2AF636}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Amb_Fly_Shoots_Path" ID="{9C27AD93-1246-46F5-A9C8-BC941F7C21A6}">
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>50</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>64.55696</XPos>
+															<YPos>60.50955</YPos>
+															<Flags>0</Flags>
+															<Time>1250</Time>
+														</Point>
+														<Point>
+															<XPos>68.98734</XPos>
+															<YPos>21.01911</YPos>
+															<Flags>0</Flags>
+															<Time>2500</Time>
+														</Point>
+														<Point>
+															<XPos>17.0886075949367</XPos>
+															<YPos>76.4331210191083</YPos>
+															<Flags>0</Flags>
+															<Time>3750</Time>
+														</Point>
+														<Point>
+															<XPos>-44.3037974683544</XPos>
+															<YPos>70.0636942675159</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Amb_Fly_Shoots_Path_01" ID="{60FDDCAF-C3C5-444E-8C66-582913AED7AB}">
+													<PointList>
+														<Point>
+															<XPos>-79.74684</XPos>
+															<YPos>20.70064</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-25.3164556962025</XPos>
+															<YPos>26.1146496815287</YPos>
+															<Flags>0</Flags>
+															<Time>1666</Time>
+														</Point>
+														<Point>
+															<XPos>33.5443037974684</XPos>
+															<YPos>67.515923566879</YPos>
+															<Flags>0</Flags>
+															<Time>3333</Time>
+														</Point>
+														<Point>
+															<XPos>66.4556962025316</XPos>
+															<YPos>38.8535031847134</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Amb_Fly_Shoots_Path_02" ID="{A908890E-C091-4AC4-973D-2827FF2813E2}">
+													<PointList>
+														<Point>
+															<XPos>-87.34177</XPos>
+															<YPos>40.44586</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-82.27848</XPos>
+															<YPos>14.01274</YPos>
+															<Flags>0</Flags>
+															<Time>2500</Time>
+														</Point>
+														<Point>
+															<XPos>66.4557</XPos>
+															<YPos>42.03822</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</RandomSequenceContainer>

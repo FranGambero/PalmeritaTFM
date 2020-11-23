@@ -231,6 +231,10 @@
 							<ShortName>Jardin_Amb_Fly_Shoot_SFX_44_16_1.wav</ShortName>
 							<Path>SFX\Jardin_Amb_Fly_Shoot_SFX_44_16_1_B9A6BE81.wem</Path>
 						</File>
+						<File Id="549590014" Language="SFX">
+							<ShortName>Jardin_Amb_Fly_Shoot_SFX_44_16_4.wav</ShortName>
+							<Path>SFX\Jardin_Amb_Fly_Shoot_SFX_44_16_4_B9A6BE81.wem</Path>
+						</File>
 						<File Id="576119278" Language="SFX">
 							<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_19.wav</ShortName>
 							<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_19_B9A6BE81.wem</Path>
