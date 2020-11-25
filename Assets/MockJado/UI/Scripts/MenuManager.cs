@@ -27,7 +27,7 @@ namespace ElJardin {
         }
 
         public void goToGame() {
-            //AudioManager.Instance.setIngameMusic();
+            AudioManager.Instance.setAmbientMusic();
             SceneManager.LoadScene("LoadScene");
         }
 

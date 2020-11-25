@@ -43,8 +43,24 @@ namespace ElJardin {
             AkSoundEngine.SetState("General_Music", "Musica_Ingame");
         }
 
+        public void setHappyMusic() {
+            AkSoundEngine.SetState("General_Music", "Musica_Inicio");
+        }
+
         public void setAmbientMusic() {
+            // Me llaman al entrar a Mapamundi
+            Debug.Log("Paso 1 y 3.- Me llaman al entrar a Mapamundi");
             AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
+            AkSoundEngine.PostEvent("UI_LPF_In", gameObject);
+        }
+
+        public void unSetAmbientMusic() {
+            AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
+        }
+
+        public void unSetUILPF() {
+            Debug.Log("Paso 4.- Me llaman al entrar a nivel");
+            AkSoundEngine.PostEvent("UI_LPF_Out", gameObject);
         }
     }
 }
