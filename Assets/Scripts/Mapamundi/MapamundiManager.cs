@@ -10,24 +10,40 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     public int currentZone, currentLevel;
     public int currentPetals;
 
-    public TextMeshProUGUI petalsTextTag;
+    public GameObject[] levelZonePanels;
+    public TextMeshProUGUI zoneTextTag, petalsTextTag;
 
     private void Awake() {
         numZones = 4;
         zoneDataArray = new ZoneData[numZones];
-        currentZone = PlayerPrefs.GetInt("CurrentZone", 0);
+        //currentZone = PlayerPrefs.GetInt("CurrentZone", 0);
+        /////
+        currentZone = 0;
+        PlayerPrefs.SetInt("CurrentZone", 0);
+        /////
         currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
 
-        //DontDestroyOnLoad(this.gameObject);
+        if (levelZonePanels.Length > 0)
+            levelZonePanels[currentZone].SetActive(true);
+
+        transform.SetParent(null);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start() {
-        SetCurrentZone();
+        SetAllZones();
         CountCurrentPetals();
     }
 
-    public void SetCurrentZone() {
-        zoneDataArray[currentZone] = SerializableManager.Instance.DeSerializeZone(currentZone);
+    public void SetCurrentZone(int zoneId) {
+        zoneDataArray[zoneId] = SerializableManager.Instance.DeSerializeZone(zoneId);
+    }
+
+    public void SetAllZones() {
+        Debug.LogWarning("CARGO LAS ZONAS");
+        for (int zoneId = 0; zoneId < zoneDataArray.Length; zoneId++) {
+            SetCurrentZone(zoneId);
+        }
     }
 
     public ZoneData GetCurrentZone(int zoneId) {
@@ -44,16 +60,26 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
     [ContextMenu("Guarda Carla")]
     public void SaveZoneData() {
-        SerializableManager.Instance.SerializeZone(zoneDataArray[currentZone]);
+        SerializableManager.Instance.SerializeZone(zoneDataArray[0]);
+        SerializableManager.Instance.SerializeZone(zoneDataArray[1]);
+        //for (int zoneId = 0; zoneId < zoneDataArray.Length; zoneId++) {
+        //    SerializableManager.Instance.SerializeZone(zoneDataArray[zoneId]);
+        //}
     }
 
     public void SaveLevel(LevelData newLevelData) {
         //ZoneData zoneData = GetCurrentZone(currentZone);
-        zoneDataArray[currentZone].levels[currentLevel] = newLevelData;
-        SaveZoneData();
+        Debug.LogWarning("VOY A GUARDARRRRR CON ZONA " + currentZone + " y level " + currentLevel);
+        Debug.LogWarning("LA LENGTH " + zoneDataArray.Length);
+        if (zoneDataArray.Length > 0) {
+            zoneDataArray[currentZone].levels[currentLevel] = newLevelData;
+            SaveZoneData();
+
+        }
     }
 
     public void CountCurrentPetals() {
+        Debug.LogWarning("Voy a coger petalitos con " + currentZone);
         ZoneData zoneData = GetCurrentZone(currentZone);
         int totalPetals = zoneData.levels.Length * 3; // 3 logros por nivel
         int currentPetals = 0;
@@ -69,8 +95,34 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         }
 
         string petalsText = currentPetals + " / " + totalPetals;
+        //string zoneText = "Zona " + currentZone;
+        string zoneText = GetCurrentZone(currentZone).zoneName;
+        if (petalsTextTag) {
+            petalsTextTag.text = petalsText;
+            zoneTextTag.text = zoneText;
+            Debug.LogWarning("Vas a meter la zonita  text : " + currentZone + " === " + zoneTextTag.text);
+        }
+    }
 
-        petalsTextTag.text = petalsText;
+    public void ChangeZone(bool greater) {
+        int avanze = 1;
+        levelZonePanels[currentZone].SetActive(false);
+
+        if (!greater)
+            avanze = -1;
+
+        //currentZone = (currentZone + avanze) % 2;
+        currentZone += avanze;
+        if (currentZone >= 2) {
+            currentZone = 0;
+        } else if (currentZone < 0) {
+            currentZone = 1;
+        }
+        PlayerPrefs.SetInt("CurrentZone", currentZone);
+
+        levelZonePanels[currentZone].SetActive(true);
+
+        CountCurrentPetals();
 
     }
 }
