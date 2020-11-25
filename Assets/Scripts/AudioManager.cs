@@ -13,7 +13,7 @@ namespace ElJardin {
         }
 
         private void Start() {
-            if (SceneManager.GetActiveScene().buildIndex == 0) {
+            if (SessionVariables.Instance.sceneData.lastScene == -1) {
                 AkSoundEngine.PostEvent("Musica_Switch_In", gameObject);
             }
 
@@ -41,7 +41,10 @@ namespace ElJardin {
 
         public void setIngameMusic() {
             AkSoundEngine.SetState("General_Music", "Musica_Ingame");
+        }
 
+        public void setAmbientMusic() {
+            AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
         }
     }
 }
