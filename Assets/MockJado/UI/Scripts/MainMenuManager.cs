@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace ElJardin {
-    public class MenuManager : MonoBehaviour {
+    public class MainMenuManager : MonoBehaviour {
         public GameObject titleMenu, startMenu, FadeOutPanel;
         public MenuButton btnPlay, btnConfig, btnCredits;
         public ConfigMenuManager configMenuManager;
