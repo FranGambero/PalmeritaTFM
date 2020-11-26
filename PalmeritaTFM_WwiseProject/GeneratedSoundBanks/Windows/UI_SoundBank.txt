@@ -1,10 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
-	326370846	UI_LPF_In			\Default Work Unit\UI\UI_LPF_In	
 	349057203	UI_Back_In			\Default Work Unit\UI\UI_Back_In	
 	1436640151	UI_Vol_Up_In			\Default Work Unit\UI\UI_Vol_Up_In	
 	2053540170	UI_Vol_Down_In			\Default Work Unit\UI\UI_Vol_Down_In	
 	2493148897	UI_Select_2_In			\Default Work Unit\UI\UI_Select_2_In	
-	2830404289	UI_LPF_Out			\Default Work Unit\UI\UI_LPF_Out	
 	3671726430	UI_Cursor_In			\Default Work Unit\UI\UI_Cursor_In	
 	3930592856	UI_Select_In			\Default Work Unit\UI\UI_Select_In	
 

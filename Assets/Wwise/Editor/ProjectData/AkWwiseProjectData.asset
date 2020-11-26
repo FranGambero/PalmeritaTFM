@@ -73,7 +73,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585954772688993592
+    m_lastTime: -8585952042199928558
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585954772710050772
+    m_lastTime: -8585952042591931645
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -405,34 +405,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 764444
       minDuration: 764444
-    - name: UI_LPF_In
-      guid: 235a383817b28f4ab6b3b285b0c06ad8
-      id: 326370846
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: UI
-        ObjectType: 4
-      - ElementName: UI_LPF_In
-        ObjectType: 3
-      Path: Default Work Unit\UI\UI_LPF_In
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: UI_LPF_Out
-      guid: 29989dec43b5ed499134a0532f590e90
-      id: 2830404289
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: UI
-        ObjectType: 4
-      - ElementName: UI_LPF_Out
-        ObjectType: 3
-      Path: Default Work Unit\UI\UI_LPF_Out
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: UI_Select_2_In
       guid: 4ed8d488a1f00846b2aebd4640fb29c7
       id: 2493148897
@@ -494,7 +466,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8585970350839458587
+    m_lastTime: -8585952042591532808
     List:
     - name: Ducking
       guid: 68031a4791c8d748ac560680a6d382f1
@@ -505,6 +477,15 @@ MonoBehaviour:
       - ElementName: Ducking
         ObjectType: 13
       Path: Default Work Unit\Ducking
+    - name: LPF_Musica
+      guid: 8d66102c4a1f4c4b93d6b32b97841ce5
+      id: 1307997658
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: LPF_Musica
+        ObjectType: 13
+      Path: Default Work Unit\LPF_Musica
     - name: Vol_Musica
       guid: a32eaa7062895a4cadff213bafe91747
       id: 3361044397
@@ -579,7 +560,6 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
   - /PalmeritaTFM_WwiseProject/SoundBanks
   - /PalmeritaTFM_WwiseProject/States
   - /PalmeritaTFM_WwiseProject/States/Default Work Unit

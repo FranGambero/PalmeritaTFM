@@ -9,6 +9,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	General_Music			
 	1563092195	Musica_Inicio	General_Music			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1307997658	LPF_Musica			\Default Work Unit\LPF_Musica	
+
 Effect plug-ins	ID	Name	Type				Notes
 	191327535	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
 

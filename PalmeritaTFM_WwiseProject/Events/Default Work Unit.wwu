@@ -218,42 +218,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="UI_LPF_In" ID="{38385A23-B217-4A8F-B6B3-B285B0C06AD8}">
-							<ChildrenList>
-								<Action Name="" ID="{B9B090CA-A3D3-48D5-922F-2FC72C0C0BB0}" ShortID="808269573">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="26"/>
-										<Property Name="FadeInCurve" Type="int16" Value="5"/>
-										<Property Name="FadeTime" Type="Real64" Value="5"/>
-										<Property Name="Lowpass" Type="int16" Value="-73"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="UI_LPF_Out" ID="{EC9D9829-B543-49ED-9134-A0532F590E90}">
-							<ChildrenList>
-								<Action Name="" ID="{D5A157D7-7B64-48B1-BB08-DA35705D6A27}" ShortID="455983485">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="27"/>
-										<Property Name="FadeInCurve" Type="int16" Value="5"/>
-										<Property Name="FadeOutCurve" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="5"/>
-										<Property Name="Lowpass" Type="int16" Value="-73"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{8CD2E1CC-32B6-4563-8723-A14139EABDD1}" ShortID="50463570">
