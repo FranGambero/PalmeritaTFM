@@ -119,7 +119,8 @@ namespace ElJardin {
             CheckWin(startingNode);
             if (levelEnded)
             {
-                AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
+                // AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
+                AudioManager.Instance.unSetAmbientMusic();
                 CheckLogros();
                 // Quizá hay que desactivar antes los otros canvas (cartas y mazo)???
                 //victoryCanvas.SetActive(true);

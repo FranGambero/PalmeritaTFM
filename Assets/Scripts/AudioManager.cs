@@ -39,6 +39,7 @@ namespace ElJardin {
 
         private void Update() {
             if (currentTime <= maxiTime) {
+                Debug.Log("Paso 4.- Me llaman con valor LPF");
                 currentTime += Time.deltaTime;
 
                 if (SessionVariables.Instance.sceneData.currentScene == 2) {
@@ -52,7 +53,6 @@ namespace ElJardin {
         public void toggleMusicIngameState(bool inGame = true) {
             levelInGame = inGame;
             if (levelInGame) {
-                Debug.LogError("MUSIQUITA> " + levelInGame);
                 if (SceneManager.GetActiveScene().buildIndex == 0) {
                     AkSoundEngine.SetState("General_Music", "Musica_Inicio");
                 } else {
@@ -68,6 +68,7 @@ namespace ElJardin {
         }
 
         public void setHappyMusic() {
+            Debug.Log("Vamos a poner happy music");
             AkSoundEngine.SetState("General_Music", "Musica_Inicio");
         }
 
@@ -79,11 +80,12 @@ namespace ElJardin {
         }
 
         public void unSetAmbientMusic() {
+            //Al volver de Mapamundi a UI
+            Debug.Log("Quito ambientes");
             AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
         }
 
         public void setUILPF(float newValue) {
-            Debug.Log("Paso 4.- Me llaman con valor LPF" + newValue);
             AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_LPF, newValue);
         }
 
