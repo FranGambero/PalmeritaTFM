@@ -82,7 +82,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         Debug.LogWarning("Voy a coger petalitos con " + currentZone);
         ZoneData zoneData = GetCurrentZone(currentZone);
         int totalPetals = zoneData.levels.Length * 3; // 3 logros por nivel
-        int currentPetals = 0;
+        this.currentPetals = 0;
 
         for (int i = 0; i < zoneData.levels.Length; i++) {
             //Miro en cada nivel de la zona sus logros
