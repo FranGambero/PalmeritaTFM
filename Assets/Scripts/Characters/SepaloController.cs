@@ -48,7 +48,7 @@ namespace ElJardin.Characters {
                 movementCoroutine = StartCoroutine(Move(targetNode));
             }
         }
-
+       
         internal void CheckGrownd() {
             RaycastHit groundHits;
             //TODO Que el suelo tenga su porpia layer y que aqui se coja sola esa layer y no todas
@@ -58,12 +58,15 @@ namespace ElJardin.Characters {
         }
 
         private IEnumerator Move(Node targetNode) {
+            ProtaAnimationController pac = GetComponentInChildren<ProtaAnimationController>();
+            pac.ActivateFloatingPS(false);
             isMoving = true;
-            GetComponentInChildren<ProtaAnimationController>().StartWalkAnimation(targetNode);
+            pac.StartWalkAnimation(targetNode);
             Movement.StopAllCoroutines();
             yield return StartCoroutine(Movement.Move(CurrentNode, targetNode, this));
-            CurrentNode = targetNode;
+          //  CurrentNode = targetNode;
             isMoving = false;
+            pac.ActivateFloatingPS(true);
             onEndWalk?.Invoke();
         }
         #endregion
