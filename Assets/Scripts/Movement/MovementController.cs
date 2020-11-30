@@ -9,7 +9,8 @@ namespace ElJardin.Movement {
         #region SerializedFields
         [SerializeField] float speed;
         [SerializeField] float YOffset;
-        private Node globalTargetNode;
+        public Node globalTargetNode;
+        public Node globalStartingNode;
         #endregion
 
         IEnumerable<Node> CalculatePath(Node startingNode, Node destinyNode) {
@@ -22,6 +23,7 @@ namespace ElJardin.Movement {
             while (Vector3.Distance(transform.position, nodePosition) > speed * Time.deltaTime) {
                 transform.LookAt(nodePosition);
                 transform.position = Vector3.MoveTowards(transform.position, nodePosition, speed * Time.deltaTime);
+                GameManager.Instance.Sepalo.CheckGrownd();
                 yield return 0;
             }
             //Close enough to target, teleport there and stop coroutine
@@ -39,6 +41,7 @@ namespace ElJardin.Movement {
 
         public IEnumerator Move(Node startingNode, Node targetNode, SepaloController sepalo) {
             this.globalTargetNode = targetNode;
+            this.globalStartingNode = startingNode;
             var path = CalculatePath(startingNode, targetNode);
             foreach (var node in path) {
                 if (targetNode == this.globalTargetNode) {

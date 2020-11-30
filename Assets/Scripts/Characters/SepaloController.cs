@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using ElJardin.Movement;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,7 +13,7 @@ namespace ElJardin.Characters {
         [Header("Injection")] public MovementController Movement;
         [Header("Turn")] [SerializeField] int myTurnIndex;
         public Coroutine movementCoroutine;
-
+        public LayerMask groundLayer;
         [HideInInspector]
         public UnityEvent OnEndWalk => onEndWalk;
         UnityEvent onEndWalk = new UnityEvent();
@@ -47,8 +49,17 @@ namespace ElJardin.Characters {
             }
         }
 
+        internal void CheckGrownd() {
+            RaycastHit groundHits;
+            //TODO Que el suelo tenga su porpia layer y que aqui se coja sola esa layer y no todas
+            if (Physics.Raycast(transform.position, Vector3.down, out groundHits, 1f, groundLayer)) {
+                CurrentNode = groundHits.collider.GetComponent<Node>();
+            }
+        }
+
         private IEnumerator Move(Node targetNode) {
             isMoving = true;
+            GetComponentInChildren<ProtaAnimationController>().StartWalkAnimation(targetNode);
             Movement.StopAllCoroutines();
             yield return StartCoroutine(Movement.Move(CurrentNode, targetNode, this));
             CurrentNode = targetNode;
