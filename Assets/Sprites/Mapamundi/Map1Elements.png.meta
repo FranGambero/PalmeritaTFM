@@ -627,10 +627,10 @@ TextureImporter:
       name: Map1Elements_19
       rect:
         serializedVersion: 2
-        x: 977
+        x: 979
         y: 0
-        width: 323
-        height: 328
+        width: 321
+        height: 327
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -9,7 +9,7 @@ public class LevelButton : MonoBehaviour {
     public GameObject[] petals;
     public Transform parentElementsToAppears;
     private List<DoGrow> elementsToAppears;
-    public Sprite lockedSprite;
+    public GameObject lockedSprite;
 
     public LevelData levelData;
     public TextMeshProUGUI levelText;
@@ -80,7 +80,7 @@ public class LevelButton : MonoBehaviour {
     }
 
     private void CheckAvailableLevel() {
-        // Para poder empezar en el 1º nivel empezamos a checkear a partir del 2º
+        //  Para poder empezar en el 1º nivel empezamos a checkear a partir del 2º
         //if (levelId > 0) {
         //    LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
         //    isActive = levelData.isCompleted;
@@ -88,6 +88,7 @@ public class LevelButton : MonoBehaviour {
         //    if (!isActive) {
         //        GetComponent<Button>().interactable = false;
         //    }
+        //    lockedSprite.SetActive(!isActive);
         //}
 
     }
