@@ -53,6 +53,48 @@ TextureImporter:
   - first:
       213: 1259866589799001111
     second: MapStaticElements1_8
+  - first:
+      213: 6431151653449414372
+    second: MapStaticElements1_9
+  - first:
+      213: -5514867451989957460
+    second: MapStaticElements1_10
+  - first:
+      213: -4538924833500329905
+    second: MapStaticElements1_11
+  - first:
+      213: -7280911006199149110
+    second: MapStaticElements1_8
+  - first:
+      213: 5749847225540427255
+    second: MapStaticElements1_9
+  - first:
+      213: 8527809339304788336
+    second: MapStaticElements1_10
+  - first:
+      213: 863907859677247116
+    second: MapStaticElements1_11
+  - first:
+      213: 2991715286633612463
+    second: MapStaticElements1_12
+  - first:
+      213: -1821738615797039587
+    second: MapStaticElements1_13
+  - first:
+      213: -536917883632561804
+    second: MapStaticElements1_14
+  - first:
+      213: 5725629195773765880
+    second: MapStaticElements1_15
+  - first:
+      213: -6380817474931552711
+    second: MapStaticElements1_16
+  - first:
+      213: -6006151068189166319
+    second: MapStaticElements1_17
+  - first:
+      213: -1022148099629886369
+    second: MapStaticElements1_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,9 +207,9 @@ TextureImporter:
       name: MapStaticElements1_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 1102
-        width: 157
+        x: 21
+        y: 1113
+        width: 156
         height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -178,6 +220,384 @@ TextureImporter:
       bones: []
       spriteID: 3bc657f23990490d0800000000000000
       internalID: -3417095689506296653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1013
+        width: 148
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c4dacbc2ee0b2d0800000000000000
+      internalID: -3264847853932163970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_2
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1086
+        width: 151
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95091dbff11a22980800000000000000
+      internalID: -8565106382564388775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_3
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1086
+        width: 117
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588482f56bf0bc950800000000000000
+      internalID: 6470282565602789509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 882
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb3176072c242da0800000000000000
+      internalID: -5970598659863004163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_5
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 881
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844fafed89f03fd90800000000000000
+      internalID: -7065286241163742136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_6
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 879
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0949a4038151320800000000000000
+      internalID: 2527953361527148730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_7
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 872
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a55a357e4ae6520800000000000000
+      internalID: 2697274540289251896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_8
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 871
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd844a040205fa90800000000000000
+      internalID: -7280911006199149110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_9
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 870
+        width: 43
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd3a1f669f8bcf40800000000000000
+      internalID: 5749847225540427255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_10
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 874
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071458d696dd85670800000000000000
+      internalID: 8527809339304788336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_11
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 870
+        width: 39
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86fab60f973dfb00800000000000000
+      internalID: 863907859677247116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 804
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa407e0d335b48920800000000000000
+      internalID: 2991715286633612463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_13
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 799
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e3ec38162e7b6e0800000000000000
+      internalID: -1821738615797039587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_14
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 789
+        width: 79
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471d680970c7c88f0800000000000000
+      internalID: -536917883632561804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_15
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 785
+        width: 101
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f863b9fa65857f40800000000000000
+      internalID: 5725629195773765880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_16
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 791
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e89164058c277a0800000000000000
+      internalID: -6380817474931552711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_17
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 787
+        width: 60
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1157049ec6dd5aca0800000000000000
+      internalID: -6006151068189166319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapStaticElements1_18
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 790
+        width: 68
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5458bd08b990d1f0800000000000000
+      internalID: -1022148099629886369
       vertices: []
       indices: 
       edges: []

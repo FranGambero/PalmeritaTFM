@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -54,6 +55,11 @@ namespace ElJardin {
             goToGame();
         }
         public void FadeOut() {
+            float time = .2f;
+            if (FadeOutPanel.GetComponent<Animator>().runtimeAnimatorController.animationClips.Any(x => x.name == "FadeOut"))
+                time = FadeOutPanel.GetComponent<Animator>().runtimeAnimatorController.animationClips.First(x => x.name == "FadeOut").length;
+            Debug.Log("Animacion: " + FadeOutPanel + " " + time);
+            btnPlay.animationLength = time;
             FadeOutPanel.GetComponent<Animator>().Play("FadeOut");
         }
 
