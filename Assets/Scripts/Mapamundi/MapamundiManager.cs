@@ -27,7 +27,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
             levelZonePanels[currentZone].SetActive(true);
 
         transform.SetParent(null);
-        DontDestroyOnLoad(this.gameObject);
+       // DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start() {
