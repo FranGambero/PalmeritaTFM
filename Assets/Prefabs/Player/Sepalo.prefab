@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2554598980396421682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695921815374953097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af205097c190fe4f8a7663c11e1c3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footTransforms:
+  - {fileID: 760046883142676169}
+  - {fileID: 5408266009224704272}
+  acelerationSpeed: 0.01
 --- !u!1 &5614350269897423266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4754,18 +4770,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2554598980396421682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4695921815374953097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af205097c190fe4f8a7663c11e1c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5614350270788547084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,6 +4836,9 @@ MonoBehaviour:
   StartingNode: {x: 1, y: 1}
   Movement: {fileID: 3570621685683779729}
   myTurnIndex: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   isMoving: 0
 --- !u!114 &3570621685683779729
 MonoBehaviour:
@@ -4846,7 +4853,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  lookAtSpeed: 0
   YOffset: 0.7
+  globalTargetNode: {fileID: 0}
+  globalStartingNode: {fileID: 0}
 --- !u!1001 &5614350270493882779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5225,6 +5235,18 @@ GameObject:
 --- !u!4 &5359447032838627379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34293364b3e8505479f260c6fa8e6354,
+    type: 3}
+  m_PrefabInstance: {fileID: 5614350270644570072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5408266009224704272 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 496566478473737928, guid: 34293364b3e8505479f260c6fa8e6354,
+    type: 3}
+  m_PrefabInstance: {fileID: 5614350270644570072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &760046883142676169 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5144825248968861969, guid: 34293364b3e8505479f260c6fa8e6354,
     type: 3}
   m_PrefabInstance: {fileID: 5614350270644570072}
   m_PrefabAsset: {fileID: 0}
