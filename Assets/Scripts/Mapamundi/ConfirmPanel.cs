@@ -12,6 +12,8 @@ public class ConfirmPanel : MonoBehaviour
     public string levelStringToLoad;
     public TextMeshProUGUI levelName;
     public LogrosPanel logrosPanel;
+    public MenuButton btnPlay;
+    public FadeOutPanel fadeOutPanel;
 
     private void Awake() {
         logrosPanel = GetComponentInChildren<LogrosPanel>();
@@ -21,6 +23,9 @@ public class ConfirmPanel : MonoBehaviour
         if (this.gameObject.activeSelf) {
             this.gameObject.SetActive(false);
         }
+        btnPlay.OnPreAnimationEvent += fadeOutPanel.FadeOut;
+        fadeOutPanel.BtnTrigger = btnPlay;
+        btnPlay.OnClickEvent += PlayLevel;
     }
 
     private void Update() {
