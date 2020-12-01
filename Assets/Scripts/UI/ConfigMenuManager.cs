@@ -40,7 +40,7 @@ public class ConfigMenuManager : MonoBehaviour {
             if (newVolValue > volSFXValue) {
                 AkSoundEngine.PostEvent("UI_Vol_Up_In", gameObject);
 
-            } else {
+            } else if (newVolValue != volSFXValue) {
                 AkSoundEngine.PostEvent("UI_Vol_Down_In", gameObject);
             }
             volSFXValue = newVolValue;
@@ -49,7 +49,7 @@ public class ConfigMenuManager : MonoBehaviour {
             if (newVolValue > volMusicValue) {
                 AkSoundEngine.PostEvent("UI_Vol_Up_In", gameObject);
 
-            } else {
+            } else if (newVolValue != volMusicValue) {
                 AkSoundEngine.PostEvent("UI_Vol_Down_In", gameObject);
             }
             volMusicValue = newVolValue;
@@ -57,7 +57,7 @@ public class ConfigMenuManager : MonoBehaviour {
 
         SetSettingValues();
         UpdateSliderValues();
-        
+
         AkSoundEngine.SetRTPCValue(stringParam, newVolValue);
     }
 
