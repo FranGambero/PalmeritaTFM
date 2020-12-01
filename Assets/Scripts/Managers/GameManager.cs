@@ -33,7 +33,7 @@ namespace ElJardin {
         }
 
         private void Start() {
-            AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
+            // AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
         }
 
         private void Update() {
@@ -64,6 +64,9 @@ namespace ElJardin {
         }
 
         public void goToMapamundi() {
+            // Esto quizá hay que cambiarlo....
+            AudioManager.Instance.setHappyMusic();
+            //----
             SceneManager.LoadScene(2);
         }
 

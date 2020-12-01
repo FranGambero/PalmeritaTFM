@@ -42,6 +42,7 @@ public class ConfirmPanel : MonoBehaviour
         Debug.LogWarning("Voy a " + levelStringToLoad);
         PlayerPrefs.SetInt("CurrentLevel", levelIdToLoad);
         AudioManager.Instance.setIngameMusic();
+        //AudioManager.Instance.unSetUILPF();
         SceneManager.LoadScene(levelStringToLoad);
     }
     public int GetLevelBuildId() {

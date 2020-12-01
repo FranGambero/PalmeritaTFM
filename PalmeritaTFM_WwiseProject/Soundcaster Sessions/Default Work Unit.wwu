@@ -24,6 +24,10 @@
 							<Value>-9.2093023255814</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="LPF_Musica" ID="{2C10668D-1F4A-4B4C-93D6-B32B97841CE5}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Vol_Musica" ID="{70AA2EA3-8962-4C5A-ADFF-213BAFE91747}"/>
 							<Value>100</Value>
 						</RTPCValue>
