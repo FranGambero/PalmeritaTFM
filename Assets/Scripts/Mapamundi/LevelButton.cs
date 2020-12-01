@@ -80,16 +80,17 @@ public class LevelButton : MonoBehaviour {
     }
 
     private void CheckAvailableLevel() {
-        //  Para poder empezar en el 1º nivel empezamos a checkear a partir del 2º
-        //if (levelId > 0) {
-        //    LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
-        //    isActive = levelData.isCompleted;
+        // Para poder empezar en el 1º nivel empezamos a checkear a partir del 2º
+        // Creo que para la segunda zona falla, y falta ver cómo mantener seleccion al cerrar juego o volver de nivel
+        if (levelId > 0) {
+            LevelData previousLevelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
+            isActive = previousLevelData.isCompleted;
 
-        //    if (!isActive) {
-        //        GetComponent<Button>().interactable = false;
-        //    }
-        //    lockedSprite.SetActive(!isActive);
-        //}
+            if (!isActive) {
+                GetComponent<Button>().interactable = false;
+            }
+            lockedSprite.SetActive(!isActive);
+        }
 
     }
 }

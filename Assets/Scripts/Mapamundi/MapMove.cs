@@ -23,20 +23,9 @@ public class MapMove : MonoBehaviour {
             moveFinished = false;
             for (int i = 0; i < listaPosiciones.Count; i++) {
                 // Easing
-                Ease moveEase = Ease.Linear;
-                float moveTime = 2f;
-                if (listaPosiciones.Count == 1) {
-                    Debug.Log("Solo... 1 u word");
-                    moveEase = Ease.InOutQuint;
-                    moveTime = 1.1f;
-                } else if (i == 0) {
-                    moveEase = Ease.InSine;
-                } else if (i == listaPosiciones.Count - 1) {
-                    moveEase = Ease.OutSine;
-                    moveTime = .9f;
-                } else {
-                    moveTime = 1f;
-                }
+                Ease moveEase = Ease.OutCubic;
+                float moveTime = .5f + listaPosiciones.Count * .25f;
+
                 moveSeq.Append(transform.DOMove(listaPosiciones[i].position, moveTime).SetEase(moveEase));
             }
             moveSeq.Play().OnComplete(() => {
