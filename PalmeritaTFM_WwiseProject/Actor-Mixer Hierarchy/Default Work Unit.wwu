@@ -71,6 +71,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_1" ID="{79315CE4-AF95-493E-9ECD-3CF95C8F5AED}" ShortID="909662049">
+									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -93,6 +100,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_2" ID="{A5678F31-E1ED-44DF-8C03-DB1DEF6862B1}" ShortID="692672475">
+									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -116,6 +130,11 @@
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_3" ID="{2CE27013-4990-4537-9965-B56D29FEA8BA}" ShortID="1064916853">
 									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-3</Value>
@@ -145,6 +164,11 @@
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_4" ID="{2AA0F0F1-003E-4F8E-82A3-5C7A97638624}" ShortID="1038504771">
 									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-5</Value>
@@ -173,6 +197,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_5" ID="{40604B43-BD6B-437C-8F8A-127073FDAE24}" ShortID="595827857">
+									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -196,6 +227,11 @@
 								</Sound>
 								<Sound Name="Jardin_Amb_SFX_44_16_Capa_6" ID="{8CC85744-A3B6-43C8-B0F2-9A8C497EB33D}" ShortID="704810352">
 									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-5</Value>
@@ -310,6 +346,11 @@
 									<ChildrenList>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_1" ID="{A305201A-2C2C-4704-9975-AB80E0D2FAEA}" ShortID="416416529">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-5</Value>
@@ -339,6 +380,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_2" ID="{17717FB7-9413-492E-987C-466C05648C17}" ShortID="92682223">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ModifierList>
 														<ModifierInfo>
@@ -403,6 +449,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_3" ID="{C7AD4975-B077-45EE-ACA3-3CDFEAE231F9}" ShortID="843402363">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ModifierList>
 														<ModifierInfo>
@@ -444,6 +495,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_4" ID="{24F3C720-EA5A-433F-98D2-1AA333366FA5}" ShortID="649738259">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>33</Value>
@@ -472,6 +528,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_5" ID="{8CAE9D82-FDC0-4FA3-9942-CA72B4AD1AB4}" ShortID="390866660">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -495,6 +558,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_6" ID="{B1D62454-AE72-40E1-892C-AD8DCD93E342}" ShortID="360842222">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ModifierList>
 														<ModifierInfo>
@@ -543,6 +611,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_7" ID="{00B41326-9940-46A5-9219-5E8F8BF98647}" ShortID="385207959">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ModifierList>
 														<ModifierInfo>
@@ -596,6 +669,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_8" ID="{31E72D20-E52B-46A4-B022-8884D9AC60BD}" ShortID="643304615">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>32</Value>
@@ -625,6 +703,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_9" ID="{66006744-A93B-4104-9E57-42E344D31865}" ShortID="135317648">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>37</Value>
@@ -664,6 +747,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_10" ID="{D59EE6B4-6E9F-4233-92B9-E3B6AC60C620}" ShortID="852105065">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -686,6 +776,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_11" ID="{53A6525A-B60C-4C49-B5E4-8208801BE234}" ShortID="813515446">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -708,6 +805,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_12" ID="{70C93A6F-EE17-4969-B8F3-6BB4113CAFCF}" ShortID="576698626">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -731,6 +835,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_13" ID="{56174243-7D45-4624-A136-9BE3D8C4F4C2}" ShortID="806420020">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>51</Value>
@@ -770,6 +879,11 @@
 										</Sound>
 										<Sound Name="Silence_1" ID="{EE9BDE3B-A9FB-4F05-9FD1-B9D1CC65D094}" ShortID="804347970">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -798,6 +912,11 @@
 										</Sound>
 										<Sound Name="Silence_01" ID="{C8389EB7-9C29-4BBA-8B63-AF4F372E08AB}" ShortID="111258865">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -826,6 +945,11 @@
 										</Sound>
 										<Sound Name="Silence_02" ID="{C530C0A5-7E7D-41E7-AC08-E5EA85A73E59}" ShortID="377766907">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -854,6 +978,11 @@
 										</Sound>
 										<Sound Name="Silence_03" ID="{5722837F-7968-4BAF-957B-C7F2354157B4}" ShortID="210976338">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -882,6 +1011,11 @@
 										</Sound>
 										<Sound Name="Silence_04" ID="{D9BF5C2E-4D0D-4715-B835-BA65EC865EE6}" ShortID="501204191">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -910,6 +1044,11 @@
 										</Sound>
 										<Sound Name="Silence_05" ID="{8700BA38-F84B-42ED-8FC8-95ADAF984537}" ShortID="402957828">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -938,6 +1077,11 @@
 										</Sound>
 										<Sound Name="Silence_06" ID="{425F5901-19B8-4BAE-8A83-25F23839C2F1}" ShortID="1577336">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -966,6 +1110,11 @@
 										</Sound>
 										<Sound Name="Silence_07" ID="{1BD42074-EB51-4511-ACA7-2360E196302D}" ShortID="266076731">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -994,6 +1143,11 @@
 										</Sound>
 										<Sound Name="Silence_08" ID="{A8E45CB8-5122-4268-879B-E13DCB02C65C}" ShortID="868559179">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1022,6 +1176,11 @@
 										</Sound>
 										<Sound Name="Silence_09" ID="{7F7D196E-BCEB-4CE7-9CCB-0DEE232E1E80}" ShortID="14436193">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1050,6 +1209,11 @@
 										</Sound>
 										<Sound Name="Silence_10" ID="{F48D98C4-78DD-410E-B150-F3D28F25A37E}" ShortID="701123713">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1099,6 +1263,11 @@
 									<ChildrenList>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_14" ID="{932D2645-A764-4FB5-AEE5-8E1B8BF15B92}" ShortID="939089332">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>54</Value>
@@ -1139,6 +1308,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_15" ID="{3A70812C-D04E-4243-81A0-4FF97D164E76}" ShortID="985913133">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>44</Value>
@@ -1168,6 +1342,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_16" ID="{C19AE469-DA02-40A9-BC38-4D336B07FC31}" ShortID="330985566">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>47</Value>
@@ -1208,6 +1387,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_17" ID="{5EE62E66-C258-403A-8B3B-BBDBA1992BDA}" ShortID="5637219">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>53</Value>
@@ -1237,6 +1421,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_18" ID="{607148C6-02BB-42D4-80F7-D1B3F5CB51AD}" ShortID="209245327">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>49</Value>
@@ -1265,6 +1454,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_19" ID="{7BB836ED-EF1F-47E9-A10B-107E40511200}" ShortID="639179123">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -1288,6 +1484,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_20" ID="{22C40B9D-6EF6-4674-B181-4AE82335DC96}" ShortID="843039619">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>52</Value>
@@ -1328,6 +1529,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_21" ID="{24859F5C-8520-47EC-9B00-82931B39AF22}" ShortID="422555098">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>45</Value>
@@ -1368,6 +1574,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_22" ID="{D5B1A21F-3FD2-472B-A80C-89F2205CA664}" ShortID="523874616">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>46</Value>
@@ -1408,6 +1619,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_23" ID="{256382EA-3ED4-4817-A3E8-441223438B9F}" ShortID="221420841">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>51</Value>
@@ -1448,6 +1664,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_24" ID="{45AD72EC-036C-4480-8660-98BD8E4AE99F}" ShortID="526539075">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>45</Value>
@@ -1487,6 +1708,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_25" ID="{03136D9B-F66B-459E-AF36-62721C7924D6}" ShortID="207148394">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>51</Value>
@@ -1527,6 +1753,11 @@
 										</Sound>
 										<Sound Name="Jardin_Amb_Birds_Shoot_SFX_44_16_26" ID="{603A6921-96F9-48AC-81AD-9B784DA2D7CF}" ShortID="139261438">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
 														<Value>48</Value>
@@ -1566,6 +1797,11 @@
 										</Sound>
 										<Sound Name="Silence_03" ID="{3DEFE827-3A7F-45FE-AD64-F6C1C65170AD}" ShortID="2976796">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1594,6 +1830,11 @@
 										</Sound>
 										<Sound Name="Silence_02" ID="{BD3C68E2-BA95-4A95-B0D6-62A9898E8227}" ShortID="210622452">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1622,6 +1863,11 @@
 										</Sound>
 										<Sound Name="Silence_04" ID="{842EA47B-B13F-4151-823F-78D3B1D803BD}" ShortID="729693088">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1650,6 +1896,11 @@
 										</Sound>
 										<Sound Name="Silence_06" ID="{3F1856DA-6BCE-451E-BA4C-BECA4273D087}" ShortID="545363158">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1678,6 +1929,11 @@
 										</Sound>
 										<Sound Name="Silence_07" ID="{561CD1F8-876E-4B34-81B6-A7D4260C8CA7}" ShortID="633637605">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1706,6 +1962,11 @@
 										</Sound>
 										<Sound Name="Silence_01" ID="{B6547308-A193-4412-9651-FEAFC630AC36}" ShortID="19442612">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1734,6 +1995,11 @@
 										</Sound>
 										<Sound Name="Silence_1" ID="{0C238F07-7A01-43E3-B5A3-8B1E7427EE68}" ShortID="682964948">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1762,6 +2028,11 @@
 										</Sound>
 										<Sound Name="Silence_05" ID="{D4B4A672-5B0C-4A64-A4CC-17DCBDF2F7BF}" ShortID="689324433">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1790,6 +2061,11 @@
 										</Sound>
 										<Sound Name="Silence_09" ID="{B002DE7A-BC09-40B7-A6D6-E5E8291129B2}" ShortID="866516638">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1818,6 +2094,11 @@
 										</Sound>
 										<Sound Name="Silence_08" ID="{41119948-1E47-42AC-B6CE-7DBACC316A49}" ShortID="112241615">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1846,6 +2127,11 @@
 										</Sound>
 										<Sound Name="Silence_10" ID="{6A20D86D-7A6B-4CB8-B448-6CDA6F8B0348}" ShortID="527332714">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>60</Value>
@@ -1896,7 +2182,7 @@
 										<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>-12</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -1926,6 +2212,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_1" ID="{F17791BB-2C9D-49A3-AA33-69D54F2D30E5}" ShortID="696222847">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -1948,6 +2241,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_2" ID="{93142459-7957-48B8-986B-4AC920D52B3D}" ShortID="391705249">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -1970,6 +2270,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_3" ID="{58D6B20A-C2F9-4ECA-8A96-61551274A0BC}" ShortID="889754813">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
@@ -1992,6 +2299,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Jardin_Amb_Fly_Shoot_SFX_44_16_4" ID="{CB090864-EA86-4BA5-A767-131593F00FD9}" ShortID="366479335">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>

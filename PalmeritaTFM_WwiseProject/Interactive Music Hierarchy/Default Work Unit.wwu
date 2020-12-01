@@ -280,6 +280,13 @@
 														<XPos>0</XPos>
 														<YPos>-2</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>72.09302</XPos>
+														<YPos>67</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
