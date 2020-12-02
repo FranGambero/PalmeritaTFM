@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using DG.Tweening.Core;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,12 +10,11 @@ namespace ElJardin {
     public class AudioManager : Singleton<AudioManager> {
         private bool levelInGame;
         private float currentTime;
-        private float maxiTime;
+        private const float maxiTime = 2.4f;
 
         private void Awake() {
             levelInGame = false;
             currentTime = 0f;
-            maxiTime = 5f;
         }
 
         private void Start() {
@@ -37,19 +38,12 @@ namespace ElJardin {
             }
         }
 
-        private void Update() {
-            if (currentTime <= maxiTime) {
-                Debug.Log("Paso 4.- Me llaman con valor LPF");
-                currentTime += Time.deltaTime;
 
-                if (SessionVariables.Instance.sceneData.currentScene == 2) {
-                    setUILPF(currentTime * 20);
-                } else {
-                    setUILPF(100 - currentTime * 20);
-                }
-            }
+        public void StartSetUILPF(bool increase, float time = maxiTime) {
+            var value = increase ? 0f : 100f;
+            DOTween.To(() => value, x => value = x, increase ? 100 : 0, time).OnUpdate(()=> setUILPF(value));
         }
-
+      
         public void toggleMusicIngameState(bool inGame = true) {
             levelInGame = inGame;
             if (levelInGame) {
