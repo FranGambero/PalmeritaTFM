@@ -16,7 +16,7 @@ public class EditorUtils : EditorWindow {
         EditorSceneManager.OpenScene("Assets/Scenes/StartMenu.unity");
     }
     public static void GoMap() {
-        EditorSceneManager.OpenScene("Assets/Scenes/Map.unity");
+        EditorSceneManager.OpenScene("Assets/Scenes/Mapa.unity");
     }
     public static void GoLoadScene() {
         EditorSceneManager.OpenScene("Assets/Scenes/LoadScene.unity");
