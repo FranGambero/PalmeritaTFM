@@ -17,23 +17,26 @@ public class MenuButton : MonoBehaviour {
 
     public void OnSelect(BaseEventData eventData) {
         AkSoundEngine.PostEvent("UI_Cursor_In", gameObject);
-        indicatorImg.enabled = true;
+        if (indicatorImg)
+            indicatorImg.enabled = true;
     }
     public void OnDeselect(BaseEventData eventData) {
-        indicatorImg.enabled = false;
+        if (indicatorImg)
+            indicatorImg.enabled = false;
     }
 
     public void OnClick(BaseEventData eventData) {
         if (!clicked) {
             clicked = true;
             OnPreAnimationEvent?.Invoke();
-            indicatorImg.GetComponent<Animator>().Play(AnimationName);
+            if (indicatorImg)
+                indicatorImg.GetComponent<Animator>().Play(AnimationName);
             StartCoroutine(PlayEvent());
         }
     }
 
     IEnumerator PlayEvent() {
-        
+
         yield return new WaitForSeconds(animationLength);
         OnClickEvent?.Invoke();
         clicked = false;

@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 namespace ElJardin {
     public class MainMenuManager : MonoBehaviour {
-        public GameObject titleMenu, startMenu, FadeOutPanel;
+        public GameObject titleMenu, startMenu;
+         public FadeOutPanel fadeOutPanel;
         public MenuButton btnPlay, btnConfig, btnCredits;
         public ConfigMenuManager configMenuManager;
 
@@ -40,8 +41,9 @@ namespace ElJardin {
         public void InitButtons() {
             btnPlay.OnClickEvent = null;
             btnPlay.OnClickEvent = StartGame;
-            btnPlay.OnPreAnimationEvent = FadeOut;
+            btnPlay.OnPreAnimationEvent = fadeOutPanel.FadeOut;
             btnPlay.OnPreAnimationEvent += triggerButtonSound;
+            fadeOutPanel.BtnTrigger = btnPlay;
             btnConfig.OnClickEvent = null;
             btnConfig.OnClickEvent = toggleConfig;
             btnConfig.OnPreAnimationEvent += triggerButtonSound;
@@ -54,14 +56,7 @@ namespace ElJardin {
             PlayerPrefs.SetInt("NextLevel", 2);
             goToGame();
         }
-        public void FadeOut() {
-            float time = .2f;
-            if (FadeOutPanel.GetComponent<Animator>().runtimeAnimatorController.animationClips.Any(x => x.name == "FadeOut"))
-                time = FadeOutPanel.GetComponent<Animator>().runtimeAnimatorController.animationClips.First(x => x.name == "FadeOut").length;
-            Debug.Log("Animacion: " + FadeOutPanel + " " + time);
-            btnPlay.animationLength = time;
-            FadeOutPanel.GetComponent<Animator>().Play("FadeOut");
-        }
+       
 
         public void toggleConfig() {
             if (configMenuManager.gameObject.activeSelf) {
