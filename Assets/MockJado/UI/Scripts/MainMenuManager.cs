@@ -5,14 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace ElJardin {
-<<<<<<< HEAD:Assets/MockJado/UI/Scripts/MenuManager.cs
-    public class MenuManager : MonoBehaviour {
-        public GameObject titleMenu, startMenu;
-        public FadeOutPanel fadeOutPanel;
-=======
     public class MainMenuManager : MonoBehaviour {
-        public GameObject titleMenu, startMenu, FadeOutPanel;
->>>>>>> ec1ff6d4a8751bc7d5298923d894234554337eb0:Assets/MockJado/UI/Scripts/MainMenuManager.cs
+        public GameObject titleMenu, startMenu;
+         public FadeOutPanel fadeOutPanel;
         public MenuButton btnPlay, btnConfig, btnCredits;
         public ConfigMenuManager configMenuManager;
 
