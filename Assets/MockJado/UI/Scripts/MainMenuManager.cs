@@ -18,6 +18,9 @@ namespace ElJardin {
 
             InitButtons();
         }
+        private void Start() {
+            AudioManager.Instance.StartSetUILPF(false, 0.1f);
+        }
         private void Update() {
             if (Input.anyKey && !startMenu.activeSelf) {
                 changeToStartMenu();
@@ -43,6 +46,7 @@ namespace ElJardin {
             btnPlay.OnClickEvent = StartGame;
             btnPlay.OnPreAnimationEvent = fadeOutPanel.FadeOut;
             btnPlay.OnPreAnimationEvent += triggerButtonSound;
+            btnPlay.OnPreAnimationEvent += IncreaseUILPF;
             fadeOutPanel.BtnTrigger = btnPlay;
             btnConfig.OnClickEvent = null;
             btnConfig.OnClickEvent = toggleConfig;
@@ -51,9 +55,12 @@ namespace ElJardin {
             btnCredits.OnClickEvent = StartCredits;
             btnCredits.OnPreAnimationEvent += triggerButtonSound;
         }
+        public void IncreaseUILPF() {
+            AudioManager.Instance.StartSetUILPF(true);
+        }
 
         public void StartGame() {
-            PlayerPrefs.SetInt("NextLevel", 2);
+            PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, 2);
             goToGame();
         }
        

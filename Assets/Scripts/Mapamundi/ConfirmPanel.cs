@@ -6,8 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ConfirmPanel : MonoBehaviour
-{
+public class ConfirmPanel : MonoBehaviour {
     public int levelIdToLoad;
     public string levelStringToLoad;
     public TextMeshProUGUI levelName;
@@ -29,7 +28,7 @@ public class ConfirmPanel : MonoBehaviour
     }
 
     private void Update() {
-        if(this.gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape)) {
+        if (this.gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape)) {
             Cancel();
         }
     }
@@ -44,11 +43,15 @@ public class ConfirmPanel : MonoBehaviour
 
     public void PlayLevel() {
         levelStringToLoad = "Level" + levelIdToLoad;
-        Debug.LogWarning("Voy a " + levelStringToLoad);
+
+        Debug.LogWarning("Voy a " + SceneManager.GetSceneByName(levelStringToLoad).buildIndex);
         PlayerPrefs.SetInt("CurrentLevel", levelIdToLoad);
+        PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, -1);
+        PlayerPrefs.SetString(Keys.Scenes.LOAD_SCENE_STRING, levelStringToLoad);
+
         AudioManager.Instance.setIngameMusic();
         //AudioManager.Instance.unSetUILPF();
-        SceneManager.LoadScene(levelStringToLoad);
+        SceneManager.LoadScene("LoadScene");
     }
     public int GetLevelBuildId() {
         levelStringToLoad = "Level" + levelIdToLoad;
