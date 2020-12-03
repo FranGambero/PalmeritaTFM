@@ -56,7 +56,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         if (GameManager.Instance.Sepalo.IsMyTurn && starting) {
             if (buildNewChannel() && !GameManager.Instance.Sepalo.isMoving) {
                 transform.position = originalPosition;
-                //AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
+                AkSoundEngine.PostEvent("Carta_Posicion_In", gameObject);
                 HideCard();
                 GameManager.Instance.Sepalo.onTurnFinished();
             } else {
