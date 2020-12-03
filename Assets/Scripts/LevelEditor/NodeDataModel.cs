@@ -2,15 +2,18 @@
 
 public class NodeDataModel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum ObstacleType
     {
-        
+        None, Rock
     }
+    
+    [SerializeField] public GameObject rockPrefab;
+    [SerializeField] public ObstacleType obstacle = ObstacleType.None;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #region Node Setters
+    [HideInInspector] public int Row;
+    [HideInInspector] public int Column;
+    [HideInInspector] public bool isRiverStart;
+    [HideInInspector] public bool isRiverEnd;
+    #endregion
 }
