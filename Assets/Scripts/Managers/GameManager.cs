@@ -45,7 +45,7 @@ namespace ElJardin {
             }
 
             if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {
-                PlayerPrefs.SetInt("NextLevel", SceneManager.GetActiveScene().buildIndex);
+                PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
                 SceneManager.LoadScene("LoadScene");
             }
         }
@@ -71,7 +71,7 @@ namespace ElJardin {
         }
 
         public void goNextLevel(int nextLevelIndex) {
-            PlayerPrefs.SetInt("NextLevel", nextLevelIndex);
+            PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, nextLevelIndex);
             SceneManager.LoadScene("LoadScene");
         }
     }
