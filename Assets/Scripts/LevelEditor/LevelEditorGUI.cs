@@ -25,15 +25,20 @@ namespace ElJardin
 
         void GenerateBaseMap(LevelEditor levelEditor)
         {
+            levelEditor.InitMatrix();
+            
             ResetMap(levelEditor);
             
             for(var i = 0; i < levelEditor.rows; i++)
             {
                 for(var j = 0; j < levelEditor.columns; j++)
                 {
-                    var node = Instantiate(levelEditor.editorNode, new Vector3(j, 0, i) * levelEditor.tileOffset, Quaternion.identity, levelEditor.gameObject.transform);
-                    node.name = $"Node{i}_{j}";
-                    node.transform.parent = levelEditor.nodeRepository.transform;
+                    var newNode = Instantiate(levelEditor.editorNode, new Vector3(j, 0, i) * levelEditor.tileOffset, Quaternion.identity, levelEditor.gameObject.transform);
+                    newNode.name = $"Node{i}_{j}";
+                    newNode.transform.parent = levelEditor.nodeRepository.transform;
+                    newNode.gameObject.GetComponent<NodeDataModel>().SetPosition(i, j);
+
+                    levelEditor.nodeMatrixFlattened[FlattenMatrix(i,j,levelEditor.columns)] = newNode;
                 }
             }
         }
@@ -46,5 +51,12 @@ namespace ElJardin
                 DestroyImmediate(parentTransform.GetChild(0).gameObject);
             }
         }
+        
+        #region Support Methods
+        int FlattenMatrix(int rowIndex, int columnIndex, int totalColumns)
+        {
+            return rowIndex + (columnIndex * totalColumns);
+        }
+        #endregion
     }
 }

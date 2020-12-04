@@ -23,7 +23,7 @@ namespace ElJardin
                             DestroyChildWithTag(node.gameObject, "obstacle");
                             break;
                         case NodeDataModel.ObstacleType.Rock:
-                            GenerateObstacle(node.rockPrefab, node.transform);
+                            GenerateObstacle(node.rockPrefab, node.transform, node);
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
@@ -51,12 +51,13 @@ namespace ElJardin
             }
         }
 
-        void GenerateObstacle(GameObject obstacle, Transform parent)
+        void GenerateObstacle(GameObject obstacle, Transform parent, NodeDataModel nodeDM)
         {
             var tag = "obstacle";
             DestroyChildWithTag(parent.gameObject, tag);
             
             var newObstacle = Instantiate(obstacle, parent);
+            nodeDM.obstacleGameObject = newObstacle;
             newObstacle.tag = tag;
         }
     }

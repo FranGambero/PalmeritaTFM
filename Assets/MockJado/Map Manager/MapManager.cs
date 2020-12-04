@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using ElJardin.Util;
 using UnityEngine;
 
 namespace ElJardin {
     public class MapManager : Singleton<MapManager> {
         #region Variables
+        [Header("Injection")] public LevelEditor levelEditor;
 
         public GameObject victoryCanvas;
         public GameObject cardCanvas;
@@ -62,7 +64,16 @@ namespace ElJardin {
         }
 
         private void Start() {
-            InitializeMap();
+            if(!levelEditor)
+            {
+                Debug.LogError("Inicializando nuevo mapa");
+                InitializeMap();
+            }
+            else
+            {
+                Debug.Log("Inicializando mapa a partir de levelEditor");
+                InitializeMapFromEditor();
+            }
             Pathfinding = new Pathfinding(this);
         }
 
@@ -77,17 +88,61 @@ namespace ElJardin {
                     mapMatrix[i, j].gameObject.name = "Node" + i + "_" + j;
                 }
             }
-            CreateStartEndPoints();
+            CreateStartEndPoints(riverStartPos, riverEndPos);
         }
 
-        private void CreateStartEndPoints() {
+        void InitializeMapFromEditor()
+        {
+            var startPos = new List<Vector2>();
+            var endPos = new List<Vector2>();
+
+            for(var i = 0; i < levelEditor.rows; i++)
+            {
+                for(var j = 0; j < levelEditor.columns; j++)
+                {
+                    var nodeDataModel = levelEditor.nodeMatrixFlattened[FlattenMatrix(i,j,levelEditor.columns)].GetComponent<NodeDataModel>();
+                    mapMatrix[i, j] = nodeDataModel.gameObject;
+                    mapMatrix[i, j].GetComponent<Node>().ChangeNodeType(NodeType.Ground, (i + j) % 2 == 0 ? groundMat : groundMatOscurecio);
+                    mapMatrix[i, j].GetComponent<Node>().SetPosition(new Vector2(nodeDataModel.Row, nodeDataModel.Column));
+
+                    if(nodeDataModel.obstacle != NodeDataModel.ObstacleType.None)
+                        mapMatrix[i, j].GetComponent<Node>().obstacle = nodeDataModel.obstacleGameObject;
+                    
+                    if(nodeDataModel.isRiverStart)
+                    {
+                        startPos.Add(new Vector2(nodeDataModel.Row, nodeDataModel.Column));
+                    }
+                    else if(nodeDataModel.isRiverEnd)
+                    {
+                        endPos.Add(new Vector2(nodeDataModel.Row, nodeDataModel.Column));
+                    }
+                }
+            }
+
+            TryCreateStartEndPoints(startPos, endPos);
+        }
+
+        int FlattenMatrix(int rowIndex, int columnIndex, int totalColumns)
+        {
+            return rowIndex + (columnIndex * totalColumns);
+        }
+
+        void TryCreateStartEndPoints(List<Vector2> listStarting, List<Vector2> listEnding)
+        {
+            if(listStarting.Count() == 1 && listEnding.Count == 1)
+                CreateStartEndPoints(listStarting[0], listEnding[0]);
+            else
+                Debug.LogError($"Start/End points Error || Make sure there is just one of each");
+        }
+
+        private void CreateStartEndPoints(Vector2 startPos, Vector2 endPos) {
             // Start point
-            if (riverStartPos != riverEndPos) {
-                mapMatrix[(int)riverStartPos.x, (int)riverStartPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Water, BuildManager.Instance.pond_m);
-                startingNode = mapMatrix[(int)riverStartPos.x, (int)riverStartPos.y].GetComponent<Node>();
+            if (startPos != endPos) {
+                mapMatrix[(int)startPos.x, (int)startPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Water, BuildManager.Instance.pond_m);
+                startingNode = mapMatrix[(int)startPos.x, (int)startPos.y].GetComponent<Node>();
                 startingNode.SetColor(Color.blue);
-                mapMatrix[(int)riverEndPos.x, (int)riverEndPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
-                endingNode = mapMatrix[(int)riverEndPos.x, (int)riverEndPos.y].GetComponent<Node>();
+                mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
+                endingNode = mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>();
                 endingNode.SetColor(Color.red);
             } else {
                 Debug.LogError("Start and end positions cant be the same");

@@ -8,12 +8,20 @@ public class NodeDataModel : MonoBehaviour
     }
     
     [SerializeField] public GameObject rockPrefab;
+    
     [SerializeField] public ObstacleType obstacle = ObstacleType.None;
+    [SerializeField] public bool isRiverStart;
+    [SerializeField] public bool isRiverEnd;
+    [SerializeField] [HideInInspector] public GameObject obstacleGameObject;
 
     #region Node Setters
     [HideInInspector] public int Row;
     [HideInInspector] public int Column;
-    [HideInInspector] public bool isRiverStart;
-    [HideInInspector] public bool isRiverEnd;
     #endregion
+
+    public void SetPosition(int row, int column)
+    {
+        Row = row;
+        Column = column;
+    }
 }
