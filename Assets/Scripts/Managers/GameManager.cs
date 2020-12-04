@@ -30,7 +30,7 @@ namespace ElJardin {
         }
 
         private void Start() {
-            AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
+            // AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
         }
 
         private void Update() {
@@ -42,7 +42,7 @@ namespace ElJardin {
             }
 
             if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {
-                PlayerPrefs.SetInt("NextLevel", SceneManager.GetActiveScene().buildIndex);
+                PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
                 SceneManager.LoadScene("LoadScene");
             }
         }
@@ -56,11 +56,19 @@ namespace ElJardin {
         }
 
         public void goToStartMenu() {
+            PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(0);
         }
 
+        public void goToMapamundi() {
+            // Esto quizá hay que cambiarlo....
+            AudioManager.Instance.setHappyMusic();
+            //----
+            SceneManager.LoadScene(2);
+        }
+
         public void goNextLevel(int nextLevelIndex) {
-            PlayerPrefs.SetInt("NextLevel", nextLevelIndex);
+            PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, nextLevelIndex);
             SceneManager.LoadScene("LoadScene");
         }
     }

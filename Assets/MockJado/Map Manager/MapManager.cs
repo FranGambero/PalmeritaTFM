@@ -8,6 +8,7 @@ namespace ElJardin {
         #region Variables
 
         public GameObject victoryCanvas;
+        public GameObject cardCanvas;
         public GameObject confety;
         /**
          * 
@@ -118,10 +119,48 @@ namespace ElJardin {
             CheckWin(startingNode);
             if (levelEnded)
             {
-                AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
-                victoryCanvas.SetActive(true);
+                // AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
+                AudioManager.Instance.unSetAmbientMusic();
+                CheckLogros();
+                // Quizá hay que desactivar antes los otros canvas (cartas y mazo)???
+                //victoryCanvas.SetActive(true);
                 //confety.SetActive(true);
             }
+        }
+
+        [ContextMenu("FUERZA LOGROS CARLA")]
+        private void CheckLogros() {
+            //El logro de victoria lo seteamos a true si o si al ganar
+            int currentZone = MapamundiManager.Instance.currentZone;
+            int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+            LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(currentZone, currentLevel);
+
+            // Logritos
+            levelData.logros[0].done = true;   // El logro completado basico siempre se cumple por terminar el nivel
+            levelData.logros[1].done = CheckLogroPetalos();
+            levelData.logros[2].done = CheckLogroMovimientos();
+
+            MapamundiManager.Instance.SaveLevel(levelData);
+            cardCanvas.SetActive(false);
+            victoryCanvas.SetActive(true);
+            ActivateLogrosPanel(currentLevel);
+
+        }
+
+        private bool CheckLogroPetalos() {
+            // Comprobamos que todas las flores de ese nivel están siendo regafas
+            return false;
+        }
+
+        private bool CheckLogroMovimientos() {
+            // Comprobamos que se ha completado en menos de X movimientos
+            return false;
+        }
+
+        private void ActivateLogrosPanel(int currentLevel) {
+            LogrosPanel logrosPanel = FindObjectOfType<LogrosPanel>();
+            // Quiza puede ser directamente el activar los ticks pasando el leveldata
+            logrosPanel.GetLogritos(currentLevel);
         }
 
         #endregion

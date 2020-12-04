@@ -38,7 +38,7 @@ public class VFXDirector : Singleton<VFXDirector> {
                 pool.Add(particles);
             }
             particles.transform.position = position.position;
-            particles.transform.rotation = position.rotation;
+          //  particles.transform.rotation = position.rotation;
             particles.gameObject.SetActive(true);
             particles.time = 0;
             particles.Play();

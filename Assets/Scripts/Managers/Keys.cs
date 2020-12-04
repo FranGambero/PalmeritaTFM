@@ -11,5 +11,12 @@ public static class Keys {
     public struct WWise {
         public static string RTPC_Music = "Vol_Musica";
         public static string RTPC_SFX = "Vol_SFX";
+        public static string RTPC_LPF = "LPF_Musica";
+    }
+
+    public struct Scenes {
+        public static string LOAD_SCENE_INT= "NextLevel";
+        public static string LOAD_SCENE_STRING= "NextLevelString";
+
     }
 }

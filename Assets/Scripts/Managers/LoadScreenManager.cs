@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace ElJardin
-{
-    public class LoadScreenManager : MonoBehaviour
-    {
+namespace ElJardin {
+    public class LoadScreenManager : MonoBehaviour {
         public GameObject loadingScreenPanel;
         public Image loadedImg;
         public Text loadedText;
@@ -16,37 +14,35 @@ namespace ElJardin
         private bool minTimeElapsed;
         private AsyncOperation async;
 
-        void Awake()
-        {
+        void Awake() {
             loadedImg.fillAmount = 0f;
             loadedText.text = "0%";
         }
-        private void Start()
-        {
+        private void Start() {
             LoadScene();
 
         }
 
-        public void LoadScene()
-        {
+        public void LoadScene() {
             minTimeElapsed = false;
             StartCoroutine(LoadScreenCoroutine());
             Invoke(nameof(TimeElapsed), minLoadTime);
         }
 
-        private IEnumerator LoadScreenCoroutine()
-        {
+        private IEnumerator LoadScreenCoroutine() {
             loadingScreenPanel.SetActive(true);
-            async = SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("NextLevel"));
+            if (PlayerPrefs.GetInt(Keys.Scenes.LOAD_SCENE_INT) != -1)
+                async = SceneManager.LoadSceneAsync(PlayerPrefs.GetInt(Keys.Scenes.LOAD_SCENE_INT));
+            else
+                async = SceneManager.LoadSceneAsync(PlayerPrefs.GetString(Keys.Scenes.LOAD_SCENE_STRING));
+
             async.allowSceneActivation = false;
 
 
-            while (!async.isDone && !minTimeElapsed)
-            {
+            while (!async.isDone && !minTimeElapsed) {
                 loadedImg.fillAmount = async.progress / 0.9f; // Trabajamos en 0 -> 0.9 porque 'progress' llega como máximo a 0.9f
                 loadedText.text = $"{(int)(loadedImg.fillAmount * 100f)}%";
-                if (async.progress >= 0.9f || minTimeElapsed)
-                {
+                if (async.progress >= 0.9f || minTimeElapsed) {
                     loadedImg.fillAmount = 1f;
                     loadedText.text = "100%";
                     async.allowSceneActivation = true;
@@ -56,8 +52,7 @@ namespace ElJardin
 
         }
 
-        private void TimeElapsed()
-        {
+        private void TimeElapsed() {
             minTimeElapsed = true;
         }
     }
