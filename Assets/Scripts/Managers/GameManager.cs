@@ -1,7 +1,4 @@
-﻿using ElJardin;
-using System.Collections;
-using System.Collections.Generic;
-using ElJardin.Characters;
+﻿using ElJardin.Characters;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
