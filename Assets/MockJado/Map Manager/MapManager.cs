@@ -195,6 +195,9 @@ namespace ElJardin {
             levelData.logros[1].done = CheckLogroPetalos();
             levelData.logros[2].done = CheckLogroMovimientos();
 
+            // Ponemos a completado si tiene un logro al menos
+            levelData.isCompleted = true;
+
             MapamundiManager.Instance.SaveLevel(levelData);
             cardCanvas.SetActive(false);
             victoryCanvas.SetActive(true);
