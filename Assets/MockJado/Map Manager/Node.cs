@@ -40,6 +40,7 @@ namespace ElJardin
         
         #region Accessors
         public bool HasObstacle => obstacle != null;
+        public bool IsWalkable => obstacle == null && nodeType != NodeType.Water;
         #endregion
 
         private void Awake()
