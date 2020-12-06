@@ -11,6 +11,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2760388952	Carta_Slide_In			\Default Work Unit\SFX\Carta_Slide_In	
 	2885749304	Hormiga_Crep_Out			\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1000507378	Wwise_Compressor_(Custom)	Wwise Compressor			
+
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	10286612	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_01\Wwise Silence	
 	35097691	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_04\Wwise Silence	
