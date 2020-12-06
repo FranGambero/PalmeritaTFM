@@ -28,7 +28,7 @@ namespace ElJardin {
 
         [Header("Test Cards")]
         public int amount;
-        public DirectionType direction;
+        private DirectionType direction;
 
         [Header("Characters")]
         public SepaloController Sepalo;
@@ -36,6 +36,8 @@ namespace ElJardin {
         private List<Node> nodesToBuild, savedNodes;
         public Dictionary<DirectionType, List<Node>> dictionaryNodesAround;
         private Coroutine hoverCoroutine;
+
+        public DirectionType Direction { get => direction; set => direction = value; }
 
         #endregion
 
@@ -204,8 +206,8 @@ namespace ElJardin {
 
         public bool CheckValidNode(int row, int column) {
             return ((row >= 0 && row < MapManager.Instance.rows && column >= 0 && column < MapManager.Instance.columns)
-                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground) 
-                && !MapManager.Instance.GetNode(row,column).HasObstacle);
+                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground)
+                && !MapManager.Instance.GetNode(row, column).HasObstacle);
         }
 
         private void CreateChangeList(int row, int column) {
@@ -230,9 +232,8 @@ namespace ElJardin {
             }
         }
 
-        public void changeBuildValues(int newAmount, DirectionType newDirType) {
+        public void changeBuildValues(int newAmount) {
             amount = newAmount;
-            direction = newDirType;
         }
 
         private bool IsChangeValid(List<Node> nodesToBuild) {
@@ -242,8 +243,8 @@ namespace ElJardin {
         public bool ChangeNodesInList() {
             bool isValid = false;
             if (GameManager.Instance.SelectedNode != null) {
-                if (!dictionaryNodesAround.ContainsKey(direction))
-                    HoverAroundNode(amount);
+                //if (!dictionaryNodesAround.ContainsKey(Direction))
+                HoverAroundNode(amount);
                 List<Node> nodesToBuild = GetNodeListByDirection(GameManager.Instance.SelectedNode.directionInHover);
                 isValid = IsChangeValid(nodesToBuild);
                 if (isValid) {
@@ -269,42 +270,42 @@ namespace ElJardin {
 
         }
 
-        public void GetSurroundingsByCard(Node node) {
-            nodesToBuild = new List<Node>();
+        //public void GetSurroundingsByCard(Node node) {
+        //    nodesToBuild = new List<Node>();
 
-            Vector2 position = node.GetPosition();
+        //    Vector2 position = node.GetPosition();
 
-            switch (direction) {
-                case DirectionType.North:
-                    for (int i = (int)position.x; i < (int)position.x + amount; i++) {
-                        //MapManager.Instance.GetNode(i, (int)position.y).ChangeNodeType(NodeType.Water, waterMat);
-                        CreateChangeList(i, (int)position.y);
-                        //ChangeNodesInList();
-                    }
-                    break;
-                case DirectionType.South:
-                    for (int i = (int)position.x; i > (int)position.x - amount; i--) {
-                        CreateChangeList(i, (int)position.y);
-                        //ChangeNodesInList();
-                    }
-                    break;
-                case DirectionType.East:
-                    for (int j = (int)position.y; j < (int)position.y + amount; j++) {
-                        CreateChangeList((int)position.x, j);
-                        //ChangeNodesInList();
-                    }
-                    break;
-                case DirectionType.West:
-                    for (int j = (int)position.y; j > (int)position.y - amount; j--) {
-                        CreateChangeList((int)position.x, j);
-                        //ChangeNodesInList();
-                    }
-                    break;
-                default:
+        //    switch (Direction) {
+        //        case DirectionType.North:
+        //            for (int i = (int)position.x; i < (int)position.x + amount; i++) {
+        //                //MapManager.Instance.GetNode(i, (int)position.y).ChangeNodeType(NodeType.Water, waterMat);
+        //                CreateChangeList(i, (int)position.y);
+        //                //ChangeNodesInList();
+        //            }
+        //            break;
+        //        case DirectionType.South:
+        //            for (int i = (int)position.x; i > (int)position.x - amount; i--) {
+        //                CreateChangeList(i, (int)position.y);
+        //                //ChangeNodesInList();
+        //            }
+        //            break;
+        //        case DirectionType.East:
+        //            for (int j = (int)position.y; j < (int)position.y + amount; j++) {
+        //                CreateChangeList((int)position.x, j);
+        //                //ChangeNodesInList();
+        //            }
+        //            break;
+        //        case DirectionType.West:
+        //            for (int j = (int)position.y; j > (int)position.y - amount; j--) {
+        //                CreateChangeList((int)position.x, j);
+        //                //ChangeNodesInList();
+        //            }
+        //            break;
+        //        default:
 
-                    break;
-            }
-        }
+        //            break;
+        //    }
+        //}
 
         #endregion
 
@@ -319,6 +320,7 @@ namespace ElJardin {
         }
 
         public void HoverNodesInList(List<Node> nodesAroundList, DirectionType newDirection) {
+            // AkSoundEngine.PostEvent("Carta_Posicion_In", gameObject);
             foreach (Node node in nodesAroundList) {
                 node.HoverOn(newDirection);
             }
@@ -354,7 +356,7 @@ namespace ElJardin {
                     sepalo.CurrentNode,
                     directionToFill,
                     numNodes);
-                if(dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
+                if (dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
                     HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
 
             }
@@ -404,6 +406,25 @@ namespace ElJardin {
             }
 
             return nodeList;
+        }
+
+        public void ShowNodesPreview(DirectionType newDirection) {
+            if (newDirection == DirectionType.Undefined) {
+                if (dictionaryNodesAround != null && dictionaryNodesAround.ContainsKey(this.Direction))
+                    dictionaryNodesAround[this.Direction].ForEach(node => node.ShowPreview(false));
+            } else {
+                if (this.Direction != newDirection) {
+                    if (dictionaryNodesAround != null && dictionaryNodesAround.ContainsKey(this.Direction))
+                        dictionaryNodesAround[this.Direction].ForEach(node => node.ShowPreview(false));
+                    //this.Direction = newDirection;
+                    dictionaryNodesAround[newDirection].ForEach(node => node.ShowPreview(true));
+                    if (dictionaryNodesAround[newDirection].All(node => node.CanBuild) && dictionaryNodesAround[newDirection].Count == amount) {
+
+                        AkSoundEngine.PostEvent("Carta_Posicion_In", gameObject);
+                    }
+                }
+            }
+            this.Direction = newDirection;
         }
 
         #endregion
