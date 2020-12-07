@@ -29,6 +29,8 @@ namespace AK
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
         static const AkUniqueID UI_SELECT_2_IN = 2493148897U;
         static const AkUniqueID UI_SELECT_IN = 3930592856U;
+        static const AkUniqueID UI_TRANS_1_IN = 4116241270U;
+        static const AkUniqueID UI_TRANS_2_IN = 1221477491U;
         static const AkUniqueID UI_VOL_DOWN_IN = 2053540170U;
         static const AkUniqueID UI_VOL_UP_IN = 1436640151U;
     } // namespace EVENTS

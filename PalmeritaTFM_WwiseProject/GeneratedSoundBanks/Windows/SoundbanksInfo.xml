@@ -264,6 +264,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4116241270" Name="UI_Trans_1_In" ObjectPath="\Events\Default Work Unit\UI\UI_Trans_1_In" DurationType="OneShot" DurationMin="7.851247" DurationMax="7.851247">
+					<IncludedMemoryFiles>
+						<File Id="369746673" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Transicion_Start_1.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Transicion_Start_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1221477491" Name="UI_Trans_2_In" ObjectPath="\Events\Default Work Unit\UI\UI_Trans_2_In" DurationType="OneShot" DurationMin="4.064558" DurationMax="4.064558">
+					<IncludedMemoryFiles>
+						<File Id="354631107" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Transicion_Start_2.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Transicion_Start_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2053540170" Name="UI_Vol_Down_In" ObjectPath="\Events\Default Work Unit\UI\UI_Vol_Down_In" DurationType="OneShot" DurationMin="0.351247" DurationMax="0.351247">
 					<IncludedMemoryFiles>
 						<File Id="1011145882" Language="SFX">

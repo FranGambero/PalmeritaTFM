@@ -218,6 +218,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="UI_Trans_1_In" ID="{9AFF927E-9391-4218-80D4-9BA9BB7F549F}">
+							<ChildrenList>
+								<Action Name="" ID="{94ADA522-4794-45C9-BB83-7A42673CD8C2}" ShortID="484473685">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Trans_1" ID="{E8375660-05F7-48BA-B4C4-4B84840962EE}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Trans_2_In" ID="{F78A3B3D-7693-4365-AB2B-9F3F3CCFD900}">
+							<ChildrenList>
+								<Action Name="" ID="{C2A938D8-1B15-453E-A520-3DF88D8B376D}" ShortID="324902232">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Trans_2" ID="{A2E43B0C-F950-4FAC-BB8B-276A823500D7}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{8CD2E1CC-32B6-4563-8723-A14139EABDD1}" ShortID="50463570">

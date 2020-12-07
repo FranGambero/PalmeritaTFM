@@ -25,6 +25,8 @@
 				<SoundBank Name="UI_SoundBank" ID="{9EAE09AB-A3BC-4739-A935-488977F5960F}">
 					<ObjectInclusionList>
 						<ObjectRef Name="UI" ID="{CE8AA016-8D66-40B6-A5CA-1F0567BCD62E}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_Trans_1_In" ID="{9AFF927E-9391-4218-80D4-9BA9BB7F549F}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_Trans_2_In" ID="{F78A3B3D-7693-4365-AB2B-9F3F3CCFD900}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_Vol_Down_In" ID="{B7B7D67E-A233-4455-9714-BCD25EB911CC}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_Vol_Up_In" ID="{772B3836-FEED-44BA-A3FA-F966B03F4690}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_Back_In" ID="{B89FA8F7-1DAD-45B6-90C1-3B82408D54A6}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
