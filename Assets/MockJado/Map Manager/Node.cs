@@ -225,7 +225,7 @@ namespace ElJardin {
         }
 
         public void Water(bool ignoreNeighbor) {
-            if(water == null) {
+            if (water == null) {
                 water = GetComponentInChildren<Water>();
             }
 
@@ -239,6 +239,20 @@ namespace ElJardin {
         [ContextMenu("Dry")]
         public void Dry() {
             water.Grow(false, () => neighbors.ForEach(n => n.Dry()), null);
+        }
+
+        public void AdminDryScript(bool add, int newNodeIndex = -1) {
+            if (add) {
+                if (!GetComponent<DryController>() && newNodeIndex != -1) {
+                    DryController newDryController = gameObject.AddComponent<DryController>();
+                    newDryController.initDry(newNodeIndex);
+                    Semaphore.Instance.AddTurn(newDryController);
+                }
+            } else {
+                if (GetComponent<DryController>()) {
+                    Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
+                }
+            }
         }
         #endregion
 

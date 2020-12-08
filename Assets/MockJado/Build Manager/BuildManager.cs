@@ -276,12 +276,16 @@ namespace ElJardin {
                 RotateMesh(node);
 
             }
-            if (!neighborWithWater) {
-                //List<ITurn> listaTurnosActuales = Semaphore.Instance.turnBasedElementList;
-                //turnIndex = listaTurnosActuales[listaTurnosActuales.Count].turnIndex + 1;
+            if (!neighborWithWater && !(savedNodes.Count == 1 && (
+                savedNodes[0].GetComponent<NodeDataModel>().isRiverStart || 
+                savedNodes[0].GetComponent<NodeDataModel>().isRiverEnd))) {
+
                 int newIndex = Semaphore.Instance.GetNewIndex();
+                Debug.Log("Er new index " + newIndex);
                 // Fran dice: Fran aqui falla
-                savedNodes.ForEach(node => node.GetComponent<DryController>().initDry(newIndex));
+                savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
+            } else {
+                savedNodes.ForEach(node => node.AdminDryScript(false));
             }
             MapManager.Instance.CheckFullRiver();
 

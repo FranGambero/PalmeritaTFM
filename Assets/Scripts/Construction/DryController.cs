@@ -38,7 +38,10 @@ public class DryController : MonoBehaviour, ITurn {
     public void onTurnFinished() {
         Semaphore.Instance.onTurnEnd(turnIndex);
         if (secadoDelTo) {
-            turnIndex = -1;
+            Semaphore.Instance.RemoveTurn(turnIndex);
+            // TODO, vuelve a poner como suelo normal :3  y quitar el dry, sera el Node posiblemete
+
+            Debug.LogWarning("Quiero ser una casilla de verdad!");
         }
     }
 }

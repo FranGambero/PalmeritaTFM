@@ -50,4 +50,20 @@ public class Semaphore : Singleton<Semaphore> {
         return turnBasedElementList[turnBasedElementList.Count - 1].turnIndex + 1;
     }
 
+    public void AddTurn(ITurn newTurnObject) {
+        onTurnStart += newTurnObject.onTurnStart;
+        if (turnBasedElementList.Find(n => n.turnIndex == newTurnObject.turnIndex) == null) {
+            turnBasedElementList.Add(newTurnObject);
+        }
+    }
+
+    public void RemoveTurn(int indexToRemove) {
+        turnBasedElementList.ForEach((n) => {
+            if (n.turnIndex == indexToRemove) {
+                onTurnStart -= n.onTurnStart;
+            }
+        });
+        turnBasedElementList.RemoveAll(n => n.turnIndex == indexToRemove);
+    }
+
 }
