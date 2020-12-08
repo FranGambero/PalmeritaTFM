@@ -6,9 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour {
-    public List<GameObject> petals;
-    public List<GameObject> pods;
-    public List<GameObject> cocoons;
+    public List<ScorePetalController> petals;
     public Transform parentElementsToAppears;
     private List<DoGrow> elementsToAppears;
     public GameObject lockedSprite;
@@ -34,8 +32,8 @@ public class LevelButton : MonoBehaviour {
 
     private void Start() {
         GetLevelData();
-        ChangeSprite();
         CheckAvailableLevel();
+        ChangeSprite();
     }
 
     private void GetLevelData() {
@@ -64,11 +62,10 @@ public class LevelButton : MonoBehaviour {
     }
     [ContextMenu("ChangeSprite")]
     public void ChangeSprite() {
-        new List<GameObject>(petals).ForEach(p => p.SetActive(false));
-
         for (int i = 0; i < numPetals; i++) {
-            petals[i].SetActive(true);
+            petals[i].SetFase(ScorePetalController.Fase.Petal, true);
         }
+
         if (elementsToAppears.Count > 0) {
             if (numPetals > 0) {
                 if (SessionVariables.Instance.sceneData.lastScene != confirmPanel.GetLevelBuildId()) {
@@ -85,19 +82,22 @@ public class LevelButton : MonoBehaviour {
 
     private void CheckAvailableLevel() {
         //  Para poder empezar en el 1º nivel empezamos a checkear a partir del 2º
+        isActive = true;
         if (levelId > 0) {
-            LevelData levelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
-            isActive = levelData.isCompleted;
-
-            if (!isActive) {
-                GetComponent<Button>().interactable = false;
-                petals.ForEach(p => p.SetActive(false));
-            } else {
-            }
-            lockedSprite.SetActive(!isActive);
-            pods.ForEach(p => p.SetActive(!isActive));
-            cocoons.ForEach(c => c.SetActive(isActive));
+            LevelData previousLevelData = MapamundiManager.Instance.GetCurrentLevel(levelId - 1);
+            isActive = previousLevelData.isCompleted;
         }
+        petals.ForEach(p => p.Reset());
 
+
+        if (!isActive) {
+            petals.ForEach(p => p.Reset());
+            //pods.ForEach(p => p.SetActive(!isActive));
+            //cocoons.ForEach(c => c.SetActive(isActive));
+        } else {
+            petals.ForEach(p => p.SetFase(ScorePetalController.Fase.Cocoon, false));
+        }
+        GetComponent<Button>().interactable = isActive;
+        lockedSprite.SetActive(!isActive);
     }
 }
