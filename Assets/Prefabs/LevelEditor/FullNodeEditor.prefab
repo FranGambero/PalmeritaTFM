@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &865094600451043835
 Transform:
   m_ObjectHideFlags: 0
@@ -240,10 +240,11 @@ MonoBehaviour:
   rockPrefab: {fileID: 5127624681489538408, guid: 3a4e66647193a154eb700c3a48abf1ec,
     type: 3}
   obstacle: 0
-  Row: 0
-  Column: 0
   isRiverStart: 0
   isRiverEnd: 0
+  obstacleGameObject: {fileID: 0}
+  Row: 0
+  Column: 0
 --- !u!1 &6217713421246273627
 GameObject:
   m_ObjectHideFlags: 0
