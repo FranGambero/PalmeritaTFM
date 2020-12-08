@@ -10,6 +10,9 @@ public class Water : MonoBehaviour {
     public bool growing = false;
     public GameObject waterN, waterW, waterE, waterS, waterStatic;
 
+    #region PreParams
+    bool grow; System.Action middleCallback; Node initNode;
+    #endregion
     [ContextMenu("Grow")]
     public void Grow(bool grow, System.Action middleCallback, Node initNode) {
         if (!growing) {
@@ -35,7 +38,12 @@ public class Water : MonoBehaviour {
             }
         }
     }
-
+    public void PrepareGrow(bool grow, System.Action middleCallback, Node initNode) {
+        this.grow = grow; this.middleCallback = middleCallback; this.initNode = initNode;
+    }
+    public void DoPreparatedGrow() {
+        Grow(grow, middleCallback, initNode);
+    }
     public void Rotate(Node thisNode) {
         transform.SetParent(null);
         transform.rotation = Quaternion.identity;
@@ -52,7 +60,7 @@ public class Water : MonoBehaviour {
                 valueZ = 0;
                 mayor = maxValue;
                 menor = valueZ;
-                incremento = .01f;
+                incremento = .02f;
                 while (mayor >= menor) {
                     valueZ += incremento;
                     if (!invoked && valueZ >= callTriger) {
@@ -76,8 +84,11 @@ public class Water : MonoBehaviour {
                 water.transform.localScale = new Vector3(1, 1f, valueZ);
             }
 
+            yield return new WaitForSeconds(.5f);
             waterStatic.SetActive(grow);
             water.SetActive(false);
+            growing = false;
+
 
         } else {
             yield return new WaitForSeconds(.1f);

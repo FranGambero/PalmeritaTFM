@@ -223,6 +223,13 @@ namespace ElJardin {
         public void Water(Node last) {
             water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), last);
         }
+        public void PrepareWater(Node last) {
+            water.PrepareGrow(true, () => neighbors.ForEach(n => n.Water(this)), last);
+        } 
+        public void DoPreparatedWater() {
+            water.DoPreparatedGrow();
+        }
+
 
         public void Water(bool ignoreNeighbor) {
             if (water == null) {

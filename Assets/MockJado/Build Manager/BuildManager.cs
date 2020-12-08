@@ -59,7 +59,7 @@ namespace ElJardin {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
                     if (neighbor.water.HasWater()) {
-                        node.Water(neighbor);
+                        node.PrepareWater(neighbor);
                         neighborHasWater = true;
                     }
                     RotateMesh(neighbor);
@@ -269,11 +269,16 @@ namespace ElJardin {
             //Correct mesh
             bool neighborWithWater = false;
             foreach (Node node in savedNodes) {
+                bool thisNodeNeighborWithWater = false;
                 node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
                 if (UpdateNeighbors(node)) {
                     neighborWithWater = true;
+                    thisNodeNeighborWithWater = true;
                 }
                 RotateMesh(node);
+                if (thisNodeNeighborWithWater) {
+                    node.DoPreparatedWater();
+                }
 
             }
             if (!neighborWithWater && !(savedNodes.Count == 1 && (
