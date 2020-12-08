@@ -53,13 +53,20 @@ namespace ElJardin {
             UpdateNeighbors(node);
         }
 
-        public void UpdateNeighbors(Node node) {
+        public bool UpdateNeighbors(Node node) {
+            bool neighborHasWater = false;
             foreach (Node neighbor in node.neighbors) {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
+                    if (neighbor.water.HasWater()) {
+                        node.Water(neighbor);
+                        neighborHasWater = true;
+                    }
                     RotateMesh(neighbor);
                 }
             }
+
+            return neighborHasWater;
         }
 
         private void RotateMesh(Node node) {
@@ -204,8 +211,8 @@ namespace ElJardin {
 
         public bool CheckValidNode(int row, int column) {
             return ((row >= 0 && row < MapManager.Instance.rows && column >= 0 && column < MapManager.Instance.columns)
-                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground) 
-                && !MapManager.Instance.GetNode(row,column).HasObstacle);
+                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground)
+                && !MapManager.Instance.GetNode(row, column).HasObstacle);
         }
 
         private void CreateChangeList(int row, int column) {
@@ -260,10 +267,21 @@ namespace ElJardin {
 
         public void buildCells() {
             //Correct mesh
+            bool neighborWithWater = false;
             foreach (Node node in savedNodes) {
                 node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                UpdateNeighbors(node);
+                if (UpdateNeighbors(node)) {
+                    neighborWithWater = true;
+                }
                 RotateMesh(node);
+
+            }
+            if (!neighborWithWater) {
+                //List<ITurn> listaTurnosActuales = Semaphore.Instance.turnBasedElementList;
+                //turnIndex = listaTurnosActuales[listaTurnosActuales.Count].turnIndex + 1;
+                int newIndex = Semaphore.Instance.GetNewIndex();
+                // Fran dice: Fran aqui falla
+                savedNodes.ForEach(node => node.GetComponent<DryController>().initDry(newIndex));
             }
             MapManager.Instance.CheckFullRiver();
 
@@ -354,7 +372,7 @@ namespace ElJardin {
                     sepalo.CurrentNode,
                     directionToFill,
                     numNodes);
-                if(dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
+                if (dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
                     HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
 
             }

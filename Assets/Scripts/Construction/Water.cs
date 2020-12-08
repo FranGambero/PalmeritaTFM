@@ -88,4 +88,8 @@ public class Water : MonoBehaviour {
         growing = false;
 
     }
+
+    public bool HasWater() {
+        return waterStatic.activeSelf;
+    }
 }

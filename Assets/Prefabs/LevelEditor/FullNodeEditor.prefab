@@ -223,6 +223,7 @@ MonoBehaviour:
   row: 0
   column: 0
   neighbors: []
+  water: {fileID: 0}
   directionInHover: 0
   obstacle: {fileID: 0}
 --- !u!114 &8718401677874815824
