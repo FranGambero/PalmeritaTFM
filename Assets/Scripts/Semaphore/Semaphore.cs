@@ -32,14 +32,38 @@ public class Semaphore : Singleton<Semaphore> {
     }
 
     public void onTurnEnd(int index) {
-        int currentIndex;
+        Debug.Log("El turno actual " + currentTurn + " y el index " + index);
+        if (currentTurn == index) {
+            int currentIndex;
 
-        var currentITurn = turnBasedElementList.Find(e => e.turnIndex == index);
-        currentIndex = turnBasedElementList.IndexOf(currentITurn);
-        currentIndex = (currentIndex + 1) % turnBasedElementList.Count;
+            var currentITurn = turnBasedElementList.Find(e => e.turnIndex == index);
+            currentIndex = turnBasedElementList.IndexOf(currentITurn);
+            currentIndex = (currentIndex + 1) % turnBasedElementList.Count;
 
-        currentTurn = turnBasedElementList[currentIndex].turnIndex;
-        onTurnStart?.Invoke(currentTurn);      // :(
+            currentTurn = turnBasedElementList[currentIndex].turnIndex;
+
+            onTurnStart?.Invoke(currentTurn);      // :(
+        }
+    }
+
+    public int GetNewIndex() {
+        return turnBasedElementList[turnBasedElementList.Count - 1].turnIndex + 1;
+    }
+
+    public void AddTurn(ITurn newTurnObject) {
+        onTurnStart += newTurnObject.onTurnStart;
+        if (turnBasedElementList.Find(n => n.turnIndex == newTurnObject.turnIndex) == null) {
+            turnBasedElementList.Add(newTurnObject);
+        }
+    }
+
+    public void RemoveTurn(int indexToRemove) {
+        turnBasedElementList.ForEach((n) => {
+            if (n.turnIndex == indexToRemove) {
+                onTurnStart -= n.onTurnStart;
+            }
+        });
+        turnBasedElementList.RemoveAll(n => n.turnIndex == indexToRemove);
     }
 
 }
