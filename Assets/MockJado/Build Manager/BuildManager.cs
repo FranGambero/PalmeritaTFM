@@ -53,13 +53,20 @@ namespace ElJardin {
             UpdateNeighbors(node);
         }
 
-        public void UpdateNeighbors(Node node) {
+        public bool UpdateNeighbors(Node node) {
+            bool neighborHasWater = false;
             foreach (Node neighbor in node.neighbors) {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
+                    if (neighbor.water.HasWater()) {
+                        node.PrepareWater(neighbor);
+                        neighborHasWater = true;
+                    }
                     RotateMesh(neighbor);
                 }
             }
+
+            return neighborHasWater;
         }
 
         private void RotateMesh(Node node) {
@@ -204,8 +211,8 @@ namespace ElJardin {
 
         public bool CheckValidNode(int row, int column) {
             return ((row >= 0 && row < MapManager.Instance.rows && column >= 0 && column < MapManager.Instance.columns)
-                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground) 
-                && !MapManager.Instance.GetNode(row,column).HasObstacle);
+                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground)
+                && !MapManager.Instance.GetNode(row, column).HasObstacle);
         }
 
         private void CreateChangeList(int row, int column) {
@@ -260,10 +267,30 @@ namespace ElJardin {
 
         public void buildCells() {
             //Correct mesh
+            bool neighborWithWater = false;
             foreach (Node node in savedNodes) {
+                bool thisNodeNeighborWithWater = false;
                 node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                UpdateNeighbors(node);
+                if (UpdateNeighbors(node)) {
+                    neighborWithWater = true;
+                    thisNodeNeighborWithWater = true;
+                }
                 RotateMesh(node);
+                if (thisNodeNeighborWithWater) {
+                    node.DoPreparatedWater();
+                }
+
+            }
+            if (!neighborWithWater && !(savedNodes.Count == 1 && (
+                savedNodes[0].GetComponent<NodeDataModel>().isRiverStart || 
+                savedNodes[0].GetComponent<NodeDataModel>().isRiverEnd))) {
+
+                int newIndex = Semaphore.Instance.GetNewIndex();
+                Debug.Log("Er new index " + newIndex);
+                // Fran dice: Fran aqui falla
+                savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
+            } else {
+                savedNodes.ForEach(node => node.AdminDryScript(false));
             }
             MapManager.Instance.CheckFullRiver();
 
@@ -354,7 +381,7 @@ namespace ElJardin {
                     sepalo.CurrentNode,
                     directionToFill,
                     numNodes);
-                if(dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
+                if (dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
                     HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
 
             }
