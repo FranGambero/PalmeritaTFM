@@ -103,6 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numTurns: 3
   _turnIndex: 0
+  peligro1: {fileID: 2100000, guid: 10c0c22b5863f764089c6172d7663bb1, type: 2}
+  peligro2: {fileID: 2100000, guid: 9220b558c7be809459c624e95194b762, type: 2}
+  peligro3: {fileID: 2100000, guid: 6fcaba1ea25e89d4ab903912ceb30aac, type: 2}
 --- !u!1 &6217713421246273627
 GameObject:
   m_ObjectHideFlags: 0

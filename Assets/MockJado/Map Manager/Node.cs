@@ -103,9 +103,11 @@ namespace ElJardin {
         }
 
         public void HoverOff() {
-            _mr.material.color = baseColor;
-            hovering = false;
-            directionInHover = DirectionType.Undefined;
+            if (!GetComponent<DryController>()) {
+                _mr.material.color = baseColor;
+                hovering = false;
+                directionInHover = DirectionType.Undefined;
+            }
         }
 
         /**
@@ -225,7 +227,7 @@ namespace ElJardin {
         }
         public void PrepareWater(Node last) {
             water.PrepareGrow(true, () => neighbors.ForEach(n => n.Water(this)), last);
-        } 
+        }
         public void DoPreparatedWater() {
             water.DoPreparatedGrow();
         }
@@ -256,10 +258,19 @@ namespace ElJardin {
                     Semaphore.Instance.AddTurn(newDryController);
                 }
             } else {
+                Debug.LogError("Preparo a quitar bien");
                 if (GetComponent<DryController>()) {
+                    Debug.LogWarning("Me lo quito en plan bien");
                     Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
+                    RemoveDryComponent();
                 }
             }
+        }
+
+        public void RemoveDryComponent() {
+            Debug.LogWarning("Voy a quitarme el dry");
+            _mr.material = (row + column) % 2 == 0 ? MapManager.Instance.groundMat: MapManager.Instance.groundMatOscurecio;
+            Destroy(GetComponent<DryController>());
         }
         #endregion
 

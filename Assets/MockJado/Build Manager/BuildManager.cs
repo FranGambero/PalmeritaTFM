@@ -290,6 +290,7 @@ namespace ElJardin {
                 // Fran dice: Fran aqui falla
                 savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
             } else {
+                Debug.LogError("Quito dry");
                 savedNodes.ForEach(node => node.AdminDryScript(false));
             }
             MapManager.Instance.CheckFullRiver();
