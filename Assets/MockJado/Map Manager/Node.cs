@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using DG.Tweening;
+﻿using System.Collections.Generic;
+using System.Linq;
 using ElJardin.Movement;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -24,20 +22,23 @@ namespace ElJardin {
         Color baseColor;
 
         bool hovering, canBuild;
-        Water water;
+        public Water water;
 
         public int GCost { get; set; }
         public int HCost { get; set; }
         public int FCost { get; set; }
         public Node CameFromNode { get; set; }
 
-        public bool CanBuild {
-            get {
-                return canBuild;
-            }
-        }
+        public bool CanBuild => canBuild;
 
         public DirectionType directionInHover;
+
+        public GameObject obstacle;
+        #endregion
+
+        #region Accessors
+        public bool HasObstacle => obstacle != null;
+        public bool IsWalkable => obstacle == null && nodeType != NodeType.Water;
         #endregion
 
         private void Awake() {
@@ -49,16 +50,14 @@ namespace ElJardin {
 
             hovering = false;
 
-
-            // uwu
             canBuild = true;
-            // end of UWU
         }
+
         private void Start() {
             water = GetComponentInChildren<Water>();
             baseColor = _mr.material.color;
-
         }
+
         public void ChangeNodeType(NodeType newType, Material newMaterial) {
             nodeType = newType;
             _mr.material = newMaterial;
@@ -109,6 +108,9 @@ namespace ElJardin {
             directionInHover = DirectionType.Undefined;
         }
 
+        /**
+         * 
+         */
         public void ShowPreview(bool show) {
             if (show) {
                 _mr.material.color = Color.black;
@@ -119,26 +121,41 @@ namespace ElJardin {
             }
         }
 
+        /**
+         * Si el nodo está en hove (por una carta), preview (de momento negra)
+         * Si no carta y se puede construir, hover de pasitos
+         */
         private void OnMouseEnter() {
             if (hovering) {
                 GameManager.Instance.SelectedNode = this;
-                BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
+                var nodesToShowPreview = BuildManager.Instance.dictionaryNodesAround[directionInHover];
+                if (nodesToShowPreview.All(node => !node.HasObstacle))
+                    BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
+
+                //TODO: ShowCantBuildPreview
             } else if (!GameManager.Instance.draggingCard && this.CanBuild) {
                 if (GameManager.Instance.Sepalo.CurrentNode != this)
                     PositionMoveHover();
             }
         }
 
+        /**
+         * Hover de pasitos que aparece en el nodo en el que se encuentra el raton
+         * Se oculta si raton fuera de nodo && en casilla no walkable ( por ahora la de sepalo)
+         */
         private void PositionMoveHover() {
             GameManager.Instance.PositionHover.SetActive(true);
             GameManager.Instance.PosPositionHover(new Vector3(
                 this.transform.position.x,
                 GameManager.Instance.PositionHover.transform.position.y,
                 this.transform.position.z
-                ));
-            //_mr.material.color = Color.blue;   //La casillita asú
+            ));
         }
 
+        /**
+         * Si esta en hover (por carta) quita la preview (ahora en negro)
+         * Si no, quita el hover de pasitos
+         */
         private void OnMouseExit() {
             if (hovering) {
                 GameManager.Instance.SelectedNode = null;
@@ -147,20 +164,19 @@ namespace ElJardin {
                 ShowPreview(false);
                 GameManager.Instance.PositionHover.SetActive(false);
             }
-            //BuildManager.Instance.UnHoverNodesInList();
         }
         #endregion
 
         #region Builder
         private void OnMouseUp() {
-            //GameManager.Instance.Sepalo.StopAllCoroutines();
             GameManager.Instance.Sepalo.DoTheMove(this);
+            //TODO: preguntar, esto no hace nada
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
         }
         #endregion
 
-        #region
+        #region Neighbors
         public bool IsGround() {
             return nodeType == NodeType.Ground ? true : false;
         }
@@ -193,11 +209,9 @@ namespace ElJardin {
         #endregion
 
         #region Pathfinding
-
         public void CalculateFCost() {
             FCost = GCost + HCost;
         }
-
         #endregion
 
         #region Water
@@ -205,12 +219,57 @@ namespace ElJardin {
         public void Water() {
             water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), null);
         }
+
         public void Water(Node last) {
             water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), last);
         }
+        public void PrepareWater(Node last) {
+            water.PrepareGrow(true, () => neighbors.ForEach(n => n.Water(this)), last);
+        } 
+        public void DoPreparatedWater() {
+            water.DoPreparatedGrow();
+        }
+
+
+        public void Water(bool ignoreNeighbor) {
+            if (water == null) {
+                water = GetComponentInChildren<Water>();
+            }
+
+            if (ignoreNeighbor) {
+                water.Grow(true, null, null);
+            } else {
+                Water();
+            }
+        }
+
         [ContextMenu("Dry")]
         public void Dry() {
             water.Grow(false, () => neighbors.ForEach(n => n.Dry()), null);
+        }
+
+        public void AdminDryScript(bool add, int newNodeIndex = -1) {
+            if (add) {
+                if (!GetComponent<DryController>() && newNodeIndex != -1) {
+                    DryController newDryController = gameObject.AddComponent<DryController>();
+                    newDryController.initDry(newNodeIndex);
+                    Semaphore.Instance.AddTurn(newDryController);
+                }
+            } else {
+                if (GetComponent<DryController>()) {
+                    Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
+                }
+            }
+        }
+        #endregion
+
+        #region Obstacles
+        public void SetObstacle(GameObject obstacle) {
+            this.obstacle = obstacle;
+        }
+
+        public void DestroyObstacle() {
+            this.obstacle = null;
         }
         #endregion
     }

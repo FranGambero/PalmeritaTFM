@@ -15,7 +15,7 @@ public class DoGrow : MonoBehaviour {
         if (growed) {
             QuickGrow();
         } else {
-            transform.DOScale(0, 0.1f);
+            QuickShrink();
             if (childs != null)
                 foreach (GrowChild item in childs) {
                     item.body.AddComponent(typeof(DoGrow));
@@ -48,6 +48,13 @@ public class DoGrow : MonoBehaviour {
     [ContextMenu("Encoje")]
     public void Shrink() {
         transform.DOScale(0, time);
+        growed = false;
+    }
+    public void QuickShrink() {
+        float tmpTime = time;
+        time = 0.1f;
+        Shrink();
+        time = tmpTime;
     }
     [System.Serializable]
     public class GrowChild {

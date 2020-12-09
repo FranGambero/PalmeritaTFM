@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using ElJardin.Characters;
 using UnityEngine;
 using UnityEngine.Events;
@@ -52,13 +53,20 @@ namespace ElJardin {
             UpdateNeighbors(node);
         }
 
-        public void UpdateNeighbors(Node node) {
+        public bool UpdateNeighbors(Node node) {
+            bool neighborHasWater = false;
             foreach (Node neighbor in node.neighbors) {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
+                    if (neighbor.water.HasWater()) {
+                        node.PrepareWater(neighbor);
+                        neighborHasWater = true;
+                    }
                     RotateMesh(neighbor);
                 }
             }
+
+            return neighborHasWater;
         }
 
         private void RotateMesh(Node node) {
@@ -163,28 +171,6 @@ namespace ElJardin {
 
         public Mesh CalculateMeshToBuild(Node node) {
             Mesh meshToBuild = canal_m;
-            /*
-            List<Vector2> positionList = new List<Vector2>();
-            List<Node> neighbors = new List<Node>();
-            Vector2 nodePos = node.GetPosition();
-            //Sacamos lista de posibles vecinos en cruz (i+1,j // i-1,j // i,j+1 // i,j-1)
-
-            positionList.Add(new Vector2(nodePos.x+1, nodePos.y));
-            positionList.Add(new Vector2(nodePos.x-1, nodePos.y));
-            positionList.Add(new Vector2(nodePos.x, nodePos.y+1));
-            positionList.Add(new Vector2(nodePos.x, nodePos.y-1));
-
-
-            //Comprobamos que los vecinos sean validos
-            foreach(Vector2 pos in positionList)
-            {
-                if (CheckValidNode((int)pos.x, (int)pos.y))
-                {
-                    neighbors.Add(MapManager.Instance.GetNode((int)pos.x,(int)pos.y));
-                    node.neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
-                }
-            }
-            */
             node.CalculateNeighbors();
 
             switch (node.neighbors.Count) {
@@ -225,7 +211,8 @@ namespace ElJardin {
 
         public bool CheckValidNode(int row, int column) {
             return ((row >= 0 && row < MapManager.Instance.rows && column >= 0 && column < MapManager.Instance.columns)
-                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground)) ? true : false;
+                && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground)
+                && !MapManager.Instance.GetNode(row, column).HasObstacle);
         }
 
         private void CreateChangeList(int row, int column) {
@@ -256,7 +243,7 @@ namespace ElJardin {
         }
 
         private bool IsChangeValid(List<Node> nodesToBuild) {
-            return (nodesToBuild != null && nodesToBuild.Count == amount) ? true : false;
+            return (nodesToBuild != null && nodesToBuild.Count == amount);
         }
 
         public bool ChangeNodesInList() {
@@ -278,24 +265,32 @@ namespace ElJardin {
             return isValid;
         }
 
-        //Justo en caso
-        //public bool ChangeNodesInList(Node startingNode) {
-        //    if (IsChangeValid()) {
-        //        savedNodes = new List<Node>(nodesToBuild);
-        //        // Vamos a llamar al movimiento del personaje con el nodo una vez validado
-        //        Debug.Log("Me llaman con lista " + nodesToBuild);
-        //        StartCoroutine(Sepalo.Move(nodesToBuild[0]));
-        //        //characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
-        //    }
-        //    return IsChangeValid();
-        //}
-
         public void buildCells() {
             //Correct mesh
+            bool neighborWithWater = false;
             foreach (Node node in savedNodes) {
+                bool thisNodeNeighborWithWater = false;
                 node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                UpdateNeighbors(node);
+                if (UpdateNeighbors(node)) {
+                    neighborWithWater = true;
+                    thisNodeNeighborWithWater = true;
+                }
                 RotateMesh(node);
+                if (thisNodeNeighborWithWater) {
+                    node.DoPreparatedWater();
+                }
+
+            }
+            if (!neighborWithWater && !(savedNodes.Count == 1 && (
+                savedNodes[0].GetComponent<NodeDataModel>().isRiverStart || 
+                savedNodes[0].GetComponent<NodeDataModel>().isRiverEnd))) {
+
+                int newIndex = Semaphore.Instance.GetNewIndex();
+                Debug.Log("Er new index " + newIndex);
+                // Fran dice: Fran aqui falla
+                savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
+            } else {
+                savedNodes.ForEach(node => node.AdminDryScript(false));
             }
             MapManager.Instance.CheckFullRiver();
 
@@ -386,7 +381,8 @@ namespace ElJardin {
                     sepalo.CurrentNode,
                     directionToFill,
                     numNodes);
-                HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
+                if (dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
+                    HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
 
             }
         }

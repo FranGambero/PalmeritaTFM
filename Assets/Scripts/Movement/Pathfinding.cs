@@ -62,6 +62,12 @@ namespace ElJardin.Util
                 {
                     if (closedList.Contains(neighbourNode))
                         continue;
+                    
+                    if(!neighbourNode.IsWalkable)
+                    {
+                        closedList.Add(neighbourNode);
+                        continue;
+                    }
 
                     var tentativeGCost = currentNode.GCost + CalculateDistance(currentNode, neighbourNode);
                     if (tentativeGCost < neighbourNode.GCost)

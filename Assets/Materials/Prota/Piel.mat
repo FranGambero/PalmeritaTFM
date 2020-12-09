@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Piel
-  m_Shader: {fileID: 4800000, guid: 9ab100c60231fb344b6d1cef60b15458, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8ba197738af889b4fafd04f9c8890c36, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -73,7 +73,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RimAmount: 1
-    - _RimThreshold: 0
+    - _RimThreshold: 0.74
     - _Seno: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -82,8 +82,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
-    - _Color: {r: 0.9433962, g: 0.743147, b: 0.8601573, a: 1}
+    - _AmbientColor: {r: 0.49056602, g: 0.108757555, b: 0.108757555, a: 1}
+    - _Color: {r: 0.9716981, g: 0.66460484, b: 0.779563, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 0.5518868, b: 0.5518868, a: 1}
     - _SpecularColor: {r: 0.8018868, g: 0.16264686, b: 0.16264686, a: 1}
