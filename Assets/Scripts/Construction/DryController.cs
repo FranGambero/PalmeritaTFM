@@ -53,6 +53,7 @@ namespace ElJardin {
             if (secadoDelTo) {
                 Semaphore.Instance.RemoveTurn(turnIndex);
                 // TODO, vuelve a poner como suelo normal :3  y quitar el dry, sera el Node posiblemete
+                BuildManager.Instance?.BuildGround(GetComponent<Node>());
                 gameObject.GetComponent<Node>().RemoveDryComponent();
                 Debug.LogWarning("Quiero ser una casilla de verdad!");
             }

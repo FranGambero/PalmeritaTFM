@@ -242,6 +242,7 @@ namespace ElJardin {
                 water.Grow(true, null, null);
             } else {
                 Water();
+                AdminDryScript(false);
             }
         }
 

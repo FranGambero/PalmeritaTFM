@@ -100,7 +100,7 @@ public class Water : MonoBehaviour {
 
     }
 
-    public bool HasWater() {
+    public bool IsActive() {
         return waterStatic.activeSelf;
     }
 }

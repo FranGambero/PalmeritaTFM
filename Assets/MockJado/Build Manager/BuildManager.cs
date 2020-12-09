@@ -54,19 +54,19 @@ namespace ElJardin {
         }
 
         public bool UpdateNeighbors(Node node) {
-            bool neighborHasWater = false;
+            bool anyNeighborHasWater = false;
             foreach (Node neighbor in node.neighbors) {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
-                    if (neighbor.water.HasWater()) {
+                    if (neighbor.water.IsActive()) {
                         node.PrepareWater(neighbor);
-                        neighborHasWater = true;
+                        anyNeighborHasWater = true;
                     }
                     RotateMesh(neighbor);
                 }
             }
 
-            return neighborHasWater;
+            return anyNeighborHasWater;
         }
 
         private void RotateMesh(Node node) {
@@ -271,10 +271,13 @@ namespace ElJardin {
             foreach (Node node in savedNodes) {
                 bool thisNodeNeighborWithWater = false;
                 node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                if (UpdateNeighbors(node)) {
+                bool anyNeighborHasWater = UpdateNeighbors(node);
+
+                if (anyNeighborHasWater) {
                     neighborWithWater = true;
                     thisNodeNeighborWithWater = true;
                 }
+
                 RotateMesh(node);
                 if (thisNodeNeighborWithWater) {
                     node.DoPreparatedWater();
