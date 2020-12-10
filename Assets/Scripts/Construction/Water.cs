@@ -37,6 +37,10 @@ public class Water : MonoBehaviour {
             } else {
                 StartCoroutine(CorGrow(grow, middleCallback, waterS));
             }
+
+            if (grow) {
+                thisNode.RemoveDryComponent();
+            }
         }
     }
     public void PrepareGrow(bool grow, System.Action middleCallback, Node initNode) {

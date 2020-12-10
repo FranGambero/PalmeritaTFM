@@ -67,6 +67,7 @@ namespace ElJardin {
 
         private void OnDestroy() {
             //secadoDelTo = true;
+            Semaphore.Instance.onTurnStart -= onTurnStart;
         }
     }
 }

@@ -103,10 +103,10 @@ namespace ElJardin {
         }
 
         public void HoverOff() {
+            hovering = false;
+            directionInHover = DirectionType.Undefined;
             if (!GetComponent<DryController>()) {
                 _mr.material.color = baseColor;
-                hovering = false;
-                directionInHover = DirectionType.Undefined;
             }
         }
 
@@ -135,7 +135,7 @@ namespace ElJardin {
                     BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
 
                 //TODO: ShowCantBuildPreview
-            } else if (!GameManager.Instance.draggingCard && this.CanBuild) {
+            } else if (!GameManager.Instance.draggingCard && this.CanBuild && this.IsWalkable) {
                 if (GameManager.Instance.Sepalo.CurrentNode != this)
                     PositionMoveHover();
             }
@@ -269,10 +269,12 @@ namespace ElJardin {
         }
 
         public void RemoveDryComponent() {
-            Debug.LogWarning("Voy a quitarme el dry");
-            Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
-            _mr.material = (row + column) % 2 == 0 ? MapManager.Instance.groundMat: MapManager.Instance.groundMatOscurecio;
-            Destroy(GetComponent<DryController>());
+            if (GetComponent<DryController>()) {
+                Debug.LogWarning("Voy a quitarme el dry");
+                Semaphore.Instance.RemoveTurn(GetComponent<DryController>());
+                _mr.material = (row + column) % 2 == 0 ? MapManager.Instance.groundMat : MapManager.Instance.groundMatOscurecio;
+                Destroy(GetComponent<DryController>());
+            }
         }
         #endregion
 
@@ -284,6 +286,15 @@ namespace ElJardin {
         public void DestroyObstacle() {
             this.obstacle = null;
         }
+        #endregion
+
+        #region regionDeMierda
+        [ContextMenu("FUERZA REGIONES CARLA")]
+
+        public void TestAutoConvertGround() {
+            BuildManager.Instance.BuildGround(this);
+        }
+
         #endregion
     }
 }

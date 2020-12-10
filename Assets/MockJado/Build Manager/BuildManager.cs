@@ -48,6 +48,9 @@ namespace ElJardin {
 
         public void BuildGround(Node node) {
             //Cambio nodo a tierra
+            if (node.GetComponent<DryController>()) {
+                node.RemoveDryComponent();
+            }
             node.ChangeNodeType(NodeType.Ground, ground_m);
             //Correccion de vecinos
             UpdateNeighbors(node);
