@@ -58,7 +58,7 @@ namespace ElJardin {
             foreach (Node neighbor in node.neighbors) {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
-                    if (neighbor.water.IsActive()) {
+                    if (neighbor.water.IsActive() || neighbor.water.isGonnaHaveDaWote) {
                         node.PrepareWater(neighbor);
                         anyNeighborHasWater = true;
                     }
@@ -294,6 +294,7 @@ namespace ElJardin {
                 savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
             } else {
                 Debug.LogError("Quito dry");
+                savedNodes.ForEach(node => node.water.isGonnaHaveDaWote = true);
                 savedNodes.ForEach(node => node.AdminDryScript(false));
             }
             MapManager.Instance.CheckFullRiver();

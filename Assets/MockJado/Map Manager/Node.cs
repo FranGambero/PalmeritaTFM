@@ -262,7 +262,7 @@ namespace ElJardin {
                 Debug.LogError("Preparo a quitar bien");
                 if (GetComponent<DryController>()) {
                     Debug.LogWarning("Me lo quito en plan bien");
-                    Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
+                    //Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
                     RemoveDryComponent();
                 }
             }
@@ -270,6 +270,7 @@ namespace ElJardin {
 
         public void RemoveDryComponent() {
             Debug.LogWarning("Voy a quitarme el dry");
+            Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
             _mr.material = (row + column) % 2 == 0 ? MapManager.Instance.groundMat: MapManager.Instance.groundMatOscurecio;
             Destroy(GetComponent<DryController>());
         }

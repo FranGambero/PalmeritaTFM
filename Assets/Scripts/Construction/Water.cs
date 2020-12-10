@@ -8,6 +8,7 @@ public class Water : MonoBehaviour {
     public float maxValue = 1f;
     public float minValue = 0f;
     public bool growing = false;
+    public bool isGonnaHaveDaWote;
     public GameObject waterN, waterW, waterE, waterS, waterStatic;
 
     #region PreParams
@@ -39,6 +40,7 @@ public class Water : MonoBehaviour {
         }
     }
     public void PrepareGrow(bool grow, System.Action middleCallback, Node initNode) {
+        isGonnaHaveDaWote = grow;
         this.grow = grow; this.middleCallback = middleCallback; this.initNode = initNode;
     }
     public void DoPreparatedGrow() {
@@ -97,7 +99,7 @@ public class Water : MonoBehaviour {
 
         }
         growing = false;
-
+        isGonnaHaveDaWote = false;
     }
 
     public bool IsActive() {

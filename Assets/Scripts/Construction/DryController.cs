@@ -24,7 +24,7 @@ namespace ElJardin {
         }
 
         private void checkDry() {
-            if (numTurns > 0 && !secadoDelTo) {
+            if (numTurns > 0) {
                 numTurns--;
                 Debug.Log("Me quedan " + numTurns + " turnos");
                 switch (numTurns) {
@@ -50,8 +50,14 @@ namespace ElJardin {
 
         public void onTurnFinished() {
             Semaphore.Instance.onTurnEnd(turnIndex);
-            if (secadoDelTo) {
-                Semaphore.Instance.RemoveTurn(turnIndex);
+            if (GetComponent<Node>().water.IsActive() ||
+             BuildManager.Instance.UpdateNeighbors(GetComponent<Node>()) ||
+             GetComponent<Node>().water.isGonnaHaveDaWote) {
+
+                gameObject.GetComponent<Node>().RemoveDryComponent();
+
+            } else if (secadoDelTo) {
+
                 // TODO, vuelve a poner como suelo normal :3  y quitar el dry, sera el Node posiblemete
                 BuildManager.Instance?.BuildGround(GetComponent<Node>());
                 gameObject.GetComponent<Node>().RemoveDryComponent();
@@ -60,7 +66,7 @@ namespace ElJardin {
         }
 
         private void OnDestroy() {
-            secadoDelTo = true;
+            //secadoDelTo = true;
         }
     }
 }
