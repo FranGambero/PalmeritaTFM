@@ -51,9 +51,10 @@ public class DoGrow : MonoBehaviour {
         growed = false;
     }
     public void QuickShrink() {
+        growed = false;
         float tmpTime = time;
         time = 0.1f;
-        Shrink();
+        transform.localScale = Vector3.zero;
         time = tmpTime;
     }
     [System.Serializable]
