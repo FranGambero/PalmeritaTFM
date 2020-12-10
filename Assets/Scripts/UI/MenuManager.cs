@@ -5,14 +5,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace ElJardin {
-    public class MenuManager : MonoBehaviour {
+    public class MenuManager : Singleton<MenuManager> {
         public GameObject configMenuPanel;
         public ConfirmPanel confirmPanel;
 
         private void Awake() {
             configMenuPanel.SetActive(false);
-            confirmPanel = FindObjectOfType<ConfirmPanel>();
+            if (!confirmPanel)
+                confirmPanel = FindObjectOfType<ConfirmPanel>();
         }
+
 
         private void Update() {
             if (Input.GetKeyDown(KeyCode.Escape) && !confirmPanel.gameObject.activeSelf) {
@@ -33,5 +35,6 @@ namespace ElJardin {
             //AudioManager.Instance.unSetUILPF();
             SceneManager.LoadScene(0);
         }
+
     }
 }
