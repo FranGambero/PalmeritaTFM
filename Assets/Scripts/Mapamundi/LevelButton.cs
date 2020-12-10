@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElJardin;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -25,7 +26,7 @@ public class LevelButton : MonoBehaviour {
         mapMoveController = FindObjectOfType<MapMove>();
         if (confirmPanel == null) {
             //No va :(((
-            confirmPanel = FindObjectOfType<ConfirmPanel>();
+            confirmPanel = MenuManager.Instance.confirmPanel;
         }
         elementsToAppears = new List<DoGrow>(parentElementsToAppears.GetComponentsInChildren<DoGrow>());
     }
@@ -45,14 +46,18 @@ public class LevelButton : MonoBehaviour {
     }
 
     public void ShowConfirmPanel() {
-        mapMoveController.focusMove(this.transform, levelId);
+        mapMoveController.focusMove(levelId);
         StartCoroutine(nameof(MoveCoroutine));
     }
 
     public IEnumerator MoveCoroutine() {
+        mapMoveController.levelManager.OnStartWalking();
         yield return new WaitUntil(() => mapMoveController.moveFinished == true);
-        confirmPanel.gameObject.SetActive(true);
         AssignDataToPanel();
+        if (mapMoveController.levelManager.playButton && mapMoveController.levelManager.playButton.gameObject.activeSelf) 
+            mapMoveController.levelManager.OnStopWalking(confirmPanel);
+        else
+            confirmPanel.Activate(true);
     }
 
     private void AssignDataToPanel() {

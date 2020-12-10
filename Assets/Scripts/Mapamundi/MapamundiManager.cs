@@ -1,5 +1,5 @@
 ﻿using ElJardin;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -12,6 +12,8 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
     public GameObject[] levelZonePanels;
     public TextMeshProUGUI zoneTextTag, petalsTextTag;
+    public Action<int> onZoneChange;
+
 
     private void Awake() {
         numZones = 4;
@@ -119,7 +121,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
             currentZone = 1;
         }
         PlayerPrefs.SetInt("CurrentZone", currentZone);
-
+        onZoneChange?.Invoke(currentZone);
         levelZonePanels[currentZone].SetActive(true);
 
         CountCurrentPetals();
