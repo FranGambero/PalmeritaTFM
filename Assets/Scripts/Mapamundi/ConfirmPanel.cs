@@ -57,4 +57,12 @@ public class ConfirmPanel : MonoBehaviour {
         levelStringToLoad = "Level" + levelIdToLoad;
         return SceneManager.GetSceneByName(levelStringToLoad).buildIndex;
     }
+
+    public void Activate(bool activate) {
+        if (activate) {
+            gameObject.SetActive(true);
+        } else {
+            gameObject.SetActive(false);
+        }
+    }
 }
