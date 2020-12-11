@@ -21,6 +21,7 @@ namespace ElJardin {
             //turnIndex = listaTurnosActuales[listaTurnosActuales.Count].turnIndex + 1;
             secadoDelTo = false;
             turnIndex = newIndex;
+            Semaphore.Instance.AddTurn(this);
         }
 
         private void checkDry() {

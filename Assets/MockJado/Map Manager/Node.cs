@@ -221,7 +221,12 @@ namespace ElJardin {
         public void Water() {
             water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), null);
         }
-
+        public void WaterNeighbors() {
+            this.neighbors.ForEach(n => n.Water(this));
+        } 
+        public void DryNeighbors() {
+            this.neighbors.ForEach(n => n.Dry());
+        }
         public void Water(Node last) {
             water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), last);
         }
@@ -256,7 +261,6 @@ namespace ElJardin {
                 if (!GetComponent<DryController>() && newNodeIndex != -1) {
                     DryController newDryController = gameObject.AddComponent<DryController>();
                     newDryController.initDry(newNodeIndex);
-                    Semaphore.Instance.AddTurn(newDryController);
                 }
             } else {
                 Debug.LogError("Preparo a quitar bien");
