@@ -10,12 +10,18 @@ public class ScorePetalController : MonoBehaviour {
     public GameObject Pod;
     public ParticleSystem psComplete;
     public Fase fase = Fase.Pod;
-    public float animTime=1f;
+    public float animTime = 1f;
     public float delay;
+    private List<DoGrow> elementsToAppears;
+    public Transform parentElementsToAppears;
+
     public enum Fase {
         Pod, Cocoon, Petal
     }
-
+    private void Start() {
+        elementsToAppears = new List<DoGrow>(parentElementsToAppears.GetComponentsInChildren<DoGrow>());
+        elementsToAppears.ForEach(e => e.QuickShrink());
+    }
     public void SetFase(Fase fase, bool anim) {
         GameObject pre = GetFaseObject(this.fase);
         this.fase = fase;
@@ -25,6 +31,16 @@ public class ScorePetalController : MonoBehaviour {
         } else {
             post.SetActive(true);
         }
+        if (fase == Fase.Pod || fase == Fase.Cocoon) {
+            elementsToAppears.ForEach(e => e.QuickShrink());
+        } else {
+            if (anim) {
+                elementsToAppears.ForEach(e => e.RandomGrow());
+            } else {
+                elementsToAppears.ForEach(e => e.QuickGrow());
+            }
+        }
+
     }
     private IEnumerator ChangeFaseWAnim(GameObject pre, GameObject post) {
         yield return new WaitForSeconds(delay);
@@ -42,7 +58,7 @@ public class ScorePetalController : MonoBehaviour {
         GameObject faseG;
         switch (fase) {
             case Fase.Pod:
-                faseG= Pod;
+                faseG = Pod;
                 break;
             case Fase.Cocoon:
                 faseG = Cocoon;
