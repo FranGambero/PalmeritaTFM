@@ -90,6 +90,9 @@ namespace ElJardin {
                     } else if (node.GetPosition().y < neighbor.GetPosition().y) {
                         Debug.Log("conecto derecha");
                         node.gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
+                    } else {
+                        Debug.Log("Conceto default");
+                        node.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                     }
                     break;
 

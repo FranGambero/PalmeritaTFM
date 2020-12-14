@@ -72,7 +72,7 @@ public class Water : MonoBehaviour {
     }
 
     private IEnumerator CorGrow(bool grow, System.Action middleCallback, GameObject water) {
-        float mayor, menor, incremento, valueZ, callTriger = .8f;
+        float mayor, menor, incremento, valueZ, callTriger = .7f;
         bool invoked = false;
         if (!growing) {
             growing = true;
@@ -110,7 +110,6 @@ public class Water : MonoBehaviour {
         float valueY;
         float animT = 1.5f;
         if (!growing) {
-            Debug.Log("PUTOO");
             if (!grow) {
                 growing = true;
 
