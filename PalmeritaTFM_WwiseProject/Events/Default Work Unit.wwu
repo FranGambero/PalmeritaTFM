@@ -240,6 +240,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Steps_Mapa_In" ID="{4FBE0F26-8F0A-4AD0-806C-5711EB3984DD}">
+							<ChildrenList>
+								<Action Name="" ID="{59792062-61FF-4FDA-9255-DD9A46590997}" ShortID="839253683">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sepalo_Steps" ID="{32C492BF-6E13-45B4-B454-84B53E6CE75F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{8CD2E1CC-32B6-4563-8723-A14139EABDD1}" ShortID="50463570">
