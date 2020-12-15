@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public Vector3 originalPosition;
@@ -23,8 +24,35 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public void LoadCardData(CardData cardData) {
         this.cardData = cardData;
         originalHandPosition = CardManager.Instance.transformList[GetComponent<Card>().transformIndex].position;
+        transform.GetChild(0).GetComponent<Image>().sprite = cardData.sprite;
+
+        switch (cardData.cardType) {
+            case CardData.CardType.Undefined:
+            case CardData.CardType.Construction:
+                GetComponent<Image>().color = Color.green;
+                // Provisional
+                transform.GetChild(1).gameObject.SetActive(true);
+                transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case CardData.CardType.Summon:
+                GetComponent<Image>().color = Color.yellow;
+                // Provisional
+                transform.GetChild(1).gameObject.SetActive(true);
+                transform.GetChild(2).gameObject.SetActive(false);
+                break;
+            case CardData.CardType.Buff:
+                GetComponent<Image>().color = Color.gray;
+                // Provisional
+                transform.GetChild(1).gameObject.SetActive(false);
+                transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            default:
+                break;
+        }
 
     }
+
+
     public void OnDrag(PointerEventData eventData) {
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             if (!starting) {
@@ -34,8 +62,12 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
                 HoverAround();
             }
             transform.position = Input.mousePosition;
-            BuildManager.Instance.changeBuildValues(
-                cardData.amount, cardData.direction);
+            if (cardData.cardType == CardData.CardType.Construction) {
+                BuildManager.Instance.changeBuildValues(
+                    cardData.amount, cardData.direction);
+            } else if (cardData.cardType == CardData.CardType.Buff) {
+                // Lo que deba preparar esta carta
+            }
         }
     }
     public void OnEndDrag(PointerEventData eventData) {

@@ -345,9 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13b2d7b74c50434cade0c87589b41e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardData:
-    amount: 0
-    direction: 0
   amountText: {fileID: 1318785629}
   transformIndex: 0
   usedCard: 0
