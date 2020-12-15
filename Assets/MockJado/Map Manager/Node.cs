@@ -103,9 +103,11 @@ namespace ElJardin {
         }
 
         public void HoverOff() {
-            _mr.material.color = baseColor;
             hovering = false;
             directionInHover = DirectionType.Undefined;
+            if (!GetComponent<DryController>()) {
+                _mr.material.color = baseColor;
+            }
         }
 
         /**
@@ -133,7 +135,7 @@ namespace ElJardin {
                     BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
 
                 //TODO: ShowCantBuildPreview
-            } else if (!GameManager.Instance.draggingCard && this.CanBuild) {
+            } else if (!GameManager.Instance.draggingCard && this.CanBuild && this.IsWalkable) {
                 if (GameManager.Instance.Sepalo.CurrentNode != this)
                     PositionMoveHover();
             }
@@ -219,13 +221,18 @@ namespace ElJardin {
         public void Water() {
             water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), null);
         }
-
+        public void WaterNeighbors() {
+            this.neighbors.ForEach(n => n.Water(this));
+        } 
+        public void DryNeighbors() {
+            this.neighbors.ForEach(n => n.Dry());
+        }
         public void Water(Node last) {
             water.Grow(true, () => neighbors.ForEach(n => n.Water(this)), last);
         }
         public void PrepareWater(Node last) {
             water.PrepareGrow(true, () => neighbors.ForEach(n => n.Water(this)), last);
-        } 
+        }
         public void DoPreparatedWater() {
             water.DoPreparatedGrow();
         }
@@ -240,6 +247,7 @@ namespace ElJardin {
                 water.Grow(true, null, null);
             } else {
                 Water();
+                AdminDryScript(false);
             }
         }
 
@@ -253,12 +261,23 @@ namespace ElJardin {
                 if (!GetComponent<DryController>() && newNodeIndex != -1) {
                     DryController newDryController = gameObject.AddComponent<DryController>();
                     newDryController.initDry(newNodeIndex);
-                    Semaphore.Instance.AddTurn(newDryController);
                 }
             } else {
+                Debug.LogError("Preparo a quitar bien");
                 if (GetComponent<DryController>()) {
-                    Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
+                    Debug.LogWarning("Me lo quito en plan bien");
+                    //Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
+                    RemoveDryComponent();
                 }
+            }
+        }
+
+        public void RemoveDryComponent() {
+            if (GetComponent<DryController>()) {
+                Debug.LogWarning("Voy a quitarme el dry");
+                Semaphore.Instance.RemoveTurn(GetComponent<DryController>());
+                _mr.material = (row + column) % 2 == 0 ? MapManager.Instance.groundMat : MapManager.Instance.groundMatOscurecio;
+                Destroy(GetComponent<DryController>());
             }
         }
         #endregion
@@ -271,6 +290,15 @@ namespace ElJardin {
         public void DestroyObstacle() {
             this.obstacle = null;
         }
+        #endregion
+
+        #region regionDeMierda
+        [ContextMenu("FUERZA REGIONES CARLA")]
+
+        public void TestAutoConvertGround() {
+            BuildManager.Instance.BuildGround(this);
+        }
+
         #endregion
     }
 }
