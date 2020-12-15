@@ -13554,6 +13554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Luigi2
       objectReference: {fileID: 0}
+    - target: {fileID: 4982192088598646417, guid: 42ee6f71d592dc444b9dd527abf36bf7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4982192088598646421, guid: 42ee6f71d592dc444b9dd527abf36bf7,
         type: 3}
       propertyPath: levelManager
@@ -15419,7 +15424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1858815262
 RectTransform:
   m_ObjectHideFlags: 0
