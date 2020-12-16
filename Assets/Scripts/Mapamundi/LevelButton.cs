@@ -50,8 +50,7 @@ public class LevelButton : MonoBehaviour {
     public IEnumerator MoveCoroutine() {
         mapMoveController.levelManager.OnStartWalking();
         yield return new WaitUntil(() => mapMoveController.moveFinished == true);
-        confirmPanel.gameObject.SetActive(true);
-        AkSoundEngine.PostEvent("UI_Pantalla_Logro_In", gameObject);
+        confirmPanel.Activate(true);
         AssignDataToPanel();
         if (mapMoveController.levelManager.playButton && mapMoveController.levelManager.playButton.gameObject.activeSelf) 
             mapMoveController.levelManager.OnStopWalking(confirmPanel);
