@@ -28,6 +28,8 @@ namespace AK
         static const AkUniqueID STEPS_MAPA_IN = 2363561452U;
         static const AkUniqueID UI_BACK_IN = 349057203U;
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
+        static const AkUniqueID UI_HIT_FLOR_IN = 4184180445U;
+        static const AkUniqueID UI_PANTALLA_LOGRO_IN = 590137221U;
         static const AkUniqueID UI_SELECT_2_IN = 2493148897U;
         static const AkUniqueID UI_SELECT_IN = 3930592856U;
         static const AkUniqueID UI_TRANS_1_IN = 4116241270U;

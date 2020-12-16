@@ -73,7 +73,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585935911781202078
+    m_lastTime: -8585935052004565208
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585935911781403086
+    m_lastTime: -8585935052004961640
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -416,6 +416,34 @@ MonoBehaviour:
       - ElementName: UI_Cursor_In
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Cursor_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Hit_Flor_In
+      guid: 41864586356ab245971095f41f592486
+      id: 4184180445
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Hit_Flor_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Hit_Flor_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Pantalla_Logro_In
+      guid: a947c188a12b21419f62fa4996650e73
+      id: 590137221
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Pantalla_Logro_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Pantalla_Logro_In
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

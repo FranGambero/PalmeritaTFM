@@ -332,6 +332,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4184180445" Name="UI_Hit_Flor_In" ObjectPath="\Events\Default Work Unit\UI\UI_Hit_Flor_In" DurationType="OneShot" DurationMin="2.781519" DurationMax="2.781519">
+					<IncludedMemoryFiles>
+						<File Id="577416292" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Hit_Flor_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Hit_Flor_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="590137221" Name="UI_Pantalla_Logro_In" ObjectPath="\Events\Default Work Unit\UI\UI_Pantalla_Logro_In" DurationType="OneShot" DurationMin="1.415397" DurationMax="1.415397">
+					<IncludedMemoryFiles>
+						<File Id="370606020" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Pantalla_Logro_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Pantalla_Logro_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2493148897" Name="UI_Select_2_In" ObjectPath="\Events\Default Work Unit\UI\UI_Select_2_In" DurationType="OneShot" DurationMin="0.799569" DurationMax="0.799569">
 					<IncludedMemoryFiles>
 						<File Id="312227647" Language="SFX">
@@ -381,6 +397,16 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="370606020" Language="SFX">
+					<ShortName>El_Jardin_UI_SFX_Pantalla_Logro_Start.wav</ShortName>
+					<Path>SFX\El_Jardin_UI_SFX_Pantalla_Logro_Start_10C4C929.wem</Path>
+				</File>
+				<File Id="577416292" Language="SFX">
+					<ShortName>El_Jardin_UI_SFX_Hit_Flor_Start.wav</ShortName>
+					<Path>SFX\El_Jardin_UI_SFX_Hit_Flor_Start_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="4063213932" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ingame_SoundBank</ObjectPath>

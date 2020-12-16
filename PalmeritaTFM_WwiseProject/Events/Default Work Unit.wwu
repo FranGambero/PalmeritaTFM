@@ -251,6 +251,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="UI_Pantalla_Logro_In" ID="{88C147A9-2BA1-4121-9F62-FA4996650E73}">
+							<ChildrenList>
+								<Action Name="" ID="{67932A0A-C5D5-4FFF-9BC3-08169BF45118}" ShortID="870955975">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Pantalla_Logro" ID="{50A08C07-080E-4266-9AF5-B50B171309C0}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Hit_Flor_In" ID="{86458641-6A35-45B2-9710-95F41F592486}">
+							<ChildrenList>
+								<Action Name="" ID="{EEF2307C-8D20-4456-8C5D-380953592501}" ShortID="417941033">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Hit_Flor" ID="{3D0E5CAC-2643-4B05-BAAA-CA00A462F285}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{8CD2E1CC-32B6-4563-8723-A14139EABDD1}" ShortID="50463570">
