@@ -43,7 +43,8 @@ public class MapMove : MonoBehaviour {
             currentLevel = targetLevel;
         }
     }
-    public void OnStep() {//Animator
+    public void OnStep() { //Animator
+        AkSoundEngine.PostEvent("Steps_Mapa_In", gameObject);
         GetComponentInChildren<ParticleSystem>().Play();
     }
     private List<Transform> MakeRecorrido(int targetLevel) {

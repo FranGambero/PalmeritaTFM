@@ -46,6 +46,7 @@ namespace ElJardin {
             btnPlay.OnClickEvent = StartGame;
             btnPlay.OnPreAnimationEvent = fadeOutPanel.FadeOut;
             btnPlay.OnPreAnimationEvent += triggerButtonSound;
+            btnPlay.OnPreAnimationEvent += triggerFadeOutSound;
             btnPlay.OnPreAnimationEvent += IncreaseUILPF;
             fadeOutPanel.BtnTrigger = btnPlay;
             btnConfig.OnClickEvent = null;
@@ -75,6 +76,10 @@ namespace ElJardin {
 
         public void triggerButtonSound() {
             AkSoundEngine.PostEvent("UI_Select_In", gameObject);
+        }
+
+        public void triggerFadeOutSound() {
+            AkSoundEngine.PostEvent("UI_Trans_1_In", gameObject);
         }
 
         public void StartCredits() {

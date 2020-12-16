@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 27ab7aa6dbdd32a4188376a918dfbb57
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Scripts/Music.meta
 guid: 27ab7aa6dbdd32a4188376a918dfbb57
 =======
@@ -8,6 +11,7 @@ guid: 935c6c2c45d75d9459fd32d6a6df5fd7
 =======
 guid: 27ab7aa6dbdd32a4188376a918dfbb57
 >>>>>>> 6e820635623d12bd7e787b517eebb64ea977d4b4
+>>>>>>> 4b6097c6916af99a3d555f918a1f419bada2b5b2
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

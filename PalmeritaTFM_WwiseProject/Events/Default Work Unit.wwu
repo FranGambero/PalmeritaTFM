@@ -218,6 +218,61 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="UI_Trans_1_In" ID="{9AFF927E-9391-4218-80D4-9BA9BB7F549F}">
+							<ChildrenList>
+								<Action Name="" ID="{94ADA522-4794-45C9-BB83-7A42673CD8C2}" ShortID="484473685">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Trans_1" ID="{E8375660-05F7-48BA-B4C4-4B84840962EE}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Trans_2_In" ID="{F78A3B3D-7693-4365-AB2B-9F3F3CCFD900}">
+							<ChildrenList>
+								<Action Name="" ID="{C2A938D8-1B15-453E-A520-3DF88D8B376D}" ShortID="324902232">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Trans_2" ID="{A2E43B0C-F950-4FAC-BB8B-276A823500D7}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Steps_Mapa_In" ID="{4FBE0F26-8F0A-4AD0-806C-5711EB3984DD}">
+							<ChildrenList>
+								<Action Name="" ID="{59792062-61FF-4FDA-9255-DD9A46590997}" ShortID="839253683">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sepalo_Steps" ID="{32C492BF-6E13-45B4-B454-84B53E6CE75F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Pantalla_Logro_In" ID="{88C147A9-2BA1-4121-9F62-FA4996650E73}">
+							<ChildrenList>
+								<Action Name="" ID="{67932A0A-C5D5-4FFF-9BC3-08169BF45118}" ShortID="870955975">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Pantalla_Logro" ID="{50A08C07-080E-4266-9AF5-B50B171309C0}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Hit_Flor_In" ID="{86458641-6A35-45B2-9710-95F41F592486}">
+							<ChildrenList>
+								<Action Name="" ID="{EEF2307C-8D20-4456-8C5D-380953592501}" ShortID="417941033">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Hit_Flor" ID="{3D0E5CAC-2643-4B05-BAAA-CA00A462F285}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{8CD2E1CC-32B6-4563-8723-A14139EABDD1}" ShortID="50463570">
