@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElJardin;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,8 +8,6 @@ using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour {
     public List<ScorePetalController> petals;
-    public Transform parentElementsToAppears;
-    private List<DoGrow> elementsToAppears;
     public GameObject lockedSprite;
 
     public LevelData levelData;
@@ -25,9 +24,8 @@ public class LevelButton : MonoBehaviour {
         mapMoveController = FindObjectOfType<MapMove>();
         if (confirmPanel == null) {
             //No va :(((
-            confirmPanel = FindObjectOfType<ConfirmPanel>();
+            confirmPanel = MenuManager.Instance.confirmPanel;
         }
-        elementsToAppears = new List<DoGrow>(parentElementsToAppears.GetComponentsInChildren<DoGrow>());
     }
 
     private void Start() {
@@ -45,15 +43,20 @@ public class LevelButton : MonoBehaviour {
     }
 
     public void ShowConfirmPanel() {
-        mapMoveController.focusMove(this.transform, levelId);
+        mapMoveController.focusMove(levelId);
         StartCoroutine(nameof(MoveCoroutine));
     }
 
     public IEnumerator MoveCoroutine() {
+        mapMoveController.levelManager.OnStartWalking();
         yield return new WaitUntil(() => mapMoveController.moveFinished == true);
         confirmPanel.gameObject.SetActive(true);
         AkSoundEngine.PostEvent("UI_Pantalla_Logro_In", gameObject);
         AssignDataToPanel();
+        if (mapMoveController.levelManager.playButton && mapMoveController.levelManager.playButton.gameObject.activeSelf) 
+            mapMoveController.levelManager.OnStopWalking(confirmPanel);
+        else
+            confirmPanel.Activate(true);
     }
 
     private void AssignDataToPanel() {
@@ -64,20 +67,8 @@ public class LevelButton : MonoBehaviour {
     [ContextMenu("ChangeSprite")]
     public void ChangeSprite() {
         for (int i = 0; i < numPetals; i++) {
-            petals[i].SetFase(ScorePetalController.Fase.Petal, true);
-        }
-
-        if (elementsToAppears.Count > 0) {
-            if (numPetals > 0) {
-                if (SessionVariables.Instance.sceneData.lastScene != confirmPanel.GetLevelBuildId()) {
-                    elementsToAppears.ForEach(e => e.QuickGrow());
-                } else {
-                    elementsToAppears[0].Grow();
-                    elementsToAppears.ForEach(e => e.RandomGrow());
-                }
-            } else {
-                elementsToAppears.ForEach(e => e.QuickShrink());
-            }
+            petals[i].SetFase(ScorePetalController.Fase.Petal, !levelData.logros[i].animationDone);
+            levelData.logros[i].animationDone = true;
         }
     }
 

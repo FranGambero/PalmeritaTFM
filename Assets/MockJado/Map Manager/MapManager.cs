@@ -27,6 +27,7 @@ namespace ElJardin {
         [Header("Tile Materials")]
         public Material groundMat; 
         public Material groundMatOscurecio;
+        public Material peligro1, peligro2, peligro3;
 
         public Material waterMat;
         //public Material waterMatStr8, waterMatCurve, waterMatFork, waterMatCross, waterMatEnd;
@@ -140,6 +141,7 @@ namespace ElJardin {
             if (startPos != endPos) {
                 mapMatrix[(int)startPos.x, (int)startPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Water, BuildManager.Instance.pond_m);
                 startingNode = mapMatrix[(int)startPos.x, (int)startPos.y].GetComponent<Node>();
+                startingNode.Water(true);
                 startingNode.SetColor(Color.blue);
                 mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
                 endingNode = mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>();
