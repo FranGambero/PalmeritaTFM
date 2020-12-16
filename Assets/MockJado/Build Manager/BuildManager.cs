@@ -48,25 +48,30 @@ namespace ElJardin {
 
         public void BuildGround(Node node) {
             //Cambio nodo a tierra
+            if (node.GetComponent<DryController>()) {
+                node.RemoveDryComponent();
+            }
             node.ChangeNodeType(NodeType.Ground, ground_m);
+            node.water.Reset();
+            node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
             //Correccion de vecinos
             UpdateNeighbors(node);
         }
 
         public bool UpdateNeighbors(Node node) {
-            bool neighborHasWater = false;
+            bool anyNeighborHasWater = false;
             foreach (Node neighbor in node.neighbors) {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
-                    if (neighbor.water.HasWater()) {
+                    if (neighbor.water.IsActive() || neighbor.water.isGonnaHaveDaWote) {
                         node.PrepareWater(neighbor);
-                        neighborHasWater = true;
+                        anyNeighborHasWater = true;
                     }
                     RotateMesh(neighbor);
                 }
             }
 
-            return neighborHasWater;
+            return anyNeighborHasWater;
         }
 
         private void RotateMesh(Node node) {
@@ -85,6 +90,9 @@ namespace ElJardin {
                     } else if (node.GetPosition().y < neighbor.GetPosition().y) {
                         Debug.Log("conecto derecha");
                         node.gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
+                    } else {
+                        Debug.Log("Conceto default");
+                        node.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                     }
                     break;
 
@@ -271,10 +279,13 @@ namespace ElJardin {
             foreach (Node node in savedNodes) {
                 bool thisNodeNeighborWithWater = false;
                 node.ChangeNodeType(NodeType.Water, CalculateMeshToBuild(node));
-                if (UpdateNeighbors(node)) {
+                bool anyNeighborHasWater = UpdateNeighbors(node);
+
+                if (anyNeighborHasWater) {
                     neighborWithWater = true;
                     thisNodeNeighborWithWater = true;
                 }
+
                 RotateMesh(node);
                 if (thisNodeNeighborWithWater) {
                     node.DoPreparatedWater();
@@ -290,6 +301,8 @@ namespace ElJardin {
                 // Fran dice: Fran aqui falla
                 savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
             } else {
+                Debug.LogError("Quito dry");
+                savedNodes.ForEach(node => node.water.isGonnaHaveDaWote = true);
                 savedNodes.ForEach(node => node.AdminDryScript(false));
             }
             MapManager.Instance.CheckFullRiver();

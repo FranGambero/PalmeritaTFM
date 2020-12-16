@@ -27,6 +27,7 @@ namespace ElJardin {
         [Header("Tile Materials")]
         public Material groundMat; 
         public Material groundMatOscurecio;
+        public Material peligro1, peligro2, peligro3;
 
         public Material waterMat;
         //public Material waterMatStr8, waterMatCurve, waterMatFork, waterMatCross, waterMatEnd;

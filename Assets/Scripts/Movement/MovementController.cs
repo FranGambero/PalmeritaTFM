@@ -47,12 +47,14 @@ namespace ElJardin.Movement {
             this.globalTargetNode = targetNode;
             this.globalStartingNode = startingNode;
             var path = CalculatePath(startingNode, targetNode);
-            foreach (var node in path) {
-                if (targetNode == this.globalTargetNode) {
-                    yield return StartCoroutine(MoveToNode(node));
-                    sepalo.CurrentNode = node;
-                } else {
-                    break;
+            if (path != null) {
+                foreach (var node in path) {
+                    if (targetNode == this.globalTargetNode) {
+                        yield return StartCoroutine(MoveToNode(node));
+                        sepalo.CurrentNode = node;
+                    } else {
+                        break;
+                    }
                 }
             }
         }
