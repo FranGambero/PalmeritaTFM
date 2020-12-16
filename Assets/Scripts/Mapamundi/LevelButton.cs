@@ -52,6 +52,7 @@ public class LevelButton : MonoBehaviour {
     public IEnumerator MoveCoroutine() {
         yield return new WaitUntil(() => mapMoveController.moveFinished == true);
         confirmPanel.gameObject.SetActive(true);
+        AkSoundEngine.PostEvent("UI_Pantalla_Logro_In", gameObject);
         AssignDataToPanel();
     }
 
