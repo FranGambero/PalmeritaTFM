@@ -27,6 +27,7 @@ namespace ElJardin {
             _positionHover.SetActive(false);
             draggingCard = false;
             Sepalo = FindObjectOfType<SepaloController>();
+            configMenu.gameObject.SetActive(false);
         }
 
         private void Start() {

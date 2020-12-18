@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ConfigMenuManager : MonoBehaviour {
-    public MenuButton backBtn;
+    public MenuButton backBtn, backMapBtn, instructionsBtn;
     public Slider musicSlider, sfxSlider;
     public TextMeshProUGUI volMusicTextValue, volSFXTextValue;
     private float volMusicValue, volSFXValue;
@@ -21,6 +21,8 @@ public class ConfigMenuManager : MonoBehaviour {
         });
 
         backBtn.OnClickEvent += CloseCongifMenu;
+        backMapBtn.OnClickEvent += () => GameManager.Instance.goToMapamundi();
+        instructionsBtn.OnClickEvent += () => GameManager.Instance.showInstructions(true);
     }
 
     private void OnEnable() {
@@ -91,5 +93,6 @@ public class ConfigMenuManager : MonoBehaviour {
         volMusicTextValue.text = volMusicValue.ToString();
         volSFXTextValue.text = volSFXValue.ToString();
     }
+
 
 }
