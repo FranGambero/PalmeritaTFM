@@ -25,10 +25,15 @@ namespace AK
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
         static const AkUniqueID MUSICA_SWITCH_IN = 2706007436U;
         static const AkUniqueID SEPALO_STEPS_IN = 847036623U;
+        static const AkUniqueID STEPS_MAPA_IN = 2363561452U;
         static const AkUniqueID UI_BACK_IN = 349057203U;
         static const AkUniqueID UI_CURSOR_IN = 3671726430U;
+        static const AkUniqueID UI_HIT_FLOR_IN = 4184180445U;
+        static const AkUniqueID UI_PANTALLA_LOGRO_IN = 590137221U;
         static const AkUniqueID UI_SELECT_2_IN = 2493148897U;
         static const AkUniqueID UI_SELECT_IN = 3930592856U;
+        static const AkUniqueID UI_TRANS_1_IN = 4116241270U;
+        static const AkUniqueID UI_TRANS_2_IN = 1221477491U;
         static const AkUniqueID UI_VOL_DOWN_IN = 2053540170U;
         static const AkUniqueID UI_VOL_UP_IN = 1436640151U;
     } // namespace EVENTS

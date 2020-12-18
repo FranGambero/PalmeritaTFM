@@ -1,16 +1,43 @@
 Event	ID	Name			Wwise Object Path	Notes
 	349057203	UI_Back_In			\Default Work Unit\UI\UI_Back_In	
+	590137221	UI_Pantalla_Logro_In			\Default Work Unit\UI\UI_Pantalla_Logro_In	
+	1221477491	UI_Trans_2_In			\Default Work Unit\UI\UI_Trans_2_In	
 	1436640151	UI_Vol_Up_In			\Default Work Unit\UI\UI_Vol_Up_In	
 	2053540170	UI_Vol_Down_In			\Default Work Unit\UI\UI_Vol_Down_In	
+	2363561452	Steps_Mapa_In			\Default Work Unit\UI\Steps_Mapa_In	
 	2493148897	UI_Select_2_In			\Default Work Unit\UI\UI_Select_2_In	
 	3671726430	UI_Cursor_In			\Default Work Unit\UI\UI_Cursor_In	
 	3930592856	UI_Select_In			\Default Work Unit\UI\UI_Select_In	
+	4116241270	UI_Trans_1_In			\Default Work Unit\UI\UI_Trans_1_In	
+	4184180445	UI_Hit_Flor_In			\Default Work Unit\UI\UI_Hit_Flor_In	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1000507378	Wwise_Compressor_(Custom)	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	130561974	El_Jardin_UI_Cursor_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_Cursor_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Cursor\El_Jardin_UI_Cursor_Start		134992
+	175036366	Jardin_Sepalo_Steps_SFX_Start_08	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_08		44880
+	187478389	Jardin_Sepalo_Steps_SFX_Start_14	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_14		36482
+	230775093	Jardin_Sepalo_Steps_SFX_Start_06	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_06		52128
 	312227647	El_Jardin_UI_Select_2_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_Select_2_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Select_2\El_Jardin_UI_Select_2_Start		141188
+	354631107	El_Jardin_UI_SFX_Transicion_Start_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_SFX_Transicion_Start_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Trans_2\El_Jardin_UI_SFX_Transicion_Start_2		302360
+	369746673	El_Jardin_UI_SFX_Transicion_Start_1	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_SFX_Transicion_Start_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Trans_1\El_Jardin_UI_SFX_Transicion_Start_1		699956
+	370606020	El_Jardin_UI_SFX_Pantalla_Logro_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_SFX_Pantalla_Logro_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Pantalla_Logro\El_Jardin_UI_SFX_Pantalla_Logro_Start		249868
+	374366418	Jardin_Sepalo_Steps_SFX_Start_05	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_05		36144
+	376104432	Jardin_Sepalo_Steps_SFX_Start_02	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_02		54000
+	390693949	Jardin_Sepalo_Steps_SFX_Start_03	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_03		54098
+	410818859	Jardin_Sepalo_Steps_SFX_Start_11	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_11		62112
+	418905517	Jardin_Sepalo_Steps_SFX_Start_01	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_01		39482
+	512440749	Jardin_Sepalo_Steps_SFX_Start_04	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_04		44066
 	548071252	El_Jardin_UI_Back_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_Back_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Back\El_Jardin_UI_Back_Start		154400
+	577416292	El_Jardin_UI_SFX_Hit_Flor_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_SFX_Hit_Flor_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Hit_Flor\El_Jardin_UI_SFX_Hit_Flor_Start		490852
+	602205659	Jardin_Sepalo_Steps_SFX_Start_12	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_12		28658
 	649737484	El_Jardin_UI_Select_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_Select_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Select\El_Jardin_UI_Select_Start		240688
+	714277669	Jardin_Sepalo_Steps_SFX_Start_15	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_15		31480
+	732199025	Jardin_Sepalo_Steps_SFX_Start_09	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_09		56064
+	757205018	Jardin_Sepalo_Steps_SFX_Start_07	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_07		38402
+	824916201	Jardin_Sepalo_Steps_SFX_Start_13	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_13		25296
 	846422562	El_Jardin_UI_Volumen_Up_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_Volumen_Up_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Vol_Up\El_Jardin_UI_Volumen_Up_Start		62104
+	1005884361	Jardin_Sepalo_Steps_SFX_Start_10	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_10		43142
 	1011145882	El_Jardin_UI_Volumen_Down_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_UI_Volumen_Down_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Vol_Down\El_Jardin_UI_Volumen_Down_Start		62104
 

@@ -24,6 +24,7 @@ public class ConfirmPanel : MonoBehaviour {
         }
         btnPlay.OnPreAnimationEvent += fadeOutPanel.FadeOut;
         btnPlay.OnPreAnimationEvent += triggerButtonSound;
+        btnPlay.OnPreAnimationEvent += triggerFadeOutSound;
         fadeOutPanel.BtnTrigger = btnPlay;
         btnPlay.OnClickEvent += PlayLevel;
     }
@@ -62,11 +63,16 @@ public class ConfirmPanel : MonoBehaviour {
     public void Activate(bool activate) {
         if (activate) {
             gameObject.SetActive(true);
+            AkSoundEngine.PostEvent("UI_Pantalla_Logro_In", gameObject);
         } else {
             gameObject.SetActive(false);
         }
     }
     public void triggerButtonSound() {
         AkSoundEngine.PostEvent("UI_Select_In", gameObject);
+    }
+
+    public void triggerFadeOutSound() {
+        AkSoundEngine.PostEvent("UI_Trans_1_In", gameObject);
     }
 }

@@ -51,6 +51,7 @@ public class ScorePetalController : MonoBehaviour {
         DOTween.To(() => value, x => value = x, 1f, animTime).OnUpdate(() => mat.SetFloat("_FlashAmount", value)).OnComplete(() => {
             post.SetActive(true);
             mat.SetFloat("_FlashAmount", 0);
+            AkSoundEngine.PostEvent("UI_Hit_Flor_In", gameObject);
             psComplete.Play();
         });
     }
