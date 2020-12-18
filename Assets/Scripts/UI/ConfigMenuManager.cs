@@ -21,8 +21,10 @@ public class ConfigMenuManager : MonoBehaviour {
         });
 
         backBtn.OnClickEvent += CloseCongifMenu;
-        backMapBtn.OnClickEvent += () => GameManager.Instance.goToMapamundi();
-        instructionsBtn.OnClickEvent += () => GameManager.Instance.showInstructions(true);
+        if (backMapBtn)
+            backMapBtn.OnClickEvent += () => GameManager.Instance.goToMapamundi();
+        if (instructionsBtn)
+            instructionsBtn.OnClickEvent += () => GameManager.Instance.showInstructions(true);
     }
 
     private void OnEnable() {

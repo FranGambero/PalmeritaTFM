@@ -14494,6 +14494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAnimName: QuickFadeOut
+  fadeInAnimName: QuickFadeIn
 --- !u!1 &2046682085375689551
 GameObject:
   m_ObjectHideFlags: 0

@@ -17356,6 +17356,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1984014617}
     m_Modifications:
+    - target: {fileID: 741298717, guid: cd5499373520cf34b802976c09ff0f97, type: 3}
+      propertyPath: fadeInAnimName
+      value: QuickFadeIn
+      objectReference: {fileID: 0}
     - target: {fileID: 116136019300338280, guid: cd5499373520cf34b802976c09ff0f97,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17590,6 +17594,7 @@ MonoBehaviour:
   - {fileID: 1858815261}
   zoneTextTag: {fileID: 697924864}
   petalsTextTag: {fileID: 577610638}
+  fadeOutPanel: {fileID: 741298714}
 --- !u!1001 &983683575
 PrefabInstance:
   m_ObjectHideFlags: 0
