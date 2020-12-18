@@ -52,7 +52,7 @@ public class LevelButton : MonoBehaviour {
         yield return new WaitUntil(() => mapMoveController.moveFinished == true);
         confirmPanel.Activate(true);
         AssignDataToPanel();
-        if (mapMoveController.levelManager.playButton && mapMoveController.levelManager.playButton.gameObject.activeSelf) 
+        if (mapMoveController.levelManager.playButton && mapMoveController.levelManager.playButton.gameObject.activeSelf)
             mapMoveController.levelManager.OnStopWalking(confirmPanel);
         else
             confirmPanel.Activate(true);
@@ -65,10 +65,15 @@ public class LevelButton : MonoBehaviour {
     }
     [ContextMenu("ChangeSprite")]
     public void ChangeSprite() {
+        bool changed = false;
         for (int i = 0; i < numPetals; i++) {
             petals[i].SetFase(ScorePetalController.Fase.Petal, !levelData.logros[i].animationDone);
+            if (!levelData.logros[i].animationDone)
+                changed = true;
             levelData.logros[i].animationDone = true;
         }
+        if (changed)
+            MapamundiManager.Instance.SaveLevel(levelData);
     }
 
     private void CheckAvailableLevel() {

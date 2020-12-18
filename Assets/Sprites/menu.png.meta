@@ -156,10 +156,10 @@ TextureImporter:
       name: menu_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 856
-        width: 373
-        height: 85
+        x: 26
+        y: 730
+        width: 503
+        height: 279
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,7 +267,7 @@ TextureImporter:
         height: 211
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 208, y: 0, z: 208, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

@@ -19,10 +19,10 @@ public class ScorePetalController : MonoBehaviour {
         Pod, Cocoon, Petal
     }
     private void Start() {
-        elementsToAppears = new List<DoGrow>(parentElementsToAppears.GetComponentsInChildren<DoGrow>());
-        elementsToAppears.ForEach(e => e.QuickShrink());
     }
     public void SetFase(Fase fase, bool anim) {
+        elementsToAppears = new List<DoGrow>(parentElementsToAppears.GetComponentsInChildren<DoGrow>());
+        elementsToAppears.ForEach(e => e.QuickShrink());
         GameObject pre = GetFaseObject(this.fase);
         this.fase = fase;
         GameObject post = GetFaseObject(this.fase);
@@ -31,6 +31,7 @@ public class ScorePetalController : MonoBehaviour {
         } else {
             post.SetActive(true);
         }
+        Debug.Log("PUTO: " + elementsToAppears + " " + elementsToAppears.Count);
         if (fase == Fase.Pod || fase == Fase.Cocoon) {
             elementsToAppears.ForEach(e => e.QuickShrink());
         } else {
