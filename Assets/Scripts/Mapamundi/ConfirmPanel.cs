@@ -53,7 +53,7 @@ public class ConfirmPanel : MonoBehaviour {
         AudioManager.Instance.setIngameMusic();
         MapamundiManager.Instance.SaveZoneData();
         //AudioManager.Instance.unSetUILPF(); 
-    SceneManager.LoadScene("LoadScene");
+        SceneManager.LoadScene("LoadScene");
     }
     public int GetLevelBuildId() {
         levelStringToLoad = "Level" + levelIdToLoad;
