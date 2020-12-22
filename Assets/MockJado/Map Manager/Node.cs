@@ -117,8 +117,9 @@ namespace ElJardin {
          */
         public void ShowPreview(bool show) {
             if (show) {
-                _mr.material.color = Color.black;
                 hasPreviewOn = show;
+                _mr.material.color = new Color32(0xF3,0xE3,0x26,0xff);
+                VFXDirector.Instance.Play("OnPreview", this.transform);
             } else if (hovering) {
                 HoverOn(directionInHover);
             } else {
@@ -224,7 +225,7 @@ namespace ElJardin {
         }
         public void WaterNeighbors() {
             this.neighbors.ForEach(n => n.Water(this));
-        } 
+        }
         public void DryNeighbors() {
             this.neighbors.ForEach(n => n.Dry());
         }
