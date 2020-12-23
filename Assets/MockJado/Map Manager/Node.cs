@@ -21,7 +21,7 @@ namespace ElJardin {
         MeshFilter _mf;
         Color baseColor;
 
-        bool hovering, canBuild;
+        bool hovering, canBuild, hasPreviewOn;
         public Water water;
 
         public int GCost { get; set; }
@@ -99,12 +99,14 @@ namespace ElJardin {
             //baseColor = _mr.material.color;
             _mr.material.color = hoverColor;
             hovering = true;
+            hasPreviewOn = true;
             directionInHover = direction;
         }
 
         public void HoverOff() {
             hovering = false;
             directionInHover = DirectionType.Undefined;
+            hasPreviewOn = false;
             if (!GetComponent<DryController>()) {
                 _mr.material.color = baseColor;
             }
@@ -115,7 +117,9 @@ namespace ElJardin {
          */
         public void ShowPreview(bool show) {
             if (show) {
-                _mr.material.color = Color.black;
+                hasPreviewOn = show;
+                _mr.material.color = new Color32(0xF3,0xE3,0x26,0xff);
+                VFXDirector.Instance.Play("OnPreview", this.transform);
             } else if (hovering) {
                 HoverOn(directionInHover);
             } else {
@@ -128,11 +132,9 @@ namespace ElJardin {
          * Si no carta y se puede construir, hover de pasitos
          */
         private void OnMouseEnter() {
+            BuildManager.Instance.ShowNodesPreview(this.directionInHover);
             if (hovering) {
                 GameManager.Instance.SelectedNode = this;
-                var nodesToShowPreview = BuildManager.Instance.dictionaryNodesAround[directionInHover];
-                if (nodesToShowPreview.All(node => !node.HasObstacle))
-                    BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
 
                 //TODO: ShowCantBuildPreview
             } else if (!GameManager.Instance.draggingCard && this.CanBuild && this.IsWalkable) {
@@ -161,9 +163,9 @@ namespace ElJardin {
         private void OnMouseExit() {
             if (hovering) {
                 GameManager.Instance.SelectedNode = null;
-                BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
+                // BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
             } else {
-                ShowPreview(false);
+                // ShowPreview(false);
                 GameManager.Instance.PositionHover.SetActive(false);
             }
         }
@@ -223,7 +225,7 @@ namespace ElJardin {
         }
         public void WaterNeighbors() {
             this.neighbors.ForEach(n => n.Water(this));
-        } 
+        }
         public void DryNeighbors() {
             this.neighbors.ForEach(n => n.Dry());
         }
