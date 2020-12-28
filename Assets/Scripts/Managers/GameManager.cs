@@ -13,8 +13,8 @@ namespace ElJardin {
         private Node selectedNode;
         public bool draggingCard;
         private bool canPlay;
-        public UnityEvent<bool> OnPause => onPause;
-        UnityEvent onPause = new UnityEvent();
+        //public UnityEvent<bool> OnPause => onPause;
+        //UnityEvent onPause = new UnityEvent();
 
         public bool CanPlay {
             get {
