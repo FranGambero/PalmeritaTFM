@@ -1,5 +1,6 @@
 ﻿using ElJardin.Characters;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace ElJardin {
@@ -11,6 +12,18 @@ namespace ElJardin {
         public Vector3 tmpRot;
         private Node selectedNode;
         public bool draggingCard;
+        private bool canPlay;
+        //public UnityEvent<bool> OnPause => onPause;
+        //UnityEvent onPause = new UnityEvent();
+
+        public bool CanPlay {
+            get {
+                return canPlay;
+            }
+            set {
+                canPlay = value;
+            }
+        }
 
         public Node SelectedNode { get => selectedNode; set => selectedNode = value; }
         public GameObject PositionHover {

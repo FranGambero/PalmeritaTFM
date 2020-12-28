@@ -53,6 +53,7 @@ namespace ElJardin {
             if (node.GetComponent<DryController>()) {
                 node.RemoveDryComponent();
             }
+            VFXDirector.Instance.Play("OnDestroyGround", node.GetSurfacePosition());
             node.ChangeNodeType(NodeType.Ground, ground_m);
             node.water.Reset();
             node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
