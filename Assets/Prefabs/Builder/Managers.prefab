@@ -44,23 +44,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelEditor: {fileID: 0}
-  victoryCanvas: {fileID: 0}
-  cardCanvas: {fileID: 0}
-  confety: {fileID: 0}
   rows: 7
   columns: 7
   tileOffset: 1.5
   groundMat: {fileID: 2100000, guid: e2bfa47644be6504d8afbb145e15bc9c, type: 2}
-  groundMatOscurecio: {fileID: 0}
-  peligro1: {fileID: 0}
-  peligro2: {fileID: 0}
-  peligro3: {fileID: 0}
+  groundMatOscurecio: {fileID: 2100000, guid: 3d60dcc47f7fb8b43b4a0c4be5acb911, type: 2}
+  peligro1: {fileID: 2100000, guid: 10c0c22b5863f764089c6172d7663bb1, type: 2}
+  peligro2: {fileID: 2100000, guid: 0ac0f1c53afd9df478994c3e98736265, type: 2}
+  peligro3: {fileID: 2100000, guid: 6fcaba1ea25e89d4ab903912ceb30aac, type: 2}
   waterMat: {fileID: 2100000, guid: 0ccfa07d6cab19245bf12b17a0aa6eb7, type: 2}
   grooveMat: {fileID: 2100000, guid: a84d8c4329e0f21479bdc1fd2584161a, type: 2}
   nodePrefab: {fileID: 7819085289489393484, guid: 299fd3d914e9098439703f0426dc069c,
     type: 3}
   riverStartPos: {x: 0, y: 0}
-  riverEndPos: {x: 6, y: 5}
+  riverEndPos: {x: 6, y: 3}
   playerStartPos: {x: 1, y: 3}
 --- !u!1 &1522253018091708996
 GameObject:
@@ -172,10 +169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sepalo: {fileID: 0}
-  configMenu: {fileID: 0}
   instructMenu: {fileID: 0}
   _positionHover: {fileID: 0}
-  tmpRot: {x: 0, y: 0, z: 0}
+  tmpRot: {x: -1, y: 0, z: 0}
   draggingCard: 0
 --- !u!1 &1522253018955214809
 GameObject:
@@ -254,6 +250,8 @@ Transform:
   - {fileID: 8364523386069000854}
   - {fileID: 1522253018248357549}
   - {fileID: 1522253018955214808}
+  - {fileID: 8584088244456336217}
+  - {fileID: 7553896706956643136}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -302,12 +300,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterMat: {fileID: 2100000, guid: 6d072d4434ce6024cb2c0607ea4d2887, type: 2}
   grooveMat: {fileID: 2100000, guid: a84d8c4329e0f21479bdc1fd2584161a, type: 2}
-  ground_m: {fileID: 5060444177187149915, guid: efe2b40611aa5f1478f6e7808b426ff5,
+  ground_m: {fileID: 1453043773871479701, guid: efe2b40611aa5f1478f6e7808b426ff5,
     type: 3}
   canal_m: {fileID: -3172128858085774672, guid: 6862566bfeb13434cb32799f2e9751dc,
     type: 3}
-  elbow_m: {fileID: 5060444177187149915, guid: 3eed0918a64ab124aad1257724a117fe, type: 3}
-  intersection3_m: {fileID: -4920290871484284274, guid: 50f2fd4272545184a8f56fd5b69330ea,
+  elbow_m: {fileID: 4818066510471147553, guid: 3eed0918a64ab124aad1257724a117fe, type: 3}
+  intersection3_m: {fileID: -8415415743612621656, guid: 50f2fd4272545184a8f56fd5b69330ea,
     type: 3}
   intersection4_m: {fileID: 306078152993339149, guid: b9be12951f2a65245a568bd500be2230,
     type: 3}
@@ -315,6 +313,127 @@ MonoBehaviour:
   start_m: {fileID: 3112977340068577888, guid: f2685abeb33751c4e8b2db5ff0400314, type: 3}
   amount: 1
   Sepalo: {fileID: 0}
+--- !u!1 &3584299972563252103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7553896706956643136}
+  - component: {fileID: 4479324352199148173}
+  m_Layer: 0
+  m_Name: MenuDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7553896706956643136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3584299972563252103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1522253019494429778}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4479324352199148173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3584299972563252103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60ab7097bb87dd45aeeb80a8c8f202f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  configMenu: {fileID: 0}
+  finalPanel: {fileID: 0}
+  baseCanvas: {fileID: 0}
+  victoryCanvas: {fileID: 0}
+  cardCanvas: {fileID: 0}
+  tutoPanelPrefab: {fileID: 0}
+--- !u!1 &4521981902472458452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8584088244456336217}
+  - component: {fileID: 1723880635932310903}
+  - component: {fileID: 8848689514654271448}
+  m_Layer: 0
+  m_Name: SerializableManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8584088244456336217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521981902472458452}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7827406, y: -4.2985206, z: -6.9136286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1522253019494429778}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723880635932310903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521981902472458452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2b1dfd926e7d641b2b5a8b15b05947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preBuildPath: Assets/Resources/ZoneData
+  zoneFile:
+  - /Zone0
+  - /Zone1
+  - /Zone2
+  - /Zone3
+  postBuildPath: PalmeritaTFM_Data/Resources
+  format: .json
+--- !u!114 &8848689514654271448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521981902472458452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9cfcd816a2c440498ac96b2b0c0adcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoneDataArray: []
+  currentZone: 0
+  currentLevel: 0
+  currentPetals: 0
+  levelZonePanels: []
+  zoneTextTag: {fileID: 0}
+  petalsTextTag: {fileID: 0}
+  fadeOutPanel: {fileID: 0}
 --- !u!1001 &1522253019819914645
 PrefabInstance:
   m_ObjectHideFlags: 0

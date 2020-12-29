@@ -3474,6 +3474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backBtn: {fileID: 2085432003}
+  backMapBtn: {fileID: 0}
+  instructionsBtn: {fileID: 0}
   musicSlider: {fileID: 393324742}
   sfxSlider: {fileID: 265600324}
   volMusicTextValue: {fileID: 1034925237}
@@ -9735,6 +9737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAnimName: FadeOut
+  fadeInAnimName: FadeIn
 --- !u!1 &1400728959
 GameObject:
   m_ObjectHideFlags: 0
@@ -10393,7 +10396,6 @@ MonoBehaviour:
   btnPlay: {fileID: 990263671}
   btnConfig: {fileID: 1464220798}
   btnCredits: {fileID: 208518216}
-  configMenuManager: {fileID: 822806643}
 --- !u!4 &1690293715
 Transform:
   m_ObjectHideFlags: 0
@@ -11431,6 +11433,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93aa665a7c728304f9a905cb77072ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2087680685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087680686}
+  - component: {fileID: 2087680687}
+  m_Layer: 0
+  m_Name: MenuDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087680686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087680685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2133807886}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087680687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087680685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60ab7097bb87dd45aeeb80a8c8f202f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  configMenu: {fileID: 822806643}
+  finalPanel: {fileID: 0}
+  baseCanvas: {fileID: 0}
+  victoryCanvas: {fileID: 0}
+  cardCanvas: {fileID: 0}
+  tutoPanelPrefab: {fileID: 0}
 --- !u!1 &2108021959
 GameObject:
   m_ObjectHideFlags: 0
@@ -11691,6 +11742,7 @@ Transform:
   - {fileID: 6311116}
   - {fileID: 1690293715}
   - {fileID: 601178168}
+  - {fileID: 2087680686}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

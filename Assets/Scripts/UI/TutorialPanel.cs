@@ -9,13 +9,20 @@ public class TutorialPanel : MonoBehaviour
     public Image tutorialImage; 
 
     private void Awake() {
-        this.gameObject.SetActive(true);
+        Activate(true);
     }
 
     private void Start() {
+        Init(tutorialData);
+    }
+    public void Activate(bool activate) {
+        this.gameObject.SetActive(activate);
+    }
+    public void Init(TutorialDataWrapper tutorialData) {
         title.text = tutorialData.Data.title;
         body.text = tutorialData.Data.body;
         tutorialImage.sprite = tutorialData.Data.sprite;
+        this.tutorialData = tutorialData;
     }
 
     private void Update() {

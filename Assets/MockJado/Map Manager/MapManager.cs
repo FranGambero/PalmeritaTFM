@@ -9,9 +9,6 @@ namespace ElJardin {
         #region Variables
         [Header("Injection")] public LevelEditor levelEditor;
 
-        public GameObject victoryCanvas;
-        public GameObject cardCanvas;
-        public GameObject confety;
         /**
          * 
          */
@@ -25,7 +22,7 @@ namespace ElJardin {
          * 
          */
         [Header("Tile Materials")]
-        public Material groundMat; 
+        public Material groundMat;
         public Material groundMatOscurecio;
         public Material peligro1, peligro2, peligro3;
 
@@ -65,13 +62,10 @@ namespace ElJardin {
         }
 
         private void Start() {
-            if(!levelEditor)
-            {
+            if (!levelEditor) {
                 Debug.LogError("Inicializando nuevo mapa");
                 InitializeMap();
-            }
-            else
-            {
+            } else {
                 Debug.Log("Inicializando mapa a partir de levelEditor");
                 InitializeMapFromEditor();
             }
@@ -92,29 +86,23 @@ namespace ElJardin {
             CreateStartEndPoints(riverStartPos, riverEndPos);
         }
 
-        void InitializeMapFromEditor()
-        {
+        void InitializeMapFromEditor() {
             var startPos = new List<Vector2>();
             var endPos = new List<Vector2>();
 
-            for(var i = 0; i < levelEditor.rows; i++)
-            {
-                for(var j = 0; j < levelEditor.columns; j++)
-                {
-                    var nodeDataModel = levelEditor.nodeMatrixFlattened[FlattenMatrix(i,j,levelEditor.columns)].GetComponent<NodeDataModel>();
+            for (var i = 0; i < levelEditor.rows; i++) {
+                for (var j = 0; j < levelEditor.columns; j++) {
+                    var nodeDataModel = levelEditor.nodeMatrixFlattened[FlattenMatrix(i, j, levelEditor.columns)].GetComponent<NodeDataModel>();
                     mapMatrix[i, j] = nodeDataModel.gameObject;
                     mapMatrix[i, j].GetComponent<Node>().ChangeNodeType(NodeType.Ground, (i + j) % 2 == 0 ? groundMat : groundMatOscurecio);
                     mapMatrix[i, j].GetComponent<Node>().SetPosition(new Vector2(nodeDataModel.Row, nodeDataModel.Column));
 
-                    if(nodeDataModel.obstacle != NodeDataModel.ObstacleType.None)
+                    if (nodeDataModel.obstacle != NodeDataModel.ObstacleType.None)
                         mapMatrix[i, j].GetComponent<Node>().obstacle = nodeDataModel.obstacleGameObject;
-                    
-                    if(nodeDataModel.isRiverStart)
-                    {
+
+                    if (nodeDataModel.isRiverStart) {
                         startPos.Add(new Vector2(nodeDataModel.Row, nodeDataModel.Column));
-                    }
-                    else if(nodeDataModel.isRiverEnd)
-                    {
+                    } else if (nodeDataModel.isRiverEnd) {
                         endPos.Add(new Vector2(nodeDataModel.Row, nodeDataModel.Column));
                     }
                 }
@@ -123,14 +111,12 @@ namespace ElJardin {
             TryCreateStartEndPoints(startPos, endPos);
         }
 
-        int FlattenMatrix(int rowIndex, int columnIndex, int totalColumns)
-        {
+        int FlattenMatrix(int rowIndex, int columnIndex, int totalColumns) {
             return rowIndex + (columnIndex * totalColumns);
         }
 
-        void TryCreateStartEndPoints(List<Vector2> listStarting, List<Vector2> listEnding)
-        {
-            if(listStarting.Count() == 1 && listEnding.Count == 1)
+        void TryCreateStartEndPoints(List<Vector2> listStarting, List<Vector2> listEnding) {
+            if (listStarting.Count() == 1 && listEnding.Count == 1)
                 CreateStartEndPoints(listStarting[0], listEnding[0]);
             else
                 Debug.LogError($"Start/End points Error || Make sure there is just one of each");
@@ -142,9 +128,12 @@ namespace ElJardin {
                 mapMatrix[(int)startPos.x, (int)startPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Water, BuildManager.Instance.pond_m);
                 startingNode = mapMatrix[(int)startPos.x, (int)startPos.y].GetComponent<Node>();
                 startingNode.Water(true);
+                startingNode.MakeStatic();
                 startingNode.SetColor(Color.blue);
                 mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
                 endingNode = mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>();
+                endingNode.ChangeNodeType(NodeType.Water);
+                endingNode.MakeStatic();
                 endingNode.SetColor(Color.red);
             } else {
                 Debug.LogError("Start and end positions cant be the same");
@@ -174,19 +163,21 @@ namespace ElJardin {
         public void CheckFullRiver() {
             winCheckedNodes = new List<Node>();
             CheckWin(startingNode);
-            if (levelEnded)
-            {
-                // AkSoundEngine.PostEvent("Amb_Base_Out", gameObject);
-                AudioManager.Instance.unSetAmbientMusic();
-                CheckLogros();
-                // Quizá hay que desactivar antes los otros canvas (cartas y mazo)???
-                //victoryCanvas.SetActive(true);
-                //confety.SetActive(true);
+            if (levelEnded) {
+                StartCoroutine(WaitWaterToEnd());
             }
+        }
+        /// <summary>
+        /// Waits til the ending node has water to end the level
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator WaitWaterToEnd() {
+            yield return new WaitUntil(() => endingNode.water.hasWater);
+            GameManager.Instance.EndGame();
         }
 
         [ContextMenu("FUERZA LOGROS CARLA")]
-        private void CheckLogros() {
+        public void CheckLogros() {
             //El logro de victoria lo seteamos a true si o si al ganar
             int currentZone = MapamundiManager.Instance.currentZone;
             int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
@@ -201,9 +192,6 @@ namespace ElJardin {
             levelData.isCompleted = true;
 
             MapamundiManager.Instance.SaveLevel(levelData);
-            cardCanvas.SetActive(false);
-            victoryCanvas.SetActive(true);
-            ActivateLogrosPanel(currentLevel);
 
         }
 
@@ -217,11 +205,7 @@ namespace ElJardin {
             return false;
         }
 
-        private void ActivateLogrosPanel(int currentLevel) {
-            LogrosPanel logrosPanel = FindObjectOfType<LogrosPanel>();
-            // Quiza puede ser directamente el activar los ticks pasando el leveldata
-            logrosPanel.GetLogritos(currentLevel);
-        }
+
 
         #endregion
 
