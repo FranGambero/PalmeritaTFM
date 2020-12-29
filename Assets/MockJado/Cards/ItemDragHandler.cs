@@ -1,7 +1,6 @@
 ﻿using DG.Tweening;
 using ElJardin;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -54,6 +53,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
 
 
     public void OnDrag(PointerEventData eventData) {
+        Debug.Log("Starting Drag");
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             if (!starting) {
                 starting = true;
@@ -67,6 +67,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
                     cardData.amount, cardData.direction);
             } else if (cardData.cardType == CardData.CardType.Buff) {
                 // Lo que deba preparar esta carta
+                
+                // Esto no está bien, el if de arriba tampoco, debería controlarlo la carta, no pasarle valores
+                // rancios a el buildmanager, que como es una instancia es terreno pantanoso.
+                // Esto solo debería llamar al Hover() de la carta y que ella se encargue.
             }
         }
     }
@@ -85,6 +89,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
 
     }
     private void DoTheAction() {
+        Debug.Log("Doing the action");
         if (GameManager.Instance.Sepalo.IsMyTurn && starting) {
             if (buildNewChannel() && !GameManager.Instance.Sepalo.isMoving) {
                 transform.position = originalPosition;
@@ -97,7 +102,6 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             }
             BuildManager.Instance.UnHoverNodesInList();
         }
-
     }
 
     private IEnumerator Wait() {

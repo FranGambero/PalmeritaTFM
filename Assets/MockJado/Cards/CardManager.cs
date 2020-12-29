@@ -44,9 +44,9 @@ namespace ElJardin {
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);
                 handList[index].CardData = cardQueue.Dequeue();
-                handList[index].loadCardData();
+                handList[index].LoadCardData();
                 moveCardToDeck(handList[index]);
-                StartCoroutine(handList[index].changeCardTransform(index));
+                StartCoroutine(handList[index].ChangeCardTransform(index));
                 index++;
             }
 
@@ -57,11 +57,11 @@ namespace ElJardin {
             Card tmpCard = handList.Find(c => c.transformIndex == currentIndex);
             handList.ForEach(c => {
                 if (c.transformIndex > currentIndex) {
-                    StartCoroutine(c.changeCardTransform(c.transformIndex - 1));
+                    StartCoroutine(c.ChangeCardTransform(c.transformIndex - 1));
                 }
             });
             //Lo movemos a ultima posicion
-            StartCoroutine(tmpCard.changeCardTransform(maxHand - 1));
+            StartCoroutine(tmpCard.ChangeCardTransform(maxHand - 1));
         }
 
         public void DrawNextCard() {
@@ -82,7 +82,7 @@ namespace ElJardin {
                 tmpCard.StopAllCoroutines();
 
                 tmpCard.CardData = cardQueue.Dequeue();
-                tmpCard.loadCardData();
+                tmpCard.LoadCardData();
                 moveCardToDeck(tmpCard);
                 //AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
 
