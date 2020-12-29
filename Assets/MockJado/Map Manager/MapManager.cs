@@ -54,6 +54,8 @@ namespace ElJardin {
         [Header("Injection")]
         [HideInInspector]
         public Pathfinding Pathfinding;
+
+        public FlowerManager flowerManager;
         #endregion
 
         private void Awake() {
@@ -197,7 +199,8 @@ namespace ElJardin {
 
         private bool CheckLogroPetalos() {
             // Comprobamos que todas las flores de ese nivel están siendo regafas
-            return false;
+            
+            return flowerManager.CountFlowerStatus();
         }
 
         private bool CheckLogroMovimientos() {
