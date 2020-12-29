@@ -58,15 +58,15 @@ namespace ElJardin {
             node.water.Reset();
             node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
             //Correccion de vecinos
-            UpdateNeighbors(node);
+            UpdateNeighbors(node, false);
         }
 
-        public bool UpdateNeighbors(Node node) {
+        public bool UpdateNeighbors(Node node, bool updateWater = true) {
             bool anyNeighborHasWater = false;
             foreach (Node neighbor in node.neighbors) {
                 if (node != this) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
-                    if (neighbor.water.IsActive() || neighbor.water.isGonnaHaveDaWote) {
+                    if ((neighbor.water.IsActive() || neighbor.water.isGonnaHaveDaWote) && updateWater) {       // Nice
                         node.PrepareWater(neighbor);
                         anyNeighborHasWater = true;
                     }
@@ -224,6 +224,10 @@ namespace ElJardin {
             return ((row >= 0 && row < MapManager.Instance.rows && column >= 0 && column < MapManager.Instance.columns)
                 && (MapManager.Instance.GetNode(row, column).GetNodeType() != NodeType.Ground)
                 && !MapManager.Instance.GetNode(row, column).HasObstacle);
+        }
+
+        public bool CheckNodeInMatrix(int row, int column) {
+            return ((row >= 0 && row < MapManager.Instance.rows && column >= 0 && column < MapManager.Instance.columns));
         }
 
         private void CreateChangeList(int row, int column) {
