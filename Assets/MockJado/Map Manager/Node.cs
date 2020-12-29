@@ -216,6 +216,34 @@ namespace ElJardin {
                 }
             }
         }
+
+        public List<Node> GetListNeighbors() {
+            List<Node> listNeighbors = new List<Node>();
+
+            List<Vector2> positionList = new List<Vector2>();
+            //Sacamos lista de posibles vecinos en cruz (i+1,j // i-1,j // i,j+1 // i,j-1)
+
+            positionList.Add(new Vector2(row + 1, column));
+            positionList.Add(new Vector2(row - 1, column));
+            positionList.Add(new Vector2(row, column + 1));
+            positionList.Add(new Vector2(row, column - 1));
+
+
+            //Comprobamos que los vecinos sean validos
+            foreach (Vector2 pos in positionList) {
+                if (BuildManager.Instance.CheckNodeInMatrix((int)pos.x, (int)pos.y)) {
+                    listNeighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    //this.neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    //foreach (Node neighbor in listNeighbors) {
+                    //    if (!neighbor.neighbors.Contains(this))
+                    //        neighbor.neighbors.Add(this);
+                    //}
+                }
+            }
+
+            return listNeighbors;
+        }
+
         #endregion
 
         #region Pathfinding
