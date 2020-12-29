@@ -156,6 +156,12 @@ namespace ElJardin {
             ));
         }
 
+        public Vector3 GetSurfacePosition() {
+            return new Vector3(this.transform.position.x,
+                this.transform.position.y+.63f,
+                this.transform.position.z);
+        }
+
         /**
          * Si esta en hover (por carta) quita la preview (ahora en negro)
          * Si no, quita el hover de pasitos

@@ -43,12 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22690bd12fa43df498856a5dae83fa25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelEditor: {fileID: 0}
   victoryCanvas: {fileID: 0}
+  cardCanvas: {fileID: 0}
   confety: {fileID: 0}
   rows: 7
   columns: 7
   tileOffset: 1.5
   groundMat: {fileID: 2100000, guid: e2bfa47644be6504d8afbb145e15bc9c, type: 2}
+  groundMatOscurecio: {fileID: 0}
+  peligro1: {fileID: 0}
+  peligro2: {fileID: 0}
+  peligro3: {fileID: 0}
   waterMat: {fileID: 2100000, guid: 0ccfa07d6cab19245bf12b17a0aa6eb7, type: 2}
   grooveMat: {fileID: 2100000, guid: a84d8c4329e0f21479bdc1fd2584161a, type: 2}
   nodePrefab: {fileID: 7819085289489393484, guid: 299fd3d914e9098439703f0426dc069c,
@@ -166,7 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sepalo: {fileID: 0}
-  mycoso: {fileID: 0}
+  configMenu: {fileID: 0}
+  instructMenu: {fileID: 0}
+  _positionHover: {fileID: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
+  draggingCard: 0
 --- !u!1 &1522253018955214809
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +314,6 @@ MonoBehaviour:
   pond_m: {fileID: 815691948198590640, guid: 0a556f92e0a9e69439b12564f3b24be4, type: 3}
   start_m: {fileID: 3112977340068577888, guid: f2685abeb33751c4e8b2db5ff0400314, type: 3}
   amount: 1
-  direction: 1
   Sepalo: {fileID: 0}
 --- !u!1001 &1522253019819914645
 PrefabInstance:
