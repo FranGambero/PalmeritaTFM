@@ -6,24 +6,22 @@ using UnityEngine.SceneManagement;
 namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public SepaloController Sepalo;
-        public ConfigMenuManager configMenu;
         public GameObject instructMenu;
         public GameObject _positionHover;
         public Vector3 tmpRot;
         private Node selectedNode;
         public bool draggingCard;
-        private bool canPlay;
+        private bool gameRunning;
+        private bool onPause = false;
         //public UnityEvent<bool> OnPause => onPause;
         //UnityEvent onPause = new UnityEvent();
 
         public bool CanPlay {
             get {
-                return canPlay;
-            }
-            set {
-                canPlay = value;
+                return gameRunning && !OnPause;
             }
         }
+        public bool OnPause { get => onPause; set => onPause = value; }
 
         public Node SelectedNode { get => selectedNode; set => selectedNode = value; }
         public GameObject PositionHover {
@@ -32,6 +30,8 @@ namespace ElJardin {
             }
             set => _positionHover = value;
         }
+
+
         public void PosPositionHover(Vector3 newPosition) {
             _positionHover.transform.position = newPosition;
             _positionHover.transform.LookAt(new Vector3(Sepalo.transform.position.x, _positionHover.transform.position.y, Sepalo.transform.position.z));
@@ -40,19 +40,25 @@ namespace ElJardin {
             _positionHover.SetActive(false);
             draggingCard = false;
             Sepalo = FindObjectOfType<SepaloController>();
-            configMenu.gameObject.SetActive(false);
+            MenuDirector.Instance.ActivateConfigMenu(false);
         }
 
         private void Start() {
+            StartGame();
             // AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
         }
-
+        public void StartGame() {
+            gameRunning = true;
+        }
+        public void EndGame() {
+            gameRunning = false;
+            AudioManager.Instance.unSetAmbientMusic();
+            MapManager.Instance.CheckLogros();
+            MenuDirector.Instance.ActivateEndMenu(true, PlayerPrefs.GetInt("CurrentLevel"));
+        }
         private void Update() {
             if (Input.GetKeyDown(KeyCode.Escape)) {
-                if (configMenu.gameObject.activeSelf)
-                    configMenu.CloseCongifMenu();
-                else
-                    configMenu.gameObject.SetActive(true);
+                MenuDirector.Instance.ToggleConfigMenu();
             }
 
             if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {

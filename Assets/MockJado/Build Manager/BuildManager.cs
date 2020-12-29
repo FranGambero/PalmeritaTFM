@@ -53,12 +53,14 @@ namespace ElJardin {
             if (node.GetComponent<DryController>()) {
                 node.RemoveDryComponent();
             }
+            if (!node.Indestructible) {
             VFXDirector.Instance.Play("OnDestroyGround", node.GetSurfacePosition());
             node.ChangeNodeType(NodeType.Ground, ground_m);
             node.water.Reset();
             node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
             //Correccion de vecinos
             UpdateNeighbors(node, false);
+            }
         }
 
         public bool UpdateNeighbors(Node node, bool updateWater = true) {
@@ -299,7 +301,7 @@ namespace ElJardin {
 
             }
             if (!neighborWithWater && !(savedNodes.Count == 1 && (
-                savedNodes[0].GetComponent<NodeDataModel>().isRiverStart || 
+                savedNodes[0].GetComponent<NodeDataModel>().isRiverStart ||
                 savedNodes[0].GetComponent<NodeDataModel>().isRiverEnd))) {
 
                 int newIndex = Semaphore.Instance.GetNewIndex();
