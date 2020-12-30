@@ -21,7 +21,7 @@ namespace ElJardin {
         MeshFilter _mf;
         Color baseColor;
 
-        bool hovering, canBuild, hasPreviewOn;
+        bool hovering, canBuild, hasPreviewOn, indestructible;
         public Water water;
 
         public int GCost { get; set; }
@@ -39,6 +39,8 @@ namespace ElJardin {
         #region Accessors
         public bool HasObstacle => obstacle != null;
         public bool IsWalkable => obstacle == null && nodeType != NodeType.Water;
+
+        public bool Indestructible { get => indestructible; set => indestructible = value; }
         #endregion
 
         private void Awake() {
@@ -58,9 +60,10 @@ namespace ElJardin {
             baseColor = _mr.material.color;
         }
 
-        public void ChangeNodeType(NodeType newType, Material newMaterial) {
+        public void ChangeNodeType(NodeType newType, Material newMaterial = null) {
             nodeType = newType;
-            _mr.material = newMaterial;
+            if (newMaterial)
+                _mr.material = newMaterial;
         }
 
         public void ChangeNodeType(NodeType newType, Mesh newMesh) {
@@ -118,7 +121,7 @@ namespace ElJardin {
         public void ShowPreview(bool show) {
             if (show) {
                 hasPreviewOn = show;
-                _mr.material.color = new Color32(0xF3,0xE3,0x26,0xff);
+                _mr.material.color = new Color32(0xF3, 0xE3, 0x26, 0xff);
                 VFXDirector.Instance.Play("OnPreview", this.transform);
             } else if (hovering) {
                 HoverOn(directionInHover);
@@ -132,14 +135,16 @@ namespace ElJardin {
          * Si no carta y se puede construir, hover de pasitos
          */
         private void OnMouseEnter() {
-            BuildManager.Instance.ShowNodesPreview(this.directionInHover);
-            if (hovering) {
-                GameManager.Instance.SelectedNode = this;
+            if (GameManager.Instance.CanPlay) {
+                BuildManager.Instance.ShowNodesPreview(this.directionInHover);
+                if (hovering) {
+                    GameManager.Instance.SelectedNode = this;
 
-                //TODO: ShowCantBuildPreview
-            } else if (!GameManager.Instance.draggingCard && this.CanBuild && this.IsWalkable) {
-                if (GameManager.Instance.Sepalo.CurrentNode != this)
-                    PositionMoveHover();
+                    //TODO: ShowCantBuildPreview
+                } else if (!GameManager.Instance.draggingCard && this.CanBuild && this.IsWalkable) {
+                    if (GameManager.Instance.Sepalo.CurrentNode != this)
+                        PositionMoveHover();
+                }
             }
         }
 
@@ -158,7 +163,7 @@ namespace ElJardin {
 
         public Vector3 GetSurfacePosition() {
             return new Vector3(this.transform.position.x,
-                this.transform.position.y+.63f,
+                this.transform.position.y + .63f,
                 this.transform.position.z);
         }
 
@@ -179,10 +184,16 @@ namespace ElJardin {
 
         #region Builder
         private void OnMouseUp() {
-            GameManager.Instance.Sepalo.DoTheMove(this);
-            //TODO: preguntar, esto no hace nada
-            if (EventSystem.current.IsPointerOverGameObject())
-                return;
+            if (GameManager.Instance.CanPlay) {
+                GameManager.Instance.Sepalo.DoTheMove(this);
+                //TODO: preguntar, esto no hace nada
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
+            }
+        }
+        public void MakeStatic() {
+            this.Indestructible = true;
+            this.canBuild = false;
         }
         #endregion
 
@@ -216,6 +227,34 @@ namespace ElJardin {
                 }
             }
         }
+
+        public List<Node> GetListNeighbors() {
+            List<Node> listNeighbors = new List<Node>();
+
+            List<Vector2> positionList = new List<Vector2>();
+            //Sacamos lista de posibles vecinos en cruz (i+1,j // i-1,j // i,j+1 // i,j-1)
+
+            positionList.Add(new Vector2(row + 1, column));
+            positionList.Add(new Vector2(row - 1, column));
+            positionList.Add(new Vector2(row, column + 1));
+            positionList.Add(new Vector2(row, column - 1));
+
+
+            //Comprobamos que los vecinos sean validos
+            foreach (Vector2 pos in positionList) {
+                if (BuildManager.Instance.CheckNodeInMatrix((int)pos.x, (int)pos.y)) {
+                    listNeighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    //this.neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    //foreach (Node neighbor in listNeighbors) {
+                    //    if (!neighbor.neighbors.Contains(this))
+                    //        neighbor.neighbors.Add(this);
+                    //}
+                }
+            }
+
+            return listNeighbors;
+        }
+
         #endregion
 
         #region Pathfinding
@@ -265,7 +304,7 @@ namespace ElJardin {
         }
 
         public void AdminDryScript(bool add, int newNodeIndex = -1) {
-            if (add) {
+            if (add && !Indestructible) {
                 if (!GetComponent<DryController>() && newNodeIndex != -1) {
                     DryController newDryController = gameObject.AddComponent<DryController>();
                     newDryController.initDry(newNodeIndex);
