@@ -187,8 +187,10 @@ namespace ElJardin {
 
             // Logritos
             levelData.logros[0].done = true;   // El logro completado basico siempre se cumple por terminar el nivel
-            levelData.logros[1].done = CheckLogroPetalos();
-            levelData.logros[2].done = CheckLogroMovimientos();
+            if(levelData.logros.Length >= 2)
+                levelData.logros[1].done = CheckLogroPetalos();
+            if (levelData.logros.Length >= 3)
+                levelData.logros[2].done = CheckLogroMovimientos();
 
             // Ponemos a completado si tiene un logro al menos
             levelData.isCompleted = true;
