@@ -14,6 +14,7 @@ public class Semaphore : Singleton<Semaphore> {
         turnBasedElementList = new List<ITurn>();
 
         turnBasedElementList.AddRange(FindObjectsOfType<MonoBehaviour>().OfType<ITurn>());
+        turnBasedElementList.RemoveAll(t => !t.turneable);
 
         turnBasedElementList.Sort((E1, E2) => E1.turnIndex.CompareTo(E2.turnIndex));
 
@@ -32,7 +33,7 @@ public class Semaphore : Singleton<Semaphore> {
     }
 
     public void onTurnEnd(int index) {
-        Debug.Log("El turno actual " + currentTurn + " y el index " + index);
+
         if (currentTurn == index) {
             int currentIndex;
 

@@ -11,7 +11,7 @@ namespace ElJardin.Characters {
         [Header("Starting Variables")] public Vector2 StartingNode;
 
         [Header("Injection")] public MovementController Movement;
-        [Header("Turn")] [SerializeField] int myTurnIndex;
+        [Header("Turn")] [SerializeField] int myTurnIndex; bool _turneable = true;
         public Coroutine movementCoroutine;
         public LayerMask groundLayer;
         [HideInInspector]
@@ -30,6 +30,8 @@ namespace ElJardin.Characters {
         }
 
         public bool IsMyTurn => turnIndex == Semaphore.Instance.currentTurn;
+
+        public bool turneable { get => _turneable; set => _turneable = value; }
         #endregion
 
 
@@ -48,7 +50,7 @@ namespace ElJardin.Characters {
                 movementCoroutine = StartCoroutine(Move(targetNode));
             }
         }
-       
+
         internal void CheckGrownd() {
             RaycastHit groundHits;
             //TODO Que el suelo tenga su porpia layer y que aqui se coja sola esa layer y no todas
@@ -64,7 +66,7 @@ namespace ElJardin.Characters {
             pac.StartWalkAnimation(targetNode);
             Movement.StopAllCoroutines();
             yield return StartCoroutine(Movement.Move(CurrentNode, targetNode, this));
-          //  CurrentNode = targetNode;
+            //  CurrentNode = targetNode;
             isMoving = false;
             pac.ActivateFloatingPS(true);
             onEndWalk?.Invoke();

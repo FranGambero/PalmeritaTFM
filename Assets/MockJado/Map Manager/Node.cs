@@ -23,11 +23,27 @@ namespace ElJardin {
 
         bool hovering, canBuild, hasPreviewOn, indestructible;
         public Water water;
+        private DryController _dryController;
 
         public int GCost { get; set; }
         public int HCost { get; set; }
         public int FCost { get; set; }
         public Node CameFromNode { get; set; }
+        public DryController dryController {
+            get {
+                if (!_dryController) {
+                    _dryController = GetComponent<DryController>();
+                }
+                return _dryController;
+            }
+        }
+
+        public bool IsStatic {
+            get {
+                return this.Indestructible == true &&
+this.canBuild == false;
+            }
+        }
 
         public bool CanBuild => canBuild;
 
@@ -110,7 +126,7 @@ namespace ElJardin {
             hovering = false;
             directionInHover = DirectionType.Undefined;
             hasPreviewOn = false;
-            if (!GetComponent<DryController>()) {
+            if (!dryController.active) {
                 _mr.material.color = baseColor;
             }
         }
@@ -206,7 +222,7 @@ namespace ElJardin {
             this.neighbors = new List<Node>();
 
             List<Vector2> positionList = new List<Vector2>();
-            List<Node> neighbors = new List<Node>();
+            List<Node> tmpNeighbors = new List<Node>();
             //Sacamos lista de posibles vecinos en cruz (i+1,j // i-1,j // i,j+1 // i,j-1)
 
             positionList.Add(new Vector2(row + 1, column));
@@ -218,14 +234,14 @@ namespace ElJardin {
             //Comprobamos que los vecinos sean validos
             foreach (Vector2 pos in positionList) {
                 if (BuildManager.Instance.CheckValidNode((int)pos.x, (int)pos.y)) {
-                    neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
-                    this.neighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
-                    foreach (Node neighbor in neighbors) {
+                    tmpNeighbors.Add(MapManager.Instance.GetNode((int)pos.x, (int)pos.y));
+                    foreach (Node neighbor in tmpNeighbors) {
                         if (!neighbor.neighbors.Contains(this))
                             neighbor.neighbors.Add(this);
                     }
                 }
             }
+            this.neighbors.AddRange(tmpNeighbors);
         }
 
         public List<Node> GetListNeighbors() {
@@ -302,30 +318,33 @@ namespace ElJardin {
         public void Dry() {
             water.Grow(false, () => neighbors.ForEach(n => n.Dry()), null);
         }
-
-        public void AdminDryScript(bool add, int newNodeIndex = -1) {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="add">add or remove to the semaphore</param>
+        /// <param name="newNodeIndex">new index in the semaphore</param>
+        public void AdminDryScript(bool add, int newNodeIndex = -1, bool resetGround = false) {
             if (add && !Indestructible) {
-                if (!GetComponent<DryController>() && newNodeIndex != -1) {
-                    DryController newDryController = gameObject.AddComponent<DryController>();
-                    newDryController.initDry(newNodeIndex);
+                if (!dryController.active && newNodeIndex != -1) {
+                    dryController.initDry(newNodeIndex);
                 }
             } else {
-                Debug.LogError("Preparo a quitar bien");
-                if (GetComponent<DryController>()) {
-                    Debug.LogWarning("Me lo quito en plan bien");
-                    //Semaphore.Instance.RemoveTurn(GetComponent<DryController>().turnIndex);
-                    RemoveDryComponent();
+                Debug.LogError("Preparo a quitar bien: " + gameObject.name);
+                if (dryController.active) {
+                    Debug.LogWarning("Me lo quito en plan bien: " + gameObject.name);
+                    StopDryComponent(resetGround);
                 }
             }
         }
 
-        public void RemoveDryComponent() {
-            if (GetComponent<DryController>()) {
-                Debug.LogWarning("Voy a quitarme el dry");
-                Semaphore.Instance.RemoveTurn(GetComponent<DryController>());
-                _mr.material = (row + column) % 2 == 0 ? MapManager.Instance.groundMat : MapManager.Instance.groundMatOscurecio;
-                Destroy(GetComponent<DryController>());
+        public void StopDryComponent(bool resetGround) {
+            if (dryController.active) {
+                dryController.StopDry(resetGround);
             }
+        }
+
+        public void ResetMat() {
+            _mr.material = (row + column) % 2 == 0 ? MapManager.Instance.groundMat : MapManager.Instance.groundMatOscurecio;
         }
         #endregion
 

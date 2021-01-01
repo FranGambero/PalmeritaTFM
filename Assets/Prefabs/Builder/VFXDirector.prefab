@@ -69,3 +69,8 @@ MonoBehaviour:
     PSPrefab: {fileID: 6735583893957300641, guid: bda9e32b992d56d4ea20fc97bc177ed1,
       type: 3}
     pool: []
+  - name: OnDryGround
+    time: 1.5
+    PSPrefab: {fileID: 3659383951894138905, guid: ae9cd623417707c45a721f45bdde13b4,
+      type: 3}
+    pool: []
