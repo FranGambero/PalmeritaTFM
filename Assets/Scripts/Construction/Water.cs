@@ -40,7 +40,7 @@ public class Water : MonoBehaviour {
                 } else {
                     StartCoroutine(CorGrow(grow, middleCallback, waterStatic));
                 }
-                thisNode.RemoveDryComponent();
+                thisNode.dryController.StopDry(false);
             } else {
                 StartCoroutine(Dry(grow, middleCallback));
             }
@@ -118,9 +118,9 @@ public class Water : MonoBehaviour {
                     waterStatic.SetActive(false);
                     waterStatic.transform.position = new Vector3(waterStatic.transform.position.x, valueY, waterStatic.transform.position.z);
                     int dryIndex = Semaphore.Instance.GetNewIndex();
-                    if (initNode && initNode.GetComponent<DryController>())
-                        dryIndex = initNode.GetComponent<DryController>().turnIndex;
-                    thisNode.AdminDryScript(true, dryIndex);
+                    if (initNode && initNode.dryController.active)//Si ya se está secando uso su indice
+                        dryIndex = initNode.dryController.turnIndex;
+                   // thisNode.AdminDryScript(true, dryIndex);
                     growing = false;
                     hasWater = false;
                     if (thisNode.GetComponent<NodeDataModel>().isRiverStart) {
@@ -138,6 +138,6 @@ public class Water : MonoBehaviour {
         }
     }
     public bool IsActive() {
-        return waterStatic.activeSelf;
+        return waterStatic.activeSelf || isGonnaHaveDaWote;
     }
 }

@@ -59,6 +59,7 @@ MonoBehaviour:
   riverStartPos: {x: 0, y: 0}
   riverEndPos: {x: 6, y: 3}
   playerStartPos: {x: 1, y: 3}
+  flowerManager: {fileID: 0}
 --- !u!1 &1522253018091708996
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +442,43 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1522253019494429778}
     m_Modifications:
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[5].name
+      value: OnDryGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[5].time
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[5].PSPrefab
+      value: 
+      objectReference: {fileID: 3659383951894138905, guid: ae9cd623417707c45a721f45bdde13b4,
+        type: 3}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[6].name
+      value: OnStopDryGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[6].time
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[6].PSPrefab
+      value: 
+      objectReference: {fileID: 3659383951894138905, guid: b62c13f1b9196ce4da5c41f609f53f04,
+        type: 3}
     - target: {fileID: 7004470426021041923, guid: c5895c257ac9c5c43b17b726f3d98263,
         type: 3}
       propertyPath: m_LocalPosition.x

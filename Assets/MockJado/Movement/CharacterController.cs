@@ -19,8 +19,11 @@ namespace ElJardin {
         public Sequence jumpSeq;
 
         public int myTurnIndex;
+        public bool _turneable=true;
         public int turnIndex { get => myTurnIndex; set => myTurnIndex = value; }
         public bool isMyTurn { get { return turnIndex == Semaphore.Instance.currentTurn; } }
+
+        public bool turneable { get => _turneable; set => _turneable = value; }
 
         private void Awake() {
             myRb = GetComponent<Rigidbody>();

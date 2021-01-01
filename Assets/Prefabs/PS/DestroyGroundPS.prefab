@@ -225,20 +225,20 @@ ParticleSystem:
       maxColor: {r: 0.6603774, g: 0.24580783, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.4056604, g: 0, b: 0, a: 1}
-        key1: {r: 0.6698113, g: 0.37970838, b: 0, a: 1}
-        key2: {r: 0.48585138, g: 0.754717, b: 0, a: 0}
-        key3: {r: 0.7575708, g: 0.7924528, b: 0, a: 0}
-        key4: {r: 1, g: 1, b: 1, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 1, g: 0.3773861, b: 0.33490568, a: 1}
+        key1: {r: 0.49077594, g: 0.12235084, b: 0, a: 1}
+        key2: {r: 0.6698113, g: 0.37970838, b: 0, a: 0}
+        key3: {r: 0.48585138, g: 0.754717, b: 0, a: 0}
+        key4: {r: 0.7575708, g: 0.7924528, b: 0, a: 0}
+        key5: {r: 0.7575708, g: 0.7924528, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 17246
-        ctime2: 47522
-        ctime3: 65535
+        ctime0: 192
+        ctime1: 17821
+        ctime2: 31235
+        ctime3: 47522
         ctime4: 65535
-        ctime5: 0
+        ctime5: 65535
         ctime6: 0
         ctime7: 0
         atime0: 0
@@ -250,7 +250,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 4
+        m_NumColorKeys: 5
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -442,7 +442,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -495,7 +495,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -548,9 +548,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: 6.283185
+      minScalar: -6.283185
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1191,10 +1191,10 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -1247,7 +1247,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -1300,9 +1300,9 @@ ParticleSystem:
         m_RotationOrder: 4
     curve:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0.7853982
-      minScalar: 0.7853982
+      minScalar: -0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1425,8 +1425,8 @@ ParticleSystem:
     fps: 30
     frameOverTime:
       serializedVersion: 2
-      minMaxState: 1
-      scalar: 0.9999
+      minMaxState: 0
+      scalar: 0
       minScalar: 0.9999
       maxCurve:
         serializedVersion: 2
@@ -1478,8 +1478,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startFrame:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 0.9999
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1534,11 +1534,25 @@ ParticleSystem:
     tilesY: 1
     animationType: 0
     rowIndex: 0
-    cycles: 1
+    cycles: 0.0001
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 1854969693486919432, guid: 05200f95c632f7945b8f2e956281617c,
+    - sprite: {fileID: -7699328018653931357, guid: ea07f2370d785014e9cf122642979bb9,
+        type: 3}
+    - sprite: {fileID: -186343322299716006, guid: ea07f2370d785014e9cf122642979bb9,
+        type: 3}
+    - sprite: {fileID: -6285070063975550627, guid: ea07f2370d785014e9cf122642979bb9,
+        type: 3}
+    - sprite: {fileID: 3166776664542397520, guid: ea07f2370d785014e9cf122642979bb9,
+        type: 3}
+    - sprite: {fileID: 2220281700739884154, guid: ea07f2370d785014e9cf122642979bb9,
+        type: 3}
+    - sprite: {fileID: -1955746717543178443, guid: ea07f2370d785014e9cf122642979bb9,
+        type: 3}
+    - sprite: {fileID: 3847788528400304303, guid: ea07f2370d785014e9cf122642979bb9,
+        type: 3}
+    - sprite: {fileID: -8851187839486611718, guid: ea07f2370d785014e9cf122642979bb9,
         type: 3}
     flipU: 0
     flipV: 0

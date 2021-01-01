@@ -50,53 +50,90 @@ namespace ElJardin {
 
         public void BuildGround(Node node) {
             //Cambio nodo a tierra
-            if (node.GetComponent<DryController>()) {
-                node.RemoveDryComponent();
+            if (node.dryController.active) {
+                node.StopDryComponent(true);
             }
             if (!node.Indestructible) {
-            VFXDirector.Instance.Play("OnDestroyGround", node.GetSurfacePosition());
-            node.ChangeNodeType(NodeType.Ground, ground_m);
-            node.water.Reset();
-            node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
-            //Correccion de vecinos
-            UpdateNeighbors(node, false);
+                VFXDirector.Instance.Play("OnDestroyGround", node.GetSurfacePosition());
+                node.ChangeNodeType(NodeType.Ground, ground_m);
+                node.water.Reset();
+                node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
+                                    //Correccion de vecinos
+                UpdateNeighbors(node, false);
             }
+        }
+        public bool CheckNeighborsWater(Node node) {
+            return node.neighbors.Find(n => n.water.IsActive());
+        }
+        List<Node> winCheckedNodes = new List<Node>();
+
+        private bool _CheckWater(Node node) {
+            bool hasWater = false;
+            winCheckedNodes.Add(node);
+            if (node.water.IsActive()) {
+                hasWater = true;
+            } else {
+                if (node.neighbors.Count > 0) {
+                    foreach (Node neighbor in node.neighbors) {
+                        if (!winCheckedNodes.Contains(neighbor))
+                            hasWater = _CheckWater(neighbor);
+                    }
+                }
+            }
+
+            return hasWater;
+        }
+        public bool CheckWater(Node node) {
+            winCheckedNodes = new List<Node>();
+            return _CheckWater(node);
+        }
+        private void HidrateAllPath(Node node) {
+            winCheckedNodes.Add(node);
+            foreach (Node item in node.neighbors) {
+                if (!winCheckedNodes.Contains(item)) {
+                    HidrateAllPath(item);
+                }
+            }
+            node.AdminDryScript(false);
+        }
+        public bool CheckWaterAndActue(Node node) {
+            bool hasWater = false;
+             hasWater = CheckWater(node);
+            if (hasWater) {
+                winCheckedNodes = new List<Node>();
+                //winCheckedNodes.ForEach(n=>n.AdminDryScript(false));
+                HidrateAllPath(node);
+            }
+            return hasWater;
         }
 
         public bool UpdateNeighbors(Node node, bool updateWater = true) {
             bool anyNeighborHasWater = false;
             foreach (Node neighbor in node.neighbors) {
-                if (node != this) {
+                if (node != neighbor) {
                     neighbor.ChangeNodeType(NodeType.Water, BuildManager.Instance.CalculateMeshToBuild(neighbor));
-                    if ((neighbor.water.IsActive() || neighbor.water.isGonnaHaveDaWote) && updateWater) {       // Nice
+                    if (neighbor.water.IsActive() && updateWater) {
                         node.PrepareWater(neighbor);
                         anyNeighborHasWater = true;
                     }
                     RotateMesh(neighbor);
                 }
             }
-
             return anyNeighborHasWater;
         }
 
         private void RotateMesh(Node node) {
-            Debug.Log("ROTATING MESH");
 
             switch (node.neighbors.Count) {
                 case 1:
-                    Debug.Log("Just one neigh");
                     Node neighbor = node.neighbors[0];
                     if (node.GetPosition().x > neighbor.GetPosition().x) {
-                        Debug.Log("conecto abajo");
                         node.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
                     } else if (node.GetPosition().y > neighbor.GetPosition().y) {
-                        Debug.Log("conecto izquierda");
                         node.gameObject.transform.rotation = Quaternion.Euler(0, 270, 0);
                     } else if (node.GetPosition().y < neighbor.GetPosition().y) {
-                        Debug.Log("conecto derecha");
                         node.gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
                     } else {
-                        Debug.Log("Conceto default");
                         node.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                     }
                     break;
@@ -139,7 +176,6 @@ namespace ElJardin {
                     break;
 
                 case 3:
-                    Debug.Log("TRIPLETE");
 
                     node.neighbors.Sort((n1, n2) => n1.GetPosition().x.CompareTo(n2.GetPosition().x));
                     Node neighbor0 = node.neighbors[0];
@@ -272,7 +308,6 @@ namespace ElJardin {
                 if (isValid) {
                     savedNodes = new List<Node>(nodesToBuild);
                     // Vamos a llamar al movimiento del personaje con el nodo una vez validado
-                    Debug.Log("Me llaman con lista " + nodesToBuild);
                     buildCells();
                     //StartCoroutine(Sepalo.Move(nodesToBuild[0]));
                     //characterController.MoveToPosition(nodesToBuild[0], nodesToBuild[nodesToBuild.Count - 1]);
@@ -300,10 +335,7 @@ namespace ElJardin {
                 }
 
             }
-            if (!neighborWithWater && !(savedNodes.Count == 1 && (
-                savedNodes[0].GetComponent<NodeDataModel>().isRiverStart ||
-                savedNodes[0].GetComponent<NodeDataModel>().isRiverEnd))) {
-
+            if (!neighborWithWater && !(savedNodes.Count == 1 && savedNodes[0].IsStatic) && !CheckWater(savedNodes[0])) {
                 int newIndex = Semaphore.Instance.GetNewIndex();
                 Debug.Log("Er new index " + newIndex);
                 // Fran dice: Fran aqui falla
@@ -312,6 +344,8 @@ namespace ElJardin {
                 Debug.LogError("Quito dry");
                 savedNodes.ForEach(node => node.water.isGonnaHaveDaWote = true);
                 savedNodes.ForEach(node => node.AdminDryScript(false));
+               // CheckWater(savedNodes[0]);
+                CheckWaterAndActue(savedNodes[0]);
             }
             MapManager.Instance.CheckFullRiver();
 
@@ -447,7 +481,6 @@ namespace ElJardin {
         private List<Node> GetNodeListByDirection(DirectionType direction) {
             List<Node> nodeList = null;
             if (dictionaryNodesAround != null) {
-                Debug.Log("N Keys: " + dictionaryNodesAround.Keys);
                 if (dictionaryNodesAround.ContainsKey(direction))
                     nodeList = dictionaryNodesAround[direction];
             }

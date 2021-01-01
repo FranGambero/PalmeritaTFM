@@ -17,8 +17,9 @@ public class Bongormiga : MonoBehaviour, ITurn {
     public Animator myAnimator;
 
     int actionTurnIndex;
-
+    public bool _turneable = true;
     public int turnIndex { get => myTurnIndex; set => myTurnIndex = value; }
+    public bool turneable { get => _turneable; set => _turneable = value; }
 
     private void Awake() {
         myAnimator = GetComponentInChildren<Animator>();
