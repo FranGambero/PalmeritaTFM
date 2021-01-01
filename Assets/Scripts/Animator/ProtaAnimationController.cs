@@ -46,11 +46,9 @@ namespace ElJardin {
             while (GameManager.Instance.Sepalo.isMoving) {
                 if (GameManager.Instance.Sepalo.Movement.globalStartingNode == GameManager.Instance.Sepalo.CurrentNode) {
                     anim.SetFloat("speed", Mathf.Clamp(anim.GetFloat("speed") + acelerationSpeed, 0f, 1f));
-                    Debug.Log("Anim+EN NODO INICIAL");
                 }
                 if (GameManager.Instance.Sepalo.Movement.globalTargetNode == GameManager.Instance.Sepalo.CurrentNode) {
                     anim.SetFloat("speed", Mathf.Clamp(anim.GetFloat("speed") - .005f, 0.1f, 1f));
-                    Debug.Log("Anim+EN NODO FINAL");
                 }
                 yield return new WaitForEndOfFrame();
             }
