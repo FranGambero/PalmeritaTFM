@@ -149,7 +149,7 @@ namespace ElJardin {
         #region Victory
         private void CheckWin(Node node) {
             winCheckedNodes.Add(node);
-            Debug.Log("Node: " + node.name + " // Ending node: " + endingNode.name);
+
             if (node == endingNode) {
                 levelEnded = true;
             } else {

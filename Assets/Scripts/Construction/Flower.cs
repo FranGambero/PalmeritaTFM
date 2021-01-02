@@ -8,8 +8,11 @@ namespace ElJardin {
         public List<DoGrow> listaElementosCrecedores;
         public Node nodito;
         public List<Node> listaNoditos;
-
+        public bool _turneable = true;
         public int turnIndex { get { return _turnIndex; } set { _turnIndex = value; } }
+
+        public bool turneable { get => _turneable; set => _turneable = true; }
+
         public int _turnIndex;
 
         private void Awake() {
