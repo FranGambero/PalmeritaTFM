@@ -95,6 +95,7 @@ namespace ElJardin {
                 }
             }
             node.AdminDryScript(false);
+            node.water.isGonnaHaveDaWote = true;
         }
         public bool CheckWaterAndActue(Node node) {
             bool hasWater = false;
