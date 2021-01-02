@@ -34,10 +34,10 @@ namespace ElJardin {
         }
 
         private void Start() {
-            firstDrawCard();
+            //firstDrawCard();
         }
 
-        private void firstDrawCard() {
+        public void firstDrawCard() {
             int index = 0;
             while (index < maxHand) {
                 Card tmpCard;

@@ -28,17 +28,12 @@ public class ConfigMenuManager : MonoBehaviour {
     }
 
     private void OnEnable() {
-        if (GameManager.CheckInstance())
-            GameManager.Instance.OnPause = true;
+       
         AudioManager.Instance.toggleMusicIngameState(false);
         reChargePlayerPrefs();
     }
-    private void OnDisable() {
-        if (GameManager.CheckInstance())
-            GameManager.Instance.OnPause = false;
-    }
+
     public void CloseCongifMenu() {
-        GameManager.Instance.OnPause = false;
 
         AudioManager.Instance.toggleMusicIngameState(true);
         AkSoundEngine.PostEvent("UI_Back_In", gameObject);
