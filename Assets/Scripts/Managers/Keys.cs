@@ -17,6 +17,6 @@ public static class Keys {
     public struct Scenes {
         public static string LOAD_SCENE_INT= "NextLevel";
         public static string LOAD_SCENE_STRING= "NextLevelString";
-
+        public static string LAST_PLAYED_LEVEL = "LastPlayeLevel";
     }
 }

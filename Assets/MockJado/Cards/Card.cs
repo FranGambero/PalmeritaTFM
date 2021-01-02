@@ -19,7 +19,8 @@ namespace ElJardin {
         }
 
         private void Start() {
-            loadCardData();
+            if (CardData != null)
+                loadCardData();
         }
 
         public void loadCardData() {
@@ -27,9 +28,9 @@ namespace ElJardin {
             GetComponent<ItemDragHandler>().LoadCardData(CardData);
             GetComponentInChildren<OutlineController>().Activate(false);
         }
-        
+
         public IEnumerator changeCardTransform(int newIndex, bool wait = true) {
-            float animTime=.5f;
+            float animTime = .5f;
             transformIndex = newIndex;
             float waitTime = wait ? transformIndex * .5f : 0f;
             yield return new WaitForSeconds(waitTime);

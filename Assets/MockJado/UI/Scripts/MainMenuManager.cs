@@ -18,7 +18,8 @@ namespace ElJardin {
             InitButtons();
         }
         private void Start() {
-            AudioManager.Instance.StartSetUILPF(false, 0.1f);
+            if(SessionVariables.Instance.sceneData.lastScene == -1)
+                AudioManager.Instance.StartSetUILPF(false, 0.1f);
         }
         private void Update() {
             if (Input.anyKey && !startMenu.activeSelf) {

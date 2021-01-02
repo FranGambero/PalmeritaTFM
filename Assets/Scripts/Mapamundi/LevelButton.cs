@@ -43,6 +43,7 @@ public class LevelButton : MonoBehaviour {
     }
 
     public void ShowConfirmPanel() {
+        Debug.Log("Hay que quemo");
         mapMoveController.focusMove(levelId);
         StartCoroutine(nameof(MoveCoroutine));
     }
