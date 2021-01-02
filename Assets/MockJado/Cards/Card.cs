@@ -25,6 +25,7 @@ namespace ElJardin {
         public void loadCardData() {
             amountText.text = CardData.amount.ToString();
             GetComponent<ItemDragHandler>().LoadCardData(CardData);
+            GetComponentInChildren<OutlineController>().Activate(false);
         }
         
         public IEnumerator changeCardTransform(int newIndex, bool wait = true) {

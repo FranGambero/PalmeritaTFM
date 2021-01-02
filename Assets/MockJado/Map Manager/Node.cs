@@ -329,9 +329,7 @@ this.canBuild == false;
                     dryController.initDry(newNodeIndex);
                 }
             } else {
-                Debug.LogError("Preparo a quitar bien: " + gameObject.name);
                 if (dryController.active) {
-                    Debug.LogWarning("Me lo quito en plan bien: " + gameObject.name);
                     StopDryComponent(resetGround);
                 }
             }
