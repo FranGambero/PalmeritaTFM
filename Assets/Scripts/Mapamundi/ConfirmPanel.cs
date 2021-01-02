@@ -45,6 +45,8 @@ public class ConfirmPanel : MonoBehaviour {
 
     public void PlayLevel() {
         levelStringToLoad = "Level" + levelIdToLoad;
+        PlayerPrefs.SetInt(Keys.Scenes.LAST_PLAYED_LEVEL, levelIdToLoad);
+        SessionVariables.Instance.levels.lastPlayedLevel = levelIdToLoad;
 
         PlayerPrefs.SetInt("CurrentLevel", levelIdToLoad);
         PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, -1);

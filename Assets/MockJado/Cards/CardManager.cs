@@ -39,7 +39,7 @@ namespace ElJardin {
 
         private void firstDrawCard() {
             int index = 0;
-            while (index < maxHand) {
+            while (index < cardList.Count) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);

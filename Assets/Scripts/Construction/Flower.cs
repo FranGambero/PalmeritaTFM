@@ -48,7 +48,7 @@ namespace ElJardin {
         }
 
         private bool CheckWaterAround() {
-            return listaNoditos.Find(e => e.water.isGonnaHaveDaWote || e.water.hasWater);
+            return listaNoditos.Find(e => e.water.IsActive());
         }
 
         public void onTurnStart(int currentIndex) {

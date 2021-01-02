@@ -630,9 +630,8 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Musica
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/perosnajes
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/SFX
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
