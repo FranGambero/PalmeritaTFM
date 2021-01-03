@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: 3578035777284051920
     second: Hovers_1
+  - first:
+      213: -1038409573446705851
+    second: Hovers_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 372
+        y: 356
         width: 140
         height: 140
       alignment: 0
@@ -148,7 +151,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 198
-        y: 385
+        y: 367
         width: 129
         height: 126
       alignment: 0
@@ -160,6 +163,27 @@ TextureImporter:
       bones: []
       spriteID: 0d397aa059cb7a130800000000000000
       internalID: 3578035777284051920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hovers_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 334
+        width: 183
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d1853aef3d691f0800000000000000
+      internalID: -1038409573446705851
       vertices: []
       indices: 
       edges: []

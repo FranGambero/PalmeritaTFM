@@ -3,44 +3,80 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class MenuDirector : Singleton<MenuDirector>
-{
+public class MenuDirector : Singleton<MenuDirector> {
     public ConfigMenuManager configMenu;
     public GameObject finalPanel;
     public Canvas baseCanvas;
     public Canvas victoryCanvas;
     public Canvas cardCanvas;
 
+    public GameObject BGBlur;
+
     [Header("Prefabs")]
     public TutorialPanel tutoPanelPrefab;
 
-   
+    [Header("Lists")]
+    public List<TutorialDataWrapper> openedTutoPanels;
+
+    public UnityEvent OnAllTutosClosed => onAllTutosClosed;
+    UnityEvent onAllTutosClosed = new UnityEvent();
+
     public void InitNewTutoPanel(TutorialDataWrapper tutorialData) {
         if (tutoPanelPrefab) {
-            Instantiate(tutoPanelPrefab, baseCanvas.transform).Init(tutorialData);
+            if (BGBlur) BGBlur.SetActive(true);
+            if (GameManager.CheckInstance()) GameManager.Instance.OnPause = true;
+            ActivateCardCanvas(false);
+            TutorialPanel tuto = Instantiate(tutoPanelPrefab, baseCanvas.transform);
+            tuto.Init(tutorialData);
+            openedTutoPanels.Add(tuto.tutorialData);
         } else {
             Debug.LogError("No TutoPanelPrefab");
         }
     }
+    public void CloseTuto(TutorialPanel tutorialPanel) {
+        openedTutoPanels.Remove(tutorialPanel.tutorialData);
+        if (openedTutoPanels.Count == 0) {
+            if (BGBlur) BGBlur.SetActive(false);
+            if (GameManager.CheckInstance()) GameManager.Instance.OnPause = false;
+            ActivateCardCanvas(true);
+            OnAllTutosClosed?.Invoke();
+        }
+    }
     public void ActivateConfigMenu(bool activate) {
-        configMenu.gameObject.SetActive(activate);
+        if (openedTutoPanels.Count > 0)
+            activate = false;
+        else {
+            if (BGBlur)
+                BGBlur.SetActive(activate);
+            if (GameManager.CheckInstance())
+                GameManager.Instance.OnPause = activate;
+        }
+        if (activate) {
+            configMenu.gameObject.SetActive(activate);
+        } else {
+            AudioManager.Instance.toggleMusicIngameState(true);
+            AkSoundEngine.PostEvent("UI_Back_In", gameObject);
+            configMenu.gameObject.SetActive(false);
+        }
     }
 
     public void ToggleConfigMenu() {
-        if (configMenu.gameObject.activeSelf)
-            configMenu.CloseCongifMenu();
-        else
-            configMenu.gameObject.SetActive(true);
+        ActivateConfigMenu(!configMenu.gameObject.activeSelf);
     }
 
+
     public void ActivateEndMenu(bool activate, int currentLevel) {
+        if (GameManager.CheckInstance()) GameManager.Instance.OnPause = activate;
+        if (BGBlur) BGBlur.SetActive(activate);
         if (activate) {
-        cardCanvas.gameObject.SetActive(false);
-        victoryCanvas.gameObject.SetActive(true);
-        ActivateLogrosPanel(currentLevel);
+
+            ActivateCardCanvas(false);
+            victoryCanvas.gameObject.SetActive(true);
+            ActivateLogrosPanel(currentLevel);
         } else {
-            cardCanvas.gameObject.SetActive(true);
+            ActivateCardCanvas(true);
             victoryCanvas.gameObject.SetActive(false);
 
         }
@@ -49,5 +85,9 @@ public class MenuDirector : Singleton<MenuDirector>
         LogrosPanel logrosPanel = FindObjectOfType<LogrosPanel>();
         // Quiza puede ser directamente el activar los ticks pasando el leveldata
         logrosPanel.GetLogritos(currentLevel);
+    }
+
+    public void ActivateCardCanvas(bool activate) {
+        cardCanvas.gameObject.SetActive(activate);
     }
 }

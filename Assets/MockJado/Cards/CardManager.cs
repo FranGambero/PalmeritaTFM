@@ -33,11 +33,8 @@ namespace ElJardin {
             totalCards = cardQueue.Count;
         }
 
-        private void Start() {
-            firstDrawCard();
-        }
 
-        private void firstDrawCard() {
+        public void firstDrawCard() {
             int index = 0;
             while (index < cardList.Count) {
                 Card tmpCard;

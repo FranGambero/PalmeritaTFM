@@ -9,6 +9,8 @@ namespace ElJardin {
         public Node nodito;
         public List<Node> listaNoditos;
         public bool _turneable = true;
+        public LayerMask groundLayer;
+
         public int turnIndex { get { return _turnIndex; } set { _turnIndex = value; } }
 
         public bool turneable { get => _turneable; set => _turneable = true; }
@@ -21,7 +23,10 @@ namespace ElJardin {
         }
 
         private void Start() {
-            if (nodito != null)
+            if (!nodito) {
+                CheckGrownd();
+            }
+            if (nodito)
                 getNodeNeighbors();
         }
 
@@ -65,6 +70,16 @@ namespace ElJardin {
 
         public void onTurnFinished() {
             Semaphore.Instance.onTurnEnd(turnIndex);
+        }
+        [ContextMenu("oh")]
+        public void CheckGrownd() {
+            RaycastHit groundHits;
+            //TODO Que el suelo tenga su porpia layer y que aqui se coja sola esa layer y no todas
+            if (Physics.Raycast(transform.position, Vector3.down, out groundHits, 2f, groundLayer)) {
+                Debug.Log("LOCOOOO");
+
+                nodito = groundHits.collider.GetComponent<Node>();
+            }
         }
     }
 }

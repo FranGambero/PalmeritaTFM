@@ -173,6 +173,7 @@ MonoBehaviour:
   instructMenu: {fileID: 0}
   _positionHover: {fileID: 0}
   tmpRot: {x: -1, y: 0, z: 0}
+  levelTutos: []
   draggingCard: 0
 --- !u!1 &1522253018955214809
 GameObject:
@@ -314,6 +315,54 @@ MonoBehaviour:
   start_m: {fileID: 3112977340068577888, guid: f2685abeb33751c4e8b2db5ff0400314, type: 3}
   amount: 1
   Sepalo: {fileID: 0}
+--- !u!1 &2218629509780405661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8396592015247963110}
+  - component: {fileID: 2848506278027634726}
+  m_Layer: 0
+  m_Name: PostproVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8396592015247963110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218629509780405661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7553896706956643136}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2848506278027634726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218629509780405661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: b90084c3c8fb3964993f86f6f3056af1, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &3584299972563252103
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +390,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8396592015247963110}
   m_Father: {fileID: 1522253019494429778}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -362,7 +412,10 @@ MonoBehaviour:
   baseCanvas: {fileID: 0}
   victoryCanvas: {fileID: 0}
   cardCanvas: {fileID: 0}
-  tutoPanelPrefab: {fileID: 0}
+  BGBlur: {fileID: 2218629509780405661}
+  tutoPanelPrefab: {fileID: 3449667376788635730, guid: 757aa8eb05562034399983280b56acdc,
+    type: 3}
+  openedTutoPanels: []
 --- !u!1 &4521981902472458452
 GameObject:
   m_ObjectHideFlags: 0

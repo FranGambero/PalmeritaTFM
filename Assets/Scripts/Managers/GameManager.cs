@@ -1,4 +1,5 @@
 ﻿using ElJardin.Characters;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,8 @@ namespace ElJardin {
         public GameObject instructMenu;
         public GameObject _positionHover;
         public Vector3 tmpRot;
+
+        public List<TutorialDataWrapper> levelTutos;
         private Node selectedNode;
         public bool draggingCard;
         private bool gameRunning;
@@ -37,7 +40,7 @@ namespace ElJardin {
             _positionHover.transform.LookAt(new Vector3(Sepalo.transform.position.x, _positionHover.transform.position.y, Sepalo.transform.position.z));
         }
         private void Awake() {
-            _positionHover.SetActive(false);
+            _positionHover?.SetActive(false);
             draggingCard = false;
             Sepalo = FindObjectOfType<SepaloController>();
             MenuDirector.Instance.ActivateConfigMenu(false);
@@ -45,8 +48,19 @@ namespace ElJardin {
 
         private void Start() {
             StartGame();
+            LaunchTutos();
             // AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
         }
+        private void LaunchTutos() {
+            if (levelTutos.Count > 0) {
+                MenuDirector.Instance.OnAllTutosClosed.AddListener(() => CardManager.Instance.firstDrawCard());
+                levelTutos.ForEach(t => MenuDirector.Instance.InitNewTutoPanel(t));
+            } else {
+                MenuDirector.Instance.ActivateCardCanvas(true);
+                CardManager.Instance.firstDrawCard();
+            }
+        }
+
         public void StartGame() {
             gameRunning = true;
         }
