@@ -26,7 +26,7 @@ namespace ElJardin {
 
         public int LastIndexUsed { get => lastIndexUsed; set => lastIndexUsed = value; }
 
-        private void Awake() {
+        private void Init() {
             maxHand = 5;
             handList = new List<Card>();
             cardQueue = new Queue<CardData>(cardList);
@@ -36,6 +36,9 @@ namespace ElJardin {
 
         public void firstDrawCard() {
             int index = 0;
+
+            MenuDirector.Instance.ActivateCardCanvas(true);
+            Init();
             while (index < cardList.Count) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
