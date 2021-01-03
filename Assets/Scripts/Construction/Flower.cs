@@ -34,7 +34,7 @@ namespace ElJardin {
         public void activateFlor() {
             flowerOpened = true;
             GetComponentInChildren<LotoAnimatorController>().LotoOpen();
-            listaElementosCrecedores.ForEach(e => e.RandomGrow());
+            listaElementosCrecedores.ForEach(e => { if (e) e.RandomGrow(); });
         }
 
         [ContextMenu("DESCRECE CARLA")]

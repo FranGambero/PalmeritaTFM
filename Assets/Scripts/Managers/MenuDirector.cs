@@ -37,6 +37,7 @@ public class MenuDirector : Singleton<MenuDirector> {
     }
     public void CloseTuto(TutorialPanel tutorialPanel) {
         openedTutoPanels.Remove(tutorialPanel.tutorialData);
+        Destroy(tutorialPanel.gameObject);
         if (openedTutoPanels.Count == 0) {
             if (BGBlur) BGBlur.SetActive(false);
             if (GameManager.CheckInstance()) GameManager.Instance.OnPause = false;
