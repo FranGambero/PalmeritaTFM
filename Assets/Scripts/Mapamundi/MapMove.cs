@@ -30,7 +30,7 @@ public class MapMove : MonoBehaviour {
 
             focusMove(currentLevel, true);
         } else {
-            transform.position = levelManager.levelTList[currentLevel].transform.position;
+            transform.position = levelManager.levelTList[currentLevel].targetPoint.transform.position;
         }
     }
 
@@ -44,7 +44,7 @@ public class MapMove : MonoBehaviour {
             Debug.Log("ENTRAMOS LO PRIMERO " + currentLevel + " / " + targetLevel);
             if (forceMove) {
                 //transform.position = levelManager.levelTList[currentLevel].transform.position;
-                transform.DOMove(levelManager.levelTList[currentLevel].transform.position, 2f).SetEase(Ease.Linear);
+                transform.DOMove(levelManager.levelTList[currentLevel].targetPoint.transform.position, 2f).SetEase(Ease.Linear);
             } else {
 
 
@@ -78,11 +78,11 @@ public class MapMove : MonoBehaviour {
 
         if (targetLevel > currentLevel) {
             for (int i = currentLevel + 1; i <= targetLevel; i++) {
-                listita.Add(levelManager.levelTList[i].transform);
+                listita.Add(levelManager.levelTList[i].targetPoint.transform);
             }
         } else {
             for (int i = currentLevel - 1; i >= targetLevel; i--) {
-                listita.Add(levelManager.levelTList[i].transform);
+                listita.Add(levelManager.levelTList[i].targetPoint.transform);
             }
         }
 
