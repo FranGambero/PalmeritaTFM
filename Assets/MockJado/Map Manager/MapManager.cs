@@ -188,9 +188,9 @@ namespace ElJardin {
             // Logritos
             levelData.logros[0].done = true;   // El logro completado basico siempre se cumple por terminar el nivel
             if(levelData.logros.Length >= 2)
-                levelData.logros[1].done = CheckLogroPetalos();
+                levelData.logros[1].done = levelData.logros[1].done ? true : CheckLogroPetalos();
             if (levelData.logros.Length >= 3)
-                levelData.logros[2].done = CheckLogroMovimientos();
+                levelData.logros[2].done = levelData.logros[2].done ? true : CheckLogroMovimientos();
 
             // Ponemos a completado si tiene un logro al menos
             levelData.isCompleted = true;
@@ -200,7 +200,7 @@ namespace ElJardin {
         }
 
         private bool CheckLogroPetalos() {
-            // Comprobamos que todas las flores de ese nivel están siendo regafas
+            // Comprobamos que todas las flores de ese nivel están siendo regadas
             if (!flowerManager)
                 flowerManager = FindObjectOfType<FlowerManager>();
             return flowerManager.CountFlowerStatus();
