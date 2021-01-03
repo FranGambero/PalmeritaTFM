@@ -46,9 +46,8 @@ public class ConfigMenuManager : MonoBehaviour {
     }
 
     public void CloseCongifMenu() {
-
-        AudioManager.Instance.toggleMusicIngameState(true);
-        AkSoundEngine.PostEvent("UI_Back_In", gameObject);
+        MenuDirector.Instance.ActivateConfigMenu(false);
+        
         gameObject.SetActive(false);
     }
 

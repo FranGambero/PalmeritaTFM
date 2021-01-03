@@ -36,7 +36,8 @@ namespace ElJardin.Characters {
 
 
         void Start() {
-            CurrentNode = MapManager.Instance?.GetNode((int)StartingNode.x, (int)StartingNode.y);
+            //CurrentNode = MapManager.Instance?.GetNode((int)StartingNode.x, (int)StartingNode.y);
+            CheckGrownd();
         }
 
         #region Actions

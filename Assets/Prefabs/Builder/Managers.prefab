@@ -173,6 +173,7 @@ MonoBehaviour:
   instructMenu: {fileID: 0}
   _positionHover: {fileID: 0}
   tmpRot: {x: -1, y: 0, z: 0}
+  levelTutos: []
   draggingCard: 0
 --- !u!1 &1522253018955214809
 GameObject:
@@ -330,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8396592015247963110
 Transform:
   m_ObjectHideFlags: 0
@@ -411,8 +412,9 @@ MonoBehaviour:
   baseCanvas: {fileID: 0}
   victoryCanvas: {fileID: 0}
   cardCanvas: {fileID: 0}
-  BGBLur: {fileID: 2218629509780405661}
-  tutoPanelPrefab: {fileID: 0}
+  BGBlur: {fileID: 2218629509780405661}
+  tutoPanelPrefab: {fileID: 3449667376788635730, guid: 757aa8eb05562034399983280b56acdc,
+    type: 3}
   openedTutoPanels: []
 --- !u!1 &4521981902472458452
 GameObject:

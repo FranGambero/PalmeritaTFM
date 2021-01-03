@@ -56,6 +56,7 @@ namespace ElJardin {
                 MenuDirector.Instance.OnAllTutosClosed.AddListener(() => CardManager.Instance.firstDrawCard());
                 levelTutos.ForEach(t => MenuDirector.Instance.InitNewTutoPanel(t));
             } else {
+                MenuDirector.Instance.ActivateCardCanvas(true);
                 CardManager.Instance.firstDrawCard();
             }
         }

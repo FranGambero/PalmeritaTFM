@@ -27,7 +27,7 @@ public class MenuDirector : Singleton<MenuDirector> {
         if (tutoPanelPrefab) {
             if (BGBlur) BGBlur.SetActive(true);
             if (GameManager.CheckInstance()) GameManager.Instance.OnPause = true;
-            cardCanvas.gameObject.SetActive(false);
+            ActivateCardCanvas(false);
             TutorialPanel tuto = Instantiate(tutoPanelPrefab, baseCanvas.transform);
             tuto.Init(tutorialData);
             openedTutoPanels.Add(tuto.tutorialData);
@@ -40,7 +40,7 @@ public class MenuDirector : Singleton<MenuDirector> {
         if (openedTutoPanels.Count == 0) {
             if (BGBlur) BGBlur.SetActive(false);
             if (GameManager.CheckInstance()) GameManager.Instance.OnPause = false;
-            cardCanvas.gameObject.SetActive(true);
+            ActivateCardCanvas(true);
             OnAllTutosClosed?.Invoke();
         }
     }
@@ -48,13 +48,17 @@ public class MenuDirector : Singleton<MenuDirector> {
         if (openedTutoPanels.Count > 0)
             activate = false;
         else {
-            if (BGBlur) BGBlur.SetActive(activate);
-            if (GameManager.CheckInstance()) GameManager.Instance.OnPause = activate;
+            if (BGBlur)
+                BGBlur.SetActive(activate);
+            if (GameManager.CheckInstance())
+                GameManager.Instance.OnPause = activate;
         }
-        if (activate)
+        if (activate) {
             configMenu.gameObject.SetActive(activate);
-        else {
-            configMenu.CloseCongifMenu();
+        } else {
+            AudioManager.Instance.toggleMusicIngameState(true);
+            AkSoundEngine.PostEvent("UI_Back_In", gameObject);
+            configMenu.gameObject.SetActive(false);
         }
     }
 
@@ -68,11 +72,11 @@ public class MenuDirector : Singleton<MenuDirector> {
         if (BGBlur) BGBlur.SetActive(activate);
         if (activate) {
 
-            cardCanvas.gameObject.SetActive(false);
+            ActivateCardCanvas(false);
             victoryCanvas.gameObject.SetActive(true);
             ActivateLogrosPanel(currentLevel);
         } else {
-            cardCanvas.gameObject.SetActive(true);
+            ActivateCardCanvas(true);
             victoryCanvas.gameObject.SetActive(false);
 
         }
@@ -81,5 +85,9 @@ public class MenuDirector : Singleton<MenuDirector> {
         LogrosPanel logrosPanel = FindObjectOfType<LogrosPanel>();
         // Quiza puede ser directamente el activar los ticks pasando el leveldata
         logrosPanel.GetLogritos(currentLevel);
+    }
+
+    public void ActivateCardCanvas(bool activate) {
+        cardCanvas.gameObject.SetActive(activate);
     }
 }

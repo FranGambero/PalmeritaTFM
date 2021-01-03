@@ -201,7 +201,8 @@ namespace ElJardin {
 
         private bool CheckLogroPetalos() {
             // Comprobamos que todas las flores de ese nivel están siendo regafas
-            
+            if (!flowerManager)
+                flowerManager = FindObjectOfType<FlowerManager>();
             return flowerManager.CountFlowerStatus();
         }
 
