@@ -12,8 +12,10 @@ namespace ElJardin.Hover
         {
             this.size = size;
         }
-        
-        public abstract void Show(Node targetNode);
+
+        public abstract void HoverOnGrab();
+
+        public abstract void HoverOnNodeEnter(Node targetNode);
 
         public void Hide()
         {

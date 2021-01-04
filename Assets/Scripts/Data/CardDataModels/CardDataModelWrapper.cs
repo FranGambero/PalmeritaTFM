@@ -7,9 +7,12 @@ namespace ElJardin.Data.Cards
     {
         [SerializeField]
         CardDataModel dataModel = new CardDataModel();
+        [SerializeField]
+        CardData cardData = new CardData();
         
         #region Accessors
         public CardDataModel DataModel => dataModel;
+        public CardData CardData => cardData;
         #endregion
     }
 }

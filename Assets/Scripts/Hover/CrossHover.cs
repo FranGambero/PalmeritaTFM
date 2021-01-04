@@ -7,8 +7,13 @@ namespace ElJardin.Hover
         public CrossHover(int size) : base(size)
         {
         }
-        
-        public override void Show(Node targetNode)
+
+        public override void HoverOnGrab()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void HoverOnNodeEnter(Node targetNode)
         {
             throw new System.NotImplementedException();
         }

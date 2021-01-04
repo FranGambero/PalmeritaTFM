@@ -8,7 +8,7 @@ namespace ElJardin
         IHover hoverProvider;
         ICardAction actionProvider;
 
-        public void Hover(Node targetNode) => hoverProvider.Show(targetNode);
+        public void HoverOnNodeEnter(Node targetNode) => hoverProvider.HoverOnNodeEnter(targetNode);
         public void UnHover() => hoverProvider.Hide();
         public void Action(Node targetNode) => actionProvider.DoAction(targetNode);
 

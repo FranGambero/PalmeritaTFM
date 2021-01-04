@@ -18,7 +18,7 @@ namespace ElJardin
         #endregion
         
         #region Accessors
-        public void Hover(Node targetNode) => actionCard.Hover(targetNode);
+        public void HoverOnNodeEnter(Node targetNode) => actionCard.HoverOnNodeEnter(targetNode);
         public void UnHover() => actionCard.UnHover();
         public void Action(Node targetNode) => actionCard.Action(targetNode);
         #endregion

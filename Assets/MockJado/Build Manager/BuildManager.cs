@@ -363,6 +363,12 @@ namespace ElJardin {
                 node.HoverOn(newDirection);
             }
         }
+        
+        public void HoverNodesInList(List<Node> nodeList) {
+            foreach (Node node in nodeList) {
+                node.HoverOn();
+            }
+        }
 
         public void UnHoverNodesInList(List<Node> nodesAroundList) {
             foreach (Node node in nodesAroundList) {

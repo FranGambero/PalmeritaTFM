@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using ElJardin;
 using System.Collections;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     private CardData cardData;
     private float upOffset = 7f;
 
+    Card ActionCard => GetComponent<Card>();
+
 
     private void Start() {
         starting = false;
@@ -20,6 +23,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         hoving = false;
         GameManager.Instance.Sepalo.OnEndWalk.AddListener(HoverAround);
     }
+    
     public void LoadCardData(CardData cardData) {
         this.cardData = cardData;
         originalHandPosition = CardManager.Instance.transformList[GetComponent<Card>().transformIndex].position;
@@ -48,7 +52,6 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             default:
                 break;
         }
-
     }
 
 
@@ -57,7 +60,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             if (!starting) {
                 starting = true;
-                GameManager.Instance.draggingCard = true;
+                //GameManager.Instance.DraggingCard = true;
+                GameManager.Instance.selectedCard = ActionCard;
                 AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 HoverAround();
             }
@@ -75,19 +79,23 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         }
     }
     public void OnEndDrag(PointerEventData eventData) {
-        GameManager.Instance.draggingCard = false;
+        //GameManager.Instance.DraggingCard = false;
+        GameManager.Instance.selectedCard = null;
         DoTheAction();
         starting = false;
         hoving = false;
-
     }
+    
     public void HoverAround() {
         if (!GameManager.Instance.Sepalo.isMoving && !hoving && starting) {
             hoving = true;
             BuildManager.Instance.HoverAroundNode(cardData.amount);
         }
-
     }
+    
+    /*
+     * Se llama solamente al usar la carta, hay que pasarlo a BuildRiver ICardAction pero esta jodido
+     */
     private void DoTheAction() {
         Debug.Log("Doing the action");
         if (GameManager.Instance.Sepalo.IsMyTurn && starting) {

@@ -10,8 +10,12 @@ namespace ElJardin {
         public GameObject _positionHover;
         public Vector3 tmpRot;
         private Node selectedNode;
-        public bool draggingCard;
+        //public bool DraggingCard;
 
+        //TODO: cambiar nombre cuando se elimine el bool
+        public Card selectedCard;
+
+        #region Accessors
         public Node SelectedNode { get => selectedNode; set => selectedNode = value; }
         public GameObject PositionHover {
             get {
@@ -19,13 +23,17 @@ namespace ElJardin {
             }
             set => _positionHover = value;
         }
+
+        public bool DraggingCard => selectedCard != null;
+        #endregion
         public void PosPositionHover(Vector3 newPosition) {
             _positionHover.transform.position = newPosition;
             _positionHover.transform.LookAt(new Vector3(Sepalo.transform.position.x, _positionHover.transform.position.y, Sepalo.transform.position.z));
         }
         private void Awake() {
             _positionHover.SetActive(false);
-            draggingCard = false;
+            //DraggingCard = false;
+            selectedCard = null;
             Sepalo = FindObjectOfType<SepaloController>();
         }
 

@@ -2,6 +2,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using ElJardin.Data.Cards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +14,7 @@ namespace ElJardin {
         [SerializeField]
         public Queue<CardData> cardQueue;
         [SerializeField]
-        public List<CardData> cardList;
+        public List<CardDataModelWrapper> cardList;
         public List<Card> handList;
         public List<Transform> transformList;
         public int maxHand;
@@ -29,7 +31,7 @@ namespace ElJardin {
         private void Awake() {
             maxHand = 5;
             handList = new List<Card>();
-            cardQueue = new Queue<CardData>(cardList);
+            cardQueue = new Queue<CardData>(cardList.Select(card => card.CardData).ToList());
             totalCards = cardQueue.Count;
         }
 

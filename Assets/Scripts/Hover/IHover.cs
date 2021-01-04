@@ -6,7 +6,8 @@ namespace ElJardin.Hover
     {
         int size { get; set; }
         List<Node> hoveredNodesCache { get; set; }
-        void Show(Node targetNode);
+        void HoverOnGrab();
+        void HoverOnNodeEnter(Node targetNode);
         void Hide();
     }
 }

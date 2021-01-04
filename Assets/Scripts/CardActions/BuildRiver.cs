@@ -8,7 +8,8 @@ namespace ElJardin.CardActions
 
         public override void DoAction(Node targetNode)
         {
-            throw new System.NotImplementedException();
+            //construir rio en las n posiciones a partir del nodo (targetNode)
+            //targetNode tiene que ser el nodo mas cercano a sepalo en la direccion elegida
         }
     }
 }

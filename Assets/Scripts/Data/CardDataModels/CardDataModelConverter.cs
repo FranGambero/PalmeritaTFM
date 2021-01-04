@@ -12,6 +12,9 @@ namespace ElJardin.Data.Cards
             var action = Activator.CreateInstance(source.actionType, source.size) as ICardAction;
             var hover = Activator.CreateInstance(source.hoverType, source.size) as IHover;
 
+            if(action != null)
+                action.insectPrefab = source.insectPrefab;
+
             return new ActionCard(hover, action);
         }
     }

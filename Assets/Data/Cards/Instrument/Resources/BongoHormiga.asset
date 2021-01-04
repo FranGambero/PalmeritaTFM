@@ -18,3 +18,10 @@ MonoBehaviour:
       classRef: ElJardin.Hover.SquareHover, Assembly-CSharp
     actionType:
       classRef: ElJardin.CardActions.BongoAction, Assembly-CSharp
+    insectPrefab: {fileID: 3742622092763242779, guid: 23a9364517583da4bb449d7d527560ee,
+      type: 3}
+  cardData:
+    amount: 0
+    direction: 0
+    cardType: 0
+    sprite: {fileID: 0}

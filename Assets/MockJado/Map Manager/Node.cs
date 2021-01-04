@@ -102,6 +102,12 @@ namespace ElJardin {
             directionInHover = direction;
         }
 
+        public void HoverOn()
+        {
+            _mr.material.color = hoverColor;
+            hovering = true;
+        }
+
         public void HoverOff() {
             hovering = false;
             directionInHover = DirectionType.Undefined;
@@ -135,7 +141,7 @@ namespace ElJardin {
                     BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(true));
 
                 //TODO: ShowCantBuildPreview
-            } else if (!GameManager.Instance.draggingCard && this.CanBuild && this.IsWalkable) {
+            } else if (!GameManager.Instance.DraggingCard && this.CanBuild && this.IsWalkable) {
                 if (GameManager.Instance.Sepalo.CurrentNode != this)
                     PositionMoveHover();
             }
