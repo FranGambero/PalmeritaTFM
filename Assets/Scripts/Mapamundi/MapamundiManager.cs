@@ -14,6 +14,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     public TextMeshProUGUI zoneTextTag, petalsTextTag;
     public Action<int> onZoneChange;
 
+    public FadeOutPanel fadeOutPanel;
 
     private void Awake() {
         numZones = 4;
@@ -35,6 +36,10 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     private void Start() {
         SetAllZones();
         CountCurrentPetals();
+        if (fadeOutPanel) {
+            AkSoundEngine.PostEvent("UI_Trans_2_In", gameObject);
+            fadeOutPanel.FadeIn();
+        }
     }
 
     public void SetCurrentZone(int zoneId) {

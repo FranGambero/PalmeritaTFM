@@ -5,10 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ConfigMenuManager : MonoBehaviour {
-    public MenuButton backBtn;
+    public MenuButton backBtn, backMapBtn, instructionsBtn;
     public Slider musicSlider, sfxSlider;
     public TextMeshProUGUI volMusicTextValue, volSFXTextValue;
     private float volMusicValue, volSFXValue;
+    public FadeOutPanel fadeOutPanel;
+    public bool onMapamundi;
 
     private void Awake() {
 
@@ -21,16 +23,31 @@ public class ConfigMenuManager : MonoBehaviour {
         });
 
         backBtn.OnClickEvent += CloseCongifMenu;
+        if (backMapBtn) {
+            if (onMapamundi) {
+                backMapBtn.OnPreAnimationEvent += () => { fadeOutPanel.BtnTrigger = backMapBtn; fadeOutPanel.FadeOut(); };
+                backMapBtn.OnPreAnimationEvent += () => AkSoundEngine.PostEvent("UI_Select_In", gameObject);
+                backMapBtn.OnPreAnimationEvent += () => AkSoundEngine.PostEvent("UI_Trans_1_In", gameObject);
+                backMapBtn.OnPreAnimationEvent += () => AudioManager.Instance.StartSetUILPF(false, 5f);
+
+                backMapBtn.OnClickEvent += () => MenuManager.Instance.goToStartMenu();
+            } else {
+                backMapBtn.OnClickEvent += () => GameManager.Instance.goToMapamundi();
+            }
+        }
+        if (instructionsBtn)
+            instructionsBtn.OnClickEvent += () => GameManager.Instance.showInstructions(true);
     }
 
     private void OnEnable() {
+       
         AudioManager.Instance.toggleMusicIngameState(false);
         reChargePlayerPrefs();
     }
 
     public void CloseCongifMenu() {
-        AudioManager.Instance.toggleMusicIngameState(true);
-        AkSoundEngine.PostEvent("UI_Back_In", gameObject);
+        MenuDirector.Instance.ActivateConfigMenu(false);
+        
         gameObject.SetActive(false);
     }
 
@@ -91,5 +108,6 @@ public class ConfigMenuManager : MonoBehaviour {
         volMusicTextValue.text = volMusicValue.ToString();
         volSFXTextValue.text = volSFXValue.ToString();
     }
+
 
 }

@@ -9,25 +9,25 @@ namespace ElJardin {
         public GameObject titleMenu, startMenu;
          public FadeOutPanel fadeOutPanel;
         public MenuButton btnPlay, btnConfig, btnCredits;
-        public ConfigMenuManager configMenuManager;
 
         private void Awake() {
             titleMenu.SetActive(true);
             startMenu.SetActive(false);
-            configMenuManager.gameObject.SetActive(false);
+            MenuDirector.Instance.ActivateConfigMenu(false);
 
             InitButtons();
         }
         private void Start() {
-            AudioManager.Instance.StartSetUILPF(false, 0.1f);
+            if(SessionVariables.Instance.sceneData.lastScene == -1)
+                AudioManager.Instance.StartSetUILPF(false, 0.1f);
         }
         private void Update() {
             if (Input.anyKey && !startMenu.activeSelf) {
                 changeToStartMenu();
             }
 
-            if (Input.GetKeyDown(KeyCode.Escape) && configMenuManager.gameObject.activeSelf) {
-                toggleConfig();
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                MenuDirector.Instance.ToggleConfigMenu();
             }
         }
 
@@ -46,10 +46,11 @@ namespace ElJardin {
             btnPlay.OnClickEvent = StartGame;
             btnPlay.OnPreAnimationEvent = fadeOutPanel.FadeOut;
             btnPlay.OnPreAnimationEvent += triggerButtonSound;
+            btnPlay.OnPreAnimationEvent += triggerFadeOutSound;
             btnPlay.OnPreAnimationEvent += IncreaseUILPF;
             fadeOutPanel.BtnTrigger = btnPlay;
             btnConfig.OnClickEvent = null;
-            btnConfig.OnClickEvent = toggleConfig;
+            btnConfig.OnClickEvent = MenuDirector.Instance.ToggleConfigMenu;
             btnConfig.OnPreAnimationEvent += triggerButtonSound;
             btnCredits.OnClickEvent = null;
             btnCredits.OnClickEvent = StartCredits;
@@ -64,17 +65,12 @@ namespace ElJardin {
             goToGame();
         }
        
-
-        public void toggleConfig() {
-            if (configMenuManager.gameObject.activeSelf) {
-                configMenuManager.CloseCongifMenu();
-            } else {
-                configMenuManager.gameObject.SetActive(true);
-            }
-        }
-
         public void triggerButtonSound() {
             AkSoundEngine.PostEvent("UI_Select_In", gameObject);
+        }
+
+        public void triggerFadeOutSound() {
+            AkSoundEngine.PostEvent("UI_Trans_1_In", gameObject);
         }
 
         public void StartCredits() {

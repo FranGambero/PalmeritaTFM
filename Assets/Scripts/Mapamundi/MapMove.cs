@@ -12,38 +12,65 @@ public class MapMove : MonoBehaviour {
     public LevelManager levelManager;
 
     private void Awake() {
-        currentLevel = 1;
-        moveFinished = false;
+        levelManager.findLevels();
+        moveFinished = true;
     }
+
+
     private void Start() {
         MapamundiManager.Instance.onZoneChange += OnZoneChanged;
         OnZoneChanged(MapamundiManager.Instance.currentZone);
+        CheckLevelPosition();
     }
+    private void CheckLevelPosition() {
+        int lastPlayedLevel = SessionVariables.Instance.levels.lastPlayedLevel;
+        currentLevel = lastPlayedLevel != -1 ? lastPlayedLevel : 0;
+        //this.transform.position = levelManager.levelTList[currentLevel].transform.position;
+        if (SessionVariables.Instance.sceneData.lastScene == 0) {
 
-    public void focusMove(int targetLevel) {
-
-        if (currentLevel != targetLevel) {
-            List<Transform> listaPosiciones = MakeRecorrido(targetLevel);
-            Sequence moveSeq = DOTween.Sequence();
-            moveFinished = false;
-            GetComponent<Animator>().SetBool("Walking", true);
-            for (int i = 0; i < listaPosiciones.Count; i++) {
-                // Easing
-                Ease moveEase = Ease.Linear;
-                float moveTime = .5f + listaPosiciones.Count * .25f;
-
-                moveSeq.Append(transform.DOMove(listaPosiciones[i].position, moveTime).SetEase(moveEase));
-            }
-            moveSeq.Play().OnComplete(() => {
-                Debug.Log("He terminao");
-                moveFinished = true;
-                GetComponent<Animator>().SetBool("Walking", false);
-            });
-
-            currentLevel = targetLevel;
+            focusMove(currentLevel, true);
+        } else {
+            transform.position = levelManager.levelTList[currentLevel].transform.position;
         }
     }
-    public void OnStep() {//Animator
+
+    private void directMove() {
+
+    }
+
+    public void focusMove(int targetLevel, bool forceMove = false) {
+
+        if (currentLevel != targetLevel || forceMove) {
+            Debug.Log("ENTRAMOS LO PRIMERO " + currentLevel + " / " + targetLevel);
+            if (forceMove) {
+                //transform.position = levelManager.levelTList[currentLevel].transform.position;
+                transform.DOMove(levelManager.levelTList[currentLevel].transform.position, 2f).SetEase(Ease.Linear);
+            } else {
+
+
+                List<Transform> listaPosiciones = MakeRecorrido(targetLevel);
+                Sequence moveSeq = DOTween.Sequence();
+                moveFinished = false;
+                GetComponent<Animator>().SetBool("Walking", true);
+                for (int i = 0; i < listaPosiciones.Count; i++) {
+                    // Easing
+                    Ease moveEase = Ease.Linear;
+                    float moveTime = .5f + listaPosiciones.Count * .25f;
+
+                    moveSeq.Append(transform.DOMove(listaPosiciones[i].position, moveTime).SetEase(moveEase));
+                }
+                moveSeq.Play().OnComplete(() => {
+                    Debug.Log("He terminao");
+                    moveFinished = true;
+                    GetComponent<Animator>().SetBool("Walking", false);
+                });
+
+                currentLevel = targetLevel;
+            }
+        }
+    }
+    public void OnStep() { //Animator
+        AkSoundEngine.PostEvent("Steps_Mapa_In", gameObject);
         GetComponentInChildren<ParticleSystem>().Play();
     }
     private List<Transform> MakeRecorrido(int targetLevel) {
@@ -64,7 +91,7 @@ public class MapMove : MonoBehaviour {
     private void OnZoneChanged(int zone) {
         if (levelManager.zone == zone) {
             gameObject.SetActive(true);
-          //  focusMove(currentLevel);
+            //  focusMove(currentLevel);
         } else {
             gameObject.SetActive(false);
         }

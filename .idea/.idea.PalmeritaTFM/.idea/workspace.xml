@@ -23,29 +23,240 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="061300e8-9aed-4815-8dd3-e716a8eb15e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Bichos.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Bichos/CangrejoPala.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Bichos/CangrejoPala/Dig.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Bichos/CangrejoPala/Dig.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Bichos/CangrejoPala/Pala.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Bichos/CangrejoPala/Pala.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/P_Out.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/P_Out.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Polenipodo.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animator/Polenipodo.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Materials/BaseBodyMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Materials/BaseBodyMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Materials/Madra.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Materials/Madra.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Materials/Ojos.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Materials/Ojos.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Pala.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/Pala.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/skin1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/skin1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/skin2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/skin2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/skin3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Pala/skin3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Plants/Bramble.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FBX/Plants/Bramble.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Decoration/BG.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Decoration/BG.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Decoration/ReceiveShadows.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Decoration/ReceiveShadows.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PostPro.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PostPro/DifuEff.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PostPro/DifuEff.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Builder/Bramble.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Builder/Bramble.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Cards/OutlineMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Cards/OutlineMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/CangrejoPala.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/CangrejoPala.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Hovers/AimHover .prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Hovers/AimHover .prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/AlertPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/AlertPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/DestroyGroundPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/DestroyGroundPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/DryPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/DryPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/PreviewPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/PreviewPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/StopDryPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/StopDryPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/FinalPanel.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/FinalPanel.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level10.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level10.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelPrefab.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelPrefab.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animator/ShovelCravAnimatorController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animator/ShovelCravAnimatorController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Construction/Flower.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Construction/Flower.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Construction/FlowerManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Construction/FlowerManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Tuto.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LogrosPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MenuDirector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MenuDirector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sprites/SpriteReceiveShadow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sprites/SpriteReceiveShadow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OutlineController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OutlineController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Interfaz.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Interfaz.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ScreenShotsUtil.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ScreenShotsUtil.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ShadersAndVFX/Others/SpriteReciveShadows.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ShadersAndVFX/Others/SpriteReciveShadows.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/BigMenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/BigMenu.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/MapBg4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/MapBg4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Materials/CanvasFilled.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Materials/CanvasFilled.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Particles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Particles.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Square.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cardsInsideDraw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/cardsInsideDraw.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_UI_SFX_Hit_Flor_Start_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_UI_SFX_Pantalla_Logro_Start_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_UI_SFX_Transicion_Start_1_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_UI_SFX_Transicion_Start_2_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_UI_SFX_Hit_Flor_Start_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_UI_SFX_Pantalla_Logro_Start_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_UI_SFX_Transicion_Start_1_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_UI_SFX_Transicion_Start_2_10C4C929.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/119660723.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/218172167.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/554799606.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/811940940.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/914630107.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/119660723.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/218172167.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/554799606.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/811940940.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/914630107.wem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Hit_Flor_Start.akd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Hit_Flor_Start.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Pantalla_Logro_Start.akd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Pantalla_Logro_Start.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Transicion_Start_1.akd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Transicion_Start_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Transicion_Start_2.akd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_UI_SFX_Transicion_Start_2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/ProfilingSession15.prof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/FadeOutPanel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/FadeOutPanel.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/Plants/Loto/Loto.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Plants/Loto/Loto.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/QuickFadePanel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/QuickFadePanel.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LogrosPanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LogrosPanel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogrosPanel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Menu/MenuBG.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Menu/MenuBG.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Cards/ActionCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Cards/ActionCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MockJado/Cards/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Cards/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Cards/CardData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Cards/CardData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MockJado/Cards/CardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Cards/CardManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelEditor/EditorRock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelEditor/EditorRock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardActions/BaseCardAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardActions/BaseCardAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardActions/BongoAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardActions/BongoAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardActions/BuildRiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardActions/BuildRiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardActions/ICardAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardActions/ICardAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelWrapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hover/CrossHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hover/CrossHover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hover/IHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hover/IHover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hover/SquareHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hover/SquareHover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Movement/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Movement/CharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MockJado/UI/Scripts/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/UI/Scripts/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Util/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Util/Singleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MockJado/VFX/VFXDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/VFX/VFXDirector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Builder/Managers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Builder/Managers.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Builder/VFXDirector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Builder/VFXDirector.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cameras/IsoCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cameras/IsoCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cards/ConstructionCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cards/ConstructionCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelEditor/FullNodeEditor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelEditor/FullNodeEditor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PS/WavePS.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PS/WavePS.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/LotoFlower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plants/LotoFlower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ConfigMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ConfigMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/FadePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/FadePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/InstructionsMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/InstructionsMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Mapa/ButtonLevel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Mapa/ButtonLevel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MenuButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MenuButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/NewInfoPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/NewInfoPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ZoneData/Zone0.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ZoneData/Zone0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mapa.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mapa.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animator/LotoAnimatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animator/LotoAnimatorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animator/ProtaAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animator/ProtaAnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Construction/DryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Construction/DryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Construction/Water.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Construction/Water.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Bongormiga.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Tuto/Bongormiga.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Bongormiga.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Tuto/Bongormiga.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Muerte.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Tuto/Pala.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Muerte.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Tuto/Pala.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Bongormiga.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Bongormiga.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Keys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Keys.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SessionVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SessionVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/ConfirmPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/ConfirmPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/LevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/LevelButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/MapMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/MapMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/MapamundiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mapamundi/MapamundiManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Semaphore/ITurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Semaphore/ITurn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Semaphore/Semaphore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Semaphore/Semaphore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ConfigMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConfigMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/FadeOutPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/FadeOutPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ScorePetalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScorePetalController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Hovers.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Hovers.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Hovers.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Hovers.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/Map1Elements.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/Map1Elements.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/MapBg3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/MapBg3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/MapOg1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Mapamundi/MapOg1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/Dots.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Materials/Dots.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/fondo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Materials/fondo.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/fondo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/fondo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/menu.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1_10C4C929.wem" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1_10C4C929.wem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2_10C4C929.wem" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2_10C4C929.wem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3_10C4C929.wem" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3_10C4C929.wem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/Wwise.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Mac/SFX/Wwise.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/SoundBankInfoCache.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/SoundBankInfoCache.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1_10C4C929.wem" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1_10C4C929.wem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2_10C4C929.wem" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2_10C4C929.wem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3_10C4C929.wem" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3_10C4C929.wem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/Wwise.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/.cache/Windows/SFX/Wwise.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Events/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Events/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Ingame_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Musica_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Musica_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Musica_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/Musica_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/UI_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/UI_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/UI_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Mac/UI_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Ingame_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Musica_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Musica_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Musica_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/Musica_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/UI_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/UI_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/UI_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/GeneratedSoundBanks/Windows/UI_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Interactive Music Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Interactive Music Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Mixing Sessions/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Mixing Sessions/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1.akd" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1.akd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2.akd" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2.akd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_2.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3.akd" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3.akd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Originals/SFX/El_Jardin_Posicion_Cartas_SFX_Start_3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.validationcache" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.validationcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/PalmeritaTFM_WwiseProject.eduar.wsettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/ProfilingSession9.prof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/SoundBanks/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Soundcaster Sessions/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/PalmeritaTFM_WwiseProject/Soundcaster Sessions/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +302,14 @@
         <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ActionCard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hover/CrossHover.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hover/SquareHover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelWrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/CardData.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/Card.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelWrapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/Card.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/CardData.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Cards/CardManager.cs" />
       </list>
     </option>
@@ -163,7 +374,7 @@
       <workItem from="1609234242835" duration="12115000" />
       <workItem from="1609351136426" duration="1653000" />
       <workItem from="1609679597873" duration="1607000" />
-      <workItem from="1609765427377" duration="14196000" />
+      <workItem from="1609765427377" duration="16199000" />
     </task>
     <servers />
   </component>

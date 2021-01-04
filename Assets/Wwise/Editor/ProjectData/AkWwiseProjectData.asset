@@ -73,7 +73,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585951948542480848
+    m_lastTime: -8585933144716093721
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585951948563202969
+    m_lastTime: -8585933144750950495
     List:
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
@@ -161,8 +161,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Carta_Posicion_In
       maxAttenuation: 0
-      maxDuration: 1615624
-      minDuration: 1554150
+      maxDuration: 1611542
+      minDuration: 1552993
     - name: Carta_Select_In
       guid: 7319dc09a3eec442a897591ef38d4420
       id: 236399107
@@ -365,6 +365,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Steps_Mapa_In
+      guid: 260fbe4f0a8fd04a806c5711eb3984dd
+      id: 2363561452
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Steps_Mapa_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\Steps_Mapa_In
+      maxAttenuation: 0
+      maxDuration: 725387
+      minDuration: 233146
     - name: UI
       guid: 16a08ace668db640a5ca1f0567bcd62e
       id: 1551306167
@@ -405,6 +419,34 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 764444
       minDuration: 764444
+    - name: UI_Hit_Flor_In
+      guid: 41864586356ab245971095f41f592486
+      id: 4184180445
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Hit_Flor_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Hit_Flor_In
+      maxAttenuation: 0
+      maxDuration: 2781519
+      minDuration: 2781519
+    - name: UI_Pantalla_Logro_In
+      guid: a947c188a12b21419f62fa4996650e73
+      id: 590137221
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Pantalla_Logro_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Pantalla_Logro_In
+      maxAttenuation: 0
+      maxDuration: 1415397
+      minDuration: 1415397
     - name: UI_Select_2_In
       guid: 4ed8d488a1f00846b2aebd4640fb29c7
       id: 2493148897
@@ -433,6 +475,34 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1363628
       minDuration: 1363628
+    - name: UI_Trans_1_In
+      guid: 7e92ff9a9193184280d49ba9bb7f549f
+      id: 4116241270
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Trans_1_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Trans_1_In
+      maxAttenuation: 0
+      maxDuration: 3966916
+      minDuration: 3966916
+    - name: UI_Trans_2_In
+      guid: 3d3b8af793766543ab2b9f3f3ccfd900
+      id: 1221477491
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UI_Trans_2_In
+        ObjectType: 3
+      Path: Default Work Unit\UI\UI_Trans_2_In
+      maxAttenuation: 0
+      maxDuration: 1712970
+      minDuration: 1712970
     - name: UI_Vol_Down_In
       guid: 7ed6b7b733a255449714bcd25eb911cc
       id: 2053540170
@@ -466,7 +536,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d7cd8876a6318e419b499e967b49208c
     GuidInternal: 
-    m_lastTime: -8585949563477698639
+    m_lastTime: -8585939836852685988
     List:
     - name: Ducking
       guid: 68031a4791c8d748ac560680a6d382f1
@@ -561,7 +631,7 @@ MonoBehaviour:
   - /PalmeritaTFM_WwiseProject/Events
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Ambientes
-  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/SFX
+  - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/Musica
   - /PalmeritaTFM_WwiseProject/Events/Default Work Unit/UI
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -24,6 +24,7 @@ public class ConfirmPanel : MonoBehaviour {
         }
         btnPlay.OnPreAnimationEvent += fadeOutPanel.FadeOut;
         btnPlay.OnPreAnimationEvent += triggerButtonSound;
+        btnPlay.OnPreAnimationEvent += triggerFadeOutSound;
         fadeOutPanel.BtnTrigger = btnPlay;
         btnPlay.OnClickEvent += PlayLevel;
     }
@@ -44,6 +45,8 @@ public class ConfirmPanel : MonoBehaviour {
 
     public void PlayLevel() {
         levelStringToLoad = "Level" + levelIdToLoad;
+        PlayerPrefs.SetInt(Keys.Scenes.LAST_PLAYED_LEVEL, levelIdToLoad);
+        SessionVariables.Instance.levels.lastPlayedLevel = levelIdToLoad;
 
         PlayerPrefs.SetInt("CurrentLevel", levelIdToLoad);
         PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, -1);
@@ -52,7 +55,7 @@ public class ConfirmPanel : MonoBehaviour {
         AudioManager.Instance.setIngameMusic();
         MapamundiManager.Instance.SaveZoneData();
         //AudioManager.Instance.unSetUILPF(); 
-    SceneManager.LoadScene("LoadScene");
+        SceneManager.LoadScene("LoadScene");
     }
     public int GetLevelBuildId() {
         levelStringToLoad = "Level" + levelIdToLoad;
@@ -62,11 +65,16 @@ public class ConfirmPanel : MonoBehaviour {
     public void Activate(bool activate) {
         if (activate) {
             gameObject.SetActive(true);
+            AkSoundEngine.PostEvent("UI_Pantalla_Logro_In", gameObject);
         } else {
             gameObject.SetActive(false);
         }
     }
     public void triggerButtonSound() {
         AkSoundEngine.PostEvent("UI_Select_In", gameObject);
+    }
+
+    public void triggerFadeOutSound() {
+        AkSoundEngine.PostEvent("UI_Trans_1_In", gameObject);
     }
 }

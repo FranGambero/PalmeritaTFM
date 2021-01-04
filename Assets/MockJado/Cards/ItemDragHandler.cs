@@ -65,17 +65,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
                 AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 HoverAround();
             }
+            
             transform.position = Input.mousePosition;
-            if (cardData.cardType == CardData.CardType.Construction) {
-                BuildManager.Instance.changeBuildValues(
-                    cardData.amount, cardData.direction);
-            } else if (cardData.cardType == CardData.CardType.Buff) {
-                // Lo que deba preparar esta carta
-                
-                // Esto no está bien, el if de arriba tampoco, debería controlarlo la carta, no pasarle valores
-                // rancios a el buildmanager, que como es una instancia es terreno pantanoso.
-                // Esto solo debería llamar al Hover() de la carta y que ella se encargue.
-            }
+            BuildManager.Instance.changeBuildValues(cardData.amount);
         }
     }
     public void OnEndDrag(PointerEventData eventData) {
@@ -101,7 +93,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         if (GameManager.Instance.Sepalo.IsMyTurn && starting) {
             if (buildNewChannel() && !GameManager.Instance.Sepalo.isMoving) {
                 transform.position = originalPosition;
-                //AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
+                //Aqui va el sonido de colocar carta
+                //AkSoundEngine.PostEvent("Carta_Posicion_In", gameObject);
+                ///
                 HideCard();
                 GameManager.Instance.Sepalo.onTurnFinished();
             } else {
@@ -132,12 +126,14 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public void OnMouseHoverEnter() {
         if (GameManager.Instance.Sepalo.IsMyTurn && !starting) {
             transform.DOMove(originalHandPosition + Vector3.up * upOffset, .2f).SetEase(Ease.Linear);
+            transform.parent.GetComponentInChildren<OutlineController>().Activate(true);
         }
     }
 
     public void OnMouseHoverExit() {
         if (GameManager.Instance.Sepalo.IsMyTurn && !starting && gameObject.activeSelf) {
             transform.DOMove(originalHandPosition, .5f);
+            transform.parent.GetComponentInChildren<OutlineController>().Activate(false);
         }
     }
 }

@@ -27,10 +27,10 @@ namespace ElJardin
         {
             usedCard = false;
         }
-
-        private void Start()
-        {
-            LoadCardData();
+        
+        private void Start() {
+            if (CardData != null)
+                LoadCardData();
         }
         
         #region Load
@@ -38,7 +38,10 @@ namespace ElJardin
         {
             amountText.text = CardData.amount.ToString();
             GetComponent<ItemDragHandler>().LoadCardData(CardData);
+            //TODO: este comentario es temporal
+            //GetComponentInChildren<OutlineController>().Activate(false);
         }
+
         
         public void LoadCardActions(CardDataModel cardDataModel)
         {
@@ -48,8 +51,8 @@ namespace ElJardin
         #endregion
         
         #region HandMovement
-        public IEnumerator ChangeCardTransform(int newIndex, bool wait = true)
-        {
+
+        public IEnumerator changeCardTransform(int newIndex, bool wait = true) {
             float animTime = .5f;
             transformIndex = newIndex;
             float waitTime = wait ? transformIndex * .5f : 0f;

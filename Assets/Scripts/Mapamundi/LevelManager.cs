@@ -11,10 +11,10 @@ public class LevelManager : MonoBehaviour
     public Button playButton;
 
     private void Start() {
-        findLevels();
+        //findLevels();
     }
 
-    private void findLevels() {
+    public void findLevels() {
         levelTList = new List<LevelButton>(transform.GetComponentsInChildren<LevelButton>());
     }
 

@@ -131,6 +131,11 @@
 									<ChildrenList>
 										<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_1_Loop" ID="{02A8EDB1-59CB-4334-BC32-428D05208A7F}" ShortID="673570057">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-8</Value>
@@ -176,6 +181,11 @@
 										</MusicTrack>
 										<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{0212862E-DCB9-4CC8-BA4D-912CA946973F}" ShortID="847002806">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-96</Value>
@@ -332,6 +342,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<MusicTrack Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{D12EFDC9-9719-47C3-94EE-CD1B01F9904F}" ShortID="220211912">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
@@ -401,6 +418,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<MusicTrack Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{898FF793-1E5E-4A72-A07B-DA7D3C16C388}" ShortID="979474458">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
@@ -468,6 +492,11 @@
 									<ChildrenList>
 										<MusicTrack Name="El_Jardin_Musica_Pausa_44_16_Loop" ID="{48D10D6F-4200-422B-A90F-2410FA8B1FD2}" ShortID="649246184">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-5</Value>

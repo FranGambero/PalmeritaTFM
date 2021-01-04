@@ -29,6 +29,10 @@
 			<ShortName>Jardin_Amb_Fly_Shoot_SFX_44_16_3.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Fly_Shoot_SFX_44_16_3_B9A6BE81.wem</Path>
 		</File>
+		<File Id="119660723" Language="SFX">
+			<ShortName>El_Jardin_Musica_Inicio_44_16_Loop.wav</ShortName>
+			<Path>SFX\El_Jardin_Musica_Inicio_44_16_Loop_D79FB2B7.wem</Path>
+		</File>
 		<File Id="162647633" Language="SFX">
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_2.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_2_B9A6BE81.wem</Path>
@@ -36,6 +40,10 @@
 		<File Id="203035603" Language="SFX">
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_9.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_9_B9A6BE81.wem</Path>
+		</File>
+		<File Id="218172167" Language="SFX">
+			<ShortName>El_Jardin_Musica_Inicio_Intro_44_16_Start.wav</ShortName>
+			<Path>SFX\El_Jardin_Musica_Inicio_Intro_44_16_Start_D79FB2B7.wem</Path>
 		</File>
 		<File Id="225958763" Language="SFX">
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_24.wav</ShortName>
@@ -101,6 +109,10 @@
 			<ShortName>Jardin_Amb_Fly_Shoot_SFX_44_16_4.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Fly_Shoot_SFX_44_16_4_B9A6BE81.wem</Path>
 		</File>
+		<File Id="554799606" Language="SFX">
+			<ShortName>El_Jardin_Musica_Ingame_44_16_Layer_2_Loop.wav</ShortName>
+			<Path>SFX\El_Jardin_Musica_Ingame_44_16_Layer_2_Loop_D79FB2B7.wem</Path>
+		</File>
 		<File Id="576119278" Language="SFX">
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_19.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_19_B9A6BE81.wem</Path>
@@ -125,6 +137,10 @@
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_26.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_26_B9A6BE81.wem</Path>
 		</File>
+		<File Id="811940940" Language="SFX">
+			<ShortName>El_Jardin_Musica_Ingame_44_16_Layer_1_Loop.wav</ShortName>
+			<Path>SFX\El_Jardin_Musica_Ingame_44_16_Layer_1_Loop_D79FB2B7.wem</Path>
+		</File>
 		<File Id="831636672" Language="SFX">
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_20.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_20_B9A6BE81.wem</Path>
@@ -132,6 +148,10 @@
 		<File Id="882408490" Language="SFX">
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_11.wav</ShortName>
 			<Path>SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_11_B9A6BE81.wem</Path>
+		</File>
+		<File Id="914630107" Language="SFX">
+			<ShortName>El_Jardin_Musica_Pausa_44_16_Loop.wav</ShortName>
+			<Path>SFX\El_Jardin_Musica_Pausa_44_16_Loop_D79FB2B7.wem</Path>
 		</File>
 		<File Id="941197341" Language="SFX">
 			<ShortName>Jardin_Amb_Birds_Shoot_SFX_44_16_1.wav</ShortName>
@@ -162,7 +182,7 @@
 			<Path>Musica_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2706007436" Name="Musica_Switch_In" ObjectPath="\Events\Default Work Unit\Musica\Musica_Switch_In" DurationType="Infinite">
-					<IncludedMemoryFiles>
+					<ReferencedStreamedFiles>
 						<File Id="119660723" Language="SFX">
 							<ShortName>El_Jardin_Musica_Inicio_44_16_Loop.wav</ShortName>
 							<Path>SFX\El_Jardin_Musica_Inicio_44_16_Loop_D79FB2B7.wem</Path>
@@ -183,7 +203,7 @@
 							<ShortName>El_Jardin_Musica_Pausa_44_16_Loop.wav</ShortName>
 							<Path>SFX\El_Jardin_Musica_Pausa_44_16_Loop_D79FB2B7.wem</Path>
 						</File>
-					</IncludedMemoryFiles>
+					</ReferencedStreamedFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{8C10EA33-8856-4B71-B94E-1CD6A8CC0DD2}">
 							<Media>
@@ -232,6 +252,70 @@
 			<ShortName>UI_SoundBank</ShortName>
 			<Path>UI_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2363561452" Name="Steps_Mapa_In" ObjectPath="\Events\Default Work Unit\UI\Steps_Mapa_In" DurationType="OneShot" DurationMin="0.233146" DurationMax="0.725387">
+					<IncludedMemoryFiles>
+						<File Id="175036366" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_08.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_08_10C4C929.wem</Path>
+						</File>
+						<File Id="187478389" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_14.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_14_10C4C929.wem</Path>
+						</File>
+						<File Id="230775093" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_06.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_06_10C4C929.wem</Path>
+						</File>
+						<File Id="374366418" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_05.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_05_10C4C929.wem</Path>
+						</File>
+						<File Id="376104432" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_02.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_02_10C4C929.wem</Path>
+						</File>
+						<File Id="390693949" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_03.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_03_10C4C929.wem</Path>
+						</File>
+						<File Id="410818859" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_11.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_11_10C4C929.wem</Path>
+						</File>
+						<File Id="418905517" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_01.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_01_10C4C929.wem</Path>
+						</File>
+						<File Id="512440749" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_04.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_04_10C4C929.wem</Path>
+						</File>
+						<File Id="602205659" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_12.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_12_10C4C929.wem</Path>
+						</File>
+						<File Id="714277669" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_15.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_15_10C4C929.wem</Path>
+						</File>
+						<File Id="732199025" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_09.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_09_10C4C929.wem</Path>
+						</File>
+						<File Id="757205018" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_07.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_07_10C4C929.wem</Path>
+						</File>
+						<File Id="824916201" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_13.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_13_10C4C929.wem</Path>
+						</File>
+						<File Id="1005884361" Language="SFX">
+							<ShortName>Jardin_Sepalo_Steps_SFX_Start_10.wav</ShortName>
+							<Path>SFX\Jardin_Sepalo_Steps_SFX_Start_10_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="349057203" Name="UI_Back_In" ObjectPath="\Events\Default Work Unit\UI\UI_Back_In" DurationType="OneShot" DurationMin="0.874467" DurationMax="0.874467">
 					<IncludedMemoryFiles>
 						<File Id="548071252" Language="SFX">
@@ -248,6 +332,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4184180445" Name="UI_Hit_Flor_In" ObjectPath="\Events\Default Work Unit\UI\UI_Hit_Flor_In" DurationType="OneShot" DurationMin="2.781519" DurationMax="2.781519">
+					<IncludedMemoryFiles>
+						<File Id="577416292" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Hit_Flor_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Hit_Flor_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="590137221" Name="UI_Pantalla_Logro_In" ObjectPath="\Events\Default Work Unit\UI\UI_Pantalla_Logro_In" DurationType="OneShot" DurationMin="1.415397" DurationMax="1.415397">
+					<IncludedMemoryFiles>
+						<File Id="370606020" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Pantalla_Logro_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Pantalla_Logro_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2493148897" Name="UI_Select_2_In" ObjectPath="\Events\Default Work Unit\UI\UI_Select_2_In" DurationType="OneShot" DurationMin="0.799569" DurationMax="0.799569">
 					<IncludedMemoryFiles>
 						<File Id="312227647" Language="SFX">
@@ -261,6 +361,22 @@
 						<File Id="649737484" Language="SFX">
 							<ShortName>El_Jardin_UI_Select_Start.wav</ShortName>
 							<Path>SFX\El_Jardin_UI_Select_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4116241270" Name="UI_Trans_1_In" ObjectPath="\Events\Default Work Unit\UI\UI_Trans_1_In" DurationType="OneShot" DurationMin="3.966916" DurationMax="3.966916">
+					<IncludedMemoryFiles>
+						<File Id="369746673" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Transicion_Start_1.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Transicion_Start_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1221477491" Name="UI_Trans_2_In" ObjectPath="\Events\Default Work Unit\UI\UI_Trans_2_In" DurationType="OneShot" DurationMin="1.712970" DurationMax="1.712970">
+					<IncludedMemoryFiles>
+						<File Id="354631107" Language="SFX">
+							<ShortName>El_Jardin_UI_SFX_Transicion_Start_2.wav</ShortName>
+							<Path>SFX\El_Jardin_UI_SFX_Transicion_Start_2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -281,6 +397,16 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="370606020" Language="SFX">
+					<ShortName>El_Jardin_UI_SFX_Pantalla_Logro_Start.wav</ShortName>
+					<Path>SFX\El_Jardin_UI_SFX_Pantalla_Logro_Start_10C4C929.wem</Path>
+				</File>
+				<File Id="577416292" Language="SFX">
+					<ShortName>El_Jardin_UI_SFX_Hit_Flor_Start.wav</ShortName>
+					<Path>SFX\El_Jardin_UI_SFX_Hit_Flor_Start_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="4063213932" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ingame_SoundBank</ObjectPath>
@@ -436,7 +562,7 @@
 					</ReferencedStreamedFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2289756239" Name="Carta_Posicion_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Posicion_In" DurationType="OneShot" DurationMin="1.554150" DurationMax="1.615624">
+				<Event Id="2289756239" Name="Carta_Posicion_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Posicion_In" DurationType="OneShot" DurationMin="1.552993" DurationMax="1.611542">
 					<IncludedMemoryFiles>
 						<File Id="71906175" Language="SFX">
 							<ShortName>El_Jardin_Posicion_Cartas_SFX_Start_3.wav</ShortName>

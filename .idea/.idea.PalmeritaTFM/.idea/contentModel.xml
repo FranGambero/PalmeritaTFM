@@ -24,7 +24,6 @@
             <e p="OFL.txt" t="Include" />
           </e>
         </e>
-        <e p="LogrosPanel.cs" t="Include" />
         <e p="MockJado" t="Include">
           <e p="Build Manager" t="Include">
             <e p="BuildManager.cs" t="Include" />
@@ -69,6 +68,7 @@
             <e p="DoGrow.cs" t="Include" />
             <e p="LotoAnimatorController.cs" t="Include" />
             <e p="ProtaAnimationController.cs" t="Include" />
+            <e p="ShovelCravAnimatorController.cs" t="Include" />
             <e p="Spin.cs" t="Include" />
           </e>
           <e p="AudioManager.cs" t="Include" />
@@ -83,6 +83,8 @@
           </e>
           <e p="Construction" t="Include">
             <e p="DryController.cs" t="Include" />
+            <e p="Flower.cs" t="Include" />
+            <e p="FlowerManager.cs" t="Include" />
             <e p="Water.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
@@ -118,10 +120,12 @@
             <e p="NodeDataModel.cs" t="Include" />
             <e p="NodeEditorGUI.cs" t="Include" />
           </e>
+          <e p="LogrosPanel.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="Keys.cs" t="Include" />
             <e p="LoadScreenManager.cs" t="Include" />
+            <e p="MenuDirector.cs" t="Include" />
             <e p="SessionVariables.cs" t="Include" />
           </e>
           <e p="Mapamundi" t="Include">
@@ -146,11 +150,15 @@
             <e p="ITurn.cs" t="Include" />
             <e p="Semaphore.cs" t="Include" />
           </e>
+          <e p="Sprites" t="Include">
+            <e p="SpriteReceiveShadow.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="ConfigMenuManager.cs" t="Include" />
             <e p="FadeOutPanel.cs" t="Include" />
             <e p="MenuButton.cs" t="Include" />
             <e p="MenuManager.cs" t="Include" />
+            <e p="OutlineController.cs" t="Include" />
             <e p="ScorePetalController.cs" t="Include" />
             <e p="ScreenTransitionImageEffect.cs" t="Include" />
             <e p="TillingMovement.cs" t="Include" />
@@ -161,10 +169,12 @@
             <e p="ClassTypeReference.cs" t="Include" />
             <e p="ClassTypeReferencePropertyDrawer.cs" t="Include" />
             <e p="EditorUtils.cs" t="Include" />
+            <e p="Interfaz.cs" t="Include" />
             <e p="Patterns" t="Include">
               <e p="IConverter.cs" t="Include" />
               <e p="IFactory.cs" t="Include" />
             </e>
+            <e p="ScreenShotsUtil.cs" t="Include" />
           </e>
         </e>
         <e p="ShadersAndVFX" t="Include">
@@ -184,6 +194,7 @@
           <e p="Others" t="Include">
             <e p="SimpleShadows.shader" t="Include" />
             <e p="SolidColor.shader" t="Include" />
+            <e p="SpriteReciveShadows.shader" t="Include" />
             <e p="Toon.shader" t="Include" />
           </e>
           <e p="Screen" t="Include">

@@ -28,27 +28,27 @@ namespace ElJardin {
 
         public int LastIndexUsed { get => lastIndexUsed; set => lastIndexUsed = value; }
 
-        private void Awake() {
+        private void Init() {
             maxHand = 5;
             handList = new List<Card>();
             cardQueue = new Queue<CardData>(cardList.Select(card => card.CardData).ToList());
             totalCards = cardQueue.Count;
         }
 
-        private void Start() {
-            firstDrawCard();
-        }
 
-        private void firstDrawCard() {
+        public void firstDrawCard() {
             int index = 0;
-            while (index < maxHand) {
+
+            MenuDirector.Instance.ActivateCardCanvas(true);
+            Init();
+            while (index < cardList.Count) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);
                 handList[index].CardData = cardQueue.Dequeue();
                 handList[index].LoadCardData();
                 moveCardToDeck(handList[index]);
-                StartCoroutine(handList[index].ChangeCardTransform(index));
+                StartCoroutine(handList[index].changeCardTransform(index));
                 index++;
             }
 
@@ -59,11 +59,11 @@ namespace ElJardin {
             Card tmpCard = handList.Find(c => c.transformIndex == currentIndex);
             handList.ForEach(c => {
                 if (c.transformIndex > currentIndex) {
-                    StartCoroutine(c.ChangeCardTransform(c.transformIndex - 1));
+                    StartCoroutine(c.changeCardTransform(c.transformIndex - 1));
                 }
             });
             //Lo movemos a ultima posicion
-            StartCoroutine(tmpCard.ChangeCardTransform(maxHand - 1));
+            StartCoroutine(tmpCard.changeCardTransform(maxHand - 1));
         }
 
         public void DrawNextCard() {

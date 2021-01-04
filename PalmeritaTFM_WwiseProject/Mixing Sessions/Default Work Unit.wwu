@@ -7,6 +7,7 @@
 					<ObjectList>
 						<ObjectRef Name="Musica_Bus" ID="{05818407-73B2-4D02-8587-A7BBE0D1C64A}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 						<ObjectRef Name="PC" ID="{CB70363A-C61A-4EE5-8ED6-74AE093CD00B}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+						<ObjectRef Name="Sepalo_Steps" ID="{32C492BF-6E13-45B4-B454-84B53E6CE75F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 					</ObjectList>
 				</MixingSession>
 			</ChildrenList>

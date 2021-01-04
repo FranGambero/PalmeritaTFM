@@ -6,9 +6,15 @@ using UnityEngine;
 namespace ElJardin {
     public class DryController : MonoBehaviour, ITurn {
         public int numTurns = 3;
+        private int currTurns;
         public bool secadoDelTo;
         public int turnIndex { get { return _turnIndex; } set { _turnIndex = value; } }
+
+        public bool turneable { get => _turneable; set => _turneable = value; }
+
         public int _turnIndex;
+        public bool _turneable = false;
+        public bool active;
 
         public void onTurnStart(int currentIndex) {
             if (turnIndex == currentIndex) {
@@ -19,16 +25,37 @@ namespace ElJardin {
         public void initDry(int newIndex) {
             //List<ITurn> listaTurnosActuales = Semaphore.Instance.turnBasedElementList;
             //turnIndex = listaTurnosActuales[listaTurnosActuales.Count].turnIndex + 1;
-            secadoDelTo = false;
-            turnIndex = newIndex;
-            Semaphore.Instance.AddTurn(this);
+            if (!active) {
+                active = true;
+                turneable = true;
+                secadoDelTo = false;
+                turnIndex = newIndex;
+                currTurns = numTurns;
+                Semaphore.Instance.AddTurn(this);
+            }
+        }
+        public void StopDry(bool resetGround) {
+            if (active) {
+                active = false;
+                turneable = false;
+                secadoDelTo = false;
+                Semaphore.Instance.RemoveTurn(this);
+                gameObject.GetComponent<Node>().ResetMat();
+                Debug.LogWarning("Quiero ser una casilla de verdad!");
+                if (resetGround) {
+                   BuildManager.Instance?.BuildGround(GetComponent<Node>());
+                }
+                else
+                    VFXDirector.Instance.Play("OnStopDryGround", transform.position);
+            }
         }
 
         private void checkDry() {
-            if (numTurns > 0) {
-                numTurns--;
-                Debug.Log("Me quedan " + numTurns + " turnos");
-                switch (numTurns) {
+            if (currTurns > 0) {
+                VFXDirector.Instance.Play("OnDryGround", transform.position);
+                currTurns--;
+
+                switch (currTurns) {
                     case 2:
                         GetComponentInChildren<MeshRenderer>().material = MapManager.Instance.peligro1;
                         break;
@@ -51,18 +78,15 @@ namespace ElJardin {
 
         public void onTurnFinished() {
             Semaphore.Instance.onTurnEnd(turnIndex);
-            if (GetComponent<Node>().water.IsActive() ||
-             BuildManager.Instance.UpdateNeighbors(GetComponent<Node>()) ||
-             GetComponent<Node>().water.isGonnaHaveDaWote) {
+            if (GetComponent<Node>().water.IsActive() /*||
+             BuildManager.Instance.CheckWaterAndActue(GetComponent<Node>())*/) {
 
-                gameObject.GetComponent<Node>().RemoveDryComponent();
+                StopDry(false);
 
             } else if (secadoDelTo) {
 
                 // TODO, vuelve a poner como suelo normal :3  y quitar el dry, sera el Node posiblemete
-                BuildManager.Instance?.BuildGround(GetComponent<Node>());
-                gameObject.GetComponent<Node>().RemoveDryComponent();
-                Debug.LogWarning("Quiero ser una casilla de verdad!");
+                StopDry(true);
             }
         }
 
@@ -70,5 +94,7 @@ namespace ElJardin {
             //secadoDelTo = true;
             Semaphore.Instance.onTurnStart -= onTurnStart;
         }
+
+
     }
 }
