@@ -19,12 +19,12 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     private void Awake() {
         numZones = 4;
         zoneDataArray = new ZoneData[numZones];
-        //currentZone = PlayerPrefs.GetInt("CurrentZone", 0);
+        currentZone = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_ZONE, 0);
         /////
-        currentZone = 0;
-        PlayerPrefs.SetInt("CurrentZone", 0);
+        //currentZone = 0;
+        //PlayerPrefs.SetInt(Keys.Scenes.CURRENT_ZONE, 0);
         /////
-        currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
+        currentLevel = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_LEVEL, 0);
 
         if (levelZonePanels.Length > 0)
             levelZonePanels[currentZone].SetActive(true);
@@ -125,7 +125,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         } else if (currentZone < 0) {
             currentZone = 1;
         }
-        PlayerPrefs.SetInt("CurrentZone", currentZone);
+        PlayerPrefs.SetInt(Keys.Scenes.CURRENT_ZONE, currentZone);
         onZoneChange?.Invoke(currentZone);
         levelZonePanels[currentZone].SetActive(true);
 

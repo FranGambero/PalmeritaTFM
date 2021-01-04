@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a4d4032f8b946443b70324320706a5c, type: 3}
-  m_Name: Muerte
+  m_Name: Pala
   m_EditorClassIdentifier: 
   data:
     title: Muerte

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Data/Cards.meta
 guid: 72d58ed93b2cc7545a88c09e8b0b7ab4
+=======
+guid: 27ab7aa6dbdd32a4188376a918dfbb57
+>>>>>>> master:Assets/Scripts/Music.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
