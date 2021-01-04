@@ -18,5 +18,7 @@ public static class Keys {
         public static string LOAD_SCENE_INT= "NextLevel";
         public static string LOAD_SCENE_STRING= "NextLevelString";
         public static string LAST_PLAYED_LEVEL = "LastPlayeLevel";
+        public static string CURRENT_ZONE = "CurrentZone";
+        public static string CURRENT_LEVEL = "CurrentLevel";
     }
 }
