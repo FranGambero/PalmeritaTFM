@@ -17,10 +17,6 @@ namespace ElJardin.Hover
 
         public abstract void HoverOnNodeEnter(Node targetNode);
 
-        public void Hide()
-        {
-            BuildManager.Instance.UnHoverNodesInList(hoveredNodesCache);
-            hoveredNodesCache.Clear();
-        }
+        public abstract void Hide();
     }
 }

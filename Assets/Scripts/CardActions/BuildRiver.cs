@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using UnityEngine;
+
 namespace ElJardin.CardActions
 {
     public class BuildRiver : BaseCardAction
@@ -8,8 +11,14 @@ namespace ElJardin.CardActions
 
         public override void DoAction(Node targetNode)
         {
-            //construir rio en las n posiciones a partir del nodo (targetNode)
-            //targetNode tiene que ser el nodo mas cercano a sepalo en la direccion elegida
+            Debug.Log($"CardAction - Building river");
+            TryBuildRiver();
+        }
+
+        void TryBuildRiver()
+        {
+            var actionCompleted = BuildManager.Instance.ChangeNodesInList();
+            onActionCompleted.Invoke(actionCompleted);
         }
     }
 }

@@ -32,7 +32,12 @@ namespace ElJardin.Hover
             }
             
             BuildManager.Instance.HoverNodesInList(hoveredNodesCache);
-            
+        }
+        
+        public override void Hide()
+        {
+            BuildManager.Instance.UnHoverNodesInList(hoveredNodesCache);
+            hoveredNodesCache.Clear();
         }
     }
 }

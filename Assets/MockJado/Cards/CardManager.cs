@@ -12,7 +12,7 @@ namespace ElJardin {
     public class CardManager : Singleton<CardManager> {
         public Card cardPrefab;
         [SerializeField]
-        public Queue<CardData> cardQueue;
+        public Queue<CardDataModelWrapper> cardQueue;
         [SerializeField]
         public List<CardDataModelWrapper> cardList;
         public List<Card> handList;
@@ -31,7 +31,7 @@ namespace ElJardin {
         private void Init() {
             maxHand = 5;
             handList = new List<Card>();
-            cardQueue = new Queue<CardData>(cardList.Select(card => card.CardData).ToList());
+            cardQueue = new Queue<CardDataModelWrapper>(cardList);
             totalCards = cardQueue.Count;
         }
 
@@ -45,8 +45,10 @@ namespace ElJardin {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);
-                handList[index].CardData = cardQueue.Dequeue();
+                var dequedCard = cardQueue.Dequeue();
+                handList[index].CardData = dequedCard.CardData;
                 handList[index].LoadCardData();
+                handList[index].LoadCardActions(dequedCard.DataModel);
                 moveCardToDeck(handList[index]);
                 StartCoroutine(handList[index].changeCardTransform(index));
                 index++;
@@ -83,8 +85,10 @@ namespace ElJardin {
                 }
                 tmpCard.StopAllCoroutines();
 
-                tmpCard.CardData = cardQueue.Dequeue();
+                var dequedCard = cardQueue.Dequeue();
+                tmpCard.CardData = dequedCard.CardData;
                 tmpCard.LoadCardData();
+                tmpCard.LoadCardActions(dequedCard.DataModel);
                 moveCardToDeck(tmpCard);
                 //AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
 

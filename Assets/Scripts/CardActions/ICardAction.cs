@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ElJardin.CardActions
 {
@@ -6,6 +7,8 @@ namespace ElJardin.CardActions
     {
         int size { get; set; }
         GameObject insectPrefab { get; set; }
+        UnityEvent<bool> onActionCompleted { get; set; }
         void DoAction(Node targetNode);
+        
     }
 }

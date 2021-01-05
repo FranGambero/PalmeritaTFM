@@ -20,7 +20,7 @@ namespace ElJardin.Data.Cards
         #endregion
         
         #region Converters
-        public ActionCard ToCard() => converter.Convert(this);
+        public ActionCard ToActionCard() => converter.Convert(this);
         #endregion
     }
 }

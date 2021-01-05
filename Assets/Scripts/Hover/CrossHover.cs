@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace ElJardin.Hover
 {
@@ -10,12 +13,51 @@ namespace ElJardin.Hover
 
         public override void HoverOnGrab()
         {
-            throw new System.NotImplementedException();
+            Debug.Log($"CrossHover - Hovering grab");
+            HoverAroundSepalo();
         }
 
         public override void HoverOnNodeEnter(Node targetNode)
         {
-            throw new System.NotImplementedException();
+            Debug.Log($"CrossHover - Hovering node");
         }
+
+        public override void Hide()
+        {
+            BuildManager.Instance.StopHoverCoroutine();
+            BuildManager.Instance.UnHoverNodesInList();
+            //hoveredNodesCache.Clear();
+        }
+
+        #region Hover On Grab
+        void HoverAroundSepalo()
+        {
+            HoverAround();
+            BuildManager.Instance.changeBuildValues(size);
+        }
+
+        void HoverAround()
+        {
+            BuildManager.Instance.HoverAroundNode(size);
+        }
+
+        List<Node> CalculateNodesToHoverAroundSepalo()
+        {
+            var nodes = new List<Node>();
+            var sepaloPosition = GameManager.Instance.Sepalo.CurrentNode;
+            
+            //North
+            for(var column = sepaloPosition.column; column <= sepaloPosition.column + size; column++)
+            {
+                var auxNode = MapManager.Instance?.GetNode(sepaloPosition.row, column);
+                if(auxNode != null)
+                {
+                    
+                }
+            }
+
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

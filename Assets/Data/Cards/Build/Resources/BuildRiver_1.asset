@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BuildRiver_1
   m_EditorClassIdentifier: 
   dataModel:
-    size: 1
+    size: 3
     hoverType:
-      classRef: ElJardin.Hover.SquareHover, Assembly-CSharp
+      classRef: ElJardin.Hover.CrossHover, Assembly-CSharp
     actionType:
       classRef: ElJardin.CardActions.BuildRiver, Assembly-CSharp
     insectPrefab: {fileID: 0}

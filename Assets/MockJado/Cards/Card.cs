@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using ElJardin.Data.Cards;
+using UnityEngine.Events;
 
 namespace ElJardin
 {
@@ -18,9 +19,11 @@ namespace ElJardin
         #endregion
         
         #region Accessors
+        public void HoverOnGrab() => actionCard.HoverOnGrab();
         public void HoverOnNodeEnter(Node targetNode) => actionCard.HoverOnNodeEnter(targetNode);
         public void UnHover() => actionCard.UnHover();
         public void Action(Node targetNode) => actionCard.Action(targetNode);
+        public UnityEvent<bool> OnActionCompleted => actionCard.OnActionCompleted;
         #endregion
 
         private void Awake()
@@ -45,7 +48,7 @@ namespace ElJardin
         
         public void LoadCardActions(CardDataModel cardDataModel)
         {
-            var aux = cardDataModel.ToCard();
+            var aux = cardDataModel.ToActionCard();
             actionCard = aux;
         }
         #endregion
