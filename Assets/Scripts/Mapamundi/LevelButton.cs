@@ -22,7 +22,7 @@ public class LevelButton : MonoBehaviour {
     private bool clicked;
 
     private void Awake() {
-        mapMoveController = FindObjectOfType<MapMove>();
+        mapMoveController = LuigisZip.Instance.luigis[zoneId];
         if (confirmPanel == null) {
             //No va :(((
             confirmPanel = MenuManager.Instance.confirmPanel;

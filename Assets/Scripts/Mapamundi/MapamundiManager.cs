@@ -30,7 +30,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
             levelZonePanels[currentZone].SetActive(true);
 
         transform.SetParent(null);
-       // DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start() {
@@ -54,7 +54,9 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     }
 
     public ZoneData GetCurrentZone(int zoneId) {
-        return SerializableManager.Instance.DeSerializeZone(zoneId);
+        if (zoneDataArray[zoneId] == null)
+            SetCurrentZone(zoneId);
+        return zoneDataArray[zoneId];
     }
 
     public LevelData GetCurrentLevel(int zoneId, int levelId) {
