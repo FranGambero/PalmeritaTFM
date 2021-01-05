@@ -101,8 +101,14 @@ namespace ElJardin {
             SceneManager.LoadScene(2);
         }
 
-        public void goNextLevel(int nextLevelIndex) {
-            PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, nextLevelIndex);
+        public void goNextLevel() {
+            int currentLevel = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_LEVEL) + 1;
+            PlayerPrefs.SetInt(Keys.Scenes.CURRENT_LEVEL, currentLevel);
+
+            string levelStringToLoad = "Level" + MapamundiManager.Instance.currentZone + "_" + currentLevel;
+
+            PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, -1);
+            PlayerPrefs.SetString(Keys.Scenes.LOAD_SCENE_STRING, levelStringToLoad);
             SceneManager.LoadScene("LoadScene");
         }
     }
