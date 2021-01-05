@@ -13,6 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AGUA_SHOOT_IN = 2731498627U;
+        static const AkUniqueID AGUA_SHOOT_OUT = 3898589054U;
+        static const AkUniqueID AMB_AGUA_IN = 589089938U;
+        static const AkUniqueID AMB_AGUA_OUT = 3276893165U;
         static const AkUniqueID AMB_BASE_IN = 430716873U;
         static const AkUniqueID AMB_BASE_OUT = 941055080U;
         static const AkUniqueID CARTA_POSICION_IN = 2289756239U;

@@ -73,7 +73,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585934752280555417
+    m_lastTime: -8585917727796916410
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -107,8 +107,64 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585934752312050736
+    m_lastTime: -8585917727797113641
     List:
+    - name: Agua_Shoot_In
+      guid: 46799f106668bd42a7f479590f305a0d
+      id: 2731498627
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambientes
+        ObjectType: 4
+      - ElementName: Agua_Shoot_In
+        ObjectType: 3
+      Path: Default Work Unit\Ambientes\Agua_Shoot_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Agua_Shoot_Out
+      guid: 11e9dcefab80c74cb0bde9876587b8ad
+      id: 3898589054
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambientes
+        ObjectType: 4
+      - ElementName: Agua_Shoot_Out
+        ObjectType: 3
+      Path: Default Work Unit\Ambientes\Agua_Shoot_Out
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Amb_Agua_In
+      guid: 58d1fa14be939f41bb6ccc4d46fa344c
+      id: 589089938
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambientes
+        ObjectType: 4
+      - ElementName: Amb_Agua_In
+        ObjectType: 3
+      Path: Default Work Unit\Ambientes\Amb_Agua_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Amb_Agua_Out
+      guid: fcb5acbfa2cc06419d59060994de036e
+      id: 3276893165
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambientes
+        ObjectType: 4
+      - ElementName: Amb_Agua_Out
+        ObjectType: 3
+      Path: Default Work Unit\Ambientes\Amb_Agua_Out
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Amb_Base_In
       guid: c9d32a01a8fc504fa8a8cae89dbb1509
       id: 430716873
@@ -135,8 +191,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambientes\Amb_Base_Out
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Ambientes
       guid: 71f4fd0ca8ba654fbd726880ba870cae
       id: 1014953671
@@ -161,8 +217,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Carta_Posicion_In
       maxAttenuation: 0
-      maxDuration: 1611542
-      minDuration: 1552993
+      maxDuration: -1
+      minDuration: -1
     - name: Carta_Select_In
       guid: 7319dc09a3eec442a897591ef38d4420
       id: 236399107
@@ -175,8 +231,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Carta_Select_In
       maxAttenuation: 0
-      maxDuration: 330091
-      minDuration: 330091
+      maxDuration: -1
+      minDuration: -1
     - name: Carta_Slide_In
       guid: 85ed6b3e00b92548ae76ed36e29dfa20
       id: 2760388952
@@ -189,8 +245,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Carta_Slide_In
       maxAttenuation: 0
-      maxDuration: 537188
-      minDuration: 459320
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga
       guid: 0bd0805230ab43499342437a62886457
       id: 2509213026
@@ -219,8 +275,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Ataque_In
       maxAttenuation: 0
-      maxDuration: 4127982
-      minDuration: 4121995
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Crep_In
       guid: 1a172b0d967b294795b4dba796f8c8db
       id: 1873637369
@@ -235,8 +291,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In
       maxAttenuation: 0
-      maxDuration: 12893356
-      minDuration: 12893356
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Crep_Out
       guid: 153402345f6195479a34bfff5f12cb72
       id: 2885749304
@@ -251,8 +307,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Salto_In
       guid: 9b46879b5e576c43a48d38e5ffb33865
       id: 2360392006
@@ -267,8 +323,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In
       maxAttenuation: 0
-      maxDuration: 1983469
-      minDuration: 1983469
+      maxDuration: -1
+      minDuration: -1
     - name: Hormiga_Steps_In
       guid: 4d0cc55da989b44e82e65d82579c087d
       id: 60258080
@@ -283,8 +339,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In
       maxAttenuation: 0
-      maxDuration: 129532
-      minDuration: 10265
+      maxDuration: -1
+      minDuration: -1
     - name: Musica
       guid: 44d85aede3ad794395c589018a6993de
       id: 1730564739
@@ -351,8 +407,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\perosnajes\Sepalo\Sepalo_Steps_In
       maxAttenuation: 0
-      maxDuration: 725387
-      minDuration: 233146
+      maxDuration: -1
+      minDuration: -1
     - name: SFX
       guid: cce1d28cb63263458723a14139eabdd1
       id: 393239870
@@ -377,8 +433,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Steps_Mapa_In
       maxAttenuation: 0
-      maxDuration: 725387
-      minDuration: 233146
+      maxDuration: -1
+      minDuration: -1
     - name: UI
       guid: 16a08ace668db640a5ca1f0567bcd62e
       id: 1551306167
@@ -403,8 +459,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Back_In
       maxAttenuation: 0
-      maxDuration: 874467
-      minDuration: 874467
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Cursor_In
       guid: af094bdf1b62bc46a7d0d959c2cf97ae
       id: 3671726430
@@ -417,8 +473,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Cursor_In
       maxAttenuation: 0
-      maxDuration: 764444
-      minDuration: 764444
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Hit_Flor_In
       guid: 41864586356ab245971095f41f592486
       id: 4184180445
@@ -431,8 +487,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Hit_Flor_In
       maxAttenuation: 0
-      maxDuration: 2781519
-      minDuration: 2781519
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Pantalla_Logro_In
       guid: a947c188a12b21419f62fa4996650e73
       id: 590137221
@@ -445,8 +501,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Pantalla_Logro_In
       maxAttenuation: 0
-      maxDuration: 1415397
-      minDuration: 1415397
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Select_2_In
       guid: 4ed8d488a1f00846b2aebd4640fb29c7
       id: 2493148897
@@ -459,8 +515,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Select_2_In
       maxAttenuation: 0
-      maxDuration: 799569
-      minDuration: 799569
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Select_In
       guid: 0dafbfff0add794d8d54b24a5e20266b
       id: 3930592856
@@ -473,8 +529,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Select_In
       maxAttenuation: 0
-      maxDuration: 1363628
-      minDuration: 1363628
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Trans_1_In
       guid: 7e92ff9a9193184280d49ba9bb7f549f
       id: 4116241270
@@ -487,8 +543,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Trans_1_In
       maxAttenuation: 0
-      maxDuration: 3966916
-      minDuration: 3966916
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Trans_2_In
       guid: 3d3b8af793766543ab2b9f3f3ccfd900
       id: 1221477491
@@ -501,8 +557,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Trans_2_In
       maxAttenuation: 0
-      maxDuration: 1712970
-      minDuration: 1712970
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Vol_Down_In
       guid: 7ed6b7b733a255449714bcd25eb911cc
       id: 2053540170
@@ -515,8 +571,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Vol_Down_In
       maxAttenuation: 0
-      maxDuration: 351247
-      minDuration: 351247
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Vol_Up_In
       guid: 36382b77edfeba44a3faf966b03f4690
       id: 1436640151
@@ -529,8 +585,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\UI_Vol_Up_In
       maxAttenuation: 0
-      maxDuration: 351247
-      minDuration: 351247
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit

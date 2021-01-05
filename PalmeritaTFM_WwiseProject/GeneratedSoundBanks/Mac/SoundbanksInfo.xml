@@ -413,6 +413,36 @@
 			<ShortName>Ingame_SoundBank</ShortName>
 			<Path>Ingame_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2731498627" Name="Agua_Shoot_In" ObjectPath="\Events\Default Work Unit\Ambientes\Agua_Shoot_In" DurationType="OneShot" DurationMin="4.028889" DurationMax="4.359478">
+					<IncludedMemoryFiles>
+						<File Id="486865489" Language="SFX">
+							<ShortName>Jardin_Agua_Shoot_SFX_44_16_Start.wav</ShortName>
+							<Path>SFX\Jardin_Agua_Shoot_SFX_44_16_Start_B9A6BE81.wem</Path>
+						</File>
+						<File Id="806211977" Language="SFX">
+							<ShortName>Jardin_Agua_Shoot_SFX_44_16_Start_2.wav</ShortName>
+							<Path>SFX\Jardin_Agua_Shoot_SFX_44_16_Start_2_B9A6BE81.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3898589054" Name="Agua_Shoot_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Agua_Shoot_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="589089938" Name="Amb_Agua_In" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Agua_In" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="314046969" Language="SFX">
+							<ShortName>Jardin_Agua_Amb_SFX_44_16_Loop_2.wav</ShortName>
+							<Path>SFX\Jardin_Agua_Amb_SFX_44_16_Loop_2_B9A6BE81.wem</Path>
+						</File>
+						<File Id="387729506" Language="SFX">
+							<ShortName>Jardin_Agua_Amb_SFX_44_16_Loop.wav</ShortName>
+							<Path>SFX\Jardin_Agua_Amb_SFX_44_16_Loop_B9A6BE81.wem</Path>
+						</File>
+						<File Id="587869079" Language="SFX">
+							<ShortName>Jardin_Agua_Amb_SFX_44_16_Loop_3.wav</ShortName>
+							<Path>SFX\Jardin_Agua_Amb_SFX_44_16_Loop_3_B9A6BE81.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3276893165" Name="Amb_Agua_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Agua_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="430716873" Name="Amb_Base_In" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_In" DurationType="Infinite">
 					<ReferencedStreamedFiles>
 						<File Id="13095816" Language="SFX">
