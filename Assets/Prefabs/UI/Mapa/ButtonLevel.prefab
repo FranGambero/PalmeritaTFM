@@ -461,6 +461,7 @@ MonoBehaviour:
   - {fileID: 7149396581693358113}
   - {fileID: 6247901764391362811}
   lockedSprite: {fileID: 8429440283709051899}
+  targetPoint: {fileID: 1434062235392435188}
   levelData:
     levelName: 
     id: 0

@@ -70,7 +70,7 @@ public class MenuDirector : Singleton<MenuDirector> {
 
     public void ActivateEndMenu(bool activate, int currentLevel) {
         if (GameManager.CheckInstance()) GameManager.Instance.OnPause = activate;
-        if (BGBlur) BGBlur.SetActive(activate);
+        if (BGBlur) BGBlur.SetActive(false);
         if (activate) {
 
             ActivateCardCanvas(false);
