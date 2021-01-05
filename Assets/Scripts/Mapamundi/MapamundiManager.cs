@@ -122,7 +122,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
         //currentZone = (currentZone + avanze) % 2;
         currentZone += avanze;
-        if (currentZone >= 2) {
+        if (currentZone >= levelZonePanels.Length-1) {
             currentZone = 0;
         } else if (currentZone < 0) {
             currentZone = 1;

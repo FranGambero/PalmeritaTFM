@@ -7,13 +7,13 @@ public class DoGrow : MonoBehaviour {
     public Vector3 size;
     public float time = 1;
     public float delay = 0;
-    public bool growed = false, forceGetSize = false;
+    public bool growed = false;
 
 
     public List<GrowChild> childs;
 
     private void Start() {
-        if (size == Vector3.zero || forceGetSize)
+        if (size == Vector3.zero )
             size = transform.localScale;
         if (growed) {
             QuickGrow();
