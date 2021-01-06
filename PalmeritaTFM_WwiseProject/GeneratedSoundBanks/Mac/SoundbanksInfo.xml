@@ -223,6 +223,7 @@
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="1307997658" Name="LPF_Musica" ObjectPath="\Game Parameters\Default Work Unit\LPF_Musica"/>
+				<GameParameter Id="1785749757" Name="Vol_MusicaIG" ObjectPath="\Game Parameters\Default Work Unit\Vol_MusicaIG"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1620872583" Name="General_Music" ObjectPath="\States\Default Work Unit\General_Music">

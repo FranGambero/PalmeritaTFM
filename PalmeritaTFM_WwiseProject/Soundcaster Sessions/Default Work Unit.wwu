@@ -24,6 +24,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="Vol_MusicaIG" ID="{C631EF74-2C94-410D-B289-16AAD73194E0}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Ducking" ID="{471A0368-C891-48D7-AC56-0680A6D382F1}"/>
 							<Value>-9.2093023255814</Value>
 						</RTPCValue>

@@ -65,6 +65,7 @@ namespace AK
         static const AkUniqueID DUCKING = 2712164154U;
         static const AkUniqueID LPF_MUSICA = 1307997658U;
         static const AkUniqueID VOL_MUSICA = 3361044397U;
+        static const AkUniqueID VOL_MUSICAIG = 1785749757U;
         static const AkUniqueID VOL_SFX = 3273357900U;
     } // namespace GAME_PARAMETERS
 
