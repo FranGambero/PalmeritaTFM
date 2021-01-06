@@ -76,10 +76,10 @@ namespace ElJardin {
                 MenuDirector.Instance.ToggleConfigMenu();
             }
 
-            if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {
-                PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
-                SceneManager.LoadScene("LoadScene");
-            }
+            // if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {
+            //     PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
+            //     SceneManager.LoadScene("LoadScene");
+            // }
         }
 
         public void showInstructions(bool showInstruc) {

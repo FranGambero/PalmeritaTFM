@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 namespace ElJardin {
     public class Flower : MonoBehaviour, ITurn {
@@ -30,13 +31,37 @@ namespace ElJardin {
                 getNodeNeighbors();
         }
 
+        private void Update() {
+            if (Input.GetKeyDown(KeyCode.D)) {
+                AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_Flor, 25);
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.C)) {
+                AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_Flor, 50);
+
+            }
+        }
+
         [ContextMenu("CRECE CARLA")]
         public void activateFlor() {
             flowerOpened = true;
             GetComponentInChildren<LotoAnimatorController>().LotoOpen();
             AkSoundEngine.PostEvent("Flor_Abrir_In", gameObject);
+            //AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_Flor, 100);
+            FlowerManager.Instance.OnFlowerOpening();
             listaElementosCrecedores.ForEach(e => { if (e) e.RandomGrow(); });
         }
+
+        //public void ChangeSound() {
+        //    int value = 0;
+        //    DOTween.To(() => value, x => value = x, 100, 1).OnUpdate(() => coso(value));
+        //}
+
+        //private void coso(int value) {
+        //    AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_Flor, value);
+
+        //}
 
         [ContextMenu("DESCRECE CARLA")]
         public void deActivateFlor() {
