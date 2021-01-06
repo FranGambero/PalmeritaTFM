@@ -592,6 +592,22 @@
 					</ReferencedStreamedFiles>
 				</Event>
 				<Event Id="941055080" Name="Amb_Base_Out" ObjectPath="\Events\Default Work Unit\Ambientes\Amb_Base_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1729150180" Name="Arbol_Abrir_In" ObjectPath="\Events\Default Work Unit\SFX\Arbol_Abrir_In" DurationType="OneShot" DurationMin="4.338821" DurationMax="4.710748">
+					<IncludedMemoryFiles>
+						<File Id="44894630" Language="SFX">
+							<ShortName>El_Jardin_Arbol_Abrir_SFX_44_16_Start_2.wav</ShortName>
+							<Path>SFX\El_Jardin_Arbol_Abrir_SFX_44_16_Start_2_B9A6BE81.wem</Path>
+						</File>
+						<File Id="149177832" Language="SFX">
+							<ShortName>El_Jardin_Arbol_Abrir_SFX_44_16_Start_3.wav</ShortName>
+							<Path>SFX\El_Jardin_Arbol_Abrir_SFX_44_16_Start_3_B9A6BE81.wem</Path>
+						</File>
+						<File Id="299876701" Language="SFX">
+							<ShortName>El_Jardin_Arbol_Abrir_SFX_44_16_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_Arbol_Abrir_SFX_44_16_Start_B9A6BE81.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2289756239" Name="Carta_Posicion_In" ObjectPath="\Events\Default Work Unit\SFX\Carta_Posicion_In" DurationType="OneShot" DurationMin="1.552993" DurationMax="1.611542">
 					<IncludedMemoryFiles>
 						<File Id="71906175" Language="SFX">
