@@ -63,6 +63,7 @@ namespace ElJardin {
 
         public void StartGame() {
             gameRunning = true;
+            AkSoundEngine.PostEvent("Amb_Agua_In", gameObject);
         }
         public void EndGame() {
             gameRunning = false;
@@ -75,10 +76,10 @@ namespace ElJardin {
                 MenuDirector.Instance.ToggleConfigMenu();
             }
 
-            if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {
-                PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
-                SceneManager.LoadScene("LoadScene");
-            }
+            // if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0) {
+            //     PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
+            //     SceneManager.LoadScene("LoadScene");
+            // }
         }
 
         public void showInstructions(bool showInstruc) {
@@ -87,6 +88,10 @@ namespace ElJardin {
             } else {
                 instructMenu.SetActive(false);
             }
+        }
+
+        private void OnDestroy() {
+            AkSoundEngine.PostEvent("Amb_Agua_Out", gameObject);
         }
 
         public void goToStartMenu() {

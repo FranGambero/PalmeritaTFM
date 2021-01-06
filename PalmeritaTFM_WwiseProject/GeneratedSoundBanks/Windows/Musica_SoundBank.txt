@@ -11,6 +11,7 @@ State	ID	Name	State Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1307997658	LPF_Musica			\Default Work Unit\LPF_Musica	
+	1785749757	Vol_MusicaIG			\Default Work Unit\Vol_MusicaIG	
 
 Effect plug-ins	ID	Name	Type				Notes
 	191327535	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			

@@ -10,7 +10,7 @@ namespace ElJardin {
     public class AudioManager : Singleton<AudioManager> {
         private bool levelInGame;
         private float currentTime;
-        private const float maxiTime = 2.4f;
+        private const float maxiTime = 5f;
 
         private void Awake() {
             levelInGame = false;
@@ -39,11 +39,17 @@ namespace ElJardin {
         }
 
 
+        /// <summary>
+        /// Le pone el filtro en el time que el digamos
+        /// </summary>
+        /// <param name="increase"> Si sube o baja</param>
+        /// <param name="time">El tiempo, si no se especifica es el maxiTime</param>
         public void StartSetUILPF(bool increase, float time = maxiTime) {
+
             var value = increase ? 0f : 100f;
-            DOTween.To(() => value, x => value = x, increase ? 100 : 0, time).OnUpdate(()=> setUILPF(value));
+            DOTween.To(() => value, x => value = x, increase ? 100 : 0, time).OnUpdate(() => setUILPF(value));
         }
-      
+
         public void toggleMusicIngameState(bool inGame = true) {
             levelInGame = inGame;
             if (levelInGame) {
