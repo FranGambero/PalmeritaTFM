@@ -36,6 +36,7 @@ public class ConfirmPanel : MonoBehaviour {
     }
 
     void Cancel() {
+        AkSoundEngine.PostEvent("UI_Back_In", gameObject);
         this.gameObject.SetActive(false);
     }
 

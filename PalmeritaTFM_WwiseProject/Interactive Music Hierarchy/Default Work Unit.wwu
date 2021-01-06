@@ -3,75 +3,6 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSegment Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{E545DACF-DDD9-4608-AB93-EFA6AA943816}" ShortID="409956497">
-					<PropertyList>
-						<Property Name="EndPosition" Type="Real64" Value="116307.68707483"/>
-						<Property Name="Tempo" Type="Real64" Value="130"/>
-						<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-15</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<MusicTrack Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{3A135637-1D07-4B3A-A3ED-89DFEC6E8BDF}" ShortID="528448291">
-							<ReferenceList>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{263D42FD-FC89-4BFD-BB5E-58698721A085}">
-									<Language>SFX</Language>
-									<AudioFile>El_Jardin_Musica_Ingame_44_16_Layer_2_Loop.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="554799606"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{9C9CAFEC-83F5-4700-8160-3FFA3E1AD3DC}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
-							<SequenceList>
-								<MusicTrackSequence Name="" ID="{C9317DD4-2599-42C9-B5B8-0DB4A8B6716D}">
-									<ClipList>
-										<MusicClip Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{BD06D96F-C2D7-4060-A7DF-E4114FB30DF3}">
-											<PropertyList>
-												<Property Name="EndTrimOffset" Type="Real64" Value="116307.68707483"/>
-												<Property Name="FadeInMode" Type="int16" Value="0"/>
-												<Property Name="FadeOutMode" Type="int16" Value="0"/>
-											</PropertyList>
-											<AudioSourceRef Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{263D42FD-FC89-4BFD-BB5E-58698721A085}"/>
-										</MusicClip>
-									</ClipList>
-								</MusicTrackSequence>
-							</SequenceList>
-						</MusicTrack>
-					</ChildrenList>
-					<CueList>
-						<MusicCue Name="Entry Cue" ID="{D353E480-D61C-407F-801A-A76243F0A0FF}"/>
-						<MusicCue Name="Exit Cue" ID="{AA8F15C2-BCBF-4D4B-8064-4ACE1ED320B5}">
-							<PropertyList>
-								<Property Name="CueType" Type="int16" Value="1"/>
-								<Property Name="TimeMs" Type="Real64" Value="116307.68707483"/>
-							</PropertyList>
-						</MusicCue>
-					</CueList>
-				</MusicSegment>
 				<MusicSwitchContainer Name="Music" ID="{4EE57AF4-31B9-404F-ABA8-7902D865B256}" ShortID="265239767">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -188,8 +119,35 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-96</Value>
+														<Value>-13</Value>
 													</ValueList>
+													<RTPCList>
+														<RTPC Name="" ID="{A3A88FB7-335A-4AC0-9A2D-3B6B512F53C4}" ShortID="680873998">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Vol_MusicaIG" ID="{C631EF74-2C94-410D-B289-16AAD73194E0}" WorkUnitID="{7688CDD7-31A6-418E-9B49-9E967B49208C}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{5ADAAFA2-4AD5-4ACD-9C0D-8825EF088915}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -293,14 +251,14 @@
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>72.09302</XPos>
-														<YPos>67</YPos>
+														<XPos>71.31783</XPos>
+														<YPos>58</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
-														<YPos>70</YPos>
+														<YPos>65</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -809,7 +767,6 @@
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
-										<TransitionObjectRef Name="El_Jardin_Musica_Ingame_44_16_Layer_2_Loop" ID="{E545DACF-DDD9-4608-AB93-EFA6AA943816}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{9EBB4CAE-8367-400B-8567-357763D95885}">
 												<PropertyList>
