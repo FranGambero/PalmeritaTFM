@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class SessionVariables : Singleton<SessionVariables> {
     public SceneData sceneData;
+    public LevelSavedData levels;
     private void Awake() {
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
         sceneData = new SceneData();
+        levels = new LevelSavedData();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -23,5 +25,10 @@ public class SessionVariables : Singleton<SessionVariables> {
     public class SceneData {
         public int lastScene = -1;
         public int currentScene = -1;
+    }
+
+    [System.Serializable]
+    public class LevelSavedData {
+        public int lastPlayedLevel = PlayerPrefs.GetInt(Keys.Scenes.LAST_PLAYED_LEVEL, -1);
     }
 }

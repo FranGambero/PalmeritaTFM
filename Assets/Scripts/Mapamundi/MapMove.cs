@@ -10,37 +10,65 @@ public class MapMove : MonoBehaviour {
     public bool moveFinished;
     public int currentLevel;
     public LevelManager levelManager;
+    private bool active;
 
     private void Awake() {
-        currentLevel = 1;
-        moveFinished = false;
+        levelManager.findLevels();
+        moveFinished = true;
     }
+
+
     private void Start() {
         MapamundiManager.Instance.onZoneChange += OnZoneChanged;
         OnZoneChanged(MapamundiManager.Instance.currentZone);
+        CheckLevelPosition();
+    }
+    private void CheckLevelPosition() {
+        int lastPlayedLevel = SessionVariables.Instance.levels.lastPlayedLevel;
+        currentLevel = lastPlayedLevel != -1 ? lastPlayedLevel : 0;
+        //this.transform.position = levelManager.levelTList[currentLevel].transform.position;
+        if (SessionVariables.Instance.sceneData.lastScene == 0) {
+
+            focusMove(currentLevel, true);
+        } else {
+            transform.position = levelManager.levelTList[currentLevel].targetPoint.transform.position;
+        }
     }
 
-    public void focusMove(int targetLevel) {
+    private void directMove() {
 
-        if (currentLevel != targetLevel) {
-            List<Transform> listaPosiciones = MakeRecorrido(targetLevel);
-            Sequence moveSeq = DOTween.Sequence();
-            moveFinished = false;
-            GetComponent<Animator>().SetBool("Walking", true);
-            for (int i = 0; i < listaPosiciones.Count; i++) {
-                // Easing
-                Ease moveEase = Ease.Linear;
-                float moveTime = .5f + listaPosiciones.Count * .25f;
+    }
 
-                moveSeq.Append(transform.DOMove(listaPosiciones[i].position, moveTime).SetEase(moveEase));
+    public void focusMove(int targetLevel, bool forceMove = false) {
+        if (active) {
+            if (currentLevel != targetLevel || forceMove) {
+                Debug.Log("ENTRAMOS LO PRIMERO " + currentLevel + " / " + targetLevel);
+                if (forceMove) {
+                    //transform.position = levelManager.levelTList[currentLevel].transform.position;
+                    transform.DOMove(levelManager.levelTList[currentLevel].targetPoint.transform.position, 2f).SetEase(Ease.Linear);
+                } else {
+
+
+                    List<Transform> listaPosiciones = MakeRecorrido(targetLevel);
+                    Sequence moveSeq = DOTween.Sequence();
+                    moveFinished = false;
+                    GetComponent<Animator>().SetBool("Walking", true);
+                    for (int i = 0; i < listaPosiciones.Count; i++) {
+                        // Easing
+                        Ease moveEase = Ease.Linear;
+                        float moveTime = .5f + listaPosiciones.Count * .25f;
+
+                        moveSeq.Append(transform.DOMove(listaPosiciones[i].position, moveTime).SetEase(moveEase));
+                    }
+                    moveSeq.Play().OnComplete(() => {
+                        Debug.Log("He terminao");
+                        moveFinished = true;
+                        GetComponent<Animator>().SetBool("Walking", false);
+                    });
+
+                    currentLevel = targetLevel;
+                }
             }
-            moveSeq.Play().OnComplete(() => {
-                Debug.Log("He terminao");
-                moveFinished = true;
-                GetComponent<Animator>().SetBool("Walking", false);
-            });
-
-            currentLevel = targetLevel;
         }
     }
     public void OnStep() { //Animator
@@ -52,20 +80,21 @@ public class MapMove : MonoBehaviour {
 
         if (targetLevel > currentLevel) {
             for (int i = currentLevel + 1; i <= targetLevel; i++) {
-                listita.Add(levelManager.levelTList[i].transform);
+                listita.Add(levelManager.levelTList[i].targetPoint.transform);
             }
         } else {
             for (int i = currentLevel - 1; i >= targetLevel; i--) {
-                listita.Add(levelManager.levelTList[i].transform);
+                listita.Add(levelManager.levelTList[i].targetPoint.transform);
             }
         }
 
         return listita;
     }
     private void OnZoneChanged(int zone) {
-        if (levelManager.zone == zone) {
+        active = levelManager.zone == zone;
+        if (active) {
             gameObject.SetActive(true);
-          //  focusMove(currentLevel);
+            //  focusMove(currentLevel);
         } else {
             gameObject.SetActive(false);
         }

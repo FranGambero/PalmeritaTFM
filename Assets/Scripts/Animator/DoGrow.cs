@@ -9,9 +9,12 @@ public class DoGrow : MonoBehaviour {
     public float delay = 0;
     public bool growed = false;
 
+
     public List<GrowChild> childs;
 
     private void Start() {
+        if (size == Vector3.zero )
+            size = transform.localScale;
         if (growed) {
             QuickGrow();
         } else {

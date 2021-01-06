@@ -7,20 +7,26 @@ public class TutorialPanel : MonoBehaviour
     public TutorialDataWrapper tutorialData;
     public TextMeshProUGUI title, body;
     public Image tutorialImage; 
-
-    private void Awake() {
-        this.gameObject.SetActive(true);
+    
+    public void Activate(bool activate) {
+        this.gameObject.SetActive(activate);
     }
 
-    private void Start() {
+    public void Init(TutorialDataWrapper tutorialData) {
         title.text = tutorialData.Data.title;
         body.text = tutorialData.Data.body;
         tutorialImage.sprite = tutorialData.Data.sprite;
+        this.tutorialData = tutorialData;
     }
 
-    private void Update() {
-        if (Input.anyKeyDown && gameObject.activeSelf) {
-            gameObject.SetActive(false);
-        }
+    //private void Update() {
+    //    if (Input.anyKeyDown && gameObject.activeSelf) {
+    //        gameObject.SetActive(false);
+    //    }
+    //}
+
+    public void CloseTuto() {
+        MenuDirector.Instance.CloseTuto(this);
+        gameObject.SetActive(false);
     }
 }

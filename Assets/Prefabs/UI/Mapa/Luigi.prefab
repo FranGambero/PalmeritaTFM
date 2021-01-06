@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 4982192088598646420}
   - component: {fileID: 4982192088598646423}
   - component: {fileID: 4982192088598646421}
+  - component: {fileID: 7495172648000858976}
   m_Layer: 5
   m_Name: Luigi
   m_TagString: Untagged
@@ -169,6 +170,25 @@ MonoBehaviour:
   moveFinished: 0
   currentLevel: 0
   levelManager: {fileID: 0}
+--- !u!95 &7495172648000858976
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4982192088598646417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45bfcb0627e48c24c973ac5b60b06a9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5180532459493908216
 GameObject:
   m_ObjectHideFlags: 0

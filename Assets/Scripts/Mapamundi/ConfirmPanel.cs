@@ -45,7 +45,9 @@ public class ConfirmPanel : MonoBehaviour {
     }
 
     public void PlayLevel() {
-        levelStringToLoad = "Level" + levelIdToLoad;
+        levelStringToLoad = "Level" + MapamundiManager.Instance.currentZone + "_"+ levelIdToLoad;
+        PlayerPrefs.SetInt(Keys.Scenes.LAST_PLAYED_LEVEL, levelIdToLoad);
+        SessionVariables.Instance.levels.lastPlayedLevel = levelIdToLoad;
 
         PlayerPrefs.SetInt("CurrentLevel", levelIdToLoad);
         PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, -1);
@@ -56,11 +58,7 @@ public class ConfirmPanel : MonoBehaviour {
         //AudioManager.Instance.unSetUILPF(); 
         SceneManager.LoadScene("LoadScene");
     }
-    public int GetLevelBuildId() {
-        levelStringToLoad = "Level" + levelIdToLoad;
-        return SceneManager.GetSceneByName(levelStringToLoad).buildIndex;
-    }
-
+   
     public void Activate(bool activate) {
         if (activate) {
             gameObject.SetActive(true);

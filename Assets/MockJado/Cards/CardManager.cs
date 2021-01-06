@@ -26,20 +26,20 @@ namespace ElJardin {
 
         public int LastIndexUsed { get => lastIndexUsed; set => lastIndexUsed = value; }
 
-        private void Awake() {
+        private void Init() {
             maxHand = 5;
             handList = new List<Card>();
             cardQueue = new Queue<CardData>(cardList);
             totalCards = cardQueue.Count;
         }
 
-        private void Start() {
-            firstDrawCard();
-        }
 
-        private void firstDrawCard() {
+        public void firstDrawCard() {
             int index = 0;
-            while (index < maxHand) {
+
+            MenuDirector.Instance.ActivateCardCanvas(true);
+            Init();
+            while (index < cardList.Count) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);

@@ -89,12 +89,14 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public void OnMouseHoverEnter() {
         if (GameManager.Instance.Sepalo.IsMyTurn && !starting) {
             transform.DOMove(originalHandPosition + Vector3.up * upOffset, .2f).SetEase(Ease.Linear);
+            transform.parent.GetComponentInChildren<OutlineController>().Activate(true);
         }
     }
 
     public void OnMouseHoverExit() {
         if (GameManager.Instance.Sepalo.IsMyTurn && !starting && gameObject.activeSelf) {
             transform.DOMove(originalHandPosition, .5f);
+            transform.parent.GetComponentInChildren<OutlineController>().Activate(false);
         }
     }
 }

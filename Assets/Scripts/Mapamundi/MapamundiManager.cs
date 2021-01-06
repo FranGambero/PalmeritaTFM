@@ -19,18 +19,18 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     private void Awake() {
         numZones = 4;
         zoneDataArray = new ZoneData[numZones];
-        //currentZone = PlayerPrefs.GetInt("CurrentZone", 0);
+        currentZone = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_ZONE, 0);
         /////
-        currentZone = 0;
-        PlayerPrefs.SetInt("CurrentZone", 0);
+        //currentZone = 0;
+        //PlayerPrefs.SetInt(Keys.Scenes.CURRENT_ZONE, 0);
         /////
-        currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
+        currentLevel = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_LEVEL, 0);
 
         if (levelZonePanels.Length > 0)
             levelZonePanels[currentZone].SetActive(true);
 
         transform.SetParent(null);
-       // DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start() {
@@ -54,7 +54,9 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     }
 
     public ZoneData GetCurrentZone(int zoneId) {
-        return SerializableManager.Instance.DeSerializeZone(zoneId);
+        if (zoneDataArray[zoneId] == null)
+            SetCurrentZone(zoneId);
+        return zoneDataArray[zoneId];
     }
 
     public LevelData GetCurrentLevel(int zoneId, int levelId) {
@@ -120,12 +122,12 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
         //currentZone = (currentZone + avanze) % 2;
         currentZone += avanze;
-        if (currentZone >= 2) {
+        if (currentZone >= levelZonePanels.Length-1) {
             currentZone = 0;
         } else if (currentZone < 0) {
             currentZone = 1;
         }
-        PlayerPrefs.SetInt("CurrentZone", currentZone);
+        PlayerPrefs.SetInt(Keys.Scenes.CURRENT_ZONE, currentZone);
         onZoneChange?.Invoke(currentZone);
         levelZonePanels[currentZone].SetActive(true);
 
