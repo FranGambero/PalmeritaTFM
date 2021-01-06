@@ -63,6 +63,7 @@ namespace ElJardin {
 
         public void StartGame() {
             gameRunning = true;
+            AkSoundEngine.PostEvent("Amb_Agua_In", gameObject);
         }
         public void EndGame() {
             gameRunning = false;
@@ -87,6 +88,10 @@ namespace ElJardin {
             } else {
                 instructMenu.SetActive(false);
             }
+        }
+
+        private void OnDestroy() {
+            AkSoundEngine.PostEvent("Amb_Agua_Out", gameObject);
         }
 
         public void goToStartMenu() {

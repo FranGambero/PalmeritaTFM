@@ -8,7 +8,7 @@ public class DoGrow : MonoBehaviour {
     public float time = 1;
     public float delay = 0;
     public bool growed = false;
-
+    public bool withSound = false;
 
     public List<GrowChild> childs;
 
@@ -30,6 +30,8 @@ public class DoGrow : MonoBehaviour {
     [ContextMenu("Grow")]
     public void Grow() {
         if (!growed) {
+            if(withSound)
+                AkSoundEngine.PostEvent("Arbol_Abrir_In", gameObject);
             Invoke(nameof(TimeredGrow), delay);
         }
     }

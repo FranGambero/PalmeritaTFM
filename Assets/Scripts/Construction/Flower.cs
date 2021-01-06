@@ -34,6 +34,7 @@ namespace ElJardin {
         public void activateFlor() {
             flowerOpened = true;
             GetComponentInChildren<LotoAnimatorController>().LotoOpen();
+            AkSoundEngine.PostEvent("Flor_Abrir_In", gameObject);
             listaElementosCrecedores.ForEach(e => { if (e) e.RandomGrow(); });
         }
 
