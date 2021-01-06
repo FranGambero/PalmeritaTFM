@@ -368,6 +368,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Flor_Abrir_In" ID="{D27146EF-5245-4ECB-80EC-25A34EDDDA1B}">
+							<ChildrenList>
+								<Action Name="" ID="{0F1C8199-B32C-48CB-A730-95ED816445A8}" ShortID="936706922">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flor_Abrir" ID="{12D2A72B-5931-476D-984E-66DB7DDF0FB4}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musica" ID="{ED5AD844-ADE3-4379-95C5-89018A6993DE}" ShortID="194525612">

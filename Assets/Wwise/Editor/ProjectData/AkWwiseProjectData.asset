@@ -73,7 +73,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3391a3b1c5ab3c47b92915f0b3a0273e
     GuidInternal: 
-    m_lastTime: -8585917727796916410
+    m_lastTime: -8585916956535795721
     List:
     - name: Ingame_SoundBank
       guid: d3b08bc42bafae428883210d31e969ec
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0e03ab045547294f9c12522a79eb1cad
     GuidInternal: 
-    m_lastTime: -8585917727797113641
+    m_lastTime: -8585916956536393518
     List:
     - name: Agua_Shoot_In
       guid: 46799f106668bd42a7f479590f305a0d
@@ -244,6 +244,20 @@ MonoBehaviour:
       - ElementName: Carta_Slide_In
         ObjectType: 3
       Path: Default Work Unit\SFX\Carta_Slide_In
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Flor_Abrir_In
+      guid: ef4671d24552cb4e80ec25a34eddda1b
+      id: 1057048301
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Flor_Abrir_In
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Flor_Abrir_In
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID CARTA_POSICION_IN = 2289756239U;
         static const AkUniqueID CARTA_SELECT_IN = 236399107U;
         static const AkUniqueID CARTA_SLIDE_IN = 2760388952U;
+        static const AkUniqueID FLOR_ABRIR_IN = 1057048301U;
         static const AkUniqueID HORMIGA_ATAQUE_IN = 1694954324U;
         static const AkUniqueID HORMIGA_CREP_IN = 1873637369U;
         static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;

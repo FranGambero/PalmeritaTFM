@@ -20,8 +20,8 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<Custom CreatedFrom="{6D1B890C-9826-4384-BF07-C15223E9FB56}">
-										<Conversion Name="Default Conversion Settings (Custom)" ID="{5DFE9F92-EF74-4B0C-87DE-8535CDFAA9CF}">
+									<Custom CreatedFrom="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}">
+										<Conversion Name="Vorbis_44 (Custom)" ID="{603C7593-C5B7-4D18-AF40-7F7B287D61A4}">
 											<PropertyList>
 												<Property Name="Channels" Type="int32">
 													<ValueList>
@@ -56,10 +56,10 @@
 											</PropertyList>
 											<ConversionPluginInfoList>
 												<ConversionPluginInfo Platform="Windows">
-													<ConversionPlugin Name="" ID="{4359D80E-93B1-42D1-A5D3-C80677FC489F}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+													<ConversionPlugin Name="" ID="{8CC7AFE2-BE9D-48F6-A7DD-EC2433C4EB0D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 												<ConversionPluginInfo Platform="Mac">
-													<ConversionPlugin Name="" ID="{74C5ECFB-11CF-442B-8261-298FA0E839E2}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+													<ConversionPlugin Name="" ID="{3726929C-B61C-42F8-BC65-CCB93FA4DF27}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 											</ConversionPluginInfoList>
 										</Conversion>
@@ -274,8 +274,8 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<Custom CreatedFrom="{6D1B890C-9826-4384-BF07-C15223E9FB56}">
-										<Conversion Name="Default Conversion Settings (Custom)" ID="{0019D180-C437-4388-90AF-21B84BC47A25}">
+									<Custom CreatedFrom="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}">
+										<Conversion Name="Vorbis_44 (Custom)" ID="{582C3702-7731-47E9-B295-435D6D49D829}">
 											<PropertyList>
 												<Property Name="Channels" Type="int32">
 													<ValueList>
@@ -310,10 +310,10 @@
 											</PropertyList>
 											<ConversionPluginInfoList>
 												<ConversionPluginInfo Platform="Windows">
-													<ConversionPlugin Name="" ID="{BD3DF0D2-92F3-40D7-BAED-04721CA06F1D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+													<ConversionPlugin Name="" ID="{6813D312-9631-446C-B11F-FA298B843B48}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 												<ConversionPluginInfo Platform="Mac">
-													<ConversionPlugin Name="" ID="{1ABDB1E0-16BD-4804-B2CC-E7392B9A0F74}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+													<ConversionPlugin Name="" ID="{4E73C803-C95F-4686-86A0-6AE24BA647B0}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 											</ConversionPluginInfoList>
 										</Conversion>
@@ -4147,7 +4147,7 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<Custom CreatedFrom="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}">
-										<Conversion Name="Vorbis_44 (Custom)" ID="{1C74A4BC-97B5-48AB-8801-2E2F2B35946E}">
+										<Conversion Name="Vorbis_44 (Custom)" ID="{F58673F2-8438-42A9-B4E4-1C28146A5E52}">
 											<PropertyList>
 												<Property Name="Channels" Type="int32">
 													<ValueList>
@@ -4182,10 +4182,10 @@
 											</PropertyList>
 											<ConversionPluginInfoList>
 												<ConversionPluginInfo Platform="Windows">
-													<ConversionPlugin Name="" ID="{6F83905A-805E-4DA6-B135-3C8C3D8FF4AA}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+													<ConversionPlugin Name="" ID="{3CE985B1-F8CC-4D1F-9D91-813C72D5DF22}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 												<ConversionPluginInfo Platform="Mac">
-													<ConversionPlugin Name="" ID="{D1B288A5-1FDD-4404-BFE3-E2A221CA9F9E}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+													<ConversionPlugin Name="" ID="{92B701AA-C298-49CE-896B-E12C1ADE1802}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 											</ConversionPluginInfoList>
 										</Conversion>
@@ -4670,6 +4670,91 @@
 								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_2" ID="{112FC22C-13C0-400F-901F-515C07A17A22}"/>
 								<ItemRef Name="El_Jardin_Posicion_Cartas_SFX_Start_3" ID="{7EA7CB29-34CC-4457-8696-6270FBBA9535}"/>
 							</Playlist>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Flor_Abrir" ID="{12D2A72B-5931-476D-984E-66DB7DDF0FB4}" ShortID="802678116">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis_44" ID="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_Flor_Abrir_SFX_44_16_Start" ID="{248D10E4-15F1-475E-979F-E69970699383}" ShortID="1014617980">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Flor_Abrir_SFX_44_16_Start" ID="{62471E25-E843-4931-A8F8-C0627CA2F177}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Flor_Abrir_SFX_44_16_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23316383"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Flor_Abrir_SFX_44_16_Start" ID="{62471E25-E843-4931-A8F8-C0627CA2F177}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="El_Jardin_Flor_Abrir_SFX_44_16_Start_2" ID="{B5C2BEFE-E31F-4B57-A0D9-878390729AE8}" ShortID="760697567">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Flor_Abrir_SFX_44_16_Start_2" ID="{D0CA799B-DEFC-44A7-B54A-64C14900CF57}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Flor_Abrir_SFX_44_16_Start_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1054396963"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Flor_Abrir_SFX_44_16_Start_2" ID="{D0CA799B-DEFC-44A7-B54A-64C14900CF57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="El_Jardin_Flor_Abrir_SFX_44_16_Start_3" ID="{D8EF7F10-A69A-4AD5-AB52-94DAFCC87E1F}" ShortID="453719462">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Flor_Abrir_SFX_44_16_Start_3" ID="{565B8EF7-C4FD-4B27-A187-84F7129989FE}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Flor_Abrir_SFX_44_16_Start_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="719636657"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Flor_Abrir_SFX_44_16_Start_3" ID="{565B8EF7-C4FD-4B27-A187-84F7129989FE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
