@@ -22,11 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061300e8-9aed-4815-8dd3-e716a8eb15e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Construction/DryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Construction/DryController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="061300e8-9aed-4815-8dd3-e716a8eb15e1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +66,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/SerializableUnityEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hover/CrossHover.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" />
@@ -81,6 +76,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/BaseCardAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Construction/DryController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" />
       </list>
     </option>
   </component>
