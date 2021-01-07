@@ -16,7 +16,16 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
     public FadeOutPanel fadeOutPanel;
 
-    private void Awake() {
+    private void Start() {
+        Init();
+        SetAllZones();
+        CountCurrentPetals();
+        if (fadeOutPanel) {
+            AkSoundEngine.PostEvent("UI_Trans_2_In", gameObject);
+            fadeOutPanel.FadeIn();
+        }
+    }
+    public void Init() {
         numZones = 4;
         zoneDataArray = new ZoneData[numZones];
         currentZone = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_ZONE, 0);
@@ -33,29 +42,20 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         // DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Start() {
-        SetAllZones();
-        CountCurrentPetals();
-        if (fadeOutPanel) {
-            AkSoundEngine.PostEvent("UI_Trans_2_In", gameObject);
-            fadeOutPanel.FadeIn();
-        }
-    }
-
-    public void SetCurrentZone(int zoneId) {
+    public void ChargeZone(int zoneId) {
         zoneDataArray[zoneId] = SerializableManager.Instance.DeSerializeZone(zoneId);
     }
 
     public void SetAllZones() {
         Debug.LogWarning("CARGO LAS ZONAS");
         for (int zoneId = 0; zoneId < zoneDataArray.Length; zoneId++) {
-            SetCurrentZone(zoneId);
+            ChargeZone(zoneId);
         }
     }
 
     public ZoneData GetCurrentZone(int zoneId) {
         if (zoneDataArray[zoneId] == null)
-            SetCurrentZone(zoneId);
+            ChargeZone(zoneId);
         return zoneDataArray[zoneId];
     }
 
@@ -78,8 +78,6 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
     public void SaveLevel(LevelData newLevelData) {
         //ZoneData zoneData = GetCurrentZone(currentZone);
-        Debug.LogWarning("VOY A GUARDARRRRR CON ZONA " + currentZone + " y level " + currentLevel);
-        Debug.LogWarning("LA LENGTH " + zoneDataArray.Length);
         if (zoneDataArray.Length > 0) {
             zoneDataArray[currentZone].levels[currentLevel] = newLevelData;
             SaveZoneData();
@@ -88,7 +86,6 @@ public class MapamundiManager : Singleton<MapamundiManager> {
     }
 
     public void CountCurrentPetals() {
-        Debug.LogWarning("Voy a coger petalitos con " + currentZone);
         ZoneData zoneData = GetCurrentZone(currentZone);
         int totalPetals = zoneData.levels.Length * 3; // 3 logros por nivel
         this.currentPetals = 0;
@@ -109,7 +106,6 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         if (petalsTextTag) {
             petalsTextTag.text = petalsText;
             zoneTextTag.text = zoneText;
-            Debug.LogWarning("Vas a meter la zonita  text : " + currentZone + " === " + zoneTextTag.text);
         }
     }
 

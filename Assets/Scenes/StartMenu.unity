@@ -176,6 +176,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1923554742}
     m_Modifications:
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 27.475012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1.5022507
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.28115845
+      objectReference: {fileID: 0}
     - target: {fileID: 5867407585559324534, guid: 1abb441b99ac2624ba180799efcf2f8e,
         type: 3}
       propertyPath: m_text
@@ -2094,7 +2109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 132.00024, y: 696}
+  m_AnchoredPosition: {x: 132, y: 696}
   m_SizeDelta: {x: 420, y: 420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487617702
@@ -10621,6 +10636,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496757419}
   m_CullTransparentMesh: 0
+--- !u!1 &1510502179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1510502180}
+  - component: {fileID: 1510502181}
+  m_Layer: 0
+  m_Name: MenuDirector (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1510502180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510502179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2133807886}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1510502181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510502179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2b1dfd926e7d641b2b5a8b15b05947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preBuildPath: Assets/Resources/ZoneData
+  zoneFile:
+  - /Zone0
+  - /Zone1
+  - /Zone2
+  - /Zone3
+  postBuildPath: Resources
+  format: .json
+  zonenPrefab:
+  - '{"zoneId":0,"zoneName":"Primavera","levels":[{"levelName":"Nivel 1","id":0,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    2","id":1,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    3","id":2,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    4","id":3,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    5","id":3,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]}]}'
+  - '{"zoneId":1,"zoneName":"Verano","levels":[{"levelName":"Nivel 6","id":0,"zone":1,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    7","id":1,"zone":1,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    8","id":2,"zone":1,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    9","id":3,"zone":1,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]}]}'
+  - "{\"zoneId\":2,\"zoneName\":\"Oto\xF1o\",\"levels\":[{\"levelName\":\"Nivel 10\",\"id\":0,\"zone\":2,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel
+    11\",\"id\":1,\"zone\":2,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel
+    12\",\"id\":2,\"zone\":2,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel
+    13\",\"id\":3,\"zone\":2,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]}]}"
+  - '{"zoneId":3,"zoneName":"Invierno","levels":[{"levelName":"Nivel 14","id":0,"zone":3,"isCompleted":true,"logros":[{"achievementName":"Completado","done":true,"animationDone":true},{"achievementName":"Flores","done":false,"animationDone":true},{"achievementName":"Movimientos","done":true,"animationDone":false}]},{"levelName":"Nivel
+    15","id":1,"zone":3,"isCompleted":true,"logros":[{"achievementName":"Completado","done":true,"animationDone":true},{"achievementName":"Flores","done":false,"animationDone":true},{"achievementName":"Movimientos","done":true,"animationDone":false}]},{"levelName":"Nivel
+    16","id":2,"zone":3,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    17","id":3,"zone":3,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]}]}'
 --- !u!1 &1532583128
 GameObject:
   m_ObjectHideFlags: 0
@@ -11015,6 +11099,7 @@ MonoBehaviour:
   btnPlay: {fileID: 990263671}
   btnConfig: {fileID: 1464220798}
   btnCredits: {fileID: 208518216}
+  test: {fileID: 0}
 --- !u!4 &1690293715
 Transform:
   m_ObjectHideFlags: 0
@@ -12590,6 +12675,7 @@ Transform:
   - {fileID: 1690293715}
   - {fileID: 601178168}
   - {fileID: 2087680686}
+  - {fileID: 1510502180}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12681,6 +12767,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1923554742}
     m_Modifications:
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 27.475
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5.5764313
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.28115845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600713702943691810, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3430666076131252708, guid: 1abb441b99ac2624ba180799efcf2f8e,
         type: 3}
       propertyPath: m_Delegates.Array.data[4].callback.m_PersistentCalls.m_Calls.Array.size
@@ -12715,6 +12826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867407585559324535, guid: 1abb441b99ac2624ba180799efcf2f8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1000061
       objectReference: {fileID: 0}
     - target: {fileID: 5867407586099124579, guid: 1abb441b99ac2624ba180799efcf2f8e,
         type: 3}

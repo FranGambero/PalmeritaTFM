@@ -18,21 +18,11 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061300e8-9aed-4815-8dd3-e716a8eb15e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Pathfinding.cs" afterDir="false" />
-    </list>
+    <list default="true" id="061300e8-9aed-4815-8dd3-e716a8eb15e1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,28 +31,52 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelEditor/LevelEditorGUI.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/MovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Bongormiga.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/IObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Rock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditorNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelEditor/LevelEditorNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelEditor/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelEditor/NodeDataModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelEditor/NodeEditorGUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelEditor/LevelEditorGUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Pathfinding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Patterns/IFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/Hover/GenericHover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/HoverDataModels/HoverFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Loaders/IHoverLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Patterns/IConverter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/HoverDataModels/HoverTypeDataModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/HoverDataModels/HoverDataModelConverter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelConverter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hover/IHover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModelWrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/CardData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/CardDataModels/CardDataModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/CardManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/ICardAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/BuildRiver.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ActionCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/Card.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/SerializableUnityEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hover/CrossHover.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hover/SquareHover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/BongormigaAfterAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/BongoAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/SerializableUnityEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/BaseCardAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Construction/DryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SepaloController.cs" />
+        <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" />
       </list>
     </option>
   </component>
@@ -123,6 +137,12 @@
       <workItem from="1606926858157" duration="6256000" />
       <workItem from="1607012966833" duration="19777000" />
       <workItem from="1607092517158" duration="476000" />
+      <workItem from="1609234242835" duration="12115000" />
+      <workItem from="1609351136426" duration="1653000" />
+      <workItem from="1609679597873" duration="1607000" />
+      <workItem from="1609765427377" duration="16199000" />
+      <workItem from="1609846376778" duration="17307000" />
+      <workItem from="1610010011845" duration="16454000" />
     </task>
     <servers />
   </component>
@@ -144,18 +164,23 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1605901956079">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="511" y="49" key="RiderGenerateDialog" timestamp="1609244714511">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="511" y="49" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1609244714511" />
+    <state x="83" y="82" width="1201" height="564" key="VCS.FileHistoryDialog" timestamp="1609775569352">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="83" y="82" width="1201" height="564" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1609775569352" />
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605901956079" />
     <state x="385" y="50" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606754024838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="385" y="50" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606754024838" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607092629300">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610047890050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607092629300" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610047890050" />
     <state x="389" y="55" width="756" height="768" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606753764203" />
   </component>
 </project>

@@ -12,6 +12,7 @@ public class SessionVariables : Singleton<SessionVariables> {
         DontDestroyOnLoad(gameObject);
         sceneData = new SceneData();
         levels = new LevelSavedData();
+        levels.lastPlayedLevel = PlayerPrefs.GetInt(Keys.Scenes.LAST_PLAYED_LEVEL, -1);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -29,6 +30,6 @@ public class SessionVariables : Singleton<SessionVariables> {
 
     [System.Serializable]
     public class LevelSavedData {
-        public int lastPlayedLevel = PlayerPrefs.GetInt(Keys.Scenes.LAST_PLAYED_LEVEL, -1);
+        public int lastPlayedLevel;
     }
 }

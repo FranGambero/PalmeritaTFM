@@ -2,6 +2,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using ElJardin.Data.Cards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +12,9 @@ namespace ElJardin {
     public class CardManager : Singleton<CardManager> {
         public Card cardPrefab;
         [SerializeField]
-        public Queue<CardData> cardQueue;
+        public Queue<CardDataModelWrapper> cardQueue;
         [SerializeField]
-        public List<CardData> cardList;
+        public List<CardDataModelWrapper> cardList;
         public List<Card> handList;
         public List<Transform> transformList;
         public int maxHand;
@@ -29,7 +31,7 @@ namespace ElJardin {
         private void Init() {
             maxHand = 5;
             handList = new List<Card>();
-            cardQueue = new Queue<CardData>(cardList);
+            cardQueue = new Queue<CardDataModelWrapper>(cardList);
             totalCards = cardQueue.Count;
         }
 
@@ -43,8 +45,10 @@ namespace ElJardin {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);
-                handList[index].CardData = cardQueue.Dequeue();
-                handList[index].loadCardData();
+                var dequedCard = cardQueue.Dequeue();
+                handList[index].CardData = dequedCard.CardData;
+                handList[index].LoadCardData();
+                handList[index].LoadCardActions(dequedCard.DataModel);
                 moveCardToDeck(handList[index]);
                 StartCoroutine(handList[index].changeCardTransform(index));
                 index++;
@@ -81,8 +85,10 @@ namespace ElJardin {
                 }
                 tmpCard.StopAllCoroutines();
 
-                tmpCard.CardData = cardQueue.Dequeue();
-                tmpCard.loadCardData();
+                var dequedCard = cardQueue.Dequeue();
+                tmpCard.CardData = dequedCard.CardData;
+                tmpCard.LoadCardData();
+                tmpCard.LoadCardActions(dequedCard.DataModel);
                 moveCardToDeck(tmpCard);
                 //AkSoundEngine.PostEvent("Carta_Slide_In", gameObject);
 
