@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 119e4a91d4c8c241a4f679e82e1cc781
     GuidInternal: 
-    m_lastTime: -8585970350803626655
+    m_lastTime: -8585916040675412578
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -216,7 +216,7 @@ MonoBehaviour:
       - ElementName: Arbol_Abrir_In
         ObjectType: 3
       Path: Default Work Unit\SFX\Arbol_Abrir_In
-      maxAttenuation: 0
+      maxAttenuation: 100000000
       maxDuration: 4710748
       minDuration: 4338821
     - name: Carta_Posicion_In
