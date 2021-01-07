@@ -23,20 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="061300e8-9aed-4815-8dd3-e716a8eb15e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/BongormigaAfterAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/BongormigaAfterAction.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PalmeritaTFM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Build Manager/BuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MockJado/Map Manager/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bongormiga.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bongormiga.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ZoneData/Zone0.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ZoneData/Zone0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardActions/BongoAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardActions/BongoAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hover/CrossHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hover/CrossHover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hover/SquareHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hover/SquareHover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SerializableUnityEvents.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SerializableUnityEvents.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +36,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelEditor/LevelEditorGUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,7 +71,6 @@
         <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ActionCard.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Cards/Card.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/SerializableUnityEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/BaseCardAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hover/BaseHover.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Map Manager/MapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/MockJado/Cards/ItemDragHandler.cs" />
@@ -93,6 +80,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Hover/SquareHover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/BongormigaAfterAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/BongoAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/SerializableUnityEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CardActions/BaseCardAction.cs" />
       </list>
     </option>
   </component>
@@ -110,7 +99,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />

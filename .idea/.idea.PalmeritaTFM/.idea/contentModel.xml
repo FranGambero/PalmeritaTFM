@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\iaparicio\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\iaparicio\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_PalmeritaTFM.1271920326.00" t="ExcludeRecursive" />
-    <e p="C:\Users\iaparicio\Documents\PalmeritaTFM" t="IncludeRecursive">
+    <e p="C:\Users\ignap\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ignap\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_PalmeritaTFM.-1969608388.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ignap\Documents\PalmeritaTFM" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="DOTween" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NodeEditorGUI.cs" t="Include" />
+          </e>
           <e p="Modules" t="Include">
             <e p="DOTweenModuleAudio.cs" t="Include" />
             <e p="DOTweenModulePhysics.cs" t="Include" />
@@ -18,6 +21,12 @@
             <e p="DOTweenModuleUtils.cs" t="Include" />
           </e>
           <e p="readme.txt" t="Include" />
+        </e>
+        <e p="Editor" t="Include">
+          <e p="EditorUtils.cs" t="Include" />
+          <e p="Interfaz.cs" t="Include" />
+          <e p="LevelEditorGUI.cs" t="Include" />
+          <e p="ScreenShotsUtil.cs" t="Include" />
         </e>
         <e p="Fonts" t="Include">
           <e p="Kalam" t="Include">
@@ -66,6 +75,7 @@
         <e p="Scripts" t="Include">
           <e p="Animator" t="Include">
             <e p="DoGrow.cs" t="Include" />
+            <e p="FlautibelulaAnimController.cs" t="Include" />
             <e p="LotoAnimatorController.cs" t="Include" />
             <e p="ProtaAnimationController.cs" t="Include" />
             <e p="ShovelCravAnimatorController.cs" t="Include" />
@@ -82,6 +92,7 @@
             <e p="BongormigaAfterAction.cs" t="Include" />
             <e p="SepaloController.cs" t="Include" />
           </e>
+          <e p="ConsoleToGUI.cs" t="Include" />
           <e p="Construction" t="Include">
             <e p="DryController.cs" t="Include" />
             <e p="Flower.cs" t="Include" />
@@ -117,9 +128,7 @@
           </e>
           <e p="LevelEditor" t="Include">
             <e p="LevelEditor.cs" t="Include" />
-            <e p="LevelEditorGUI.cs" t="Include" />
             <e p="NodeDataModel.cs" t="Include" />
-            <e p="NodeEditorGUI.cs" t="Include" />
           </e>
           <e p="LogrosPanel.cs" t="Include" />
           <e p="Managers" t="Include">
@@ -135,6 +144,7 @@
             <e p="LevelButton.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="LineGrinderController.cs" t="Include" />
+            <e p="LuigisZip.cs" t="Include" />
             <e p="MapamundiManager.cs" t="Include" />
             <e p="MapMove.cs" t="Include" />
           </e>
@@ -160,22 +170,20 @@
             <e p="MenuButton.cs" t="Include" />
             <e p="MenuManager.cs" t="Include" />
             <e p="OutlineController.cs" t="Include" />
+            <e p="ResetManager.cs" t="Include" />
             <e p="ScorePetalController.cs" t="Include" />
             <e p="ScreenTransitionImageEffect.cs" t="Include" />
             <e p="TillingMovement.cs" t="Include" />
             <e p="TutorialPanel.cs" t="Include" />
           </e>
-          <e p="Utils" t="Include">
+          <e p="Util" t="Include">
             <e p="ClassTypeConstraintAttribute.cs" t="Include" />
             <e p="ClassTypeReference.cs" t="Include" />
             <e p="ClassTypeReferencePropertyDrawer.cs" t="Include" />
-            <e p="EditorUtils.cs" t="Include" />
-            <e p="Interfaz.cs" t="Include" />
             <e p="Patterns" t="Include">
               <e p="IConverter.cs" t="Include" />
               <e p="IFactory.cs" t="Include" />
             </e>
-            <e p="ScreenShotsUtil.cs" t="Include" />
             <e p="SerializableUnityEvents.cs" t="Include" />
           </e>
         </e>
