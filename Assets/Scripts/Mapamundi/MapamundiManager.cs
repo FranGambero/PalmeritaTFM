@@ -128,8 +128,8 @@ public class MapamundiManager : Singleton<MapamundiManager> {
             currentZone = 1;
         }
         PlayerPrefs.SetInt(Keys.Scenes.CURRENT_ZONE, currentZone);
-        onZoneChange?.Invoke(currentZone);
         levelZonePanels[currentZone].SetActive(true);
+        onZoneChange?.Invoke(currentZone);
 
         CountCurrentPetals();
 
