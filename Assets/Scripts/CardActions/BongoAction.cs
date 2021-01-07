@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ElJardin.Characters;
 using UnityEngine;
 
 namespace ElJardin.CardActions
@@ -13,14 +14,28 @@ namespace ElJardin.CardActions
 
         public override void DoAction(Node targetNode)
         {
-            CreateBongo(targetNode);
-            DestroySurroundingGround(targetNode);
+            if(targetNode == null)
+                onActionCompleted.Invoke(false);
+            else
+            {
+                if(targetNode != GameManager.Instance.Sepalo.CurrentNode)
+                {
+                    CreateBongo(targetNode);
+                    //DestroySurroundingGround(targetNode);
+                    onActionCompleted.Invoke(true);
+                }
+                else
+                    onActionCompleted.Invoke(false);
+            }
         }
 
         void CreateBongo(Node position)
         {
-            var bongoInstance = Object.Instantiate(insectPrefab, position.transform) as GameObject;
-            bongoInstance.GetComponentInChildren<Animator>().Play("PlayBongo0");
+            var bongoInstance = Object.Instantiate(insectPrefab, position.transform.position + new Vector3(0,0.7f,0), Quaternion.identity ) as GameObject;
+            //bongoInstance.GetComponentInChildren<Animator>().Play("PlayBongo0");
+            
+            bongoInstance.GetComponent<BongormigaAfterAction>().onAnimationEnd.AddListener(()=>DestroySurroundingGround(position));
+            bongoInstance.GetComponent<BongormigaAfterAction>().PlayBongos();
         }
         
         IEnumerator PlayBongos(Node targetNode)
@@ -39,25 +54,22 @@ namespace ElJardin.CardActions
         
         void DestroyChildWithTag(GameObject parent, string tag)
         {
-            var childCount = parent.transform.childCount;
-            var index = 0;
-            var safeLock = 100;
-            while(index < childCount && safeLock > 0)
+            Debug.Log($"Try destroy obstacles");
+            foreach(Transform childTransform in parent.transform)
             {
-                safeLock -= 1;
-                var child = parent.transform.GetChild(index);
-                if(child.CompareTag(tag))
+                //Si tiene obstaculo
+                if(childTransform.gameObject.CompareTag(tag))
                 {
-                    if(child.transform.GetChild(0).CompareTag(obstacleTag))
+                    Debug.Log($" ----- object is obstacle");
+                    foreach(Transform possibleObstacleTransform in childTransform)
                     {
-                        //node.destroyObstacle();
-                        childCount = parent.transform.childCount;
+                        if(possibleObstacleTransform.gameObject.CompareTag(obstacleTag))
+                        {
+                            Debug.Log($" ----- obstacle is rock");
+                            parent.GetComponent<Node>()?.DestroyObstacle();
+                        }
                     }
-                    else
-                        index += 1;
                 }
-                else
-                    index += 1;
             }
         }
         
@@ -75,26 +87,6 @@ namespace ElJardin.CardActions
                     TryDestroyObstacle(northNode);
             }
 
-            //North West
-            var northWestNode = MapManager.Instance?.GetNode(node.row -1, node.column + 1);
-            if(northWestNode != null)
-            {
-                if(!northWestNode.IsGround())
-                    listDestroyNodesSquare.Add(northWestNode);
-                else
-                    TryDestroyObstacle(northWestNode);
-            }
-
-            //North East
-            var northEastNode = MapManager.Instance?.GetNode(node.row +1, node.column + 1);
-            if(northEastNode != null)
-            {
-                if(!northEastNode.IsGround())
-                    listDestroyNodesSquare.Add(northEastNode);
-                else
-                    TryDestroyObstacle(northEastNode);
-            }
-
             //South
             var southNode = MapManager.Instance?.GetNode(node.row, node.column - 1);
             if(southNode != null)
@@ -103,26 +95,6 @@ namespace ElJardin.CardActions
                     listDestroyNodesSquare.Add(southNode);
                 else
                     TryDestroyObstacle(southNode);
-            }
-
-            //South West
-            var southWestNode = MapManager.Instance?.GetNode(node.row -1, node.column - 1);
-            if(southWestNode != null)
-            {
-                if(!southWestNode.IsGround()) 
-                    listDestroyNodesSquare.Add(southWestNode);
-                else
-                    TryDestroyObstacle(southWestNode);
-            }
-
-            //South East
-            var southEastNode = MapManager.Instance?.GetNode(node.row +1, node.column - 1);
-            if(southEastNode != null)
-            {
-                if(!southEastNode.IsGround()) 
-                    listDestroyNodesSquare.Add(southEastNode);
-                else
-                    TryDestroyObstacle(southEastNode);
             }
 
             //East

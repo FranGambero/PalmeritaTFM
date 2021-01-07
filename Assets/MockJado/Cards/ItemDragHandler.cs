@@ -106,8 +106,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if(CanUseCardAction())
         {
+            var mouseNode = GameManager.Instance.SelectedNode;
+            
             ActionCard.OnActionCompleted.AddListener(EndCardActions);
-            ActionCard.Action(null);
+            ActionCard.Action(mouseNode);
         }
     }
 
@@ -127,7 +129,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             BuildManager.Instance.StopHoverCoroutine();
             ResetCardPosition();
         }
-
+        ActionCard.UnHover();
         BuildManager.Instance.UnHoverNodesInList();
     }
 

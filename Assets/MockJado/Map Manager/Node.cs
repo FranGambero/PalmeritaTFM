@@ -13,6 +13,7 @@ namespace ElJardin {
 
         //[HideInInspector]
         public List<Node> neighbors;
+        public bool Hovering { get; set; }
 
         Material currentMaterial;
         NodeType nodeType;
@@ -21,7 +22,7 @@ namespace ElJardin {
         MeshFilter _mf;
         Color baseColor;
 
-        bool hovering, canBuild, hasPreviewOn, indestructible;
+        bool canBuild, hasPreviewOn, indestructible;
         public Water water;
         private DryController _dryController;
 
@@ -66,7 +67,7 @@ this.canBuild == false;
             _mr = GetComponentInChildren<MeshRenderer>();
             _mf = GetComponentInChildren<MeshFilter>();
 
-            hovering = false;
+            Hovering = false;
 
             canBuild = true;
         }
@@ -117,7 +118,7 @@ this.canBuild == false;
         public void HoverOn(DirectionType direction) {
             //baseColor = _mr.material.color;
             _mr.material.color = hoverColor;
-            hovering = true;
+            Hovering = true;
             hasPreviewOn = true;
             directionInHover = direction;
         }
@@ -125,11 +126,11 @@ this.canBuild == false;
         public void HoverOn()
         {
             _mr.material.color = hoverColor;
-            hovering = true;
+            Hovering = true;
         }
 
         public void HoverOff() {
-            hovering = false;
+            Hovering = false;
             directionInHover = DirectionType.Undefined;
             hasPreviewOn = false;
             if (!dryController.active) {
@@ -145,7 +146,7 @@ this.canBuild == false;
                 hasPreviewOn = show;
                 _mr.material.color = new Color32(0xF3, 0xE3, 0x26, 0xff);
                 VFXDirector.Instance.Play("OnPreview", this.transform);
-            } else if (hovering) {
+            } else if (Hovering) {
                 HoverOn(directionInHover);
             } else {
                 HoverOff();
@@ -158,8 +159,10 @@ this.canBuild == false;
          */
         private void OnMouseEnter() {
             if (GameManager.Instance.CanPlay) {
-                BuildManager.Instance.ShowNodesPreview(this.directionInHover);
-                if (hovering) {
+                if(GameManager.Instance.selectedCard != null)
+                    GameManager.Instance.selectedCard.HoverOnNodeEnter(this);
+                //BuildManager.Instance.ShowNodesPreview(this.directionInHover);
+                if (Hovering) {
                     GameManager.Instance.SelectedNode = this;
 
                     //TODO: ShowCantBuildPreview
@@ -194,7 +197,9 @@ this.canBuild == false;
          * Si no, quita el hover de pasitos
          */
         private void OnMouseExit() {
-            if (hovering) {
+            if (Hovering) {
+                if(GameManager.Instance.selectedCard != null)
+                    GameManager.Instance.selectedCard.UnHover();
                 GameManager.Instance.SelectedNode = null;
                 // BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
             } else {
@@ -358,6 +363,7 @@ this.canBuild == false;
         }
 
         public void DestroyObstacle() {
+            Destroy(obstacle);
             this.obstacle = null;
         }
         #endregion

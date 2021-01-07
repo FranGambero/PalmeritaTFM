@@ -79,6 +79,7 @@
             <e p="ICardAction.cs" t="Include" />
           </e>
           <e p="Characters" t="Include">
+            <e p="BongormigaAfterAction.cs" t="Include" />
             <e p="SepaloController.cs" t="Include" />
           </e>
           <e p="Construction" t="Include">

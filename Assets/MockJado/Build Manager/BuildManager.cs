@@ -515,5 +515,22 @@ namespace ElJardin {
         }
 
         #endregion
+        
+        #region Card Hover Coroutines
+
+        public void GenericHoverStart(System.Action action)
+        {
+            StopHoverCoroutine();
+            hoverCoroutine = StartCoroutine(GenericHoverCoroutine(action));
+        }
+
+        IEnumerator GenericHoverCoroutine(System.Action action)
+        {
+            var sepalo = GameManager.Instance.Sepalo;
+            yield return sepalo.movementCoroutine;
+            action();
+        }
+        
+        #endregion
     }
 }

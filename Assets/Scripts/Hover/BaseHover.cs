@@ -10,6 +10,7 @@ namespace ElJardin.Hover
 
         protected BaseHover(int size)
         {
+            hoveredNodesCache = new List<Node>();
             this.size = size;
         }
 

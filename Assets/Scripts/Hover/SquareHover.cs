@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace ElJardin.Hover
 {
@@ -13,29 +14,58 @@ namespace ElJardin.Hover
             //La hormiga no hace hover al agarrar la carta
         }
 
-        public override void HoverOnNodeEnter(Node targetNode)
+        public override void HoverOnNodeEnter(Node node)
         {
+            BuildManager.Instance.GenericHoverStart(()=>CrossHover(node));
+        }
+
+        void CrossHover(Node node)
+        {
+            Debug.Log($"Hovering on Node {node.name}");
+            node.Hovering = true;
             //Por seguridad se borran los hovers antiguos
             Hide();
+            GameManager.Instance.SelectedNode = node;
             
-            //Se hacen los hover alrededor del nodo, todas las posiciones
-            for(var row = targetNode.row - size; row < targetNode.row + size; row++)
+            var listDestroyNodesSquare = new List<Node>();
+
+            //North
+            var northNode = MapManager.Instance?.GetNode(node.row, node.column + 1);
+            if(northNode != null)
             {
-                for(var column = targetNode.column - size; column < targetNode.column + size; column++)
-                {
-                    //Si se encuentra dentro del rango del mapa
-                    if(row >= 0 && row < MapManager.Instance.rows && column >= 0 && column < MapManager.Instance.columns)
-                    {
-                        hoveredNodesCache.Add(MapManager.Instance.GetNode(row,column));
-                    }
-                }
+                listDestroyNodesSquare.Add(northNode);
             }
-            
+
+            //South
+            var southNode = MapManager.Instance?.GetNode(node.row, node.column - 1);
+            if(southNode != null)
+            {
+                listDestroyNodesSquare.Add(southNode);
+            }
+
+            //East
+            var eastNode = MapManager.Instance?.GetNode(node.row + 1, node.column);
+            if(eastNode != null)
+            {
+                listDestroyNodesSquare.Add(eastNode);
+            }
+
+            //West
+            var westNode = MapManager.Instance?.GetNode(node.row - 1,node.column);
+            if(westNode != null)
+            {
+                listDestroyNodesSquare.Add(westNode);
+            }
+
+            hoveredNodesCache = listDestroyNodesSquare;
+
             BuildManager.Instance.HoverNodesInList(hoveredNodesCache);
         }
         
         public override void Hide()
         {
+            Debug.Log("Hide");
+            GameManager.Instance.SelectedNode = null;
             BuildManager.Instance.UnHoverNodesInList(hoveredNodesCache);
             hoveredNodesCache.Clear();
         }

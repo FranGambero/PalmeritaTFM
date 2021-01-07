@@ -19,13 +19,14 @@ namespace ElJardin.Hover
 
         public override void HoverOnNodeEnter(Node targetNode)
         {
-            Debug.Log($"CrossHover - Hovering node");
+            Debug.Log($"CrossHover - Hovering node {targetNode.name}");
+            BuildManager.Instance.ShowNodesPreview(targetNode.directionInHover);
         }
 
         public override void Hide()
         {
-            BuildManager.Instance.StopHoverCoroutine();
-            BuildManager.Instance.UnHoverNodesInList();
+            //BuildManager.Instance.StopHoverCoroutine();
+            //BuildManager.Instance.UnHoverNodesInList();
             //hoveredNodesCache.Clear();
         }
 
@@ -39,24 +40,6 @@ namespace ElJardin.Hover
         void HoverAround()
         {
             BuildManager.Instance.HoverAroundNode(size);
-        }
-
-        List<Node> CalculateNodesToHoverAroundSepalo()
-        {
-            var nodes = new List<Node>();
-            var sepaloPosition = GameManager.Instance.Sepalo.CurrentNode;
-            
-            //North
-            for(var column = sepaloPosition.column; column <= sepaloPosition.column + size; column++)
-            {
-                var auxNode = MapManager.Instance?.GetNode(sepaloPosition.row, column);
-                if(auxNode != null)
-                {
-                    
-                }
-            }
-
-            throw new NotImplementedException();
         }
         #endregion
     }
