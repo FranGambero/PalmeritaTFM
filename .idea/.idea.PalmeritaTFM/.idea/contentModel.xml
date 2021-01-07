@@ -8,6 +8,9 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="DOTween" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NodeEditorGUI.cs" t="Include" />
+          </e>
           <e p="Modules" t="Include">
             <e p="DOTweenModuleAudio.cs" t="Include" />
             <e p="DOTweenModulePhysics.cs" t="Include" />
@@ -19,22 +22,29 @@
           </e>
           <e p="readme.txt" t="Include" />
         </e>
+        <e p="Editor" t="Include">
+          <e p="EditorUtils.cs" t="Include" />
+          <e p="Interfaz.cs" t="Include" />
+          <e p="LevelEditorGUI.cs" t="Include" />
+          <e p="ScreenShotsUtil.cs" t="Include" />
+        </e>
         <e p="Fonts" t="Include">
           <e p="Kalam" t="Include">
             <e p="OFL.txt" t="Include" />
           </e>
         </e>
-        <e p="LogrosPanel.cs" t="Include" />
         <e p="MockJado" t="Include">
           <e p="Build Manager" t="Include">
             <e p="BuildManager.cs" t="Include" />
             <e p="DirectionType.cs" t="Include" />
           </e>
           <e p="Cards" t="Include">
+            <e p="ActionCard.cs" t="Include" />
             <e p="Card.cs" t="Include" />
             <e p="CardData.cs" t="Include" />
             <e p="CardManager.cs" t="Include" />
             <e p="ItemDragHandler.cs" t="Include" />
+            <e p="ZoneCardData.cs" t="Include" />
           </e>
           <e p="Map Manager" t="Include">
             <e p="MapManager.cs" t="Include" />
@@ -65,36 +75,67 @@
         <e p="Scripts" t="Include">
           <e p="Animator" t="Include">
             <e p="DoGrow.cs" t="Include" />
+            <e p="FlautibelulaAnimController.cs" t="Include" />
             <e p="LotoAnimatorController.cs" t="Include" />
             <e p="ProtaAnimationController.cs" t="Include" />
+            <e p="ShovelCravAnimatorController.cs" t="Include" />
             <e p="Spin.cs" t="Include" />
           </e>
           <e p="AudioManager.cs" t="Include" />
+          <e p="CardActions" t="Include">
+            <e p="BaseCardAction.cs" t="Include" />
+            <e p="BongoAction.cs" t="Include" />
+            <e p="BuildRiver.cs" t="Include" />
+            <e p="ICardAction.cs" t="Include" />
+          </e>
           <e p="Characters" t="Include">
+            <e p="BongormigaAfterAction.cs" t="Include" />
             <e p="SepaloController.cs" t="Include" />
           </e>
+          <e p="ConsoleToGUI.cs" t="Include" />
           <e p="Construction" t="Include">
+            <e p="DryController.cs" t="Include" />
+            <e p="Flower.cs" t="Include" />
+            <e p="FlowerManager.cs" t="Include" />
             <e p="Water.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
             <e p="Achievement.cs" t="Include" />
+            <e p="CardDataModels" t="Include">
+              <e p="CardDataModel.cs" t="Include" />
+              <e p="CardDataModelConverter.cs" t="Include" />
+              <e p="CardDataModelWrapper.cs" t="Include" />
+            </e>
+            <e p="HoverDataModels" t="Include">
+              <e p="HoverDataModelConverter.cs" t="Include" />
+              <e p="HoverTypeDataModel.cs" t="Include" />
+              <e p="HoverTypeDataModelWrapper.cs" t="Include" />
+            </e>
             <e p="LevelData.cs" t="Include" />
             <e p="SerializableManager.cs" t="Include" />
+            <e p="TutorialData.cs" t="Include" />
+            <e p="TutorialDataWrapper.cs" t="Include" />
             <e p="ZoneData.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
             <e p="Bongormiga.cs" t="Include" />
           </e>
+          <e p="Hover" t="Include">
+            <e p="BaseHover.cs" t="Include" />
+            <e p="CrossHover.cs" t="Include" />
+            <e p="IHover.cs" t="Include" />
+            <e p="SquareHover.cs" t="Include" />
+          </e>
           <e p="LevelEditor" t="Include">
             <e p="LevelEditor.cs" t="Include" />
-            <e p="LevelEditorGUI.cs" t="Include" />
             <e p="NodeDataModel.cs" t="Include" />
-            <e p="NodeEditorGUI.cs" t="Include" />
           </e>
+          <e p="LogrosPanel.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="Keys.cs" t="Include" />
             <e p="LoadScreenManager.cs" t="Include" />
+            <e p="MenuDirector.cs" t="Include" />
             <e p="SessionVariables.cs" t="Include" />
           </e>
           <e p="Mapamundi" t="Include">
@@ -103,6 +144,7 @@
             <e p="LevelButton.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="LineGrinderController.cs" t="Include" />
+            <e p="LuigisZip.cs" t="Include" />
             <e p="MapamundiManager.cs" t="Include" />
             <e p="MapMove.cs" t="Include" />
           </e>
@@ -119,16 +161,30 @@
             <e p="ITurn.cs" t="Include" />
             <e p="Semaphore.cs" t="Include" />
           </e>
+          <e p="Sprites" t="Include">
+            <e p="SpriteReceiveShadow.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="ConfigMenuManager.cs" t="Include" />
             <e p="FadeOutPanel.cs" t="Include" />
             <e p="MenuButton.cs" t="Include" />
             <e p="MenuManager.cs" t="Include" />
+            <e p="OutlineController.cs" t="Include" />
+            <e p="ResetManager.cs" t="Include" />
+            <e p="ScorePetalController.cs" t="Include" />
             <e p="ScreenTransitionImageEffect.cs" t="Include" />
             <e p="TillingMovement.cs" t="Include" />
+            <e p="TutorialPanel.cs" t="Include" />
           </e>
-          <e p="Utils" t="Include">
-            <e p="EditorUtils.cs" t="Include" />
+          <e p="Util" t="Include">
+            <e p="ClassTypeConstraintAttribute.cs" t="Include" />
+            <e p="ClassTypeReference.cs" t="Include" />
+            <e p="ClassTypeReferencePropertyDrawer.cs" t="Include" />
+            <e p="Patterns" t="Include">
+              <e p="IConverter.cs" t="Include" />
+              <e p="IFactory.cs" t="Include" />
+            </e>
+            <e p="SerializableUnityEvents.cs" t="Include" />
           </e>
         </e>
         <e p="ShadersAndVFX" t="Include">
@@ -145,10 +201,15 @@
             <e p="Shader_Wind.shader" t="Include" />
             <e p="WhiteNoise.cginc" t="Include" />
           </e>
+          <e p="Others" t="Include">
+            <e p="SimpleShadows.shader" t="Include" />
+            <e p="SolidColor.shader" t="Include" />
+            <e p="SpriteReciveShadows.shader" t="Include" />
+            <e p="Toon.shader" t="Include" />
+          </e>
           <e p="Screen" t="Include">
             <e p="ScreenTransitionImageEffect.shader" t="Include" />
           </e>
-          <e p="Toon.shader" t="Include" />
           <e p="VFX_Materials" t="Include">
             <e p="NoShadow.shader" t="Include" />
             <e p="WaterCorona.shader" t="Include" />

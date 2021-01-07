@@ -504,6 +504,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  cardSprite: {fileID: 8287941594500609565}
 --- !u!114 &824035396
 MonoBehaviour:
   m_ObjectHideFlags: 0

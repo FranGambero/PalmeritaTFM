@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,7 +10,7 @@ namespace ElJardin {
         public GameObject titleMenu, startMenu;
          public FadeOutPanel fadeOutPanel;
         public MenuButton btnPlay, btnConfig, btnCredits;
-
+        public TMPro.TextMeshProUGUI test;
         private void Awake() {
             titleMenu.SetActive(true);
             startMenu.SetActive(false);
