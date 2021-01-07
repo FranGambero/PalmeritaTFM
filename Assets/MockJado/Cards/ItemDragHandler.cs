@@ -108,6 +108,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             var mouseNode = GameManager.Instance.SelectedNode;
             
+            ActionCard.OnActionCompleted.RemoveAllListeners();
             ActionCard.OnActionCompleted.AddListener(EndCardActions);
             ActionCard.Action(mouseNode);
         }
