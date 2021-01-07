@@ -113,6 +113,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             ActionCard.OnActionCompleted.RemoveAllListeners();
             ActionCard.OnActionCompleted.AddListener(EndCardActions);
             ActionCard.Action(mouseNode);
+            TurnsCounter.Instance.OnCardUsed();
         }
     }
 

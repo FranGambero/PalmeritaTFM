@@ -211,8 +211,7 @@ namespace ElJardin {
         }
 
         private bool CheckLogroMovimientos() {
-            // Comprobamos que se ha completado en menos de X movimientos
-            return false;
+            return TurnsCounter.Instance.CheckResults();
         }
 
 
