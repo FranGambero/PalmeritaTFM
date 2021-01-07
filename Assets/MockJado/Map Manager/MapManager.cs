@@ -142,8 +142,12 @@ namespace ElJardin {
             }
         }
 
-        public Node GetNode(int row, int column) {
-            return mapMatrix[row, column].GetComponent<Node>();
+        public Node GetNode(int row, int column)
+        {
+            if(rows > row && row >= 0 && columns > column && column >= 0)
+                return mapMatrix[row, column]?.GetComponent<Node>(); 
+            
+            return null;
         }
 
         #region Victory

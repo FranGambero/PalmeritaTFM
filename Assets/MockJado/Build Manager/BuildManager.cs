@@ -407,6 +407,12 @@ namespace ElJardin {
                 node.HoverOn(newDirection);
             }
         }
+        
+        public void HoverNodesInList(List<Node> nodeList) {
+            foreach (Node node in nodeList) {
+                node.HoverOn();
+            }
+        }
 
         public void UnHoverNodesInList(List<Node> nodesAroundList) {
             foreach (Node node in nodesAroundList) {
@@ -488,7 +494,7 @@ namespace ElJardin {
 
             return nodeList;
         }
-
+        
         public void ShowNodesPreview(DirectionType newDirection) {
             if (newDirection == DirectionType.Undefined) {
                 if (dictionaryNodesAround != null && dictionaryNodesAround.ContainsKey(this.Direction))
@@ -508,6 +514,23 @@ namespace ElJardin {
             this.Direction = newDirection;
         }
 
+        #endregion
+        
+        #region Card Hover Coroutines
+
+        public void GenericHoverStart(System.Action action)
+        {
+            StopHoverCoroutine();
+            hoverCoroutine = StartCoroutine(GenericHoverCoroutine(action));
+        }
+
+        IEnumerator GenericHoverCoroutine(System.Action action)
+        {
+            var sepalo = GameManager.Instance.Sepalo;
+            yield return sepalo.movementCoroutine;
+            action();
+        }
+        
         #endregion
     }
 }
