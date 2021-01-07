@@ -36,6 +36,7 @@ public class ConfirmPanel : MonoBehaviour {
     }
 
     void Cancel() {
+        AkSoundEngine.PostEvent("UI_Back_In", gameObject);
         this.gameObject.SetActive(false);
     }
 
@@ -44,7 +45,7 @@ public class ConfirmPanel : MonoBehaviour {
     }
 
     public void PlayLevel() {
-        levelStringToLoad = "Level" + levelIdToLoad;
+        levelStringToLoad = "Level" + MapamundiManager.Instance.currentZone + "_"+ levelIdToLoad;
         PlayerPrefs.SetInt(Keys.Scenes.LAST_PLAYED_LEVEL, levelIdToLoad);
         SessionVariables.Instance.levels.lastPlayedLevel = levelIdToLoad;
 
@@ -57,11 +58,7 @@ public class ConfirmPanel : MonoBehaviour {
         //AudioManager.Instance.unSetUILPF(); 
         SceneManager.LoadScene("LoadScene");
     }
-    public int GetLevelBuildId() {
-        levelStringToLoad = "Level" + levelIdToLoad;
-        return SceneManager.GetSceneByName(levelStringToLoad).buildIndex;
-    }
-
+   
     public void Activate(bool activate) {
         if (activate) {
             gameObject.SetActive(true);

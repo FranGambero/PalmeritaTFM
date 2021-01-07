@@ -78,6 +78,7 @@ public class Water : MonoBehaviour {
             growing = true;
             if (!hasWater) {
                 if (grow) {
+                    AkSoundEngine.PostEvent("Agua_Shoot_In", gameObject);
                     water.SetActive(true);
                     valueZ = 0;
                     mayor = maxValue;
@@ -96,7 +97,7 @@ public class Water : MonoBehaviour {
                         }
                     }
                 }
-
+                AkSoundEngine.PostEvent("Agua_Shoot_Out", gameObject);
                 yield return new WaitForSeconds(.5f);
                 water.SetActive(false);
                 hasWater = true;

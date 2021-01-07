@@ -5,7 +5,11 @@
 			<ChildrenList>
 				<SoundBank Name="Ingame_SoundBank" ID="{C48BB0D3-AF2B-42AE-8883-210D31E969EC}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Amb_Agua_Out" ID="{BFACB5FC-CCA2-4106-9D59-060994DE036E}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Amb_Agua_In" ID="{14FAD158-93BE-419F-BB6C-CC4D46FA344C}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Agua_Shoot_In" ID="{109F7946-6866-42BD-A7F4-79590F305A0D}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Carta_Select_In" ID="{09DC1973-EEA3-42C4-A897-591EF38D4420}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Arbol_Abrir_In" ID="{8F0C6196-ECE8-435B-BECE-188336C3DD7F}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Salto_In" ID="{9B87469B-575E-436C-A48D-38E5FFB33865}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Ataque_In" ID="{FFC50977-BFE9-43DE-837A-9DEA73F23E04}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Carta_Posicion_In" ID="{188F6BD4-1C3D-442F-8F04-50853C6736A5}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
@@ -14,7 +18,9 @@
 						<ObjectRef Name="Hormiga_Crep_Out" ID="{34023415-615F-4795-9A34-BFFF5F12CB72}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Carta_Slide_In" ID="{3E6BED85-B900-4825-AE76-ED36E29DFA20}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga" ID="{5280D00B-AB30-4943-9342-437A62886457}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Agua_Shoot_Out" ID="{EFDCE911-80AB-4CC7-B0BD-E9876587B8AD}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Steps_In" ID="{5DC50C4D-89A9-4EB4-82E6-5D82579C087D}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Flor_Abrir_In" ID="{D27146EF-5245-4ECB-80EC-25A34EDDDA1B}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Sepalo_Steps_In" ID="{616AED51-B29D-4EE4-9A14-89BDB3611A37}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_Base_In" ID="{012AD3C9-FCA8-4F50-A8A8-CAE89DBB1509}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ambientes" ID="{0CFDF471-BAA8-4F65-BD72-6880BA870CAE}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>

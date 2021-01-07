@@ -61,6 +61,64 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Amb_Agua_In" ID="{14FAD158-93BE-419F-BB6C-CC4D46FA344C}">
+							<ChildrenList>
+								<Action Name="" ID="{65D18BE9-789B-477B-BA49-2F2117241670}" ShortID="213576052">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Agua_Loop" ID="{6BEC5550-6261-477B-B71B-1893AB8D4C47}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Amb_Agua_Out" ID="{BFACB5FC-CCA2-4106-9D59-060994DE036E}">
+							<ChildrenList>
+								<Action Name="" ID="{331DE350-073A-46EB-9422-2ED0A848C558}" ShortID="977108468">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Agua_Loop" ID="{6BEC5550-6261-477B-B71B-1893AB8D4C47}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Agua_Shoot_In" ID="{109F7946-6866-42BD-A7F4-79590F305A0D}">
+							<ChildrenList>
+								<Action Name="" ID="{002E1ED2-DB34-47CF-A271-2F10294131D8}" ShortID="20964087">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Agua_Shoots" ID="{2640211B-FAE0-4B2B-AD5E-33A72E8A086F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Agua_Shoot_Out" ID="{EFDCE911-80AB-4CC7-B0BD-E9876587B8AD}">
+							<ChildrenList>
+								<Action Name="" ID="{97BCA35A-6D8B-4B35-82AB-83BCEF551EE2}" ShortID="842791451">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Agua_Shoots" ID="{2640211B-FAE0-4B2B-AD5E-33A72E8A086F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="perosnajes" ID="{399396F8-123A-41B4-9CCF-274EFFB40232}" ShortID="601825588">
@@ -305,6 +363,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Carta_Posicion" ID="{6996E7EE-8C8F-444E-B34A-017EF390ABB5}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Flor_Abrir_In" ID="{D27146EF-5245-4ECB-80EC-25A34EDDDA1B}">
+							<ChildrenList>
+								<Action Name="" ID="{0F1C8199-B32C-48CB-A730-95ED816445A8}" ShortID="936706922">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flor_Abrir" ID="{12D2A72B-5931-476D-984E-66DB7DDF0FB4}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Arbol_Abrir_In" ID="{8F0C6196-ECE8-435B-BECE-188336C3DD7F}">
+							<ChildrenList>
+								<Action Name="" ID="{3711363D-75AC-4E03-B313-77EDAF2CD023}" ShortID="29202420">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Arbol_Abrir" ID="{EE3A15C8-A623-4914-A7F4-39070028FCA6}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

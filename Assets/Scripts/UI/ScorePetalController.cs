@@ -31,7 +31,7 @@ public class ScorePetalController : MonoBehaviour {
         } else {
             post.SetActive(true);
         }
-        Debug.Log("PUTO: " + elementsToAppears + " " + elementsToAppears.Count);
+
         if (fase == Fase.Pod || fase == Fase.Cocoon) {
             elementsToAppears.ForEach(e => e.QuickShrink());
         } else {
