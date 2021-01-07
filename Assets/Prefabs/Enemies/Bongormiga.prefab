@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 3742622092763242773}
   - component: {fileID: 1105701644}
   - component: {fileID: 1218795929}
+  - component: {fileID: 4704420281681352584}
   m_Layer: 0
   m_Name: Bongormiga
   m_TagString: Untagged
@@ -86,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3742622092763242779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.77, y: 0.77, z: 6.96}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3742622093228143765}
@@ -105,7 +106,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3742622092763242779}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a87f55c59ea3a5a4ea793dbf84b73df0, type: 3}
   m_Name: 
@@ -115,6 +116,7 @@ MonoBehaviour:
   StunObj: {fileID: 3527602403997729637}
   Movement: {fileID: 1218795929}
   myAnimator: {fileID: 0}
+  _turneable: 1
 --- !u!114 &1218795929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +130,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  lookAtSpeed: 0
   YOffset: 0.7
+  globalTargetNode: {fileID: 0}
+  globalStartingNode: {fileID: 0}
+--- !u!114 &4704420281681352584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3742622092763242779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ff5a39bdf9440189bca687b2de01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 301782460}
 --- !u!1 &3742622093228143770
 GameObject:
   m_ObjectHideFlags: 0

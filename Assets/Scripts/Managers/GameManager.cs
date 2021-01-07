@@ -13,6 +13,9 @@ namespace ElJardin {
 
         public List<TutorialDataWrapper> levelTutos;
         private Node selectedNode;
+        
+        //public bool DraggingCard;
+
         public bool draggingCard;
         private bool gameRunning;
         private bool onPause = false;
@@ -26,6 +29,10 @@ namespace ElJardin {
         }
         public bool OnPause { get => onPause; set => onPause = value; }
 
+        //TODO: cambiar nombre cuando se elimine el bool
+        public Card selectedCard;
+
+        #region Accessors
         public Node SelectedNode { get => selectedNode; set => selectedNode = value; }
         public GameObject PositionHover {
             get {
@@ -35,6 +42,9 @@ namespace ElJardin {
         }
 
 
+        public bool DraggingCard => selectedCard != null;
+        #endregion
+
         public void PosPositionHover(Vector3 newPosition) {
             _positionHover.transform.position = newPosition;
             _positionHover.transform.LookAt(new Vector3(Sepalo.transform.position.x, _positionHover.transform.position.y, Sepalo.transform.position.z));
@@ -42,6 +52,7 @@ namespace ElJardin {
         private void Awake() {
             _positionHover?.SetActive(false);
             draggingCard = false;
+            selectedCard = null;
             Sepalo = FindObjectOfType<SepaloController>();
             MenuDirector.Instance.ActivateConfigMenu(false);
         }
