@@ -23,5 +23,6 @@ MonoBehaviour:
   cardData:
     amount: 1
     direction: 0
-    cardType: 0
-    sprite: {fileID: 0}
+    cardType: 2
+    sprite: {fileID: -7127666870768220687, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
+      type: 3}

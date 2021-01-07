@@ -15,6 +15,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     private CardData cardData;
     private float upOffset = 7f;
 
+    public Image cardSprite;
+
     Card ActionCard => GetComponent<Card>();
     void EndTurn() => GameManager.Instance.Sepalo.onTurnFinished();
 
@@ -32,7 +34,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         this.cardData = cardData;
         originalHandPosition = CardManager.Instance.transformList[GetComponent<Card>().transformIndex].position;
-        transform.GetChild(0).GetComponent<Image>().sprite = cardData.sprite;
+        cardSprite.sprite = cardData.sprite;
 
         switch(cardData.cardType)
         {
