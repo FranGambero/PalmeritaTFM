@@ -24,7 +24,6 @@ namespace ElJardin.CardActions
 
                     CreateBongo(targetNode);
                     //DestroySurroundingGround(targetNode);
-                    onActionCompleted.Invoke(true);
                 } else {
                     onCardUsed.Invoke(false);
                     onActionCompleted.Invoke(false);
@@ -125,7 +124,10 @@ namespace ElJardin.CardActions
             {
                 BuildManager.Instance?.BuildGround(nodeToDestroy);
             }
+
+            onActionCompleted.Invoke(true);
+
         }
-        
+
     }
 }
