@@ -316,9 +316,9 @@ namespace ElJardin {
             }
             return isValid;
         }
-
-        public void buildCells() {
-            //Correct mesh
+        private IEnumerator BuildCellsCor() {
+            Instantiate(GameManager.Instance.ShovelCrabPrefab, savedNodes[0].GetSurfacePosition(), Quaternion.identity).GetComponentInChildren<ShovelCravAnimatorController>().PlayDig();
+            yield return new WaitForSeconds(1.5f);
             bool neighborWithWater = false;
             foreach (Node node in savedNodes) {
                 bool thisNodeNeighborWithWater = false;
@@ -345,10 +345,14 @@ namespace ElJardin {
                 Debug.LogError("Quito dry");
                 savedNodes.ForEach(node => node.water.isGonnaHaveDaWote = true);
                 savedNodes.ForEach(node => node.AdminDryScript(false));
-               // CheckWater(savedNodes[0]);
+                // CheckWater(savedNodes[0]);
                 CheckWaterAndActue(savedNodes[0]);
             }
             MapManager.Instance.CheckFullRiver();
+        }
+        public void buildCells() {
+            //Correct mesh
+            StartCoroutine(BuildCellsCor());
 
         }
 
@@ -485,7 +489,7 @@ namespace ElJardin {
             return nodesToBuilAround;
         }
 
-        private List<Node> GetNodeListByDirection(DirectionType direction) {
+        public List<Node> GetNodeListByDirection(DirectionType direction) {
             List<Node> nodeList = null;
             if (dictionaryNodesAround != null) {
                 if (dictionaryNodesAround.ContainsKey(direction))
