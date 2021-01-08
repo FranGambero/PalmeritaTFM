@@ -222,6 +222,7 @@ MonoBehaviour:
   tmpRot: {x: -1, y: 0, z: 0}
   levelTutos: []
   draggingCard: 0
+  usingCard: 0
   selectedCard: {fileID: 0}
 --- !u!1 &1522253018955214809
 GameObject:
@@ -648,20 +649,9 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
         type: 3}
-      propertyPath: vfxEffects.Array.data[9].name
-      value: AntIn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
-        type: 3}
       propertyPath: vfxEffects.Array.data[9].time
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
-        type: 3}
-      propertyPath: vfxEffects.Array.data[9].PSPrefab
-      value: 
-      objectReference: {fileID: 7522918668566146543, guid: 669e1c1a54b42cd448c9957f3afa3550,
-        type: 3}
     - target: {fileID: 7004470426021041923, guid: c5895c257ac9c5c43b17b726f3d98263,
         type: 3}
       propertyPath: m_LocalPosition.x

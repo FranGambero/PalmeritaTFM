@@ -89,8 +89,8 @@ MonoBehaviour:
     PSPrefab: {fileID: 7522918668566146543, guid: b0f1f425cd4306641b324d996aca08e5,
       type: 3}
     pool: []
-  - name: DestroyRock
+  - name: AlertPS
     time: 1.5
-    PSPrefab: {fileID: 7522918668566146543, guid: b0f1f425cd4306641b324d996aca08e5,
+    PSPrefab: {fileID: 3659383951894138905, guid: 1988954bd369a2a4187423faf836b8c9,
       type: 3}
     pool: []
