@@ -66,7 +66,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         Debug.Log("Starting Drag");
         if(GameManager.Instance.Sepalo.IsMyTurn )
         {
-            if(!starting && GameManager.Instance.canPickCard)
+            if(!starting)
             {
                 starting = true;
                 GameManager.Instance.selectedCard = ActionCard;
