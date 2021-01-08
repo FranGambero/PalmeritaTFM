@@ -38,7 +38,7 @@ namespace ElJardin {
         private Coroutine hoverCoroutine;
 
         public DirectionType Direction { get => direction; set => direction = value; }
-
+        public Action OnBuildEnds;
         #endregion
 
         #region Build
@@ -349,6 +349,7 @@ namespace ElJardin {
                 CheckWaterAndActue(savedNodes[0]);
             }
             MapManager.Instance.CheckFullRiver();
+            OnBuildEnds?.Invoke();
         }
         public void buildCells() {
             //Correct mesh

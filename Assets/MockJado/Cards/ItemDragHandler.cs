@@ -125,8 +125,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             //AkSoundEngine.PostEvent("Carta_Posicion_In", gameObject);
             ResetCardPosition();
             HideCard();
-                
-            EndTurn();
+            BuildManager.Instance.OnBuildEnds=EndTurn;
         }
         else
         {
