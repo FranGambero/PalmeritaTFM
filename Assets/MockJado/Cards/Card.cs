@@ -41,8 +41,7 @@ namespace ElJardin
         {
             amountText.text = CardData.amount.ToString();
             GetComponent<ItemDragHandler>().LoadCardData(CardData);
-            //TODO: este comentario es temporal
-            //GetComponentInChildren<OutlineController>().Activate(false);
+            GetComponentInChildren<OutlineController>().Activate(false);
         }
 
         
