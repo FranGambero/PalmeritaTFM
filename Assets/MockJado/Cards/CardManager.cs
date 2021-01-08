@@ -41,7 +41,7 @@ namespace ElJardin {
 
             MenuDirector.Instance.ActivateCardCanvas(true);
             Init();
-            while (index < cardList.Count) {
+            while (index < cardList.Count && index< transformList.Count) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);

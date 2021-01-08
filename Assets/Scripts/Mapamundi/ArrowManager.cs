@@ -21,7 +21,7 @@ public class ArrowManager : MonoBehaviour
     }
 
     private void CheckLeftPetals() {
-        Debug.LogError("Quedan: " + (minPetals - MapamundiManager.Instance.currentPetals));
+
         nextPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Consigue " + (minPetals - MapamundiManager.Instance.currentPetals) + " petalos más para avanzar";
     }
 

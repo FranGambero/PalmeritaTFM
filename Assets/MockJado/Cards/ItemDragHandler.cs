@@ -9,13 +9,14 @@ using UnityEngine.UI;
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public Vector3 originalPosition;
-    public Vector3 originalHandPosition;
+    public Transform originalHandPosition;
     public bool starting, hoving;
     public LayerMask layerMask;
     private CardData cardData;
     private float upOffset = 7f;
 
     public Image cardSprite;
+    public Image cardBody;
 
     Card ActionCard => GetComponent<Card>();
     void EndTurn() => GameManager.Instance.Sepalo.onTurnFinished();
@@ -33,9 +34,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     public void LoadCardData(CardData cardData)
     {
         this.cardData = cardData;
-        originalHandPosition = CardManager.Instance.transformList[GetComponent<Card>().transformIndex].position;
+        originalHandPosition = CardManager.Instance.transformList[GetComponent<Card>().transformIndex];
         cardSprite.sprite = cardData.sprite;
-
+        cardBody.color = cardData.bgColor;
         switch(cardData.cardType)
         {
             case CardData.CardType.Undefined:
@@ -164,7 +165,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if(GameManager.Instance.Sepalo.IsMyTurn && !starting)
         {
-            transform.DOMove(originalHandPosition + Vector3.up * upOffset, .2f).SetEase(Ease.Linear);
+            transform.DOMove(originalHandPosition.position + Vector3.up * upOffset, .2f).SetEase(Ease.Linear);
             transform.parent.GetComponentInChildren<OutlineController>().Activate(true);
         }
     }
@@ -173,14 +174,14 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if(GameManager.Instance.Sepalo.IsMyTurn && !starting && gameObject.activeSelf)
         {
-            transform.DOMove(originalHandPosition, .5f);
+            transform.DOMove(originalHandPosition.position, .5f);
             transform.parent.GetComponentInChildren<OutlineController>().Activate(false);
         }
     }
 
     void ResetCardPosition()
     {
-        transform.position = originalHandPosition;
+        transform.position = originalHandPosition.position;
     }
     #endregion
 }

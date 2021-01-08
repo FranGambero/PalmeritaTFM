@@ -74,7 +74,7 @@ namespace ElJardin
 
             transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, animTime);
 
-            GetComponent<ItemDragHandler>().originalHandPosition = CardManager.Instance.transformList[transformIndex].position;
+            GetComponent<ItemDragHandler>().originalHandPosition = CardManager.Instance.transformList[transformIndex];
         }
         #endregion
     }

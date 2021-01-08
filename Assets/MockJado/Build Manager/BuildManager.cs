@@ -338,11 +338,8 @@ namespace ElJardin {
             }
             if (!neighborWithWater && !(savedNodes.Count == 1 && savedNodes[0].IsStatic) && !CheckWater(savedNodes[0])) {
                 int newIndex = Semaphore.Instance.GetNewIndex();
-                Debug.Log("Er new index " + newIndex);
-                // Fran dice: Fran aqui falla
                 savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
             } else {
-                Debug.LogError("Quito dry");
                 savedNodes.ForEach(node => node.water.isGonnaHaveDaWote = true);
                 savedNodes.ForEach(node => node.AdminDryScript(false));
                 // CheckWater(savedNodes[0]);

@@ -15,5 +15,7 @@ namespace ElJardin {
         public DirectionType direction;
         public CardType cardType;
         public Sprite sprite;
+        public Color bgColor;
+
     }
 }
