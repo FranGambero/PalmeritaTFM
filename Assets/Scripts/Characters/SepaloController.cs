@@ -43,7 +43,7 @@ namespace ElJardin.Characters {
 
         #region Actions
         public void DoTheMove(Node targetNode) {
-            if (IsMyTurn) {
+            if (IsMyTurn && !GameManager.Instance.usingCard) {
                 //StopAllCoroutines();
                 if (movementCoroutine != null) {
                     StopCoroutine(movementCoroutine);

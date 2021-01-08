@@ -327,7 +327,7 @@ this.canBuild == false;
 
         [ContextMenu("Dry")]
         public void Dry() {
-            water.Grow(false, () => neighbors.ForEach(n => n.Dry()), null);
+            water.Grow(false, () => neighbors.ForEach(n => n.Dry()), this);
         }
         /// <summary>
         /// 
