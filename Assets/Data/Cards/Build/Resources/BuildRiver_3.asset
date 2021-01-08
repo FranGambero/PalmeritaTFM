@@ -18,7 +18,8 @@ MonoBehaviour:
       classRef: ElJardin.Hover.CrossHover, Assembly-CSharp
     actionType:
       classRef: ElJardin.CardActions.BuildRiver, Assembly-CSharp
-    insectPrefab: {fileID: 0}
+    insectPrefab: {fileID: 2249157350775151950, guid: 5a7600a83d28b4c44b9f23af4ecca6a2,
+      type: 3}
   cardData:
     amount: 3
     direction: 0

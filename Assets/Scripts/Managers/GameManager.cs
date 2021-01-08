@@ -8,6 +8,7 @@ namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public SepaloController Sepalo;
         public GameObject instructMenu;
+        public GameObject ShovelCrabPrefab;
         public GameObject _positionHover;
         public Vector3 tmpRot;
 

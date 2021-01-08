@@ -67,6 +67,7 @@ namespace ElJardin.CardActions
                         {
                             Debug.Log($" ----- obstacle is rock");
                             parent.GetComponent<Node>()?.DestroyObstacle();
+                            VFXDirector.Instance.Play("DestroyRock",parent.GetComponent<Node>().GetSurfacePosition());
                         }
                     }
                 }

@@ -7,7 +7,16 @@ using UnityEngine;
 public class VFXDirector : Singleton<VFXDirector> {
     public List<VFX> vfxEffects;
     public ParticleSystem Play(string name, Transform position) {
-        return Play(name, position.position);
+        VFX vfx = vfxEffects.Find(v => v.name.Equals(name));
+        ParticleSystem ps = null;
+        if (vfx != null) {
+            ps = vfx.Play(position);
+            ps.transform.SetParent(this.transform);
+            StartCoroutine(DisablePS(ps, vfx.time));
+        } else {
+            Debug.LogWarning("El vfx no existe: " + name);
+        }
+        return ps;
     }
     public ParticleSystem Play(string name, Vector3 position) {
         VFX vfx = vfxEffects.Find(v => v.name.Equals(name));
@@ -41,7 +50,7 @@ public class VFXDirector : Singleton<VFXDirector> {
                 pool.Add(particles);
             }
             particles.transform.position = position.position;
-            //  particles.transform.rotation = position.rotation;
+              particles.transform.rotation = position.rotation;
             particles.gameObject.SetActive(true);
             particles.time = 0;
             particles.Play();

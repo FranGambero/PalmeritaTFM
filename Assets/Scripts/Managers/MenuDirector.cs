@@ -37,6 +37,7 @@ public class MenuDirector : Singleton<MenuDirector> {
     }
     public void CloseTuto(TutorialPanel tutorialPanel) {
         openedTutoPanels.Remove(tutorialPanel.tutorialData);
+        AkSoundEngine.PostEvent("UI_Select_In", gameObject);
         Destroy(tutorialPanel.gameObject);
         if (openedTutoPanels.Count == 0) {
             if (BGBlur) BGBlur.SetActive(false);
