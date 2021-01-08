@@ -64,12 +64,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Starting Drag");
-        if(GameManager.Instance.Sepalo.IsMyTurn)
+        if(GameManager.Instance.Sepalo.IsMyTurn )
         {
-            if(!starting)
+            if(!starting && GameManager.Instance.canPickCard)
             {
                 starting = true;
-
                 GameManager.Instance.selectedCard = ActionCard;
                 AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 HoverAroundNode();

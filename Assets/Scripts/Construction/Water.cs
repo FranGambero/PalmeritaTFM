@@ -120,36 +120,34 @@ public class Water : MonoBehaviour {
     private IEnumerator Dry(bool grow, System.Action middleCallback) {
         float valueY;
         float animT = 1.5f;
-        if (!growing) {
-            if (!grow) {
-                growing = true;
-                Debug.Log("Cagonto: " + thisNode.name);
-                int dryIndex = Semaphore.Instance.GetNewIndex();
-                if (initNode && initNode.dryController.active)//Si ya se está secando uso su indice
-                    dryIndex = initNode.dryController.turnIndex;
-                thisNode.AdminDryScript(true, dryIndex);
-                growing = false;
-                hasWater = false;
-                if (thisNode.GetComponent<NodeDataModel>().isRiverStart) {
-                    thisNode.Water();
-                }
-                valueY = waterStatic.transform.position.y;
-                waterStatic.transform.DOMoveY(-1, animT).OnComplete(() => {
-                    waterStatic.SetActive(false);
-                    waterStatic.transform.position = new Vector3(waterStatic.transform.position.x, valueY, waterStatic.transform.position.z);
-                  
-                });
-                yield return new WaitForSeconds(.01f);
-
-                middleCallback?.Invoke();
-
-                yield return new WaitForSeconds(animT);
-
+        if (!grow) {
+            growing = hasWater = isGonnaHaveDaWote = false;
+            
+            waterE.SetActive(false); waterN.SetActive(false); waterS.SetActive(false); waterW.SetActive(false);
+            waterStatic.SetActive(false);
+            int dryIndex = Semaphore.Instance.GetNewIndex();
+            if (initNode && initNode.dryController.active)//Si ya se está secando uso su indice
+                dryIndex = initNode.dryController.turnIndex;
+            thisNode.AdminDryScript(true, dryIndex);
+            if (thisNode.GetComponent<NodeDataModel>().isRiverStart) {
+                thisNode.Water();
             }
-            isGonnaHaveDaWote = false;
+            valueY = waterStatic.transform.position.y;
+            waterStatic.transform.DOMoveY(-1, animT).OnComplete(() => {
+                waterStatic.SetActive(false);
+                waterStatic.transform.position = new Vector3(waterStatic.transform.position.x, valueY, waterStatic.transform.position.z);
+
+            });
+            yield return new WaitForSeconds(.01f);
+
+            middleCallback?.Invoke();
+
+            yield return new WaitForSeconds(animT);
+
         }
+        isGonnaHaveDaWote = false;
     }
     public bool IsActive() {
-        return waterStatic.activeSelf || isGonnaHaveDaWote;
+        return hasWater || isGonnaHaveDaWote;
     }
 }
