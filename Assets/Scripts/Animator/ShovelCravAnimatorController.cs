@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ElJardin;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class ShovelCravAnimatorController : MonoBehaviour
     [ContextMenu("DIG")]
     public void PlayDig() {
         gameObject.SetActive(true);
+        transform.parent.LookAt(GameManager.Instance.Sepalo.transform);
         animator.Play("Dig");
     }
   public void OnAnimDig() {

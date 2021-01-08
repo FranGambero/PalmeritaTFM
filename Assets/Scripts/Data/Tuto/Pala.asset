@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Pala
   m_EditorClassIdentifier: 
   data:
-    title: Muerte
-    body: 'La muerteeee
-
-      Morticia'
-    sprite: {fileID: 3214090429402685561, guid: 05200f95c632f7945b8f2e956281617c,
+    title: Cangrejo Pala
+    body: "Arrastra las cartas de Pala para abrir camino al agua desde la fuente
+      hasta los objetivos.\n\nObserva el n\xFAmero del indicador de la carta para
+      saber el alc\xE1nce que tiene."
+    sprite: {fileID: 7585433144361682982, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
       type: 3}

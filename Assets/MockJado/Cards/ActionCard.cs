@@ -16,6 +16,7 @@ namespace ElJardin
         public void Action(Node targetNode) => actionProvider.DoAction(targetNode);
 
         public UnityEvent<bool> OnActionCompleted => actionProvider.onActionCompleted;
+        public UnityEvent<bool> OnCardUsed => actionProvider.onCardUsed;
 
         public ActionCard(IHover hoverProvider, ICardAction actionProvider)
         {

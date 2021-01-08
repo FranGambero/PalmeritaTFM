@@ -37,6 +37,7 @@ public class MenuDirector : Singleton<MenuDirector> {
     }
     public void CloseTuto(TutorialPanel tutorialPanel) {
         openedTutoPanels.Remove(tutorialPanel.tutorialData);
+        AkSoundEngine.PostEvent("UI_Select_In", gameObject);
         Destroy(tutorialPanel.gameObject);
         if (openedTutoPanels.Count == 0) {
             if (BGBlur) BGBlur.SetActive(false);
@@ -55,8 +56,10 @@ public class MenuDirector : Singleton<MenuDirector> {
                 GameManager.Instance.OnPause = activate;
         }
         if (activate) {
+            ActivateCardCanvas(false);
             configMenu.gameObject.SetActive(activate);
         } else {
+            ActivateCardCanvas(true);
             AudioManager.Instance.toggleMusicIngameState(true);
             AkSoundEngine.PostEvent("UI_Back_In", gameObject);
             configMenu.gameObject.SetActive(false);
@@ -89,6 +92,7 @@ public class MenuDirector : Singleton<MenuDirector> {
     }
 
     public void ActivateCardCanvas(bool activate) {
-        cardCanvas.gameObject.SetActive(activate);
+        if (cardCanvas)
+            cardCanvas.gameObject.SetActive(activate);
     }
 }

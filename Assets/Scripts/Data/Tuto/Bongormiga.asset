@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Bongormiga
   m_EditorClassIdentifier: 
   data:
-    title: Luigi
-    body: 'Utiliza a la bongormiga para destruir las rocas que se interpongan en
-      tu camino.
-
-      Arrastra la carta de Bongormiga en cualquier casilla libre
-      y libera su poder en las 4 direcciones!'
-    sprite: {fileID: 21300000, guid: bc067823b9d4f3543a75cd8c66de2281, type: 3}
+    title: Bongormiga
+    body: "Utiliza a la bongormiga para destruir las rocas que se interpongan en
+      tu camino con sus bongos.\nArrastra la carta de Bongormiga en cualquier casilla
+      libre y l\xEDbera su poder en las 4 direcciones!"
+    sprite: {fileID: -7127666870768220687, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
+      type: 3}

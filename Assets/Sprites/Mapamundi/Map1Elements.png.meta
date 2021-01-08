@@ -333,10 +333,10 @@ TextureImporter:
       name: Map1Elements_5
       rect:
         serializedVersion: 2
-        x: 977
-        y: 656
-        width: 323
-        height: 312
+        x: 1027
+        y: 699
+        width: 207
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +480,10 @@ TextureImporter:
       name: Map1Elements_12
       rect:
         serializedVersion: 2
-        x: 977
-        y: 344
-        width: 323
-        height: 302
+        x: 1010
+        y: 393
+        width: 253
+        height: 237
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
