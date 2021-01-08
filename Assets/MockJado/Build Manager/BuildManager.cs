@@ -58,7 +58,8 @@ namespace ElJardin {
                 node.ChangeNodeType(NodeType.Ground, ground_m);
                 node.water.Reset();
                 node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
-                                    //Correccion de vecinos
+                int dryIndex= Semaphore.Instance.GetNewIndex();
+                node.neighbors.ForEach(n => n.AdminDryScript(true, dryIndex));      //Correccion de vecinos
                 UpdateNeighbors(node, false);
             }
         }

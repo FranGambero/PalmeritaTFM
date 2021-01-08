@@ -5,20 +5,21 @@ namespace ElJardin.CardActions
 {
     public class BuildRiver : BaseCardAction
     {
+        bool actionCompleted;
         public BuildRiver(int size) : base(size)
         {
         }
 
-        public override void DoAction(Node targetNode)
-        {
+        public override void DoAction(Node targetNode) {
             Debug.Log($"CardAction - Building river");
+            BuildManager.Instance.OnBuildEnds = () => { onActionCompleted.Invoke(actionCompleted); };
             TryBuildRiver();
         }
 
         void TryBuildRiver()
         {
-            var actionCompleted = BuildManager.Instance.ChangeNodesInList();
-            onActionCompleted.Invoke(actionCompleted);
+            actionCompleted = BuildManager.Instance.ChangeNodesInList();
+            onCardUsed?.Invoke(actionCompleted);
         }
     }
 }

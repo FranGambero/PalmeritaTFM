@@ -92,6 +92,7 @@ public class MenuDirector : Singleton<MenuDirector> {
     }
 
     public void ActivateCardCanvas(bool activate) {
-        cardCanvas.gameObject.SetActive(activate);
+        if (cardCanvas)
+            cardCanvas.gameObject.SetActive(activate);
     }
 }

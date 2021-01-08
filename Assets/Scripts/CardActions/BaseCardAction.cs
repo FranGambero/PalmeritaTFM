@@ -9,11 +9,13 @@ namespace ElJardin.CardActions
         public int size { get; set; }
         public GameObject insectPrefab { get; set; }
         public UnityEvent<bool> onActionCompleted { get; set; }
+        public UnityEvent<bool> onCardUsed { get; set; }
 
         protected BaseCardAction(int size)
         {
             this.size = size;
             onActionCompleted = new BoolUnityEvent();
+            onCardUsed = new BoolUnityEvent();
         }
         
         public abstract void DoAction(Node targetNode);

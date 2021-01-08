@@ -113,6 +113,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             
             ActionCard.OnActionCompleted.RemoveAllListeners();
             ActionCard.OnActionCompleted.AddListener(EndCardActions);
+            ActionCard.OnCardUsed.RemoveAllListeners();
+            ActionCard.OnCardUsed.AddListener(CardUsed);
             ActionCard.Action(mouseNode);
             TurnsCounter.Instance.OnCardUsed();
         }
@@ -124,19 +126,20 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             //Aqui va el sonido de colocar carta
             //AkSoundEngine.PostEvent("Carta_Posicion_In", gameObject);
-            ResetCardPosition();
-            HideCard();
-            BuildManager.Instance.OnBuildEnds=EndTurn;
+            EndTurn();
         }
         else
         {
             BuildManager.Instance.StopHoverCoroutine();
-            ResetCardPosition();
         }
         ActionCard.UnHover();
-        BuildManager.Instance.UnHoverNodesInList();
     }
-
+    private void CardUsed(bool used) {
+        BuildManager.Instance.UnHoverNodesInList();
+        ResetCardPosition();
+        if (used)
+            HideCard();
+    }
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(.1f);

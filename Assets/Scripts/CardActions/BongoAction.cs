@@ -20,12 +20,15 @@ namespace ElJardin.CardActions
             {
                 if(targetNode != GameManager.Instance.Sepalo.CurrentNode)
                 {
+                    onCardUsed.Invoke(true);
+
                     CreateBongo(targetNode);
                     //DestroySurroundingGround(targetNode);
                     onActionCompleted.Invoke(true);
-                }
-                else
+                } else {
+                    onCardUsed.Invoke(false);
                     onActionCompleted.Invoke(false);
+                }
             }
         }
 
