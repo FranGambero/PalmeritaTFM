@@ -56,8 +56,10 @@ public class MenuDirector : Singleton<MenuDirector> {
                 GameManager.Instance.OnPause = activate;
         }
         if (activate) {
+            ActivateCardCanvas(false);
             configMenu.gameObject.SetActive(activate);
         } else {
+            ActivateCardCanvas(true);
             AudioManager.Instance.toggleMusicIngameState(true);
             AkSoundEngine.PostEvent("UI_Back_In", gameObject);
             configMenu.gameObject.SetActive(false);
@@ -90,6 +92,7 @@ public class MenuDirector : Singleton<MenuDirector> {
     }
 
     public void ActivateCardCanvas(bool activate) {
-        cardCanvas.gameObject.SetActive(activate);
+        if (cardCanvas)
+            cardCanvas.gameObject.SetActive(activate);
     }
 }

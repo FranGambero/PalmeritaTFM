@@ -505,6 +505,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   cardSprite: {fileID: 8287941594500609565}
+  cardBody: {fileID: 6736612939661367991}
 --- !u!114 &824035396
 MonoBehaviour:
   m_ObjectHideFlags: 0

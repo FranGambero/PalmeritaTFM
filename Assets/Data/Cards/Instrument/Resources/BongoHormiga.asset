@@ -26,3 +26,4 @@ MonoBehaviour:
     cardType: 2
     sprite: {fileID: -7127666870768220687, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
       type: 3}
+    bgColor: {r: 0.7924528, g: 0.69244057, b: 0.17568529, a: 1}

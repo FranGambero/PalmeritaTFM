@@ -13,7 +13,6 @@ namespace ElJardin.Data.Cards
         public int size;
         [ClassImplements(typeof(IHover))] public ClassTypeReference hoverType;
         [ClassImplements(typeof(ICardAction))] public ClassTypeReference actionType;
-
         public GameObject insectPrefab;
         
         readonly CardDataModelConverter converter = new CardDataModelConverter();

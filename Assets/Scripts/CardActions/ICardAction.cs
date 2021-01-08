@@ -8,6 +8,7 @@ namespace ElJardin.CardActions
         int size { get; set; }
         GameObject insectPrefab { get; set; }
         UnityEvent<bool> onActionCompleted { get; set; }
+        UnityEvent<bool> onCardUsed { get; set; }
         void DoAction(Node targetNode);
         
     }
