@@ -4,10 +4,11 @@ public class NodeDataModel : MonoBehaviour
 {
     public enum ObstacleType
     {
-        None, Rock
+        None, Rock, Bramble
     }
     
     [SerializeField] public GameObject rockPrefab;
+    [SerializeField] public GameObject bramblePrefab;
     
     [SerializeField] public ObstacleType obstacle = ObstacleType.None;
     [SerializeField] public bool isRiverStart;
