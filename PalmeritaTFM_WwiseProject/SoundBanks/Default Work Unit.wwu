@@ -9,6 +9,7 @@
 						<ObjectRef Name="Amb_Agua_In" ID="{14FAD158-93BE-419F-BB6C-CC4D46FA344C}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Agua_Shoot_In" ID="{109F7946-6866-42BD-A7F4-79590F305A0D}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Carta_Select_In" ID="{09DC1973-EEA3-42C4-A897-591EF38D4420}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Victoria_Out" ID="{8DEDD6A7-877C-42DE-A0B6-417B6BAD3033}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Arbol_Abrir_In" ID="{8F0C6196-ECE8-435B-BECE-188336C3DD7F}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Salto_In" ID="{9B87469B-575E-436C-A48D-38E5FFB33865}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Ataque_In" ID="{FFC50977-BFE9-43DE-837A-9DEA73F23E04}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>

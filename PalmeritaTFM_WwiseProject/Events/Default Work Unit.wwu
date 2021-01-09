@@ -441,6 +441,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Victoria_Out" ID="{8DEDD6A7-877C-42DE-A0B6-417B6BAD3033}">
+							<ChildrenList>
+								<Action Name="" ID="{4D7D6E4B-712F-4227-AA54-8B59528AC94C}" ShortID="740461491">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_Base_Loop" ID="{38C05550-C5A9-4BA6-A430-15901649E28D}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6BA00A70-2532-4FA7-9BBA-C3A3BD1C7587}" ShortID="209283701">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="General_Shoots" ID="{702878F9-69A7-4679-B205-30AD2788F12E}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musica" ID="{ED5AD844-ADE3-4379-95C5-89018A6993DE}" ShortID="194525612">

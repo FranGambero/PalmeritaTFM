@@ -43,6 +43,7 @@ namespace AK
         static const AkUniqueID UI_VOL_DOWN_IN = 2053540170U;
         static const AkUniqueID UI_VOL_UP_IN = 1436640151U;
         static const AkUniqueID VICTORIA_IN = 4164129368U;
+        static const AkUniqueID VICTORIA_OUT = 137613311U;
     } // namespace EVENTS
 
     namespace STATES

@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	60258080	Hormiga_Steps_In			\Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In	
+	137613311	Victoria_Out			\Default Work Unit\SFX\Victoria_Out	
 	236399107	Carta_Select_In			\Default Work Unit\SFX\Carta_Select_In	
 	430716873	Amb_Base_In			\Default Work Unit\Ambientes\Amb_Base_In	
 	589089938	Amb_Agua_In			\Default Work Unit\Ambientes\Amb_Agua_In	
