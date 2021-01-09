@@ -35,7 +35,7 @@ public class FlowerManager : Singleton<FlowerManager>
 
     public void QuitSound() {
         this.targetValue = 0;
-        float duration = 2f;
+        float duration = 1f;
         DOTween.To(() => currentRTPCValue, x => currentRTPCValue = x, targetValue, duration).OnUpdate(() => assignFlowerRTPCValue(currentRTPCValue));
     }
 
