@@ -25,9 +25,7 @@ namespace ElJardin.Hover
 
         public override void Hide()
         {
-            //BuildManager.Instance.StopHoverCoroutine();
-            //BuildManager.Instance.UnHoverNodesInList();
-            //hoveredNodesCache.Clear();
+            
         }
 
         #region Hover On Grab

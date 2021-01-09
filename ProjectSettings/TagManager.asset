@@ -8,6 +8,7 @@ TagManager:
   - obstacle
   - Rock
   - Burnable
+  - Lotus
   layers:
   - Default
   - TransparentFX

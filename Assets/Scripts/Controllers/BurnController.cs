@@ -57,6 +57,7 @@ namespace Assets.Scripts.Controllers
         void DestroyBush(BurningNode node)
         {
             Destroy(node.particle.gameObject);
+            Debug.Log($"Destroyed particle {node.node.name} {node.particle == null}");
             VFXDirector.Instance.Play("AntOut",node.node.GetSurfacePosition());
             node.node.DestroyObstacle();
         }
@@ -66,6 +67,12 @@ namespace Assets.Scripts.Controllers
             for(var i = burningNodes.Count - 1; i >= 0; i--)
             {
                 var node = burningNodes[i];
+                if(IsLotus(node.node))
+                {
+                    var flower = node.node.obstacle.GetComponent<Flower>();
+                    flower.deActivateFlor();
+                    Semaphore.Instance.RemoveTurn(flower);
+                }
                 DestroyBush(node);
                 burningNodes.RemoveAt(i);
             }
@@ -89,7 +96,7 @@ namespace Assets.Scripts.Controllers
         
         void AddBurningNode(Node node)
         {
-            if(!burningNodes.Any(n => n.node == node))
+            if(!burningNodes.Any(n => n.node == node) && (CanBurn(node) || IsLotus(node)))
                 burningNodes.Add(new BurningNode(node, burning_ps));
         }
 
@@ -103,9 +110,12 @@ namespace Assets.Scripts.Controllers
                     var possibleNode = MapManager.Instance.GetNode(row, column);
                     if(possibleNode != null && possibleNode != target)
                     {
-                        if(possibleNode.HasObstacle && CanBurn(possibleNode))
+                        if(possibleNode.HasObstacle && (CanBurn(possibleNode) || IsLotus(possibleNode)))
                         {
-                            neighbors.Add(possibleNode);
+                            if(!burningNodes.Any(n => n.node == possibleNode))
+                            {
+                                neighbors.Add(possibleNode);
+                            }
                         }
                     }
                 }
@@ -119,6 +129,11 @@ namespace Assets.Scripts.Controllers
         bool CanBurn(Node node)
         {
             return node.obstacle.gameObject.CompareTag("obstacle") && node.obstacle.gameObject.transform.GetChild(0).gameObject.CompareTag("Burnable");
+        }
+
+        bool IsLotus(Node node)
+        {
+            return node.obstacle.gameObject.CompareTag("obstacle") && node.obstacle.gameObject.transform.GetChild(0).gameObject.CompareTag("Lotus");
         }
         #endregion
         

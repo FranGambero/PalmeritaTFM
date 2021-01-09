@@ -19,6 +19,8 @@ namespace ElJardin.CardActions
             {
                 if(targetNode != GameManager.Instance.Sepalo.CurrentNode)
                 {
+                    Debug.Log($"ShittyFlute - {targetNode.name}");
+
                     onCardUsed.Invoke(true);
 
                     CreateFlute(targetNode);

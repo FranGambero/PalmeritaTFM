@@ -28,7 +28,7 @@ namespace ElJardin.Characters
 
         IEnumerator BurnOnEndAnim()
         {
-            float aux = 5;
+            float aux = 4;
             yield return new WaitForSeconds(aux);
             onAnimationEnd.Invoke();
             aux = 1.5f;

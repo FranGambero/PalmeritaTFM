@@ -94,7 +94,6 @@
             <e p="FluteAfterAction.cs" t="Include" />
             <e p="SepaloController.cs" t="Include" />
           </e>
-          <e p="ConsoleToGUI.cs" t="Include" />
           <e p="Construction" t="Include">
             <e p="DryController.cs" t="Include" />
             <e p="Flower.cs" t="Include" />
@@ -192,6 +191,9 @@
               <e p="IFactory.cs" t="Include" />
             </e>
             <e p="SerializableUnityEvents.cs" t="Include" />
+          </e>
+          <e p="Utils" t="Include">
+            <e p="ConsoleToGUI.cs" t="Include" />
           </e>
         </e>
         <e p="ShadersAndVFX" t="Include">
