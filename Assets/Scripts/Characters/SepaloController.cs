@@ -73,12 +73,23 @@ namespace ElJardin.Characters {
             pac.ActivateFloatingPS(true);
             onEndWalk?.Invoke();
         }
+
+        public void LookAtMeBitch(GameObject myEyes) {
+            StartCoroutine(LookCor(myEyes));
+        }
+        private IEnumerator LookCor(GameObject body) {
+            Vector3 relativePos = body.transform.position - transform.position;
+            Quaternion toRotation = Quaternion.LookRotation(relativePos);
+            for (int i = 0; i < 50; i++) {
+            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 5f * Time.deltaTime);
+                yield return new WaitForEndOfFrame();
+            }
+        }
         #endregion
 
         #region Turn
         public void onTurnStart(int currentIndex) {
             if (IsMyTurn) {
-                Debug.Log("Turno sepalo");
                 CardManager.Instance.DrawNextCard();
             }
         }
