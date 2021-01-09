@@ -7,6 +7,7 @@ TagManager:
   - Terrain
   - obstacle
   - Rock
+  - Burnable
   layers:
   - Default
   - TransparentFX

@@ -20,6 +20,7 @@ namespace ElJardin
 
             if(GUILayout.Button("Update Map"))
             {
+                UpdateReferences(levelEditor);
                 UpdateAllNodesInMap(levelEditor);
                 Debug.Log("Map Updated");
             }
@@ -29,6 +30,20 @@ namespace ElJardin
                 ResetMap(levelEditor);
             }
         }
+        
+        #region Update references
+        void UpdateReferences(LevelEditor levelEditor)
+        {
+            foreach(var nodeObject in levelEditor.nodeMatrixFlattened)
+            {
+                var nodeData = nodeObject.GetComponent<NodeDataModel>();
+                var generalData = levelEditor.editorNode.GetComponent<NodeDataModel>();
+
+                nodeData.rockPrefab = generalData.rockPrefab;
+                nodeData.bramblePrefab = generalData.bramblePrefab;
+            }
+        }
+        #endregion
 
         #region Map Generation
         void GenerateBaseMap(LevelEditor levelEditor)
