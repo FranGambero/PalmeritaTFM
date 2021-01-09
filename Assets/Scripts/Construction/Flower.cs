@@ -68,7 +68,7 @@ namespace ElJardin {
             flowerOpened = false;
             // Hace la animación un poco regulinchi
             GetComponentInChildren<LotoAnimatorController>().LotoClose();
-            listaElementosCrecedores.ForEach(e => e.Shrink());
+            listaElementosCrecedores.ForEach(e => { if (e) e.Shrink(); });
         }
 
         public void getNodeNeighbors() {

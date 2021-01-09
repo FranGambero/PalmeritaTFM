@@ -17,7 +17,7 @@ namespace ElJardin {
         
         //public bool DraggingCard;
 
-        public bool draggingCard;
+        public bool draggingCard, usingCard;
         private bool gameRunning;
         private bool onPause = false;
         //public UnityEvent<bool> OnPause => onPause;

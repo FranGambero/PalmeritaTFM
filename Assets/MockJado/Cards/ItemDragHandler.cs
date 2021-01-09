@@ -6,8 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
-{
+public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     public Vector3 originalPosition;
     public Transform originalHandPosition;
     public bool starting, hoving;
@@ -22,8 +21,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     void EndTurn() => GameManager.Instance.Sepalo.onTurnFinished();
 
 
-    private void Start()
-    {
+    private void Start() {
         starting = false;
         originalPosition = transform.position;
         hoving = false;
@@ -31,14 +29,12 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     }
 
     #region Load
-    public void LoadCardData(CardData cardData)
-    {
+    public void LoadCardData(CardData cardData) {
         this.cardData = cardData;
         originalHandPosition = CardManager.Instance.transformList[GetComponent<Card>().transformIndex];
         cardSprite.sprite = cardData.sprite;
         cardBody.color = cardData.bgColor;
-        switch(cardData.cardType)
-        {
+        switch (cardData.cardType) {
             case CardData.CardType.Undefined:
             case CardData.CardType.Construction:
                 GetComponent<Image>().color = Color.green;
@@ -61,38 +57,33 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     #endregion
 
-    public void OnDrag(PointerEventData eventData)
-    {
+    public void OnDrag(PointerEventData eventData) {
         Debug.Log("Starting Drag");
-        if(GameManager.Instance.Sepalo.IsMyTurn )
-        {
-            if(!starting)
-            {
+        if (GameManager.Instance.Sepalo.IsMyTurn) {
+            if (!starting && !GameManager.Instance.usingCard) {
+                GameManager.Instance.usingCard = true;
                 starting = true;
                 GameManager.Instance.selectedCard = ActionCard;
                 AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 HoverAroundNode();
             }
-
-            transform.position = Input.mousePosition;
+            if (GameManager.Instance.usingCard && (GameManager.Instance.selectedCard == this.ActionCard))
+                transform.position = Input.mousePosition;
             //BuildManager.Instance.changeBuildValues(cardData.amount);
         }
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
+    public void OnEndDrag(PointerEventData eventData) {
         GameManager.Instance.selectedCard = null;
-        
+
         DoTheAction();
         starting = false;
         hoving = false;
     }
 
     #region Hover Around Node
-    void HoverAroundNode()
-    {
-        if(!GameManager.Instance.Sepalo.isMoving && !hoving && starting)
-        {
+    void HoverAroundNode() {
+        if (!GameManager.Instance.Sepalo.isMoving && !hoving && starting) {
             hoving = true;
             ActionCard.HoverOnGrab();
             //BuildManager.Instance.HoverAroundNode(cardData.amount);
@@ -104,12 +95,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     /*
      * Se llama solamente al usar la carta, hay que pasarlo a BuildRiver ICardAction pero esta jodido
      */
-    void DoTheAction()
-    {
-        if(CanUseCardAction())
-        {
+    void DoTheAction() {
+        if (CanUseCardAction()) {
             var mouseNode = GameManager.Instance.SelectedNode;
-            
+
             ActionCard.OnActionCompleted.RemoveAllListeners();
             ActionCard.OnActionCompleted.AddListener(EndCardActions);
             ActionCard.OnCardUsed.RemoveAllListeners();
@@ -119,70 +108,62 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         }
     }
 
-    void EndCardActions(bool actionCompleted)
-    {
-        if( actionCompleted && !GameManager.Instance.Sepalo.isMoving)
-        {
+    void EndCardActions(bool actionCompleted) {
+        if (actionCompleted && !GameManager.Instance.Sepalo.isMoving) {
             //Aqui va el sonido de colocar carta
             //AkSoundEngine.PostEvent("Carta_Posicion_In", gameObject);
             EndTurn();
-        }
-        else
-        {
+        } else {
             BuildManager.Instance.StopHoverCoroutine();
         }
+        GameManager.Instance.usingCard = false;
+
         ActionCard.UnHover();
     }
     private void CardUsed(bool used) {
         BuildManager.Instance.UnHoverNodesInList();
+
+        if (!used)
+            GameManager.Instance.usingCard = false;
         ResetCardPosition();
         if (used)
             HideCard();
     }
-    private IEnumerator Wait()
-    {
+    private IEnumerator Wait() {
         yield return new WaitForSeconds(.1f);
     }
 
-    bool CanUseCardAction()
-    {
+    bool CanUseCardAction() {
         return GameManager.Instance.Sepalo.IsMyTurn && starting;
     }
-    private bool buildNewChannel()
-    {
+    private bool buildNewChannel() {
         bool hasBuild = BuildManager.Instance.ChangeNodesInList();
         return hasBuild;
     }
     #endregion
-    
+
     #region CardVisuals
-    private void HideCard()
-    {
+    private void HideCard() {
         // CardManager.Instance.moveCards(GetComponent<Card>().transformIndex);
         gameObject.SetActive(false);
         CardManager.Instance.LastIndexUsed = GetComponent<Card>().transformIndex;
     }
 
-    public void OnMouseHoverEnter()
-    {
-        if(GameManager.Instance.Sepalo.IsMyTurn && !starting)
-        {
+    public void OnMouseHoverEnter() {
+        if (GameManager.Instance.Sepalo.IsMyTurn && !starting) {
             transform.DOMove(originalHandPosition.position + Vector3.up * upOffset, .2f).SetEase(Ease.Linear);
             transform.parent.GetComponentInChildren<OutlineController>().Activate(true);
         }
     }
 
-    public void OnMouseHoverExit()
-    {
-        if(GameManager.Instance.Sepalo.IsMyTurn && !starting && gameObject.activeSelf)
-        {
+    public void OnMouseHoverExit() {
+        if (GameManager.Instance.Sepalo.IsMyTurn && !starting && gameObject.activeSelf) {
             transform.DOMove(originalHandPosition.position, .5f);
             transform.parent.GetComponentInChildren<OutlineController>().Activate(false);
         }
     }
 
-    void ResetCardPosition()
-    {
+    void ResetCardPosition() {
         transform.position = originalHandPosition.position;
     }
     #endregion
