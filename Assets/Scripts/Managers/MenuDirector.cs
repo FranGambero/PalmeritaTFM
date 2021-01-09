@@ -61,6 +61,7 @@ public class MenuDirector : Singleton<MenuDirector> {
         } else {
             ActivateCardCanvas(true);
             AudioManager.Instance.toggleMusicIngameState(true);
+            if(configMenu && configMenu.gameObject.activeInHierarchy)
             AkSoundEngine.PostEvent("UI_Back_In", gameObject);
             configMenu.gameObject.SetActive(false);
         }

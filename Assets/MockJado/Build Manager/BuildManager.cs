@@ -318,7 +318,10 @@ namespace ElJardin {
             return isValid;
         }
         private IEnumerator BuildCellsCor() {
-            Instantiate(GameManager.Instance.ShovelCrabPrefab, savedNodes[0].GetSurfacePosition(), Quaternion.identity).GetComponentInChildren<ShovelCravAnimatorController>().PlayDig();
+            GameObject pala;
+            pala = Instantiate(GameManager.Instance.ShovelCrabPrefab, savedNodes[0].GetSurfacePosition(), Quaternion.identity);
+            pala.GetComponentInChildren<ShovelCravAnimatorController>().PlayDig();
+            GameManager.Instance.Sepalo.LookAtMeBitch(pala);
             yield return new WaitForSeconds(1.5f);
             bool neighborWithWater = false;
             foreach (Node node in savedNodes) {
@@ -348,6 +351,7 @@ namespace ElJardin {
             }
             MapManager.Instance.CheckFullRiver();
             OnBuildEnds?.Invoke();
+            Destroy(pala, 2f);
         }
         public void buildCells() {
             //Correct mesh

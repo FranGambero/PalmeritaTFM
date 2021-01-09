@@ -65,10 +65,8 @@ namespace ElJardin {
 
         private void Start() {
             if (!levelEditor) {
-                Debug.LogError("Inicializando nuevo mapa");
                 InitializeMap();
             } else {
-                Debug.Log("Inicializando mapa a partir de levelEditor");
                 InitializeMapFromEditor();
             }
             Pathfinding = new Pathfinding(this);
