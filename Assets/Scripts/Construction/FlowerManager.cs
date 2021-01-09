@@ -1,6 +1,7 @@
 ﻿using ElJardin;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using DG.Tweening;
 
@@ -18,7 +19,11 @@ public class FlowerManager : Singleton<FlowerManager>
         QuitSound();
     }
 
-    public bool CountFlowerStatus() {
+    public bool CountFlowerStatus()
+    {
+        if(flores.Any(f => f == null))
+            return false;
+        
         Debug.LogWarning("TIENES " + flores.Count + " flores " + flores.TrueForAll(f => f.flowerOpened));
         return flores.TrueForAll(f => f.flowerOpened);
     }

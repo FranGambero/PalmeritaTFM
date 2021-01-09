@@ -88,6 +88,9 @@ namespace ElJardin
                     case NodeDataModel.ObstacleType.Rock:
                         GenerateObstacle(node.rockPrefab, node.transform, node);
                         break;
+                    case NodeDataModel.ObstacleType.Bramble:
+                        GenerateObstacle(node.bramblePrefab, node.transform, node);
+                        break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
