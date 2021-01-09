@@ -87,7 +87,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
     public void CountCurrentPetals() {
         ZoneData zoneData = GetCurrentZone(currentZone);
-        int totalPetals = zoneData.levels.Length * 3; // 3 logros por nivel
+        int totalPetals = CountTotalPetals(zoneData);
         this.currentPetals = 0;
 
         for (int i = 0; i < zoneData.levels.Length; i++) {
@@ -109,6 +109,15 @@ public class MapamundiManager : Singleton<MapamundiManager> {
         }
     }
 
+    private int CountTotalPetals(ZoneData currentZoneData) {
+        int totalPetals = 0;
+        foreach (var level in currentZoneData.levels) {
+            totalPetals += level.logros.Length;
+        }
+
+        return totalPetals;
+    }
+
     public void ChangeZone(bool greater) {
         int avanze = 1;
         levelZonePanels[currentZone].SetActive(false);
@@ -118,7 +127,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
         //currentZone = (currentZone + avanze) % 2;
         currentZone += avanze;
-        if (currentZone >= levelZonePanels.Length-1) {
+        if (currentZone >= levelZonePanels.Length - 1) {
             currentZone = 0;
         } else if (currentZone < 0) {
             currentZone = 1;
