@@ -86,10 +86,12 @@
             <e p="BaseCardAction.cs" t="Include" />
             <e p="BongoAction.cs" t="Include" />
             <e p="BuildRiver.cs" t="Include" />
+            <e p="FluteAction.cs" t="Include" />
             <e p="ICardAction.cs" t="Include" />
           </e>
           <e p="Characters" t="Include">
             <e p="BongormigaAfterAction.cs" t="Include" />
+            <e p="FluteAfterAction.cs" t="Include" />
             <e p="SepaloController.cs" t="Include" />
           </e>
           <e p="ConsoleToGUI.cs" t="Include" />
@@ -98,6 +100,9 @@
             <e p="Flower.cs" t="Include" />
             <e p="FlowerManager.cs" t="Include" />
             <e p="Water.cs" t="Include" />
+          </e>
+          <e p="Controllers" t="Include">
+            <e p="BurnController.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
             <e p="Achievement.cs" t="Include" />
@@ -123,6 +128,7 @@
           <e p="Hover" t="Include">
             <e p="BaseHover.cs" t="Include" />
             <e p="CrossHover.cs" t="Include" />
+            <e p="FluteHover.cs" t="Include" />
             <e p="IHover.cs" t="Include" />
             <e p="SquareHover.cs" t="Include" />
           </e>
@@ -155,6 +161,7 @@
             <e p="IPathable.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
             <e p="Pathfinding.cs" t="Include" />
+            <e p="TurnsCounter.cs" t="Include" />
           </e>
           <e p="PlayerController.cs" t="Include" />
           <e p="Semaphore" t="Include">
