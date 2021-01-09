@@ -64,7 +64,6 @@ namespace ElJardin.Hover
         
         public override void Hide()
         {
-            Debug.Log("Hide");
             GameManager.Instance.SelectedNode = null;
             BuildManager.Instance.UnHoverNodesInList(hoveredNodesCache);
             hoveredNodesCache.Clear();

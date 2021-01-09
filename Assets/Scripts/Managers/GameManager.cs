@@ -1,5 +1,6 @@
 ﻿using ElJardin.Characters;
 using System.Collections.Generic;
+using Assets.Scripts.Controllers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ using UnityEngine.SceneManagement;
 namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public SepaloController Sepalo;
+        public BurnController BurnController;
         public GameObject instructMenu;
         public GameObject ShovelCrabPrefab;
         public GameObject _positionHover;

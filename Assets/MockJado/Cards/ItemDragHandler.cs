@@ -119,6 +119,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
         GameManager.Instance.usingCard = false;
 
         ActionCard.UnHover();
+        GameManager.Instance.SelectedNode = null;
     }
     private void CardUsed(bool used) {
         BuildManager.Instance.UnHoverNodesInList();
