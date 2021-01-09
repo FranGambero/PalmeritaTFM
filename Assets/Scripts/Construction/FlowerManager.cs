@@ -29,18 +29,18 @@ public class FlowerManager : Singleton<FlowerManager>
 
     public void ChangeSound() {
         targetValue += 100 / flores.Count;
-        float duration = 2;
+        float duration = 10f;
         DOTween.To(() => currentRTPCValue, x => currentRTPCValue = x, targetValue, duration).OnUpdate(() => assignFlowerRTPCValue(currentRTPCValue));
     }
 
     public void QuitSound() {
+        DOTween.KillAll();
         this.targetValue = 0;
-        float duration = 2;
+        float duration = 1f;
         DOTween.To(() => currentRTPCValue, x => currentRTPCValue = x, targetValue, duration).OnUpdate(() => assignFlowerRTPCValue(currentRTPCValue));
     }
 
     private void assignFlowerRTPCValue(int value) {
         AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_Flor, value);
-
     }
 }

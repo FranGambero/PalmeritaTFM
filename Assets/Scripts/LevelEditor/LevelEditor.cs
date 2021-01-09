@@ -15,11 +15,7 @@ namespace ElJardin
         
         public GameObject editorNode;
 
-        private void Start()
-        {
-            Debug.Log($"Level editor on start, node matrix 01 name {nodeMatrixFlattened.Length}");
-        }
-
+       
         #region Matrix Support Methods
         public void InitMatrix()
         {

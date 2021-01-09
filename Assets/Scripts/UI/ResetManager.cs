@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ResetManager : MonoBehaviour {
     public bool pusheen;
-    public float waitTime = 2f;
+    public float waitTime = 1.5f;
     private Coroutine checkCor;
 
     public Image chargingImage;
