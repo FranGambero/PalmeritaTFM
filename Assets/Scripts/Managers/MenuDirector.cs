@@ -76,7 +76,7 @@ public class MenuDirector : Singleton<MenuDirector> {
         if (GameManager.CheckInstance()) GameManager.Instance.OnPause = activate;
         if (BGBlur) BGBlur.SetActive(false);
         if (activate) {
-
+            AkSoundEngine.PostEvent("Victoria_In", gameObject);
             ActivateCardCanvas(false);
             victoryCanvas.gameObject.SetActive(true);
             ActivateLogrosPanel(currentLevel);

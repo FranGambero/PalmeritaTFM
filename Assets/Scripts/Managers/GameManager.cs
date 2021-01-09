@@ -78,6 +78,7 @@ namespace ElJardin {
         public void EndGame() {
             gameRunning = false;
             AudioManager.Instance.unSetAmbientMusic();
+            FlowerManager.Instance.QuitSound();
             MapManager.Instance.CheckLogros();
             MenuDirector.Instance.ActivateEndMenu(true, PlayerPrefs.GetInt("CurrentLevel"));
         }
@@ -113,10 +114,12 @@ namespace ElJardin {
             // Esto quizá hay que cambiarlo....
             AudioManager.Instance.setHappyMusic();
             //----
+            AkSoundEngine.PostEvent("Victoria_Out", gameObject);
             SceneManager.LoadScene(2);
         }
 
         public void goNextLevel() {
+            AkSoundEngine.PostEvent("Victoria_Out", gameObject);
             int currentLevel = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_LEVEL) + 1;
             PlayerPrefs.SetInt(Keys.Scenes.CURRENT_LEVEL, currentLevel);
 
