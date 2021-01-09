@@ -136,5 +136,10 @@ namespace ElJardin {
             PlayerPrefs.SetString(Keys.Scenes.LOAD_SCENE_STRING, levelStringToLoad);
             SceneManager.LoadScene("LoadScene");
         }
+
+        public void RestarLevel() {
+            PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("LoadScene");
+        }
     }
 }

@@ -13,8 +13,13 @@ public class Interfaz : Editor {
         EditorSceneManager.OpenScene("Assets/Scenes/Mapa.unity", OpenSceneMode.Single);
     }
 
-    [MenuItem("Escenitas/Level 0")]
+    [MenuItem("Escenitas/Level 0_0")]
     static void LoadScene3() {
-        EditorSceneManager.OpenScene("Assets/Scenes/Level0.unity", OpenSceneMode.Single);
+        EditorSceneManager.OpenScene("Assets/Scenes/Level0_0.unity", OpenSceneMode.Single);
+    }
+
+    [MenuItem("Escenitas/Level 1_0")]
+    static void LoadScene4() {
+        EditorSceneManager.OpenScene("Assets/Scenes/Level1_0.unity", OpenSceneMode.Single);
     }
 }
