@@ -1514,7 +1514,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Configuraci\xF3n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 955c5a4a3b2522844bc023de523c977e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a47b19ec5ff5c5544a3f8c3e776bd41d, type: 2}
   m_sharedMaterial: {fileID: 8876425582136680664, guid: 955c5a4a3b2522844bc023de523c977e,
     type: 2}
   m_fontSharedMaterials: []
@@ -1541,7 +1541,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 260
+  m_fontSize: 306
   m_fontSizeBase: 260
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -2259,6 +2259,8 @@ MonoBehaviour:
   sfxSlider: {fileID: 1776236746558569009}
   volMusicTextValue: {fileID: 1776236745039431302}
   volSFXTextValue: {fileID: 1776236745872508866}
+  fadeOutPanel: {fileID: 0}
+  onMapamundi: 0
 --- !u!1 &1776236745629775877
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,12 +4813,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4280176009
       objectReference: {fileID: 0}
-    - target: {fileID: 5867407585559324534, guid: 1abb441b99ac2624ba180799efcf2f8e,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 955c5a4a3b2522844bc023de523c977e,
-        type: 2}
     - target: {fileID: 5867407585559324534, guid: 1abb441b99ac2624ba180799efcf2f8e,
         type: 3}
       propertyPath: m_sharedMaterial
