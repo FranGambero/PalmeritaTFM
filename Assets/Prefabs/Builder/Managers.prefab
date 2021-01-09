@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &101866115447626927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2814983936684208404}
+  - component: {fileID: 4429863746219590107}
+  m_Layer: 0
+  m_Name: CardCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2814983936684208404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101866115447626927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1522253019494429778}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4429863746219590107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101866115447626927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa27452a6047b42b32d3096bed1882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currMovements: 0
+  maxMovements: 0
 --- !u!1 &1522253018068072349
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,10 +216,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sepalo: {fileID: 0}
   instructMenu: {fileID: 0}
+  ShovelCrabPrefab: {fileID: 2249157350775151950, guid: 5a7600a83d28b4c44b9f23af4ecca6a2,
+    type: 3}
   _positionHover: {fileID: 0}
   tmpRot: {x: -1, y: 0, z: 0}
   levelTutos: []
   draggingCard: 0
+  usingCard: 0
+  selectedCard: {fileID: 0}
 --- !u!1 &1522253018955214809
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +304,7 @@ Transform:
   - {fileID: 7553896706956643136}
   - {fileID: 8584088244456336217}
   - {fileID: 5037119773686120852}
+  - {fileID: 2814983936684208404}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -409,6 +459,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flores:
   - {fileID: 0}
+  currentRTPCValue: 0
+  targetValue: 0
 --- !u!1 &3584299972563252103
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +566,12 @@ MonoBehaviour:
   - /Zone3
   postBuildPath: PalmeritaTFM_Data/Resources
   format: .json
+  zonenPrefab:
+  - '{"zoneId":0,"zoneName":"Primavera","levels":[{"levelName":"Nivel 1","id":0,"zone":0,"isCompleted":true,"logros":[{"achievementName":"Completado","done":true,"animationDone":true},{"achievementName":"Flores","done":true,"animationDone":true},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    2","id":1,"zone":0,"isCompleted":true,"logros":[{"achievementName":"Completado","done":true,"animationDone":true},{"achievementName":"Flores","done":true,"animationDone":true},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    3","id":2,"zone":0,"isCompleted":true,"logros":[{"achievementName":"Completado","done":true,"animationDone":true},{"achievementName":"Flores","done":true,"animationDone":true},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    4","id":3,"zone":0,"isCompleted":true,"logros":[{"achievementName":"Completado","done":true,"animationDone":true},{"achievementName":"Flores","done":true,"animationDone":true},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+    4","id":3,"zone":0,"isCompleted":true,"logros":[{"achievementName":"Completado","done":true,"animationDone":true},{"achievementName":"Flores","done":true,"animationDone":true},{"achievementName":"Movimientos","done":false,"animationDone":false}]}]}'
 --- !u!114 &8848689514654271448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,11 +599,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1522253019494429778}
     m_Modifications:
-    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
-        type: 3}
-      propertyPath: vfxEffects.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
         type: 3}
       propertyPath: vfxEffects.Array.data[5].name
@@ -578,6 +631,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3659383951894138905, guid: b62c13f1b9196ce4da5c41f609f53f04,
         type: 3}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[8].name
+      value: DestroyRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[8].time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[8].PSPrefab
+      value: 
+      objectReference: {fileID: 7522918668566146543, guid: b0f1f425cd4306641b324d996aca08e5,
+        type: 3}
+    - target: {fileID: 7004470426021041922, guid: c5895c257ac9c5c43b17b726f3d98263,
+        type: 3}
+      propertyPath: vfxEffects.Array.data[9].time
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7004470426021041923, guid: c5895c257ac9c5c43b17b726f3d98263,
         type: 3}
       propertyPath: m_LocalPosition.x

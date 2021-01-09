@@ -31,6 +31,7 @@ namespace ElJardin {
         private void Init() {
             maxHand = 5;
             handList = new List<Card>();
+            cardList.RemoveAll(c=>c==null);
             cardQueue = new Queue<CardDataModelWrapper>(cardList);
             totalCards = cardQueue.Count;
         }
@@ -41,7 +42,7 @@ namespace ElJardin {
 
             MenuDirector.Instance.ActivateCardCanvas(true);
             Init();
-            while (index < cardList.Count) {
+            while (index < cardList.Count && index< transformList.Count) {
                 Card tmpCard;
                 tmpCard = Instantiate(cardPrefab, transformList[index]);
                 handList.Add(tmpCard);

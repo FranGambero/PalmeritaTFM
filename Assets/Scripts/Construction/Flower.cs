@@ -68,14 +68,11 @@ namespace ElJardin {
             flowerOpened = false;
             // Hace la animación un poco regulinchi
             GetComponentInChildren<LotoAnimatorController>().LotoClose();
-            listaElementosCrecedores.ForEach(e => e.Shrink());
+            listaElementosCrecedores.ForEach(e => { if (e) e.Shrink(); });
         }
 
         public void getNodeNeighbors() {
             listaNoditos = nodito.GetListNeighbors();
-            foreach (var item in listaNoditos) {
-                Debug.Log("NODITO " + item.name);
-            }
         }
 
         private bool CheckWaterAround() {
@@ -102,7 +99,7 @@ namespace ElJardin {
             RaycastHit groundHits;
             //TODO Que el suelo tenga su porpia layer y que aqui se coja sola esa layer y no todas
             if (Physics.Raycast(transform.position, Vector3.down, out groundHits, 2f, groundLayer)) {
-                Debug.Log("LOCOOOO");
+
 
                 nodito = groundHits.collider.GetComponent<Node>();
             }

@@ -8,15 +8,16 @@ namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public SepaloController Sepalo;
         public GameObject instructMenu;
+        public GameObject ShovelCrabPrefab;
         public GameObject _positionHover;
         public Vector3 tmpRot;
 
         public List<TutorialDataWrapper> levelTutos;
         private Node selectedNode;
-        
+
         //public bool DraggingCard;
 
-        public bool draggingCard;
+        public bool draggingCard, usingCard;
         private bool gameRunning;
         private bool onPause = false;
         //public UnityEvent<bool> OnPause => onPause;
@@ -50,7 +51,8 @@ namespace ElJardin {
             _positionHover.transform.LookAt(new Vector3(Sepalo.transform.position.x, _positionHover.transform.position.y, Sepalo.transform.position.z));
         }
         private void Awake() {
-            _positionHover?.SetActive(false);
+            if (_positionHover)
+                _positionHover.SetActive(false);
             draggingCard = false;
             selectedCard = null;
             Sepalo = FindObjectOfType<SepaloController>();
@@ -59,17 +61,14 @@ namespace ElJardin {
 
         private void Start() {
             StartGame();
-            LaunchTutos();
+            CardManager.Instance.firstDrawCard();
+            if (levelTutos.Count > 0)
+                Invoke(nameof(LaunchTutos), 3f);
             // AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
         }
         private void LaunchTutos() {
-            if (levelTutos.Count > 0) {
-                MenuDirector.Instance.OnAllTutosClosed.AddListener(() => CardManager.Instance.firstDrawCard());
-                levelTutos.ForEach(t => MenuDirector.Instance.InitNewTutoPanel(t));
-            } else {
-                MenuDirector.Instance.ActivateCardCanvas(true);
-                CardManager.Instance.firstDrawCard();
-            }
+            MenuDirector.Instance.ActivateCardCanvas(true);
+            levelTutos.ForEach(t => MenuDirector.Instance.InitNewTutoPanel(t));
         }
 
         public void StartGame() {

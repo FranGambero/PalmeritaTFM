@@ -82,6 +82,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5127624681489538408, guid: 3a4e66647193a154eb700c3a48abf1ec,
     type: 3}
+  bramblePrefab: {fileID: 1549398109386660050, guid: d144c536fe2eac94b972df0e631d3f74,
+    type: 3}
   obstacle: 0
   isRiverStart: 0
   isRiverEnd: 0

@@ -24,6 +24,7 @@ namespace ElJardin
         public void UnHover() => actionCard.UnHover();
         public void Action(Node targetNode) => actionCard.Action(targetNode);
         public UnityEvent<bool> OnActionCompleted => actionCard.OnActionCompleted;
+        public UnityEvent<bool> OnCardUsed => actionCard.OnCardUsed;
         #endregion
 
         private void Awake()
@@ -41,8 +42,7 @@ namespace ElJardin
         {
             amountText.text = CardData.amount.ToString();
             GetComponent<ItemDragHandler>().LoadCardData(CardData);
-            //TODO: este comentario es temporal
-            //GetComponentInChildren<OutlineController>().Activate(false);
+            GetComponentInChildren<OutlineController>().Activate(false);
         }
 
         
@@ -75,7 +75,7 @@ namespace ElJardin
 
             transform.DOJump(CardManager.Instance.transformList[transformIndex].position, 3, 1, animTime);
 
-            GetComponent<ItemDragHandler>().originalHandPosition = CardManager.Instance.transformList[transformIndex].position;
+            GetComponent<ItemDragHandler>().originalHandPosition = CardManager.Instance.transformList[transformIndex];
         }
         #endregion
     }

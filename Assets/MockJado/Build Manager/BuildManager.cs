@@ -38,7 +38,7 @@ namespace ElJardin {
         private Coroutine hoverCoroutine;
 
         public DirectionType Direction { get => direction; set => direction = value; }
-
+        public Action OnBuildEnds;
         #endregion
 
         #region Build
@@ -58,7 +58,8 @@ namespace ElJardin {
                 node.ChangeNodeType(NodeType.Ground, ground_m);
                 node.water.Reset();
                 node.DryNeighbors();//TODO Cambiar esto para que seque solo las que no vayan hasta la fuente
-                                    //Correccion de vecinos
+                //int dryIndex= Semaphore.Instance.GetNewIndex();
+                //node.neighbors.ForEach(n => n.AdminDryScript(true, dryIndex));      //Correccion de vecinos
                 UpdateNeighbors(node, false);
             }
         }
@@ -316,9 +317,12 @@ namespace ElJardin {
             }
             return isValid;
         }
-
-        public void buildCells() {
-            //Correct mesh
+        private IEnumerator BuildCellsCor() {
+            GameObject pala;
+            pala = Instantiate(GameManager.Instance.ShovelCrabPrefab, savedNodes[0].GetSurfacePosition(), Quaternion.identity);
+            pala.GetComponentInChildren<ShovelCravAnimatorController>().PlayDig();
+            GameManager.Instance.Sepalo.LookAtMeBitch(pala);
+            yield return new WaitForSeconds(1.5f);
             bool neighborWithWater = false;
             foreach (Node node in savedNodes) {
                 bool thisNodeNeighborWithWater = false;
@@ -338,17 +342,20 @@ namespace ElJardin {
             }
             if (!neighborWithWater && !(savedNodes.Count == 1 && savedNodes[0].IsStatic) && !CheckWater(savedNodes[0])) {
                 int newIndex = Semaphore.Instance.GetNewIndex();
-                Debug.Log("Er new index " + newIndex);
-                // Fran dice: Fran aqui falla
                 savedNodes.ForEach(node => node.AdminDryScript(true, newIndex));
             } else {
-                Debug.LogError("Quito dry");
                 savedNodes.ForEach(node => node.water.isGonnaHaveDaWote = true);
                 savedNodes.ForEach(node => node.AdminDryScript(false));
-               // CheckWater(savedNodes[0]);
+                // CheckWater(savedNodes[0]);
                 CheckWaterAndActue(savedNodes[0]);
             }
             MapManager.Instance.CheckFullRiver();
+            OnBuildEnds?.Invoke();
+            Destroy(pala, 2f);
+        }
+        public void buildCells() {
+            //Correct mesh
+            StartCoroutine(BuildCellsCor());
 
         }
 
@@ -485,7 +492,7 @@ namespace ElJardin {
             return nodesToBuilAround;
         }
 
-        private List<Node> GetNodeListByDirection(DirectionType direction) {
+        public List<Node> GetNodeListByDirection(DirectionType direction) {
             List<Node> nodeList = null;
             if (dictionaryNodesAround != null) {
                 if (dictionaryNodesAround.ContainsKey(direction))

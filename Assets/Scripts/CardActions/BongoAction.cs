@@ -20,12 +20,14 @@ namespace ElJardin.CardActions
             {
                 if(targetNode != GameManager.Instance.Sepalo.CurrentNode)
                 {
+                    onCardUsed.Invoke(true);
+
                     CreateBongo(targetNode);
                     //DestroySurroundingGround(targetNode);
-                    onActionCompleted.Invoke(true);
-                }
-                else
+                } else {
+                    onCardUsed.Invoke(false);
                     onActionCompleted.Invoke(false);
+                }
             }
         }
 
@@ -67,6 +69,7 @@ namespace ElJardin.CardActions
                         {
                             Debug.Log($" ----- obstacle is rock");
                             parent.GetComponent<Node>()?.DestroyObstacle();
+                            VFXDirector.Instance.Play("DestroyRock",parent.GetComponent<Node>().GetSurfacePosition());
                         }
                     }
                 }
@@ -121,7 +124,10 @@ namespace ElJardin.CardActions
             {
                 BuildManager.Instance?.BuildGround(nodeToDestroy);
             }
+
+            onActionCompleted.Invoke(true);
+
         }
-        
+
     }
 }

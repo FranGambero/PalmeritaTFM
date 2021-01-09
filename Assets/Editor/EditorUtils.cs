@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class EditorUtils : EditorWindow {
 
-    string sceneName = "Level0";
+    string sceneName = "Level0_0";
     int index;
 
     [MenuItem("Window/EditorUtils/Scenes")]
@@ -51,6 +51,9 @@ public class EditorUtils : EditorWindow {
         if (GUILayout.Button("Buscar")) {
             EditorSceneManager.OpenScene("Assets/Scenes/" + sceneName + ".unity");
 
+        }
+        if (GUILayout.Button("Reset PlayerPrefs")) {
+            PlayerPrefs.DeleteAll();
         }
     }
     private int GetNextSceneIndex() {
