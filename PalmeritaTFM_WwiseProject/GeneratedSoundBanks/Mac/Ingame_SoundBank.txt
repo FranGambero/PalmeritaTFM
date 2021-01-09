@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2885749304	Hormiga_Crep_Out			\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out	
 	3276893165	Amb_Agua_Out			\Default Work Unit\Ambientes\Amb_Agua_Out	
 	3898589054	Agua_Shoot_Out			\Default Work Unit\Ambientes\Agua_Shoot_Out	
+	4164129368	Victoria_In			\Default Work Unit\SFX\Victoria_In	
 
 Effect plug-ins	ID	Name	Type				Notes
 	1000507378	Wwise_Compressor_(Custom)	Wwise Compressor			
@@ -109,6 +110,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	889296306	Hormiga_Steps_L_SFX_Start_11	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Hormiga_Steps_L_SFX_Start_11_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_11		741
 	908227072	Hormiga_Steps_L_SFX_Start_8	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Hormiga_Steps_L_SFX_Start_8_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_8		751
 	961432926	El_Jardin_Slide_Cartas_SFX_Start_3	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_Slide_Cartas_SFX_Start_3_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Carta_Slide\El_Jardin_Slide_Cartas_SFX_Start_3		6119
+	990800071	El_Jardin_Victoria_SFX_44_16_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_Victoria_SFX_44_16_Start_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Victoria_Nivel\El_Jardin_Victoria_SFX_44_16_Start		126727
 	993322690	Hormiga_Steps_R_SFX_Start_3	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Hormiga_Steps_R_SFX_Start_3_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_R_SFX_Start_3		550
 	1005884361	Jardin_Sepalo_Steps_SFX_Start_10	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Sepalo_Steps_SFX_Start_10_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Sepalo\Sepalo_Steps\Jardin_Sepalo_Steps_SFX_Start_10		4430
 	1019557451	Hormiga_Steps_L_SFX_Start_14	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Hormiga_Steps_L_SFX_Start_14_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_14		739

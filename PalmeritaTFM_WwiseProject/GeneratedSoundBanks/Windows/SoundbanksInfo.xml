@@ -898,6 +898,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4164129368" Name="Victoria_In" ObjectPath="\Events\Default Work Unit\SFX\Victoria_In" DurationType="OneShot" DurationMin="9.600000" DurationMax="9.600000">
+					<IncludedMemoryFiles>
+						<File Id="990800071" Language="SFX">
+							<ShortName>El_Jardin_Victoria_SFX_44_16_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_Victoria_SFX_44_16_Start_B9A6BE81.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
