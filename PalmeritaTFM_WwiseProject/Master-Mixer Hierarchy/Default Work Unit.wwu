@@ -120,13 +120,16 @@
 								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
 									<ObjectRef Name="Ducking_Meter" ID="{0059CC87-89C2-4C33-88C9-922AC485C194}" WorkUnitID="{CC6D4C3D-B214-4672-AF29-CB77A2F2704A}"/>
 								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="PC" ID="{CB70363A-C61A-4EE5-8ED6-74AE093CD00B}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
 							</ReferenceList>
 						</Bus>
 						<AuxBus Name="PC" ID="{CB70363A-C61A-4EE5-8ED6-74AE093CD00B}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-24</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

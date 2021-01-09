@@ -61,6 +61,7 @@ public class MenuDirector : Singleton<MenuDirector> {
         } else {
             ActivateCardCanvas(true);
             AudioManager.Instance.toggleMusicIngameState(true);
+            if(configMenu && configMenu.gameObject.activeInHierarchy)
             AkSoundEngine.PostEvent("UI_Back_In", gameObject);
             configMenu.gameObject.SetActive(false);
         }
@@ -75,7 +76,7 @@ public class MenuDirector : Singleton<MenuDirector> {
         if (GameManager.CheckInstance()) GameManager.Instance.OnPause = activate;
         if (BGBlur) BGBlur.SetActive(false);
         if (activate) {
-
+            AkSoundEngine.PostEvent("Victoria_In", gameObject);
             ActivateCardCanvas(false);
             victoryCanvas.gameObject.SetActive(true);
             ActivateLogrosPanel(currentLevel);

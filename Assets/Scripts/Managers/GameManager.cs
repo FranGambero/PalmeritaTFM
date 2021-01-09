@@ -16,7 +16,7 @@ namespace ElJardin {
 
         public List<TutorialDataWrapper> levelTutos;
         private Node selectedNode;
-        
+
         //public bool DraggingCard;
 
         public bool draggingCard, usingCard;
@@ -53,7 +53,8 @@ namespace ElJardin {
             _positionHover.transform.LookAt(new Vector3(Sepalo.transform.position.x, _positionHover.transform.position.y, Sepalo.transform.position.z));
         }
         private void Awake() {
-            _positionHover?.SetActive(false);
+            if (_positionHover)
+                _positionHover.SetActive(false);
             draggingCard = false;
             selectedCard = null;
             Sepalo = FindObjectOfType<SepaloController>();
@@ -62,17 +63,14 @@ namespace ElJardin {
 
         private void Start() {
             StartGame();
-            LaunchTutos();
+            CardManager.Instance.firstDrawCard();
+            if (levelTutos.Count > 0)
+                Invoke(nameof(LaunchTutos), 3f);
             // AkSoundEngine.PostEvent("Amb_Base_In", gameObject);
         }
         private void LaunchTutos() {
-            if (levelTutos.Count > 0) {
-                MenuDirector.Instance.OnAllTutosClosed.AddListener(() => CardManager.Instance.firstDrawCard());
-                levelTutos.ForEach(t => MenuDirector.Instance.InitNewTutoPanel(t));
-            } else {
-                MenuDirector.Instance.ActivateCardCanvas(true);
-                CardManager.Instance.firstDrawCard();
-            }
+            MenuDirector.Instance.ActivateCardCanvas(true);
+            levelTutos.ForEach(t => MenuDirector.Instance.InitNewTutoPanel(t));
         }
 
         public void StartGame() {
@@ -82,6 +80,7 @@ namespace ElJardin {
         public void EndGame() {
             gameRunning = false;
             AudioManager.Instance.unSetAmbientMusic();
+            FlowerManager.Instance.QuitSound();
             MapManager.Instance.CheckLogros();
             MenuDirector.Instance.ActivateEndMenu(true, PlayerPrefs.GetInt("CurrentLevel"));
         }
@@ -117,10 +116,12 @@ namespace ElJardin {
             // Esto quizá hay que cambiarlo....
             AudioManager.Instance.setHappyMusic();
             //----
+            AkSoundEngine.PostEvent("Victoria_Out", gameObject);
             SceneManager.LoadScene(2);
         }
 
         public void goNextLevel() {
+            AkSoundEngine.PostEvent("Victoria_Out", gameObject);
             int currentLevel = PlayerPrefs.GetInt(Keys.Scenes.CURRENT_LEVEL) + 1;
             PlayerPrefs.SetInt(Keys.Scenes.CURRENT_LEVEL, currentLevel);
 

@@ -73,9 +73,6 @@ namespace ElJardin {
 
         public void getNodeNeighbors() {
             listaNoditos = nodito.GetListNeighbors();
-            foreach (var item in listaNoditos) {
-                Debug.Log("NODITO " + item.name);
-            }
         }
 
         private bool CheckWaterAround() {
@@ -102,7 +99,7 @@ namespace ElJardin {
             RaycastHit groundHits;
             //TODO Que el suelo tenga su porpia layer y que aqui se coja sola esa layer y no todas
             if (Physics.Raycast(transform.position, Vector3.down, out groundHits, 2f, groundLayer)) {
-                Debug.Log("LOCOOOO");
+
 
                 nodito = groundHits.collider.GetComponent<Node>();
             }
