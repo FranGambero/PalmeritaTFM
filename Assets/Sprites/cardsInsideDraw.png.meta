@@ -8,6 +8,33 @@ TextureImporter:
   - first:
       213: 7585433144361682982
     second: cardsInsideDraw_1
+  - first:
+      213: 6239805386366270192
+    second: cardsInsideDraw_0
+  - first:
+      213: -8034238124415794717
+    second: cardsInsideDraw_1
+  - first:
+      213: 7266072434596167683
+    second: cardsInsideDraw_2
+  - first:
+      213: 7663944846120405724
+    second: cardsInsideDraw_3
+  - first:
+      213: 1503973525474095813
+    second: cardsInsideDraw_4
+  - first:
+      213: -8846014159883617363
+    second: cardsInsideDraw_5
+  - first:
+      213: 1785549169878808745
+    second: cardsInsideDraw_6
+  - first:
+      213: -2226755261389178810
+    second: cardsInsideDraw_7
+  - first:
+      213: 8338952053809548796
+    second: cardsInsideDraw_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,19 +147,19 @@ TextureImporter:
       name: cardsInsideDraw_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 894
-        width: 431
-        height: 389
+        x: 16
+        y: 906
+        width: 436
+        height: 387
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f54a8abeb0751d90800000000000000
-      internalID: -7127666870768220687
+      spriteID: 0fa3ee160fd389650800000000000000
+      internalID: 6239805386366270192
       vertices: []
       indices: 
       edges: []
@@ -141,19 +168,40 @@ TextureImporter:
       name: cardsInsideDraw_1
       rect:
         serializedVersion: 2
-        x: 492
-        y: 894
-        width: 370
-        height: 368
+        x: 500
+        y: 912
+        width: 351
+        height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6280725614fd44960800000000000000
-      internalID: 7585433144361682982
+      spriteID: 3e1cb493ef6a08090800000000000000
+      internalID: -8034238124415794717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardsInsideDraw_2
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 794
+        width: 447
+        height: 474
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd055616b8e9b370800000000000000
+      internalID: 8338952053809548796
       vertices: []
       indices: 
       edges: []
