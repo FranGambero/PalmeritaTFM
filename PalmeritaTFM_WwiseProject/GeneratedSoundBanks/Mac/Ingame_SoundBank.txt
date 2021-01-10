@@ -2,6 +2,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	60258080	Hormiga_Steps_In			\Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In	
 	137613311	Victoria_Out			\Default Work Unit\SFX\Victoria_Out	
 	236399107	Carta_Select_In			\Default Work Unit\SFX\Carta_Select_In	
+	283117980	Pala_Agua_In			\Default Work Unit\SFX\Pala_Agua_In	
+	392698258	Pala_Seca_In			\Default Work Unit\SFX\Pala_Seca_In	
 	430716873	Amb_Base_In			\Default Work Unit\Ambientes\Amb_Base_In	
 	589089938	Amb_Agua_In			\Default Work Unit\Ambientes\Amb_Agua_In	
 	847036623	Sepalo_Steps_In			\Default Work Unit\perosnajes\Sepalo\Sepalo_Steps_In	
@@ -25,28 +27,21 @@ Effect plug-ins	ID	Name	Type				Notes
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	10286612	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_01\Wwise Silence	
 	35097691	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_04\Wwise Silence	
-	44571156	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_07\Wwise Silence	
-	54581870	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_09\Wwise Silence	
 	59906668	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_02\Wwise Silence	
-	158877281	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_08\Wwise Silence	
 	227468892	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_01\Wwise Silence	
 	282394480	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_06\Wwise Silence	
-	333383782	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_08\Wwise Silence	
 	366061150	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_05\Wwise Silence	
 	419594037	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_04\Wwise Silence	
 	532909722	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_03\Wwise Silence	
-	719617512	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_07\Wwise Silence	
 	761242792	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_02\Wwise Silence	
 	876247887	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_06\Wwise Silence	
 	882939177	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_03\Wwise Silence	
-	926083990	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_10\Wwise Silence	
 	956667473	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_1\Wwise Silence	
-	992436942	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_09\Wwise Silence	
-	1019812370	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_10\Wwise Silence	
 	1042033190	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_05\Wwise Silence	
 	1046686347	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_1\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	677964	El_Jardin_Pala_Agua_SFX_44_16_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_Pala_Agua_SFX_44_16_Start_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Pala_Agua\El_Jardin_Pala_Agua_SFX_44_16_Start		22011
 	22765751	Hormiga_Steps_L_SFX_Start_10	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Hormiga_Steps_L_SFX_Start_10_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_10		751
 	23316383	El_Jardin_Flor_Abrir_SFX_44_16_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_Flor_Abrir_SFX_44_16_Start_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flor_Abrir\El_Jardin_Flor_Abrir_SFX_44_16_Start		40658
 	44894630	El_Jardin_Arbol_Abrir_SFX_44_16_Start_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_Arbol_Abrir_SFX_44_16_Start_2_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Arbol_Abrir\El_Jardin_Arbol_Abrir_SFX_44_16_Start_2		70735
@@ -119,6 +114,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1023776841	Hormiga_Steps_L_SFX_Start_9	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Hormiga_Steps_L_SFX_Start_9_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_9		741
 	1053793191	Hormiga_Steps_L_SFX_Start_4	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Hormiga_Steps_L_SFX_Start_4_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_4		2353
 	1054396963	El_Jardin_Flor_Abrir_SFX_44_16_Start_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_Flor_Abrir_SFX_44_16_Start_2_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flor_Abrir\El_Jardin_Flor_Abrir_SFX_44_16_Start_2		44741
+	1065590856	El_Jardin_Pala_Seca_SFX_44_16_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\El_Jardin_Pala_Seca_SFX_44_16_Start_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Pala_Seca\El_Jardin_Pala_Seca_SFX_44_16_Start		51659
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	13095816	Jardin_Amb_Birds_Shoot_SFX_44_16_14	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Mac\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_14_B9A6BE81.wem	13095816.wem	\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Jardin_Amb_Birds_Shoot_SFX_44_16_14	

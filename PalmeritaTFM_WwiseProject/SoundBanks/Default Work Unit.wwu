@@ -15,10 +15,12 @@
 						<ObjectRef Name="Hormiga_Ataque_In" ID="{FFC50977-BFE9-43DE-837A-9DEA73F23E04}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Carta_Posicion_In" ID="{188F6BD4-1C3D-442F-8F04-50853C6736A5}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_Base_Out" ID="{43433771-3EBF-4566-8033-5A72D762C774}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pala_Seca_In" ID="{D5C90BD8-11AD-456F-9919-C7057D783806}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Crep_In" ID="{0D2B171A-7B96-4729-95B4-DBA796F8C8DB}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Crep_Out" ID="{34023415-615F-4795-9A34-BFFF5F12CB72}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Carta_Slide_In" ID="{3E6BED85-B900-4825-AE76-ED36E29DFA20}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga" ID="{5280D00B-AB30-4943-9342-437A62886457}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pala_Agua_In" ID="{04065C84-1712-4A6C-B44C-2819CF4D72ED}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Victoria_In" ID="{B1E450A6-40B6-4C27-A61E-39F3FBD9B64F}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Agua_Shoot_Out" ID="{EFDCE911-80AB-4CC7-B0BD-E9876587B8AD}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hormiga_Steps_In" ID="{5DC50C4D-89A9-4EB4-82E6-5D82579C087D}" WorkUnitID="{04AB030E-4755-4F29-9C12-522A79EB1CAD}" Origin="Manual" Filter="7"/>
