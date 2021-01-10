@@ -8,7 +8,7 @@ using UnityEngine;
 public class ScreenShotsUtil : EditorWindow {
     [MenuItem("Window/EditorUtils/ScreenShots/ScreenShotsWindow")]
     public static void ShowWindow() {
-        EditorWindow.GetWindow<EditorUtils>("ScreenShots");
+        EditorWindow.GetWindow<ScreenShotsUtil>("ScreenShots");
     }
     [MenuItem("Window/EditorUtils/ScreenShots/Chas!")]
     public static void TakeScreenShot() {

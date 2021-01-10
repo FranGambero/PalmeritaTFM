@@ -37,6 +37,6 @@ public class FlautibelulaAnimController : MonoBehaviour {
     }
     public void OnAnimationEnds() {
         VFXDirector.Instance.Play("OnDestroyGround", transform.GetChild(0));
-        transform.parent.gameObject.SetActive(false);
+        //transform.parent.gameObject.SetActive(false);
     }
 }

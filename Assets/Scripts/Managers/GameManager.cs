@@ -1,5 +1,6 @@
 ﻿using ElJardin.Characters;
 using System.Collections.Generic;
+using Assets.Scripts.Controllers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ using UnityEngine.SceneManagement;
 namespace ElJardin {
     public class GameManager : Singleton<GameManager> {
         public SepaloController Sepalo;
+        public BurnController BurnController;
         public GameObject instructMenu;
         public GameObject ShovelCrabPrefab;
         public GameObject _positionHover;
@@ -61,6 +63,11 @@ namespace ElJardin {
 
         private void Start() {
             StartGame();
+            PlayerPrefs.SetString(Keys.Scenes.LOAD_SCENE_STRING,SceneManager.GetActiveScene().name);
+            int levelId = int.Parse(SceneManager.GetActiveScene().name[SceneManager.GetActiveScene().name.Length-1].ToString());
+            PlayerPrefs.SetInt(Keys.Scenes.LAST_PLAYED_LEVEL, levelId);
+            SessionVariables.Instance.levels.lastPlayedLevel = levelId;
+
             CardManager.Instance.firstDrawCard();
             if (levelTutos.Count > 0)
                 Invoke(nameof(LaunchTutos), 3f);
@@ -127,6 +134,11 @@ namespace ElJardin {
 
             PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, -1);
             PlayerPrefs.SetString(Keys.Scenes.LOAD_SCENE_STRING, levelStringToLoad);
+            SceneManager.LoadScene("LoadScene");
+        }
+
+        public void RestarLevel() {
+            PlayerPrefs.SetInt(Keys.Scenes.LOAD_SCENE_INT, SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene("LoadScene");
         }
     }

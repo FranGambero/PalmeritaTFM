@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5686859, g: 0.7075472, b: 0.19023673, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalPosition: {x: 0, y: 0, z: 0}
-  originalHandPosition: {x: 0, y: 0, z: 0}
+  originalHandPosition: {fileID: 0}
   starting: 0
   hoving: 0
   layerMask:
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7585433144361682982, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
+  m_Sprite: {fileID: 7266072434596167683, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1

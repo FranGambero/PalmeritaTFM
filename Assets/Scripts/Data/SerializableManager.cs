@@ -7,7 +7,7 @@ public class SerializableManager : Singleton<SerializableManager> {
     public string preBuildPath = "Assets/Resources/ZoneData";
     public string[] zoneFile = { "/Zone0", "/Zone1", "/Zone2", "/Zone3" };
     public string format = ".json";
-    public string[] zonenPrefab = {
+    private string[] zonePrefab = {
     "{\"zoneId\":0,\"zoneName\":\"Primavera\",\"levels\":[{\"levelName\":\"Nivel 1\",\"id\":0,\"zone\":0,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel 2\",\"id\":1,\"zone\":0,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel 3\",\"id\":2,\"zone\":0,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel 4\",\"id\":3,\"zone\":0,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel 5\",\"id\":3,\"zone\":0,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]}]}",
 
     "{\"zoneId\":1,\"zoneName\":\"Verano\",\"levels\":[{\"levelName\":\"Nivel 6\",\"id\":0,\"zone\":1,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel 7\",\"id\":1,\"zone\":1,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel 8\",\"id\":2,\"zone\":1,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]},{\"levelName\":\"Nivel 9\",\"id\":3,\"zone\":1,\"isCompleted\":false,\"logros\":[{\"achievementName\":\"Completado\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Flores\",\"done\":false,\"animationDone\":false},{\"achievementName\":\"Movimientos\",\"done\":false,\"animationDone\":false}]}]}",
@@ -21,7 +21,7 @@ public class SerializableManager : Singleton<SerializableManager> {
         string path = GetZonePath(zoneId);
         if (!File.Exists(path)) {
             using (StreamWriter sw = new StreamWriter(path)) {
-                sw.Write(zonenPrefab[zoneId]);
+                sw.Write(zonePrefab[zoneId]);
             }
         }
         zoneData = DeSerializeSelectedZone(path);
