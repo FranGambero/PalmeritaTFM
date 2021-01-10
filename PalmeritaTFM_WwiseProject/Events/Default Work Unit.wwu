@@ -467,6 +467,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Pala_Seca_In" ID="{D5C90BD8-11AD-456F-9919-C7057D783806}">
+							<ChildrenList>
+								<Action Name="" ID="{D655FEAE-B773-4A75-AAA9-20003675C807}" ShortID="856282351">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pala_Seca" ID="{8096A94A-1F56-4C3A-8011-0EFF1E1D991B}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pala_Agua_In" ID="{04065C84-1712-4A6C-B44C-2819CF4D72ED}">
+							<ChildrenList>
+								<Action Name="" ID="{D554091C-E89A-4C37-A7D6-F45FD5ADB3D6}" ShortID="950417953">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pala_Agua" ID="{9A19F7B5-6EFE-4702-BAFD-02A3F75BE15C}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musica" ID="{ED5AD844-ADE3-4379-95C5-89018A6993DE}" ShortID="194525612">

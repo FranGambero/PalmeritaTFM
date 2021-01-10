@@ -30,6 +30,8 @@ namespace AK
         static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
         static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
         static const AkUniqueID MUSICA_SWITCH_IN = 2706007436U;
+        static const AkUniqueID PALA_AGUA_IN = 283117980U;
+        static const AkUniqueID PALA_SECA_IN = 392698258U;
         static const AkUniqueID SEPALO_STEPS_IN = 847036623U;
         static const AkUniqueID STEPS_MAPA_IN = 2363561452U;
         static const AkUniqueID UI_BACK_IN = 349057203U;
