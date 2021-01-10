@@ -2,6 +2,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	60258080	Hormiga_Steps_In			\Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In	
 	137613311	Victoria_Out			\Default Work Unit\SFX\Victoria_Out	
 	236399107	Carta_Select_In			\Default Work Unit\SFX\Carta_Select_In	
+	283117980	Pala_Agua_In			\Default Work Unit\SFX\Pala_Agua_In	
+	392698258	Pala_Seca_In			\Default Work Unit\SFX\Pala_Seca_In	
 	430716873	Amb_Base_In			\Default Work Unit\Ambientes\Amb_Base_In	
 	589089938	Amb_Agua_In			\Default Work Unit\Ambientes\Amb_Agua_In	
 	847036623	Sepalo_Steps_In			\Default Work Unit\perosnajes\Sepalo\Sepalo_Steps_In	
@@ -39,6 +41,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	1046686347	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_1\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	677964	El_Jardin_Pala_Agua_SFX_44_16_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_Pala_Agua_SFX_44_16_Start_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Pala_Agua\El_Jardin_Pala_Agua_SFX_44_16_Start		21993
 	22765751	Hormiga_Steps_L_SFX_Start_10	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Steps_L_SFX_Start_10_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_10		751
 	23316383	El_Jardin_Flor_Abrir_SFX_44_16_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_Flor_Abrir_SFX_44_16_Start_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flor_Abrir\El_Jardin_Flor_Abrir_SFX_44_16_Start		40658
 	44894630	El_Jardin_Arbol_Abrir_SFX_44_16_Start_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_Arbol_Abrir_SFX_44_16_Start_2_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Arbol_Abrir\El_Jardin_Arbol_Abrir_SFX_44_16_Start_2		70735
@@ -111,6 +114,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1023776841	Hormiga_Steps_L_SFX_Start_9	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Steps_L_SFX_Start_9_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_9		741
 	1053793191	Hormiga_Steps_L_SFX_Start_4	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Hormiga_Steps_L_SFX_Start_4_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Personajes\Hormiga\Hormiga_steps\Hormiga_Steps_L_SFX_Start_4		2353
 	1054396963	El_Jardin_Flor_Abrir_SFX_44_16_Start_2	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_Flor_Abrir_SFX_44_16_Start_2_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flor_Abrir\El_Jardin_Flor_Abrir_SFX_44_16_Start_2		44741
+	1065590856	El_Jardin_Pala_Seca_SFX_44_16_Start	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\El_Jardin_Pala_Seca_SFX_44_16_Start_B9A6BE81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Pala_Seca\El_Jardin_Pala_Seca_SFX_44_16_Start		51880
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	13095816	Jardin_Amb_Birds_Shoot_SFX_44_16_14	C:\Users\eduar\Documents\UMA_20\PalmeritaTFM\PalmeritaTFM_WwiseProject\.cache\Windows\SFX\Jardin_Amb_Birds_Shoot_SFX_44_16_14_B9A6BE81.wem	13095816.wem	\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Jardin_Amb_Birds_Shoot_SFX_44_16_14	

@@ -4565,7 +4565,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -4762,6 +4762,88 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="El_Jardin_Victoria_SFX_44_16_Start" ID="{CBFA1C47-792C-4F4E-800D-BBBBF3D40F01}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Pala_Seca" ID="{8096A94A-1F56-4C3A-8011-0EFF1E1D991B}" ShortID="1058081072">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis_44" ID="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_Pala_Seca_SFX_44_16_Start" ID="{DCD67853-907E-4300-8F07-A9BFE623822F}" ShortID="1026747738">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Pala_Seca_SFX_44_16_Start" ID="{3454A7FC-E83E-46A7-A6A2-42A8617B4AEF}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Pala_Seca_SFX_44_16_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1065590856"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Pala_Seca_SFX_44_16_Start" ID="{3454A7FC-E83E-46A7-A6A2-42A8617B4AEF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Pala_Agua" ID="{9A19F7B5-6EFE-4702-BAFD-02A3F75BE15C}" ShortID="1048007258">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis_44" ID="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="El_Jardin_Pala_Agua_SFX_44_16_Start" ID="{D61568E3-A1B5-4515-9A88-C4B39C908EA4}" ShortID="867911801">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="El_Jardin_Pala_Agua_SFX_44_16_Start" ID="{FAB70E80-157A-4DCF-B2C5-700D5D610119}">
+											<Language>SFX</Language>
+											<AudioFile>El_Jardin_Pala_Agua_SFX_44_16_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="677964"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="El_Jardin_Pala_Agua_SFX_44_16_Start" ID="{FAB70E80-157A-4DCF-B2C5-700D5D610119}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

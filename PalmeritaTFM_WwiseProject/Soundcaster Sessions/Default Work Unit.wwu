@@ -22,18 +22,26 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Musica_Inicio" ID="{3C969A56-BBB8-4D03-B480-66A55BEA9C87}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+							<ObjectRef Name="Pala_Agua" ID="{9A19F7B5-6EFE-4702-BAFD-02A3F75BE15C}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Sepalo_Steps" ID="{32C492BF-6E13-45B4-B454-84B53E6CE75F}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+							<ObjectRef Name="Pala_Seca" ID="{8096A94A-1F56-4C3A-8011-0EFF1E1D991B}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Arbol_Abrir" ID="{EE3A15C8-A623-4914-A7F4-39070028FCA6}" WorkUnitID="{BCFA7357-20A1-4A04-9954-B4E891FD7784}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Musica_Ingame" ID="{F8E0533D-C71A-405D-8AEF-A445CF59107A}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}"/>
+							<Position X="3" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Vol_MusicaIG" ID="{C631EF74-2C94-410D-B289-16AAD73194E0}"/>
-							<Value>0</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Ducking" ID="{471A0368-C891-48D7-AC56-0680A6D382F1}"/>

@@ -834,6 +834,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="283117980" Name="Pala_Agua_In" ObjectPath="\Events\Default Work Unit\SFX\Pala_Agua_In" DurationType="OneShot" DurationMin="1.650000" DurationMax="1.650000">
+					<IncludedMemoryFiles>
+						<File Id="677964" Language="SFX">
+							<ShortName>El_Jardin_Pala_Agua_SFX_44_16_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_Pala_Agua_SFX_44_16_Start_B9A6BE81.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="392698258" Name="Pala_Seca_In" ObjectPath="\Events\Default Work Unit\SFX\Pala_Seca_In" DurationType="OneShot" DurationMin="2.963038" DurationMax="2.963038">
+					<IncludedMemoryFiles>
+						<File Id="1065590856" Language="SFX">
+							<ShortName>El_Jardin_Pala_Seca_SFX_44_16_Start.wav</ShortName>
+							<Path>SFX\El_Jardin_Pala_Seca_SFX_44_16_Start_B9A6BE81.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="847036623" Name="Sepalo_Steps_In" ObjectPath="\Events\Default Work Unit\perosnajes\Sepalo\Sepalo_Steps_In" DurationType="OneShot" DurationMin="0.233146" DurationMax="0.725387">
 					<IncludedMemoryFiles>
 						<File Id="175036366" Language="SFX">
