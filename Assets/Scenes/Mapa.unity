@@ -43746,10 +43746,9 @@ MonoBehaviour:
   - /Zone1
   - /Zone2
   - /Zone3
-  postBuildPath: PalmeritaTFM_Data/Resources
   format: .json
-  zonenPrefab:
-  - '{"zoneId":0,"zoneName":"Primavera","levels":[{"levelName":"Nivel 1","id":0,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
+  zonePrefab:
+  - '{"zoneId":0,"zoneName":"Primavera","levels":[{"levelName":"Nivel 1","id":0,"zone":0,"isCompleted":false,"logros":[{"achievementName":"PUTO","done":false,"animationDone":false}]},{"levelName":"Nivel
     2","id":1,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
     3","id":2,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
     4","id":3,"zone":0,"isCompleted":false,"logros":[{"achievementName":"Completado","done":false,"animationDone":false},{"achievementName":"Flores","done":false,"animationDone":false},{"achievementName":"Movimientos","done":false,"animationDone":false}]},{"levelName":"Nivel
@@ -76613,6 +76612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: elementsToAppears.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239894029902465218, guid: 074a71beea665864caf44c211f1d0aa1,
+        type: 3}
+      propertyPath: petals.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6239894029902465218, guid: 074a71beea665864caf44c211f1d0aa1,
         type: 3}
