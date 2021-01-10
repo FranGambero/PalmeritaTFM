@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4d4032f8b946443b70324320706a5c, type: 3}
+  m_Name: Fuerirula
+  m_EditorClassIdentifier: 
+  data:
+    title: "Fuer\xEDrula "
+    body: "La Fuer\xEDrula o Fireflute es una potente herramienta para deshacerte
+      de esas molestas zarzas que te cierran el camino.\n\n\xA1Pero cuidado! El fuego
+      es peligroso y puede extenderse."
+    sprite: {fileID: 7266072434596167683, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
+      type: 3}
