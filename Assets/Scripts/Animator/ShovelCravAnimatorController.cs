@@ -12,6 +12,7 @@ public class ShovelCravAnimatorController : MonoBehaviour
     [ContextMenu("DIG")]
     public void PlayDig() {
         gameObject.SetActive(true);
+        AkSoundEngine.PostEvent("Pala_Seca_In", gameObject);
         bodyMat.material.SetTexture("_MainTex", skins[Random.Range(0, skins.Count)]);
         transform.parent.LookAt(GameManager.Instance.Sepalo.transform);
         animator.Play("Dig");
