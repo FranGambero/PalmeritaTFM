@@ -63,6 +63,11 @@ namespace ElJardin {
 
         private void Start() {
             StartGame();
+            PlayerPrefs.SetString(Keys.Scenes.LOAD_SCENE_STRING,SceneManager.GetActiveScene().name);
+            int levelId = int.Parse(SceneManager.GetActiveScene().name[SceneManager.GetActiveScene().name.Length-1].ToString());
+            PlayerPrefs.SetInt(Keys.Scenes.LAST_PLAYED_LEVEL, levelId);
+            SessionVariables.Instance.levels.lastPlayedLevel = levelId;
+
             CardManager.Instance.firstDrawCard();
             if (levelTutos.Count > 0)
                 Invoke(nameof(LaunchTutos), 3f);

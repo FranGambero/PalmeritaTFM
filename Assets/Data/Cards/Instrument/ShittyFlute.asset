@@ -24,5 +24,6 @@ MonoBehaviour:
     amount: 1
     direction: 0
     cardType: 2
-    sprite: {fileID: 21300000, guid: 81df67bf5f02b7d4b84264761869c080, type: 3}
+    sprite: {fileID: 7266072434596167683, guid: f1e96879a9de11d4a8bfdb1f60750c8d,
+      type: 3}
     bgColor: {r: 0.7924528, g: 0.69244057, b: 0.17568529, a: 1}
