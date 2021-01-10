@@ -62,14 +62,14 @@
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-10</XPos>
-														<YPos>-5</YPos>
+														<XPos>-12.60465</XPos>
+														<YPos>-7.428</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-5</YPos>
+														<YPos>-7.428</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>

@@ -25,24 +25,16 @@ Effect plug-ins	ID	Name	Type				Notes
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	10286612	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_01\Wwise Silence	
 	35097691	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_04\Wwise Silence	
-	44571156	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_07\Wwise Silence	
-	54581870	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_09\Wwise Silence	
 	59906668	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_02\Wwise Silence	
-	158877281	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_08\Wwise Silence	
 	227468892	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_01\Wwise Silence	
 	282394480	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_06\Wwise Silence	
-	333383782	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_08\Wwise Silence	
 	366061150	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_05\Wwise Silence	
 	419594037	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_04\Wwise Silence	
 	532909722	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_03\Wwise Silence	
-	719617512	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_07\Wwise Silence	
 	761242792	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_02\Wwise Silence	
 	876247887	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_06\Wwise Silence	
 	882939177	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_03\Wwise Silence	
-	926083990	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_10\Wwise Silence	
 	956667473	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot\Silence_1\Wwise Silence	
-	992436942	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_09\Wwise Silence	
-	1019812370	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_10\Wwise Silence	
 	1042033190	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_05\Wwise Silence	
 	1046686347	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambientes\General_Shoots\Amb_Birds_Shoot_2\Silence_1\Wwise Silence	
 

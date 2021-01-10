@@ -331,7 +331,7 @@
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -391,7 +391,7 @@
 															<Modifier Name="" ID="{C40D2E05-A84D-4DDE-997D-28766D568378}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Min" Type="Real64" Value="-33"/>
+																	<Property Name="Min" Type="Real64" Value="-31"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -460,7 +460,7 @@
 															<Modifier Name="" ID="{F669D96B-FB93-4904-9A0B-9C0EBFE7F491}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Min" Type="Real64" Value="-39"/>
+																	<Property Name="Min" Type="Real64" Value="-34"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -468,7 +468,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>33</Value>
+														<Value>39</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -569,7 +569,7 @@
 															<Modifier Name="" ID="{945B8285-FF7D-44D5-B2F1-944B636CD3D2}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Min" Type="Real64" Value="-42"/>
+																	<Property Name="Min" Type="Real64" Value="-39"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -718,7 +718,7 @@
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
 																	<Property Name="Max" Type="Real64" Value="26"/>
-																	<Property Name="Min" Type="Real64" Value="-53"/>
+																	<Property Name="Min" Type="Real64" Value="-36"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -842,7 +842,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>51</Value>
+														<Value>39</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -854,6 +854,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -886,7 +891,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -919,7 +924,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -952,7 +957,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -985,7 +990,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1018,7 +1023,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1051,7 +1056,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1084,7 +1089,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1108,138 +1113,6 @@
 												<ActiveSource Name="Wwise Silence" ID="{EBE5343F-68F0-4CC1-8D05-1D746B48712D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Silence_07" ID="{1BD42074-EB51-4511-ACA7-2360E196302D}" ShortID="266076731">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{E96DEABF-283E-4782-B7B5-CA711FA2A03F}" ShortID="44571156" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{E96DEABF-283E-4782-B7B5-CA711FA2A03F}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Silence_08" ID="{A8E45CB8-5122-4268-879B-E13DCB02C65C}" ShortID="868559179">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{169E2919-CEEA-4DC8-ACCF-D991C6F6AFA9}" ShortID="333383782" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{169E2919-CEEA-4DC8-ACCF-D991C6F6AFA9}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Silence_09" ID="{7F7D196E-BCEB-4CE7-9CCB-0DEE232E1E80}" ShortID="14436193">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{A05343F8-BDBF-4380-ABDA-17D24F5FE88B}" ShortID="54581870" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{A05343F8-BDBF-4380-ABDA-17D24F5FE88B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Silence_10" ID="{F48D98C4-78DD-410E-B150-F3D28F25A37E}" ShortID="701123713">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{2E2F6719-6CA8-4FF3-BEB2-CF412F022329}" ShortID="926083990" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{2E2F6719-6CA8-4FF3-BEB2-CF412F022329}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Amb_Birds_Shoot_2" ID="{A8D5BF36-4D8D-4B55-9032-EB79CBA7D5DF}" ShortID="964605073">
@@ -1248,7 +1121,7 @@
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-9</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1270,7 +1143,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>54</Value>
+														<Value>45</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1283,6 +1156,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1318,6 +1196,11 @@
 														<Value>44</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1349,7 +1232,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>47</Value>
+														<Value>44</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1362,6 +1245,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1394,7 +1282,12 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>53</Value>
+														<Value>46</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1428,7 +1321,12 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>49</Value>
+														<Value>45</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1458,6 +1356,11 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1491,7 +1394,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>52</Value>
+														<Value>43</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1504,6 +1407,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1536,7 +1444,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>45</Value>
+														<Value>41</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1581,7 +1489,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>46</Value>
+														<Value>43</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1594,6 +1502,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1626,7 +1539,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>51</Value>
+														<Value>44</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1639,6 +1552,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1671,7 +1589,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>45</Value>
+														<Value>41</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1683,6 +1601,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1715,7 +1638,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>51</Value>
+														<Value>42</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1728,6 +1651,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1760,7 +1688,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>48</Value>
+														<Value>42</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1772,6 +1700,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1804,7 +1737,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1837,7 +1770,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1870,7 +1803,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1903,7 +1836,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1927,39 +1860,6 @@
 												<ActiveSource Name="Wwise Silence" ID="{DE66CCC4-8F2A-4F4F-89DA-361ADD2AD436}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Silence_07" ID="{561CD1F8-876E-4B34-81B6-A7D4260C8CA7}" ShortID="633637605">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{0514CA59-CE85-44A3-8842-81C64E9F31D2}" ShortID="719617512" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{0514CA59-CE85-44A3-8842-81C64E9F31D2}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="Silence_01" ID="{B6547308-A193-4412-9651-FEAFC630AC36}" ShortID="19442612">
 											<PropertyList>
 												<Property Name="IsStreamingEnabled" Type="bool">
@@ -1969,7 +1869,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2002,7 +1902,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2035,7 +1935,7 @@
 												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
-														<Value>60</Value>
+														<Value>43</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2057,105 +1957,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Wwise Silence" ID="{1820B7D8-0385-4B20-B0F1-3E7D739799F6}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Silence_09" ID="{B002DE7A-BC09-40B7-A6D6-E5E8291129B2}" ShortID="866516638">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{5A5C6D24-F50C-4541-9449-922E72A8E523}" ShortID="992436942" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{5A5C6D24-F50C-4541-9449-922E72A8E523}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Silence_08" ID="{41119948-1E47-42AC-B6CE-7DBACC316A49}" ShortID="112241615">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{432D7876-BDD1-4D27-87EE-8087FA63D528}" ShortID="158877281" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{432D7876-BDD1-4D27-87EE-8087FA63D528}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Silence_10" ID="{6A20D86D-7A6B-4CB8-B448-6CDA6F8B0348}" ShortID="527332714">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{98141F6F-6B07-4363-8C1C-366BD0679404}" ShortID="1019812370" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<PropertyList>
-														<Property Name="Length" Type="Real32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{98141F6F-6B07-4363-8C1C-366BD0679404}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -4344,19 +4145,12 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="UI_Hit_Flor" ID="{3D0E5CAC-2643-4B05-BAAA-CA00A462F285}" ShortID="157353958">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Vorbis_44" ID="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+									<ObjectRef Name="SFX_Bus" ID="{1C69E12D-86EF-46FD-9BC2-03ECA30CEFAA}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4935,7 +4729,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
