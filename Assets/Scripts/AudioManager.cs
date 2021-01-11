@@ -46,12 +46,15 @@ namespace ElJardin {
             levelInGame = inGame;
             if (levelInGame) {
                 if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 2) {
-                    AkSoundEngine.SetState("General_Music", "Musica_Inicio");
+                    // AkSoundEngine.SetState("General_Music", "Musica_Inicio");
                 } else {
                     setIngameMusic();
                 }
             } else {
-                AkSoundEngine.SetState("General_Music", "None");
+                if (SceneManager.GetActiveScene().buildIndex > 3) {
+
+                    AkSoundEngine.SetState("General_Music", "None");
+                }
             }
         }
 

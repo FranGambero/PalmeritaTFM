@@ -6,10 +6,10 @@ public class LotoAnimatorController : MonoBehaviour {
     public Animator BallAnimator;
     public Animator lotoAnimator;
     public void OnHalfOpen() {
-        BallAnimator.Play("BallGo");
+       // BallAnimator.Play("BallGo");
     }
     public void OnClose() {
-        BallAnimator.Play("BallBack");
+       // BallAnimator.Play("BallBack");
     }
 
     public void LotoOpen() {

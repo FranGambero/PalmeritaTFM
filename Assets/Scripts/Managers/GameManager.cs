@@ -33,7 +33,7 @@ namespace ElJardin {
         public bool OnPause { get => onPause; set => onPause = value; }
 
         //TODO: cambiar nombre cuando se elimine el bool
-        public Card selectedCard;
+        private Card selectedCard;
 
         #region Accessors
         public Node SelectedNode { get => selectedNode; set => selectedNode = value; }
@@ -45,7 +45,9 @@ namespace ElJardin {
         }
 
 
-        public bool DraggingCard => selectedCard != null;
+        public bool DraggingCard => SelectedCard != null;
+
+        public Card SelectedCard { get => selectedCard; set => selectedCard = value; }
         #endregion
 
         public void PosPositionHover(Vector3 newPosition) {
@@ -56,7 +58,7 @@ namespace ElJardin {
             if (_positionHover)
                 _positionHover.SetActive(false);
             draggingCard = false;
-            selectedCard = null;
+            SelectedCard = null;
             Sepalo = FindObjectOfType<SepaloController>();
             MenuDirector.Instance.ActivateConfigMenu(false);
         }

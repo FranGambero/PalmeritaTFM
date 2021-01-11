@@ -75,8 +75,8 @@ namespace ElJardin {
         }
         private IEnumerator DrawNextCardCoroutine() {
             yield return new WaitForSeconds(.1f);
-            bool canDraw = handList.FindAll(c => c.gameObject.activeSelf).Count < maxHand;
-            Debug.Log("Cartas posibles: " + canDraw);
+            bool canDraw = handList.FindAll(c =>c != null && c.gameObject.activeSelf).Count < maxHand;
+
             if (cardQueue.Count > 0 && canDraw) {
                 int lastHandIndex = maxHand - 1;
                 Card tmpCard = handList.Find(c => !c.gameObject.activeSelf);

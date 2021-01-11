@@ -100,7 +100,7 @@ namespace ElJardin {
         }
         public bool CheckWaterAndActue(Node node) {
             bool hasWater = false;
-             hasWater = CheckWater(node);
+            hasWater = CheckWater(node);
             if (hasWater) {
                 winCheckedNodes = new List<Node>();
                 //winCheckedNodes.ForEach(n=>n.AdminDryScript(false));
@@ -414,7 +414,7 @@ namespace ElJardin {
                 node.HoverOn(newDirection);
             }
         }
-        
+
         public void HoverNodesInList(List<Node> nodeList) {
             foreach (Node node in nodeList) {
                 node.HoverOn();
@@ -451,8 +451,10 @@ namespace ElJardin {
                     sepalo.CurrentNode,
                     directionToFill,
                     numNodes);
-                if (dictionaryNodesAround[directionToFill].All(node => !node.HasObstacle))
-                    HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
+                if (dictionaryNodesAround.ContainsKey(directionToFill) && dictionaryNodesAround[directionToFill] != null)
+                    if (dictionaryNodesAround[directionToFill].Count > 0 && dictionaryNodesAround[directionToFill].Count == numNodes)
+                        if (dictionaryNodesAround[directionToFill].All(node => node != null && !node.HasObstacle))
+                            HoverNodesInList(dictionaryNodesAround[directionToFill], directionToFill);
 
             }
         }
@@ -501,7 +503,7 @@ namespace ElJardin {
 
             return nodeList;
         }
-        
+
         public void ShowNodesPreview(DirectionType newDirection) {
             if (newDirection == DirectionType.Undefined) {
                 if (dictionaryNodesAround != null && dictionaryNodesAround.ContainsKey(this.Direction))
@@ -522,22 +524,20 @@ namespace ElJardin {
         }
 
         #endregion
-        
+
         #region Card Hover Coroutines
 
-        public void GenericHoverStart(System.Action action)
-        {
+        public void GenericHoverStart(System.Action action) {
             StopHoverCoroutine();
             hoverCoroutine = StartCoroutine(GenericHoverCoroutine(action));
         }
 
-        IEnumerator GenericHoverCoroutine(System.Action action)
-        {
+        IEnumerator GenericHoverCoroutine(System.Action action) {
             var sepalo = GameManager.Instance.Sepalo;
             yield return sepalo.movementCoroutine;
             action();
         }
-        
+
         #endregion
     }
 }

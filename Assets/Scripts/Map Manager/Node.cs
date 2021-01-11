@@ -159,8 +159,8 @@ this.canBuild == false;
          */
         private void OnMouseEnter() {
             if (GameManager.Instance.CanPlay) {
-                if(GameManager.Instance.selectedCard != null)
-                    GameManager.Instance.selectedCard.HoverOnNodeEnter(this);
+                if(GameManager.Instance.SelectedCard != null)
+                    GameManager.Instance.SelectedCard.HoverOnNodeEnter(this);
                 //BuildManager.Instance.ShowNodesPreview(this.directionInHover);
                 if (Hovering) {
                     GameManager.Instance.SelectedNode = this;
@@ -198,8 +198,8 @@ this.canBuild == false;
          */
         private void OnMouseExit() {
             if (Hovering) {
-                if(GameManager.Instance.selectedCard != null)
-                    GameManager.Instance.selectedCard.UnHover();
+                if(GameManager.Instance.SelectedCard != null)
+                    GameManager.Instance.SelectedCard.UnHover();
                 GameManager.Instance.SelectedNode = null;
                 // BuildManager.Instance.dictionaryNodesAround[directionInHover].ForEach(n => n.ShowPreview(false));
             } else {

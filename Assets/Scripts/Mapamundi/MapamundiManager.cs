@@ -69,11 +69,11 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
     [ContextMenu("Guarda Carla")]
     public void SaveZoneData() {
-        SerializableManager.Instance.SerializeZone(zoneDataArray[0]);
-        SerializableManager.Instance.SerializeZone(zoneDataArray[1]);
-        //for (int zoneId = 0; zoneId < zoneDataArray.Length; zoneId++) {
-        //    SerializableManager.Instance.SerializeZone(zoneDataArray[zoneId]);
-        //}
+        //SerializableManager.Instance.SerializeZone(zoneDataArray[0]);
+        //SerializableManager.Instance.SerializeZone(zoneDataArray[1]);
+        for (int zoneId = 0; zoneId < zoneDataArray.Length; zoneId++) {
+            SerializableManager.Instance.SerializeZone(zoneDataArray[zoneId]);
+        }
     }
 
     public void SaveLevel(LevelData newLevelData) {
@@ -127,7 +127,7 @@ public class MapamundiManager : Singleton<MapamundiManager> {
 
         //currentZone = (currentZone + avanze) % 2;
         currentZone += avanze;
-        if (currentZone >= levelZonePanels.Length - 1) {
+        if (currentZone >= levelZonePanels.Length ) {
             currentZone = 0;
         } else if (currentZone < 0) {
             currentZone = 1;

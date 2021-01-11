@@ -129,12 +129,12 @@ namespace ElJardin {
                 startingNode = mapMatrix[(int)startPos.x, (int)startPos.y].GetComponent<Node>();
                 startingNode.Water(true);
                 startingNode.MakeStatic();
-                startingNode.SetColor(Color.blue);
+                startingNode.SetColor(new Color32(0x2F,0x9B,0xF3,0xFF));
                 mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>().ChangeNodeType(NodeType.Groove, BuildManager.Instance.pond_m);
                 endingNode = mapMatrix[(int)endPos.x, (int)endPos.y].GetComponent<Node>();
                 endingNode.ChangeNodeType(NodeType.Water);
                 endingNode.MakeStatic();
-                endingNode.SetColor(Color.red);
+                endingNode.SetColor(new Color32(0xFF,0x59,0x25,0xFF));
             } else {
                 Debug.LogError("Start and end positions cant be the same");
             }
