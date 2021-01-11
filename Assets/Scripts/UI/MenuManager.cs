@@ -18,21 +18,11 @@ namespace ElJardin {
 
         private void Update() {
             if (Input.GetKeyDown(KeyCode.Escape) && !confirmPanel.gameObject.activeSelf) {
-                toggleConfigMenu();
-            }
-        }
-
-        private void toggleConfigMenu() {
-            if (configMenuPanel.activeSelf) {
-                configMenuPanel.SetActive(false);
-            } else {
-                configMenuPanel.SetActive(true);
+                MenuDirector.Instance.ToggleConfigMenu();
             }
         }
 
         public void goToStartMenu() {
-            // Quiza se puede poner en un ondestroy de esto o el Mapamundi scene?
-            //AudioManager.Instance.unSetUILPF();
             SceneManager.LoadScene(0);
         }
 

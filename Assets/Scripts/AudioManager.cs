@@ -22,14 +22,6 @@ namespace ElJardin {
                 AkSoundEngine.PostEvent("Musica_Switch_In", gameObject);
             }
 
-            //if (SessionVariables.Instance.sceneData.currentScene == 2) {
-            //    StartCoroutine(LPFCoroutine(true));
-            //} else {
-            //    StartCoroutine(LPFCoroutine(false));
-            //}
-
-            //setUILPF(0);
-
             if (PlayerPrefs.HasKey(Keys.Volume.PREF_VOL_SFX)) {
                 AkSoundEngine.SetRTPCValue(Keys.WWise.RTPC_SFX, PlayerPrefs.GetInt(Keys.Volume.PREF_VOL_SFX));
             }
@@ -53,13 +45,13 @@ namespace ElJardin {
         public void toggleMusicIngameState(bool inGame = true) {
             levelInGame = inGame;
             if (levelInGame) {
-                if (SceneManager.GetActiveScene().buildIndex == 0) {
+                if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 2) {
                     AkSoundEngine.SetState("General_Music", "Musica_Inicio");
                 } else {
                     setIngameMusic();
                 }
             } else {
-                //AkSoundEngine.SetState("General_Music", "None");
+                AkSoundEngine.SetState("General_Music", "None");
             }
         }
 
