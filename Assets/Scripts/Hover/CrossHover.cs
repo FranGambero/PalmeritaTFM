@@ -13,13 +13,12 @@ namespace ElJardin.Hover
 
         public override void HoverOnGrab()
         {
-            Debug.Log($"CrossHover - Hovering grab");
             HoverAroundSepalo();
         }
 
         public override void HoverOnNodeEnter(Node targetNode)
         {
-            Debug.Log($"CrossHover - Hovering node {targetNode.name}");
+
             BuildManager.Instance.ShowNodesPreview(targetNode.directionInHover);
         }
 

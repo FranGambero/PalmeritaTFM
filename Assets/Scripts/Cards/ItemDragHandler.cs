@@ -58,7 +58,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
     #endregion
 
     public void OnDrag(PointerEventData eventData) {
-        Debug.Log("Starting Drag");
+
         if (GameManager.Instance.Sepalo.IsMyTurn) {
             if (!starting && !GameManager.Instance.usingCard) {
                 GameManager.Instance.usingCard = true;

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class MenuDirector : Singleton<MenuDirector> {
     public ConfigMenuManager configMenu;
@@ -95,5 +96,9 @@ public class MenuDirector : Singleton<MenuDirector> {
     public void ActivateCardCanvas(bool activate) {
         if (cardCanvas)
             cardCanvas.gameObject.SetActive(activate);
+    }
+
+    public void GoCredits(){
+        SceneManager.LoadScene("Credits");
     }
 }
