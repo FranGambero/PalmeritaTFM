@@ -25,10 +25,7 @@ namespace AK
         static const AkUniqueID CARTA_SLIDE_IN = 2760388952U;
         static const AkUniqueID FLOR_ABRIR_IN = 1057048301U;
         static const AkUniqueID HORMIGA_ATAQUE_IN = 1694954324U;
-        static const AkUniqueID HORMIGA_CREP_IN = 1873637369U;
-        static const AkUniqueID HORMIGA_CREP_OUT = 2885749304U;
         static const AkUniqueID HORMIGA_SALTO_IN = 2360392006U;
-        static const AkUniqueID HORMIGA_STEPS_IN = 60258080U;
         static const AkUniqueID MUSICA_SWITCH_IN = 2706007436U;
         static const AkUniqueID PALA_AGUA_IN = 283117980U;
         static const AkUniqueID PALA_SECA_IN = 392698258U;

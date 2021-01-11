@@ -61,7 +61,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Musica_Inicio" ID="{43A4F975-E858-4CE1-AC44-14F2ACFF8513}"/>
+						<CurrentStateRef Name="None" ID="{7B65DC3C-242E-4E6C-96FF-623EA9D29310}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
