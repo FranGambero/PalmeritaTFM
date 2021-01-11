@@ -4145,6 +4145,23 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="UI_Hit_Flor" ID="{3D0E5CAC-2643-4B05-BAAA-CA00A462F285}" ShortID="157353958">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Vorbis_44" ID="{9FF4A2D3-52D4-431C-8803-2DDCDFB2843D}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
