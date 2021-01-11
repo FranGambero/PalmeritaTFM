@@ -63,18 +63,18 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
             if (!starting && !GameManager.Instance.usingCard) {
                 GameManager.Instance.usingCard = true;
                 starting = true;
-                GameManager.Instance.selectedCard = ActionCard;
+                GameManager.Instance.SelectedCard = ActionCard;
                 AkSoundEngine.PostEvent("Carta_Select_In", gameObject);
                 HoverAroundNode();
             }
-            if (GameManager.Instance.usingCard && (GameManager.Instance.selectedCard == this.ActionCard))
+            if (GameManager.Instance.usingCard && (GameManager.Instance.SelectedCard == this.ActionCard))
                 transform.position = Input.mousePosition;
             //BuildManager.Instance.changeBuildValues(cardData.amount);
         }
     }
 
     public void OnEndDrag(PointerEventData eventData) {
-        GameManager.Instance.selectedCard = null;
+        GameManager.Instance.SelectedCard = null;
 
         DoTheAction();
         starting = false;
