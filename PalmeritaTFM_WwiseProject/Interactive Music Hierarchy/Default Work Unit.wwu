@@ -424,6 +424,50 @@
 										</MusicCue>
 									</CueList>
 								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{BED36ED7-02EF-45BF-955C-C09BAEAEE9AE}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{3B11E8F5-0C21-47C9-893C-706F466DA895}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{BDC07CEF-D879-4BAC-B8BD-C78A85127FD0}" ShortID="64216727">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{026BA0A0-6710-4D81-AFEE-0CBA8D11EA55}" ShortID="297418160">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{6FD24E00-C354-469B-81AC-781119944979}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{4EA25B6C-CC34-4864-B9C1-2D2D16958DFD}" ShortID="806094643">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{16D89C07-9869-4208-9667-815620370F80}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Musica_Pausa" ID="{B2858A83-6463-4DE6-8A74-D1D846F2F1A9}" ShortID="602127302">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E650500B-80BF-4402-BDD9-E1BED99B596A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{914A9E11-C8D4-41C2-A4F6-79E82E1CC781}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
 								<MusicSegment Name="Pausa" ID="{1F6C7636-FD3A-4CAF-BF00-7716AAD93ECC}" ShortID="725745014">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="130678.538250388"/>
@@ -504,12 +548,12 @@
 								</MusicSegment>
 							</ChildrenList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{BED36ED7-02EF-45BF-955C-C09BAEAEE9AE}">
+								<MusicTransition Name="Root" ID="{3D528B52-59B5-4A6C-842D-7C07D7FE463F}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{3B11E8F5-0C21-47C9-893C-706F466DA895}">
+										<MusicTransition Name="Transition" ID="{EB4ED844-D414-48F7-A712-479822615F4C}">
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -517,20 +561,14 @@
 								</MusicTransition>
 							</TransitionList>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{BDC07CEF-D879-4BAC-B8BD-C78A85127FD0}" ShortID="64216727">
+								<MusicPlaylistItem Name="" ID="{7D7865AB-0067-4B98-BF11-073AB4E777F4}" ShortID="386228764">
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{026BA0A0-6710-4D81-AFEE-0CBA8D11EA55}" ShortID="297418160">
-											<PropertyList>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="El_Jardin_Musica_Inicio_Intro_44_16_Start" ID="{6FD24E00-C354-469B-81AC-781119944979}"/>
-										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{4EA25B6C-CC34-4864-B9C1-2D2D16958DFD}" ShortID="806094643">
+										<MusicPlaylistItem Name="" ID="{709F48FF-27D8-4D32-B060-2F415D712757}" ShortID="916692777">
 											<PropertyList>
 												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
-											<SegmentRef Name="El_Jardin_Musica_Inicio_44_16_Loop" ID="{16D89C07-9869-4208-9667-815620370F80}"/>
+											<SegmentRef Name="Pausa" ID="{1F6C7636-FD3A-4CAF-BF00-7716AAD93ECC}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
@@ -814,7 +852,7 @@
 								<PathElementRef Name="None" ID="{7B65DC3C-242E-4E6C-96FF-623EA9D29310}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="Musica_Pausa" ID="{B2858A83-6463-4DE6-8A74-D1D846F2F1A9}" WorkUnitID="{9661582F-7FB4-4EC2-A568-2034BF42ECDC}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

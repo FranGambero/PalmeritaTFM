@@ -215,6 +215,10 @@
 							<Media>
 								<File Id="218172167"/>
 								<File Id="119660723"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7B65DC3C-242E-4E6C-96FF-623EA9D29310}">
+							<Media>
 								<File Id="914630107"/>
 							</Media>
 						</SwitchContainer>
@@ -693,144 +697,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1873637369" Name="Hormiga_Crep_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_In" DurationType="OneShot" DurationMin="12.893356" DurationMax="12.893356">
-					<IncludedMemoryFiles>
-						<File Id="445216661" Language="SFX">
-							<ShortName>Hormiga_Pasos_Crepitar_SFX_Loop_2.wav</ShortName>
-							<Path>SFX\Hormiga_Pasos_Crepitar_SFX_Loop_2_B9A6BE81.wem</Path>
-						</File>
-						<File Id="684924528" Language="SFX">
-							<ShortName>Hormiga_Pasos_Crepitar_SFX_Loop_1.wav</ShortName>
-							<Path>SFX\Hormiga_Pasos_Crepitar_SFX_Loop_1_B9A6BE81.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2885749304" Name="Hormiga_Crep_Out" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Crep_Out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2360392006" Name="Hormiga_Salto_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Salto_In" DurationType="OneShot" DurationMin="1.983469" DurationMax="1.983469">
 					<IncludedMemoryFiles>
 						<File Id="315805695" Language="SFX">
 							<ShortName>Hormiga_Salto_SFX_Start.wav</ShortName>
 							<Path>SFX\Hormiga_Salto_SFX_Start_B9A6BE81.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="60258080" Name="Hormiga_Steps_In" ObjectPath="\Events\Default Work Unit\perosnajes\Hormiga\Hormiga_Steps_In" DurationType="OneShot" DurationMin="0.010265" DurationMax="0.129532">
-					<IncludedMemoryFiles>
-						<File Id="22765751" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_10.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_10_B9A6BE81.wem</Path>
-						</File>
-						<File Id="114312251" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_1.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_1_B9A6BE81.wem</Path>
-						</File>
-						<File Id="115633511" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_5.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_5_B9A6BE81.wem</Path>
-						</File>
-						<File Id="120287909" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_2.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_2_B9A6BE81.wem</Path>
-						</File>
-						<File Id="181006974" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_6.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_6_B9A6BE81.wem</Path>
-						</File>
-						<File Id="208011244" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_12.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_12_B9A6BE81.wem</Path>
-						</File>
-						<File Id="212824443" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_10.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_10_B9A6BE81.wem</Path>
-						</File>
-						<File Id="310507928" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_1.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_1_B9A6BE81.wem</Path>
-						</File>
-						<File Id="315022579" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_B9A6BE81.wem</Path>
-						</File>
-						<File Id="347756161" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_5.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_5_B9A6BE81.wem</Path>
-						</File>
-						<File Id="354100747" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_7.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_7_B9A6BE81.wem</Path>
-						</File>
-						<File Id="443141774" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_6.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_6_B9A6BE81.wem</Path>
-						</File>
-						<File Id="472364602" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_9.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_9_B9A6BE81.wem</Path>
-						</File>
-						<File Id="518595459" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_12.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_12_B9A6BE81.wem</Path>
-						</File>
-						<File Id="520386910" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_13.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_13_B9A6BE81.wem</Path>
-						</File>
-						<File Id="520489507" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_11.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_11_B9A6BE81.wem</Path>
-						</File>
-						<File Id="522397035" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_B9A6BE81.wem</Path>
-						</File>
-						<File Id="574437409" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_4.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_4_B9A6BE81.wem</Path>
-						</File>
-						<File Id="588272894" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_8.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_8_B9A6BE81.wem</Path>
-						</File>
-						<File Id="680496677" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_2.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_2_B9A6BE81.wem</Path>
-						</File>
-						<File Id="717799211" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_13.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_13_B9A6BE81.wem</Path>
-						</File>
-						<File Id="729712105" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_7.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_7_B9A6BE81.wem</Path>
-						</File>
-						<File Id="808385460" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_14.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_14_B9A6BE81.wem</Path>
-						</File>
-						<File Id="889296306" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_11.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_11_B9A6BE81.wem</Path>
-						</File>
-						<File Id="908227072" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_8.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_8_B9A6BE81.wem</Path>
-						</File>
-						<File Id="993322690" Language="SFX">
-							<ShortName>Hormiga_Steps_R_SFX_Start_3.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_R_SFX_Start_3_B9A6BE81.wem</Path>
-						</File>
-						<File Id="1019557451" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_14.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_14_B9A6BE81.wem</Path>
-						</File>
-						<File Id="1023776841" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_9.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_9_B9A6BE81.wem</Path>
-						</File>
-						<File Id="1053793191" Language="SFX">
-							<ShortName>Hormiga_Steps_L_SFX_Start_4.wav</ShortName>
-							<Path>SFX\Hormiga_Steps_L_SFX_Start_4_B9A6BE81.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
